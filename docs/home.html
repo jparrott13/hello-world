@@ -1,1 +1,2769 @@
 
+
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Board Insights</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="grid.css">
+   </head>
+   <body>
+      <div  class="application-header shadow z-50">
+         <h1>Board Insights</h1>
+      </div>
+      <!-- ** TABLE HEADER ** --> 
+      <div class="outerWrapper mainHeader shadow z-50">
+         <!-- COMMITTEE COLUMN-->
+         <!-- POWERS RESERVED COLUMN-->
+         <div class="box controls-row bt-none" style="justify-content: left; grid-column: span 2;">
+            <div class="dropdown">
+               <a class="dropdown-toggle lrg-bold outer" role="button" data-target="policyGroupDropdown" aria-haspopup="true" aria-expanded="false">ALM <i class="fas fa-caret-down"></i></a>
+               <div class="dropdown-content dropdown-menu dropdown-align-left" id="policyGroupDropdown">
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ALM</button>
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ABC</button>
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>QWERT</button>
+               </div>
+            </div>
+         </div>
+         <div class="controls-box bl-none controls-row bt-none">
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer">Filter <span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
+            <div class="dropdown layout-options">
+               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle no-outline cursor-pointer" data-target="layoutDropdown">Layout</button>
+               <div class="dropdown-content dropdown-menu dropdown-align-right" id="layoutDropdown">
+                  <button class="dropdown-item" onclick="showYears(1)" href="#"><img class="layout-img" src="1col.svg">One Year View</button>
+                  <button class="dropdown-item" onclick="showYears(3)" href="#"><img class="layout-img" src="3col.svg">Three Year View</button>
+                  <button class="dropdown-item" onclick="showYears(5)" href="#"><img class="layout-img" src="5col.svg">Five Year View</button>
+               </div>
+            </div>
+         </div>
+         <!-- COMMITTEE COLUMN-->
+         <div class="box grid-order-0"></div>
+         <!-- POWERS RESERVED COLUMN-->
+         <div class="box bl-none grid-order-1"></div>
+         <div class="scrollWrapper grid-order-2" style="position: relative;">
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle arrow-ctrl arrow-left cursor-pointer" onclick="translateTable('left')"><i class="fas fa-chevron-left"></i></button>
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle arrow-ctrl arrow-right visible cursor-pointer" onclick="translateTable('right')"><i class="fas fa-chevron-right"></i></button>
+            <div class="innerWrapper">
+               <!-- FY HEADERS -->
+               <!-- 2017 -->
+               <div class="box FYheader">2017</div>
+               <!-- 2018 -->
+               <div class="box FYheader">2018</div>
+               <!-- 2019 -->
+               <div class="box FYheader">2019</div>
+               <!-- 2020 -->
+               <div class="box FYheader">2020</div>
+               <!-- 2021 -->
+               <div class="box FYheader">2021</div>
+               <!-- 2022 -->
+               <div class="box FYheader">2022</div>
+               <!-- 2023 -->
+               <div class="box FYheader">2023</div>
+               <!-- 2024 -->
+               <div class="box FYheader">2024</div>
+            </div>
+         </div>
+         <!-- COMMITTEE HEADER-->
+         <div class="box SPRheader grid-order-3" ></div>
+         <!-- POWERS RESERVED HEADER-->
+         <div class="box SPRheader bl-none grid-order-4">Specific Powers Reserved</div>
+         <div class="scrollWrapper grid-order-5">
+            <div class="innerWrapper">
+               <!-- QUARTER HEADERS -->
+               <!-- 2017 -->
+               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box FYQheader">Q2</div>
+               <div class="box FYQheader">Q3</div>
+               <div class="box FYQheader">Q4</div>
+               <!-- 2018 -->
+               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box FYQheader">Q2</div>
+               <div class="box FYQheader">Q3</div>
+               <div class="box FYQheader">Q4</div>
+               <!-- 2019 -->
+               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box FYQheader">Q2</div>
+               <div class="box FYQheader">Q3</div>
+               <div class="box FYQheader">Q4</div>
+               <!-- 2020 -->
+               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box FYQheader">Q2</div>
+               <div class="box FYQheader">Q3</div>
+               <div class="box FYQheader">Q4</div>
+               <!-- 2021 -->
+               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box FYQheader">Q2</div>
+               <div class="box FYQheader">Q3</div>
+               <div class="box FYQheader">Q4</div>
+               <!-- 2022 -->
+               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box FYQheader">Q2</div>
+               <div class="box FYQheader">Q3</div>
+               <div class="box FYQheader">Q4</div>
+               <!-- 2023 -->
+               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box FYQheader">Q2</div>
+               <div class="box FYQheader">Q3</div>
+               <div class="box FYQheader">Q4</div>
+               <!-- 2024 -->
+               <div class="box boxQ1 FYQheader">Q1</div>
+               <div class="box FYQheader">Q2</div>
+               <div class="box FYQheader">Q3</div>
+               <div class="box FYQheader">Q4</div>
+            </div>
+         </div>
+         <!-- Row 3 -->
+         <div class="box SPRheader monthDetail grid-order-6" ></div>
+         <!-- Row 3 -->
+         <div class="box SPRheader monthDetail bl-none grid-order-7"></div>
+         <div class="scrollWrapper monthDetail grid-order-8">
+            <div class="innerWrapper">
+               <!-- MONTHS HEADERS -->
+               <!-- 2017 Q1 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jan</div>
+                  <div class="box">Feb</div>
+                  <div class="box">Mar</div>
+               </div>
+               <!-- 2017 Q2 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Apr</div>
+                  <div class="box">May</div>
+                  <div class="box">Jun</div>
+               </div>
+               <!-- 2017 Q3 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jul</div>
+                  <div class="box">Aug</div>
+                  <div class="box">Sept</div>
+               </div>
+               <!-- 2017 Q4 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Oct</div>
+                  <div class="box">Nov</div>
+                  <div class="box">Dec</div>
+               </div>
+               <!-- 2018 Q1 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jan</div>
+                  <div class="box">Feb</div>
+                  <div class="box">Mar</div>
+               </div>
+               <!-- 2018 Q2 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Apr</div>
+                  <div class="box">May</div>
+                  <div class="box">Jun</div>
+               </div>
+               <!-- 2018 Q3 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jul</div>
+                  <div class="box">Aug</div>
+                  <div class="box">Sept</div>
+               </div>
+               <!-- 2018 Q4 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Oct</div>
+                  <div class="box">Nov</div>
+                  <div class="box">Dec</div>
+               </div>
+               <!-- 2019 Q1 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jan</div>
+                  <div class="box">Feb</div>
+                  <div class="box">Mar</div>
+               </div>
+               <!-- 2019 Q2 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Apr</div>
+                  <div class="box">May</div>
+                  <div class="box">Jun</div>
+               </div>
+               <!-- 2019 Q3 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jul</div>
+                  <div class="box">Aug</div>
+                  <div class="box">Sept</div>
+               </div>
+               <!-- 2019 Q4 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Oct</div>
+                  <div class="box">Nov</div>
+                  <div class="box">Dec</div>
+               </div>
+               <!-- 2020 Q1 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jan</div>
+                  <div class="box">Feb</div>
+                  <div class="box">Mar</div>
+               </div>
+               <!-- 2020 Q2 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Apr</div>
+                  <div class="box">May</div>
+                  <div class="box">Jun</div>
+               </div>
+               <!-- 2020 Q3 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jul</div>
+                  <div class="box">Aug</div>
+                  <div class="box">Sept</div>
+               </div>
+               <!-- 2020 Q4 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Oct</div>
+                  <div class="box">Nov</div>
+                  <div class="box">Dec</div>
+               </div>
+               <!-- 2021 Q1 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jan</div>
+                  <div class="box">Feb</div>
+                  <div class="box">Mar</div>
+               </div>
+               <!-- 2021 Q2 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Apr</div>
+                  <div class="box">May</div>
+                  <div class="box">Jun</div>
+               </div>
+               <!-- 2021 Q3 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jul</div>
+                  <div class="box">Aug</div>
+                  <div class="box">Sept</div>
+               </div>
+               <!-- 2021 Q4 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Oct</div>
+                  <div class="box">Nov</div>
+                  <div class="box">Dec</div>
+               </div>
+               <!-- 2022 Q1 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jan</div>
+                  <div class="box">Feb</div>
+                  <div class="box">Mar</div>
+               </div>
+               <!-- 2022 Q2 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Apr</div>
+                  <div class="box">May</div>
+                  <div class="box">Jun</div>
+               </div>
+               <!-- 2022 Q3 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jul</div>
+                  <div class="box">Aug</div>
+                  <div class="box">Sept</div>
+               </div>
+               <!-- 2022 Q4 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Oct</div>
+                  <div class="box">Nov</div>
+                  <div class="box">Dec</div>
+               </div>
+               <!-- 2023 Q1 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jan</div>
+                  <div class="box">Feb</div>
+                  <div class="box">Mar</div>
+               </div>
+               <!-- 2023 Q2 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Apr</div>
+                  <div class="box">May</div>
+                  <div class="box">Jun</div>
+               </div>
+               <!-- 2023 Q3 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jul</div>
+                  <div class="box">Aug</div>
+                  <div class="box">Sept</div>
+               </div>
+               <!-- 2023 Q4 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Oct</div>
+                  <div class="box">Nov</div>
+                  <div class="box">Dec</div>
+               </div>
+               <!-- 2024 Q1 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jan</div>
+                  <div class="box">Feb</div>
+                  <div class="box">Mar</div>
+               </div>
+               <!-- 2024 Q2 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Apr</div>
+                  <div class="box">May</div>
+                  <div class="box">Jun</div>
+               </div>
+               <!-- 2024 Q3 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Jul</div>
+                  <div class="box">Aug</div>
+                  <div class="box">Sept</div>
+               </div>
+               <!-- 2024 Q4 -->
+               <div class="box FYQheaderMonth">
+                  <div class="box">Oct</div>
+                  <div class="box">Nov</div>
+                  <div class="box">Dec</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="outerWrapper">
+         <!-- SET Header-->
+         <div class="box powerCategory powerSet bt-none">Set</div>
+         <!-- SET > COMMITEE > IC -->
+         <div class="box committeeEntry" style="grid-row: span 4;">IC</div>
+         <!-- SET > Power 01 -->
+         <div class="box SPRentry">Set investment beliefs</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- SET > Power 02 -->
+         <div class="box SPRentry">Set total fund and asset class policy benchmarks</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- SET > Power 03 -->
+         <div class="box SPRentry">Set investment risk appetite and tolerances</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- SET > Power 04 -->
+         <div class="box SPRentry">Set the target rate of return</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerSetCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- SET Header-->
+         <div class="box powerCategory powerApprove">Approve</div>
+         <!-- APPROVE > COMMITTEE > IC -->
+         <div class="box committeeEntry" style="grid-row: span 2;">IC</div>
+         <!-- APPROVE > Power 01 -->
+         <div class="box SPRentry">Select the asset allocation mix including interim allocation targets for each fund</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- APPROVE > Power 02 -->
+         <div class="box SPRentry">Approve asset class strategic plans and portfolio construction guidelines</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div>
+                     <ul class="item innerDataUl">
+                        <li class="liToggle IC APPROVE" data-target="#17Q2A2">
+                           <span class="item sr-only">Description here for screen reader</span>
+                        </li>
+                     </ul>
+                  </div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- APPROVE > COMMITTEE > FAC -->
+         <div class="box committeeEntry" style="grid-row: span 3;">FAC</div>
+         <!-- APPROVE > Power 03 -->
+         <div class="box SPRentry">Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- APPROVE > Power 04 -->
+         <div class="box SPRentry">Approve significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- APPROVE > Power 05 -->
+         <div class="box SPRentry">Approve Pension System actuarial valuations, and employer rate setting for statutorily mandated participants which represents all plans other than public agencies</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerApproveCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <div class="box powerCategory powerApprove">Conduct</div>
+         <!-- Conduct > COMMITTEE > IC -->
+         <div class="box committeeEntry" style="grid-row: span 1;">IC</div>
+         <!-- Conduct > Power 01 -->
+         <div class="box SPRentry">Conduct strategic asset allocation</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+               <div class="box cell powerConductCell">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- OVERSEE -->
+         <div class="box powerCategory powerOversee">Oversee</div>
+         <!-- OVERSEE > COMMITTEE > FAC -->
+         <div class="box committeeEntry" style="grid-row: span 4;">FAC</div>
+         <!-- OVERSEE > Power 01 -->
+         <div class="box SPRentry">Oversee financial soundness of the overall CalPERS system, including annual review of unfunded liability, overall pension soundness and sustainability, health programs, the Long Term Care Fund, and any other programs offered</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 02 -->
+         <div class="box SPRentry">Oversee the funding risk through an asset liability management framework to guide investment strategy and actuarial policies for the Pension Systems            </div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 03 -->
+         <div class="box SPRentry">Oversee treasury management practices of the organization to ensure sufficient cash is available to pay benefits and other CalPERS obligations</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 04 -->
+         <div class="box SPRentry">Oversee cash management and fund liquidity management processes including the monitoring of liquidity and the management of liquidity risks</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > COMMITTEE > IC -->
+         <div class="box committeeEntry" style="grid-row: span 8;">IC</div>
+         <!-- OVERSEE > Power 01 -->
+         <div class="box SPRentry">Oversee asset class strategic plans and portfolio construction guidelines</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"></div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 02 -->
+         <div class="box SPRentry">Oversee compliance with significant financial policies (not including investment policies), actuarial policies, and service provider and employer contracting policies.</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"></div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 03 -->
+         <div class="box SPRentry">Oversee investment performance</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"></div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 04 -->
+         <div class="box SPRentry">Oversee selection process and performance of investment partners, managers and consultants</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"></div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 05 -->
+         <div class="box SPRentry">Oversee cost effectiveness of the investment program</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"></div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 06 -->
+         <div class="box SPRentry">Oversee investment office risk assessment and control environment</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"></div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 07 -->
+         <div class="box SPRentry">Oversee environmental, social and governance (ESG) program</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"></div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+         <!-- OVERSEE > Power 08 -->
+         <div class="box SPRentry">Oversee performance of Board consultants who provide investment-related expertise to the Board</div>
+         <div class="scrollWrapper">
+            <div class="innerWrapper">
+               <!-- 2017 -->
+               <div class="box cell boxQ1 powerOverseeCell"></div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2018 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2019 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2020 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2021 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2022 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2023 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <!-- 2024 -->
+               <div class="box cell boxQ1 powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+               <div class="box cell powerOverseeCell"> </div>
+            </div>
+         </div>
+      </div>
+      <!-- ** TABLE BODY ** -->      
+      <!-- Sidebar Content -->
+      <div id="17Q2A2" class="overlaySidebar approvePowerCat">
+         <div class="titleArea">
+            <h2>Approve</h2>
+            <button type="button" class="close" aria-label="Close">
+            <i class="fas fa-times"></i>
+            </button>
+         </div>
+         <div class="body">
+            <div class="details">
+               <p><span class="label">Quarter</span>2017 - Q2</p>
+               <p><span class="label">Committee</span>FAC</p>
+            </div>
+            <div class="details">
+               <p><span class="label">Specific Power Reserved</span>Approve significant financial principles, asset liability management and funding risk methodologies, and actuarial methods</p>
+            </div>
+            <hr>
+            <div class="agenda">
+               <p><span class="label">Agenda Items</span></p>
+               <ul>
+                  <li><a id="toggleDocument" href="#">Asset Liability Management Policy (Second Reading)</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="backdrop-overlay"></div>
+      <!-- Filter Modal -->
+      <div id="radarFilter" class="overlaySidebar radar-filter">
+         <div  class="inner-container relative">
+            <div class="titleArea">
+               <h2 class="my-3">Filter Radar</h2>
+               <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="applied-filters pb-4 px-4">
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+            </div>
+            <div>
+               <ul class="list-reset flex border-b tabs-nav my-0" role="tablist">
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">Program</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Committee</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Publisher</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Item Type</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection3">Policy Power</a>
+                  </li>
+               </ul>
+               <div class="body">
+                  <div class="tab-content active" id="filterSection1">
+                     <fieldset>
+                        <legend class="form-legend sr-only">Filter by Committee</legend>
+                        <div class="checkbox-list checkbox-list--custom">
+                           <div>
+                              <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked>
+                              <label for="ACTO">Actuarial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="FINO" value="FINO">
+                              <label for="FINO">Financial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="INVO" value="INVO" >
+                              <label for="INVO">Investment Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="ACTO2" value="ACTO" >
+                              <label for="ACTO2">Actuarial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="FINO2" value="FINO">
+                              <label for="FINO2">Financial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="INVO2" value="INVO" >
+                              <label for="INVO2">Investment Office</label>
+                           </div>
+                        </div>
+                     </fieldset>
+                  </div>
+                  <div class="tab-content" id="filterSection2">
+                     <div class="checkbox-list checkbox-list--custom">
+                        <div>
+                           <input type="checkbox" name="names" id="ACTO" value="ACTO" >
+                           <label for="ACTO">John Smith</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="FINO" value="FINO">
+                           <label for="FINO">Anna Appleseed</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="INVO" value="INVO" >
+                           <label for="INVO">Investment Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="ACTO2" value="ACTO" >
+                           <label for="ACTO2">Actuarial Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="FINO2" value="FINO">
+                           <label for="FINO2">Financial Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="INVO2" value="INVO" >
+                           <label for="INVO2">Investment Office</label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-content" id="filterSection3">3</div>
+               </div>
+            </div>
+            <div class="footer fixed pin-b pin-r">
+               <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+               Apply Filters
+               </button>
+            </div>
+         </div>
+      </div>
+      <!-- Javascript -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="radar.js"></script>
+   </body>
+</html>
