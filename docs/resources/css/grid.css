@@ -68,6 +68,11 @@ body {
 	margin: 0;
 }
 
+
+.clear {
+clear:both;
+}
+
 .controls-row {
 	background-color: #f7f7f7!important;
 	display: flex;
