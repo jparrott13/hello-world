@@ -3,7 +3,7 @@
     margin: 0 auto;
     position: relative;
     display: block;
-    width: 50%;
+    width: 65%;
 }
 
 #calendar {
@@ -101,7 +101,7 @@
 
 .day {
   display: inline-block;
-  width: 25%;
+  width: 14%;
   padding: 10px;
   text-align: center;
   vertical-align: top;
