@@ -4,6 +4,7 @@
     position: relative;
     display: block;
     width: 65%;
+    padding: 50px 0px 0px 0px;
 }
 
 #calendar {
@@ -23,15 +24,16 @@
   text-align: center;
   position:relative;
   z-index: 100;
+  margin-bottom: 35px;
 }
 
 .header h1 {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 2em;
   color:#444;
   line-height: 50px;
-  font-weight: 100;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
