@@ -159,12 +159,12 @@
 .yellow { background: rgba(249, 233, 0, 1); }
 
 .details {
-  position: relative;
-  width: 420px;
-  height: 75px;
-  background: rgba(164, 164, 164, 1);
-  margin-top: 5px;
-  border-radius: 4px;
+    position: relative;
+    width: 50%;
+    height: 75px;
+    background: rgba(164, 164, 164, 1);
+    border-radius: 4px;
+    margin: 0 auto;
 }
 
 .details.in {
