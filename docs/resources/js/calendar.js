@@ -227,7 +227,7 @@
 
     this.renderEvents(todaysEvents, details);
 
-    arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 78 + 'px';
+    arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 10 + 'px';
   }
 
   Calendar.prototype.renderEvents = function(events, ele) {
