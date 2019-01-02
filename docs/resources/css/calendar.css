@@ -3,25 +3,26 @@
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  width: 420px;
+  width: 100%;
   margin: 0 auto;
-  height: 570px;
+  height: auto;
   overflow: hidden;
 }
 
 .header {
   height: 50px;
-  width: 420px;
-  background: rgba(66, 66, 66, 1);
+  width: 100%;
+  background: transparent;
   text-align: center;
   position:relative;
   z-index: 100;
 }
 
-.header h1 {
+.header h3 {
   margin: 0;
   padding: 0;
   font-size: 20px;
+  color:#444;
   line-height: 50px;
   font-weight: 100;
   letter-spacing: 1px;
@@ -88,17 +89,17 @@
 }
 
 .week {
- background: #4A4A4A;
+ background: transparent;
 }
 
 .day {
   display: inline-block;
-  width: 60px;
+  width: 25%;
   padding: 10px;
   text-align: center;
   vertical-align: top;
   cursor: pointer;
-  background: #4A4A4A;
+  background: transparent;
   position: relative;
   z-index: 100;
 }
