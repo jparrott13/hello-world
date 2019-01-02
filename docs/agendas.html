@@ -8,10 +8,11 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
       <link rel="stylesheet" href="resources/css/grid.css">
+       <link rel="stylesheet" href="resources/css/calendar.css">
    </head>
    <body>
       <div  class="application-header shadow z-50">
-         <h1>Board Insights</h1>
+         <h1>All Agendas</h1>
       </div>
       <!-- ** TABLE HEADER ** --> 
       <div class="outerWrapper mainHeader shadow z-50">
@@ -19,7 +20,11 @@
          <!-- POWERS RESERVED COLUMN-->
          <div class="box controls-row bt-none" style="justify-content: left; grid-column: span 2;">
             <div class="dropdown">
-              <h2>Full Agendas</h2>
+               <a class="dropdown-toggle lrg-bold outer" role="button" data-target="policyGroupDropdown" aria-haspopup="true" aria-expanded="false">ALM <i class="fas fa-caret-down"></i></a>
+               <div class="dropdown-content dropdown-menu dropdown-align-left" id="policyGroupDropdown">
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ALM</button>
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>ABC</button>
+                  <button class="dropdown-item" href="#"><span class="policy-group-icon"><i class="fas fa-users"></i></span>QWERT</button>
                </div>
             </div>
          </div>
@@ -2762,5 +2767,6 @@
       <!-- Javascript -->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
       <script src="resources/js/radar.js"></script>
+       <script src="resources/js/calendar.js"></script>
    </body>
 </html>
