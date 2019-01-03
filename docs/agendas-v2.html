@@ -11,6 +11,17 @@
       <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
    </head>
    <body>
+             <script>
+       
+       $(document).ready( function () {
+    $('#agenda-table').DataTable( {
+       paging: true,
+       searching: true;
+       ordering: true,
+    } );
+} );
+
+</script>
       <div  class="application-header shadow z-50">
          <h1>All Agendas</h1>
       </div>
@@ -145,13 +156,7 @@
         
       </div>
       <div class="clear"></div>
-       <script>
-       
-       $(document).ready( function () {
-    $('#agenda-table').DataTable();
-} );
 
-</script>
           <div class="inner-wrapper">
           <table id="agenda-table" class="display">
     <thead>
