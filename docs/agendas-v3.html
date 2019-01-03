@@ -1,0 +1,509 @@
+
+
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>All Agendas</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="resources/css/grid.css">
+      <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+      
+      <style>
+      .container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+.calendar {
+    background: #2b4450;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    height: 501px;
+  perspective: 1000;
+    transition: .9s;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+
+/* Front - Calendar */
+.front {
+    transform: rotateY(0deg);
+}
+
+.current-date {
+    border-bottom: 1px solid rgba(73, 114, 133, .6);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.current-date h1 {
+    color: #dfebed;
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+.week-days {
+    color: #dfebed;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 30px 40px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.weeks {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+.weeks div {
+    display: flex;
+    font-size: 1.2em;
+    font-weight: 300;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.last-month {
+    opacity: .3;
+}
+
+.weeks span {
+    padding: 10px;
+}
+
+.weeks span.active {
+    background: #f78536;
+    border-radius: 50%;
+}
+
+.weeks span:not(.last-month):hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.event {
+    position: relative;
+}
+
+.event:after {
+    content: '•';
+    color: #f78536;
+    font-size: 1.4em;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+
+/* Back - Event form */
+
+.back {
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+.back input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(73, 114, 133, .6);
+    color: #dfebed;
+    font-size: 1.4em;
+    font-weight: 300;
+    padding: 30px 40px;
+    width: 100%;
+}
+
+.info {
+    color: #dfebed;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 30px 40px;
+}
+
+.info div:not(.observations) {
+    margin-bottom: 40px;
+}
+
+.info span {
+    font-weight: 300;
+}
+
+.info .date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .date p {
+    width: 50%;
+}
+
+.info .address p {
+    width: 100%;
+}
+
+.actions {
+    bottom: 0;
+    border-top: 1px solid rgba(73, 114, 133, .6);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+}
+
+.actions button {
+    background: none;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 30px 0;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+.actions button:first-of-type {
+    border-right: 1px solid rgba(73, 114, 133, .6);
+}
+
+.actions button:hover {
+    background: #497285;
+    cursor: pointer;
+}
+
+.actions button:active {
+    background: #5889a0;
+    outline: none;
+}
+
+/* Flip animation */
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    backface-visibility: hidden;
+}
+</style>
+      
+   </head>
+   <body>
+
+      <div  class="application-header shadow z-50">
+         <h1>All Agendas</h1>
+      </div>
+      <!-- ** TABLE HEADER ** --> 
+      <div class="outerWrapper mainHeader shadow z-50">
+         <!-- COMMITTEE COLUMN-->
+         <!-- POWERS RESERVED COLUMN-->
+         <div class="box controls-row bt-none" style="justify-content: left; grid-column: span 2;">
+            <div class="dropdown">
+               <h2>All Agendas</h2>
+            </div>
+         </div>
+         <div class="controls-box bl-none controls-row bt-none">
+                 <a href="agendas.html" class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 no-outline relative flex cursor-pointer">All Agendas</a>   
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer">Filter <span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
+            <div class="dropdown layout-options">
+               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle no-outline cursor-pointer" data-target="layoutDropdown">Layout</button>
+               <div class="dropdown-content dropdown-menu dropdown-align-right" id="layoutDropdown">
+                  <button class="dropdown-item" onclick="showYears(1)" href="#"><img class="layout-img" src="1col.svg">One Year View</button>
+                  <button class="dropdown-item" onclick="showYears(3)" href="#"><img class="layout-img" src="3col.svg">Three Year View</button>
+                  <button class="dropdown-item" onclick="showYears(5)" href="#"><img class="layout-img" src="5col.svg">Five Year View</button>
+               </div>
+            </div>
+         </div>
+        
+
+       
+      
+   
+ 
+     
+      <!-- Filter Modal -->
+      <div id="radarFilter" class="overlaySidebar radar-filter">
+         <div  class="inner-container relative">
+            <div class="titleArea">
+               <h2 class="my-3">Filter Radar</h2>
+               <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="applied-filters pb-4 px-4">
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+            </div>
+            <div>
+               <ul class="list-reset flex border-b tabs-nav my-0" role="tablist">
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">Program</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Committee</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Publisher</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Item Type</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection3">Policy Power</a>
+                  </li>
+               </ul>
+               <div class="body">
+                  <div class="tab-content active" id="filterSection1">
+                     <fieldset>
+                        <legend class="form-legend sr-only">Filter by Committee</legend>
+                        <div class="checkbox-list checkbox-list--custom">
+                           <div>
+                              <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked>
+                              <label for="ACTO">Actuarial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="FINO" value="FINO">
+                              <label for="FINO">Financial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="INVO" value="INVO" >
+                              <label for="INVO">Investment Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="ACTO2" value="ACTO" >
+                              <label for="ACTO2">Actuarial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="FINO2" value="FINO">
+                              <label for="FINO2">Financial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="INVO2" value="INVO" >
+                              <label for="INVO2">Investment Office</label>
+                           </div>
+                        </div>
+                     </fieldset>
+                  </div>
+                  <div class="tab-content" id="filterSection2">
+                     <div class="checkbox-list checkbox-list--custom">
+                        <div>
+                           <input type="checkbox" name="names" id="ACTO" value="ACTO" >
+                           <label for="ACTO">John Smith</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="FINO" value="FINO">
+                           <label for="FINO">Anna Appleseed</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="INVO" value="INVO" >
+                           <label for="INVO">Investment Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="ACTO2" value="ACTO" >
+                           <label for="ACTO2">Actuarial Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="FINO2" value="FINO">
+                           <label for="FINO2">Financial Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="INVO2" value="INVO" >
+                           <label for="INVO2">Investment Office</label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-content" id="filterSection3">3</div>
+               </div>
+            </div>
+            <div class="footer fixed pin-b pin-r">
+               <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+               Apply Filters
+               </button>
+            </div>
+         </div>
+      </div>
+        
+      </div>
+      <div class="clear"></div>
+
+
+          <div class="inner-wrapper">
+          HTML  CSS  JS Result
+
+
+    <div class="container">
+      <div class="calendar">
+        <div class="front">
+          <div class="current-date">
+            <h1>Friday 15th</h1>
+            <h1>January 2016</h1>   
+          </div>
+
+          <div class="current-month">
+            <ul class="week-days">
+              <li>MON</li>
+              <li>TUE</li>
+              <li>WED</li>
+              <li>THU</li>
+              <li>FRI</li>
+              <li>SAT</li>
+              <li>SUN</li>
+            </ul>
+
+            <div class="weeks">
+              <div class="first">
+                <span class="last-month">28</span>
+                <span class="last-month">29</span>
+                <span class="last-month">30</span>
+                <span class="last-month">31</span>
+                <span>01</span>
+                <span>02</span>
+                <span>03</span>
+              </div>
+
+              <div class="second">
+                <span>04</span>
+                <span>05</span>
+                <span class="event">06</span>
+                <span>07</span>
+                <span>08</span>
+                <span>09</span>
+                <span>10</span>
+              </div>
+
+              <div class="third">
+                <span>11</span>
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span class="active">15</span>
+                <span>16</span>
+                <span>17</span>
+              </div>
+
+              <div class="fourth">
+                <span>18</span>
+                <span>19</span>
+                <span>20</span>
+                <span>21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+              </div>
+
+              <div class="fifth">
+                <span>25</span>
+                <span>26</span>
+                <span>27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="back">
+          <input placeholder="What's the event?">
+          <div class="info">
+            <div class="date">
+              <p class="info-date">
+              Date: <span>Jan 15th, 2016</span>
+              </p>
+              <p class="info-time">
+                Time: <span>6:35 PM</span>
+              </p>
+            </div>
+            <div class="address">
+              <p>
+                Address: <span>129 W 81st St, New York, NY</span>
+              </p>
+            </div>
+            <div class="observations">
+              <p>
+                Observations: <span>Be there 15 minutes earlier</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="save">
+              Save <i class="ion-checkmark"></i>
+            </button>
+            <button class="dismiss">
+              Dismiss <i class="ion-android-close"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+          
+          </div>
+   
+      <!-- Javascript -->
+      <script>
+      var app = {
+    settings: {
+        container: $('.calendar'),
+        calendar: $('.front'),
+        days: $('.weeks span'),
+        form: $('.back'),
+        input: $('.back input'),
+        buttons: $('.back button')
+    },
+
+    init: function() {
+        instance = this;
+        settings = this.settings;
+        this.bindUIActions();
+    },
+
+    swap: function(currentSide, desiredSide) {
+        settings.container.toggleClass('flip');
+
+        currentSide.fadeOut(900);
+        currentSide.hide();
+
+        desiredSide.show();
+    },
+
+    bindUIActions: function() {
+        settings.days.on('click', function(){
+            instance.swap(settings.calendar, settings.form);
+            settings.input.focus();
+        });
+
+        settings.buttons.on('click', function(){
+            instance.swap(settings.form, settings.calendar);
+        });
+    }
+}
+
+app.init();
+</script>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="resources/js/radar.js"></script>
+                      
+   </body>
+</html>
