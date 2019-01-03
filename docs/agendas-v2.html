@@ -1,0 +1,182 @@
+
+
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>All Agendas</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="resources/css/grid.css">
+      <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+   </head>
+   <body>
+      <div  class="application-header shadow z-50">
+         <h1>All Agendas</h1>
+      </div>
+      <!-- ** TABLE HEADER ** --> 
+      <div class="outerWrapper mainHeader shadow z-50">
+         <!-- COMMITTEE COLUMN-->
+         <!-- POWERS RESERVED COLUMN-->
+         <div class="box controls-row bt-none" style="justify-content: left; grid-column: span 2;">
+            <div class="dropdown">
+               <h2>All Agendas</h2>
+            </div>
+         </div>
+         <div class="controls-box bl-none controls-row bt-none">
+                 <a href="agendas.html" class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 no-outline relative flex cursor-pointer">All Agendas</a>   
+            <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer">Filter <span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
+            <div class="dropdown layout-options">
+               <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow dropdown-toggle no-outline cursor-pointer" data-target="layoutDropdown">Layout</button>
+               <div class="dropdown-content dropdown-menu dropdown-align-right" id="layoutDropdown">
+                  <button class="dropdown-item" onclick="showYears(1)" href="#"><img class="layout-img" src="1col.svg">One Year View</button>
+                  <button class="dropdown-item" onclick="showYears(3)" href="#"><img class="layout-img" src="3col.svg">Three Year View</button>
+                  <button class="dropdown-item" onclick="showYears(5)" href="#"><img class="layout-img" src="5col.svg">Five Year View</button>
+               </div>
+            </div>
+         </div>
+        
+
+       
+      
+   
+ 
+     
+      <!-- Filter Modal -->
+      <div id="radarFilter" class="overlaySidebar radar-filter">
+         <div  class="inner-container relative">
+            <div class="titleArea">
+               <h2 class="my-3">Filter Radar</h2>
+               <button type="button" class="close" aria-label="Close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="applied-filters pb-4 px-4">
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+               <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span>
+            </div>
+            <div>
+               <ul class="list-reset flex border-b tabs-nav my-0" role="tablist">
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">Program</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Committee</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Publisher</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Item Type</a>
+                  </li>
+                  <li class="mr-1">
+                     <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection3">Policy Power</a>
+                  </li>
+               </ul>
+               <div class="body">
+                  <div class="tab-content active" id="filterSection1">
+                     <fieldset>
+                        <legend class="form-legend sr-only">Filter by Committee</legend>
+                        <div class="checkbox-list checkbox-list--custom">
+                           <div>
+                              <input type="checkbox" name="programName" id="ACTO" value="ACTO" checked>
+                              <label for="ACTO">Actuarial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="FINO" value="FINO">
+                              <label for="FINO">Financial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="INVO" value="INVO" >
+                              <label for="INVO">Investment Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="ACTO2" value="ACTO" >
+                              <label for="ACTO2">Actuarial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="FINO2" value="FINO">
+                              <label for="FINO2">Financial Office</label>
+                           </div>
+                           <div>
+                              <input type="checkbox" name="programName" id="INVO2" value="INVO" >
+                              <label for="INVO2">Investment Office</label>
+                           </div>
+                        </div>
+                     </fieldset>
+                  </div>
+                  <div class="tab-content" id="filterSection2">
+                     <div class="checkbox-list checkbox-list--custom">
+                        <div>
+                           <input type="checkbox" name="names" id="ACTO" value="ACTO" >
+                           <label for="ACTO">John Smith</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="FINO" value="FINO">
+                           <label for="FINO">Anna Appleseed</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="INVO" value="INVO" >
+                           <label for="INVO">Investment Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="ACTO2" value="ACTO" >
+                           <label for="ACTO2">Actuarial Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="FINO2" value="FINO">
+                           <label for="FINO2">Financial Office</label>
+                        </div>
+                        <div>
+                           <input type="checkbox" name="names" id="INVO2" value="INVO" >
+                           <label for="INVO2">Investment Office</label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-content" id="filterSection3">3</div>
+               </div>
+            </div>
+            <div class="footer fixed pin-b pin-r">
+               <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+               Apply Filters
+               </button>
+            </div>
+         </div>
+      </div>
+        
+      </div>
+      <div class="clear"></div>
+       <script>
+       
+       $(document).ready( function () {
+    $('#agenda-table').DataTable();
+} );
+
+</script>
+          <div class="inner-wrapper">
+          <table id="agenda-table" class="display">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td>
+        </tr>
+    </tbody>
+</table>
+          
+          </div>
+
+      <!-- Javascript -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="resources/js/radar.js"></script>
+      <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+   </body>
+</html>
