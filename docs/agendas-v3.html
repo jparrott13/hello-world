@@ -22,14 +22,15 @@
 }
 
 .calendar {
-    background: #2b4450;
-    border-radius: 4px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
-    height: 501px;
+    background: transparent;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+    height: 600px;
   perspective: 1000;
     transition: .9s;
     transform-style: preserve-3d;
     width: 100%;
+   marign-top:50px; 
+   border: 1px solid #f7f7f7;
 }
 
 /* Front - Calendar */
@@ -45,17 +46,18 @@
 }
 
 .current-date h1 {
-    color: #dfebed;
+    color: #444444;
     font-size: 1.4em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .week-days {
-    color: #dfebed;
+    color: #444444;
     display: flex;
     justify-content: space-between;
     font-weight: 600;
     padding: 30px 40px;
+       list-style-type: none;
 }
 
 .days {
@@ -65,7 +67,7 @@
 }
 
 .weeks {
-    color: #fff;
+     color: #444444;
     display: flex;
     flex-direction: column;
     padding: 0 40px;
@@ -89,8 +91,10 @@
 }
 
 .weeks span.active {
-    background: #f78536;
+    background: #ff6700;
     border-radius: 50%;
+    width: 50px;
+    text-align: center;
 }
 
 .weeks span:not(.last-month):hover {
