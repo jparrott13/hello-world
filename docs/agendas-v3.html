@@ -105,6 +105,14 @@
 .event {
     position: relative;
 }
+         
+         .event-com2 {
+    position: relative;
+}
+         
+         .event-com3 {
+    position: relative;
+}
 
 .event:after {
     content: '•';
@@ -114,6 +122,26 @@
     right: -4px;
     top: -4px;
 }
+         
+.event-com2:after {
+    content: '•';
+    color: #f78536;
+    font-size: 1.4em;
+    position: absolute;
+    right: -4px;
+    top: -10px;
+}
+         
+         
+.event-com3:after {
+    content: '•';
+    color: #f78536;
+    font-size: 1.4em;
+    position: absolute;
+    right: -4px;
+    top: 10px;
+}
+
 
 /* Back - Event form */
 
@@ -408,7 +436,7 @@
                 <span>20</span>
                 <span>21</span>
                 <span>22</span>
-                <span>23</span>
+               <span class="event event-com2 event-com3">23</span>
                 <span>24</span>
                     <span>25</span>
                 <span>26</span>
