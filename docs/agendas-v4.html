@@ -94,16 +94,16 @@
 .last-month {
     opacity: .3;
 }
-.weeks span {
+.weeks div {
     padding: 10px;
 }
-.weeks span.active {
+.weeks div.active {
     background: #ff6700;
     border-radius: 50%;
     width: 50px;
     text-align: center;
 }
-.weeks span:not(.last-month):hover {
+.weeks div:not(.last-month):hover {
     cursor: pointer;
     font-weight: 600;
 }
@@ -391,56 +391,56 @@
 
             <div class="weeks">
               <div class="first">
-                <span class="last-month">30</span>
-                <span class="last-month">31</span>
-                 <span>01</span>
-                <span>02</span>
-                <span class="active">03</span>
-                <span>04</span>
-                <span>05</span>
+                <div class="last-month">30</div>
+                <div class="last-month">31</div>
+                 <div>01</div>
+                <div>02</div>
+                <div class="active">03</div>
+                <div>04</div>
+                <div>05</div>
               </div>
 
               <div class="second">
-                <span>06</span>
-                <span>07</span>
-                <span class="event">08</span>
-                <span>09</span>
-                <span>10</span>
-                <span>11</span>
-                <span>12</span>
+                <div>06</div>
+                <div>07</div>
+                <div class="event">08</div>
+                <div>09</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
               </div>
 
               <div class="third">
       
-                <span>13</span>
-                <span>14</span>
-                <span class=" event ">15</span>
-                <span>16</span>
-                <span>17</span>
-                     <span>18</span>
-                <span>19</span>
+                <div>13</div>
+                <div>14</div>
+                <div class=" event ">15</div>
+                <div>16</div>
+                <div>17</div>
+                     <div>18</div>
+                <div>19</div>
               </div>
 
               <div class="fourth">
             
-                <span>20</span>
-                <span>21</span>
-                <span>22</span>
-               <span class="event event-com2">23</span>
-                <span>24</span>
-                    <span>25</span>
-                <span>26</span>
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+               <div class="event event-com2">23</div>
+                <div>24</div>
+                    <div>25</div>
+                <div>26</div>
               </div>
 
               <div class="fifth">
              
-                <span>27</span>
-                <span>28</span>
-                <span>29</span>
-                <span>30</span>
-                <span>31</span>
-                       <span class="last-month">1</span>
-                <span class="last-month">2</span>
+                <div>27</div>
+                <div>28</div>
+                <div>29</div>
+                <div>30</div>
+                <div>31</div>
+                       <div class="last-month">1</div>
+                <div class="last-month">2</div>
               </div>
             </div>
           </div>
@@ -451,15 +451,15 @@
           <div class="info">
             <div class="date">
               <p class="info-date">
-              Date: <span>Jan 8, 2019</span>
+              Date: <div>Jan 8, 2019</div>
               </p>
               <p class="info-time">
-                Time: <span>8:00 AM</span>
+                Time: <div>8:00 AM</div>
               </p>
             </div>
             <div class="address">
               <p>
-               Location: <span>400 Q Street, Sacramento, CA</span>
+               Location: <div>400 Q Street, Sacramento, CA</div>
               </p>
             </div>
             <div class="observations">
@@ -522,7 +522,7 @@
     settings: {
         container: $('.calendar'),
         calendar: $('.front'),
-        days: $('.weeks span'),
+        days: $('.weeks div'),
         form: $('.back'),
         input: $('.back input'),
         buttons: $('.back button')
