@@ -20,7 +20,7 @@
 .calendar {
 	background: transparent;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
-	height: 1050px;
+	height: auto;
 	perspective: 1000;
 	transition: .9s;
 	transform-style: preserve-3d;
@@ -71,7 +71,7 @@
 }
 .week-days div {
 	margin: 0 auto;
-	padding: 20px 40px 20px 40px;
+	padding: 20px 50px 20px 50px;
 	font-size: 1.1em;
 	font-weight: 600;
 	text-align: center;
@@ -97,15 +97,16 @@
 	position: relative;
 	display: block;
 	margin: 0 auto;
-	padding: 50px;
+	padding: 50px 70px 50px 70px;
 	height: auto;
 }
 .first div > span, .second div > span, .third div > span, .fourth div > span, .fifth div > span {
-	position: relative;
+	position: absolute;
 	display: block;
-	top: -20px;
-	left: -20px;
-	font-size: 0.6em;
+	top: 0;
+	left: 0;
+	font-size: 0.9em;
+	padding: 10px;
 }
 .last-month {
 	opacity: .3;
