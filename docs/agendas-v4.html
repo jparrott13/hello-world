@@ -64,27 +64,18 @@
 }
 .week-days {
 	color: #444444;
-	display: flex;
-	flex-direction: column;	
 }
-	
-	.calendar-week {
-display: flex;
-    justify-content: space-between;	
-	}
-	
-.week-days div {
-	
-	position: relative;
-    display: block;
-    margin: 0 auto;
-    padding: 50px;
-	
-	font-size: 1.2em;
-font-weight: 600;
-	text-align: center;
+.calendar-week {
+	display: flex;
 	justify-content: space-between;
-}	
+}
+.week-days div {
+	margin: 0 auto;
+	padding: 20px 40px 20px 40px;
+	font-size: 1.1em;
+	font-weight: 600;
+	text-align: center;
+}
 .days {
 	display: flex;
 	flex-wrap: wrap;
@@ -361,14 +352,14 @@ font-weight: 600;
           <i class="fas fa-chevron-right"></i> </div>
         <div class="current-month">
           <div class="week-days">
-			  <div class="calendar-week">
-            <div>MON</div>
-             <div>TUE</div>
-            <div>WED</div>
-             <div>THU</div>
-             <div>FRI</div>
+            <div class="calendar-week">
+              <div>MON</div>
+              <div>TUE</div>
+              <div>WED</div>
+              <div>THU</div>
+              <div>FRI</div>
+            </div>
           </div>
-			  </div>
           <div class="weeks">
             <div class="first">
               <div class="last-month"><span>31</span></div>
