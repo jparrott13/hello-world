@@ -241,13 +241,19 @@
 	
 	/*Sliding Content*/
 .slider {
-
-  overflow-x: auto;
-	overflow-x:hidden;
+text-align: center;
+	overflow:hidden;
+	padding:0px !important;
+	margin:0px !important;
+	width:140px;
+}
+	.slides {
+		  overflow-x: auto !important;
 	display:flex !important;
 	width:140px;
 	padding:0px !important;
 	margin:0px !important;
+		scroll-behavior: smooth !important;
 	 -webkit-overflow-scrolling: touch !important;
 		 -webkit-scroll-snap-points-x: repeat(300px) !important;
       -ms-scroll-snap-points-x: repeat(300px) !important;
@@ -255,7 +261,7 @@
   -webkit-scroll-snap-type: mandatory !important;
       -ms-scroll-snap-type: mandatory !important;
           scroll-snap-type: mandatory !important;
-}
+		}	
 .slide {
   width: 140px;
   flex-shrink: 0;
@@ -263,6 +269,10 @@
 		padding:0px !important;
 	margin:0px !important;
 	scroll-behavior: smooth !important;
+	position:relative;
+	display:flex !important;
+	justify-content: center!important;
+	align-items:center!important;
 	
 }
 	.event {
@@ -401,6 +411,7 @@
               <div class="active event">
 				  <span>04</span>
 			<div class="slider">
+				<div class="slides">
 				  <div class="slide" id="slide-1">
 					  Event 1
 					  </div>
@@ -410,6 +421,7 @@
 					  <div class="slide" id="slide-3">
 					  Event 3
 					  </div>
+					</div>
 				  </div>
 				    <a href="#slide-1">1</a>
   <a href="#slide-2">2</a>
