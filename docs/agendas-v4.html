@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>All Agendas</title>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
-<link rel="stylesheet" href="resources/css/grid.css">
+<link rel="stylesheet" href="https://jparrott13.github.io/hello-world/resources/css/grid.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
 <style>
@@ -240,10 +240,8 @@
 }
 	
 	/*Sliding Content*/
-.first div > div.slider {
-  width: 300px;
-  height: 300px;
-  display: flex;
+.slider {
+
   overflow-x: auto;
 		 -webkit-scroll-snap-points-x: repeat(300px);
       -ms-scroll-snap-points-x: repeat(300px);
@@ -252,7 +250,7 @@
       -ms-scroll-snap-type: mandatory;
           scroll-snap-type: mandatory;
 }
-.first div > div.slider > .slide {
+.slide {
   width: 300px;
   flex-shrink: 0;
   height: 100%;
@@ -490,7 +488,7 @@
 <!-- Javascript --> 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
-<script src="resources/js/radar.js"></script> 
+<script src="https://jparrott13.github.io/hello-world/resources/js/radar.js"></script> 
 <script>
       var app = {
     settings: {
