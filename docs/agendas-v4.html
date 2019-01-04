@@ -94,10 +94,8 @@
 .last-month {
     opacity: .3;
 }
-.weeks div {
-    padding: 10px;
-}
-.weeks div.active {
+
+.weeks span.active {
     background: #ff6700;
     border-radius: 50%;
     width: 50px;
@@ -232,6 +230,17 @@
          text-align:left;
          }
       
+		  
+		  	  
+		  .first div, .second div, .third div, .fourth div, .fifth div {
+			  
+			position:relative;
+			  display:block;
+		width:20%
+			padding:10px;
+			  margin: 0px 10px 0px 10px;
+		  }		  
+		  
 		  
 		  .first div > span, .second div > span, .third div > span, .fourth div > span, .fifth div > span {
 			  
@@ -404,8 +413,8 @@
                 <div class="last-month">31</div>
                  <div><span>01</span></div>
                 <div><span>02</span></div>
-                <div class="active"><span>03</span></div>
-                <div><span>04</span></div>
+                <div><span>03</span></div>
+                <div class="active"><span>04</span></div>
             
               </div>
 
