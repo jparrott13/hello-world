@@ -20,7 +20,7 @@
 .calendar {
 	background: transparent;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
-	height: auto;
+	height: 1050px;
 	perspective: 1000;
 	transition: .9s;
 	transform-style: preserve-3d;
@@ -112,11 +112,10 @@
 .last-month {
 	opacity: .3;
 }
-.weeks span.active {
-	background: #ff6700;
-	border-radius: 50%;
-	width: 50px;
-	text-align: center;
+.active {
+
+	font-weight: 500 !important;
+    border-top: solid 3px hsla(0, 0%, 0%, 0.5) !important;
 }
 .weeks div:not(.last-month):hover {
 	cursor: pointer;
