@@ -2377,9 +2377,18 @@
 	  </script>
 	  
 	  <script>
+		  
+		  	var maxSlides,
+    width = $(window).width();
+
+if (width < 845) {
+    maxSlides = 1;
+} else {
+    maxSlides = 3;
+}
 
     $(document).ready(function(){
-      $('.preview-slider').bxSlider(
+    var myslider = $('.preview-slider').bxSlider(
       {
     captions: false,
 mode:'vertical',
@@ -2393,21 +2402,6 @@ mode:'vertical',
   });
     });
 		  
-	var maxSlides,
-    width = $(window).width();
-
-if (width < 845) {
-    maxSlides = 1;
-} else {
-    maxSlides = 3;
-}
-
-var myslider = $('.preview-slider').bxSlider({
-
-    maxSlides: 3,
-});	  
-
-	  
 
   </script>
 	  
