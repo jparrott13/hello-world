@@ -2363,32 +2363,11 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
 <script src="https://jparrott13.github.io/hello-world/resources/js/radar.js"></script> 
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
-		<script>
-		document.documentElement.addEventListener('DOMContentLoaded', function(event)  {
-    var $tgt = $('.bx-viewport')[0];
-    var tgt = document.querySelector('.bx-viewport');
-    tgt.style.height = ""
-    tgt.removeAttribute('height');
-    tgt.style.removeProperty('height');
-    $tgt.css('height', '');
-    $tgt.removeAttr('height');
 
-}, false);
-	  </script>
 	  
 	  <script>
-		  
-		  	var maxSlides,
-    width = $(window).width();
-
-if (width < 845) {
-    maxSlides = 1;
-} else {
-    maxSlides = 3;
-}
-
     $(document).ready(function(){
-    var myslider = $('.preview-slider').bxSlider(
+      $('.preview-slider').bxSlider(
       {
     captions: false,
 mode:'vertical',
@@ -2402,7 +2381,24 @@ mode:'vertical',
   });
     });
 		  
-
+	var maxSlides,
+    width = $(window).width();
+if (width < 845) {
+    maxSlides = 1;
+} else {
+    maxSlides = 1;
+}
+var myslider = $('.preview-slider').bxSlider({
+        captions: false,
+mode:'vertical',
+		  slideWidth: 528,
+	  controls: true,
+	   pager: false,
+	  minSlides: 3, 
+		  maxSlides:3, 
+		  moveSlides: 1,
+});	  
+	  
   </script>
 	  
 
