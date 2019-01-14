@@ -3090,13 +3090,13 @@
 		  captions: false,
 	  controls: true,
 	   pager: false,
-	  maxSlides: 3,
+	  minSlides: 3,
 	slideMargin: 10,
   };
 
 function init() {
   // Set maxSlides depending on window width
-  oBxSettings.maxSlides = window.outerWidth < 845 ? 1 : 1;
+  oBxSettings.minSlides = window.outerWidth < 845 ? 1 : 1;
 }
 
 $(document).ready(function() {
