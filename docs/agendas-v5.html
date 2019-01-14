@@ -363,9 +363,9 @@
     <!--.preview-wrapper -->
     <div class="preview-wrapper"> 
     <!--.preview-slider -->
-    <div class="preview-slider"> 
+    <div class="preview-slider" id="calendar-picker"> 
         <!--slide 1 -->
-        <div>
+        <div data-slide-index="1">
 	 <div class="calendar-wrap">
          
            <!--first month--> <div class="mini-calendar">
@@ -2385,6 +2385,7 @@
 	   pager: false,
 	  maxSlides: 1,
 	slideMargin: 10,
+		pagerCustom: '#calendar-picker'
   });
     });
   </script>
