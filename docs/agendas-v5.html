@@ -1591,14 +1591,17 @@
 	  maxSlides: 1,
 		  
   });
-		
-		
-	setTimeout(function(){
-            bxSlider.redrawSlider();
-        },100);	
     });
-		 
+		  
+
   </script>
+	  
+	  <script>
+	  		  $("#first-slide").load(function(){
+  var height = $(this).height();
+   $( ".bx-viewport" ).css( "height", height );
+});
+	  </script>
 
 <script>
     $(document).ready(function(){
