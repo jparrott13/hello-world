@@ -1591,12 +1591,13 @@
 	  maxSlides: 1,
 		  
   });
+		
+		
+	setTimeout(function(){
+            bxSlider.redrawSlider();
+        },100);	
     });
-		  
-		  $("#first-slide").load(function(){
-  var height = $(this).height();
-   $( ".bx-viewport" ).css( "height", height );
-});
+		 
   </script>
 
 <script>
