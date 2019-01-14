@@ -1581,7 +1581,7 @@
 	  </script>
 	  
 	  <script>
-    $(window).load(function(){
+    $(document).ready(function(){
       $('.preview-slider').bxSlider(
       {
     captions: false,
@@ -1592,7 +1592,13 @@
 		  
   });
     });
-		  
+
+	var getViewportHeight = function(){
+    var height = 0;
+    children = slider.children;
+    height = jQuery(slider.children[0]).height();;
+    return height;
+}		  
 
   </script>
 	  
