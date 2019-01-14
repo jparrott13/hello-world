@@ -26,8 +26,7 @@
 }
 	  
 	  .preview-slider .calendar-wrap {
-		  height:265px;
-		      margin: 20px 0px 20px 0px;
+		     height: 263px;
 	  }
 .inner-wrapper {
 	width: 62%;
@@ -143,7 +142,7 @@
 .mini-calendar h2 {
     font-size: 1em;
     -webkit-margin-before: 0.1em;
-    -webkit-margin-after: 0.1em;
+    -webkit-margin-after: 0.3em;
 }	  
 .mini-calendar a {
 	color: #8e352e;
@@ -2393,6 +2392,20 @@ mode:'vertical',
 		  
   });
     });
+		  
+	var maxSlides,
+    width = $(window).width();
+
+if (width < 845) {
+    maxSlides = 1;
+} else {
+    maxSlides = 3;
+}
+
+var myslider = $('.preview-slider').bxSlider({
+    ...
+    maxSlides: maxSlides,
+});	  
 
 	  
 
