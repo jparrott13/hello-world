@@ -351,7 +351,7 @@
     <!--.preview-slider -->
     <div class="preview-slider"> 
         <!--slide 1 -->
-        <div>
+        <div id="first-slide">
 	 <div class="calendar-wrap">
          
             <div class="mini-calendar">
@@ -1592,6 +1592,11 @@
 		  
   });
     });
+		  
+		  $("#first-slide").load(function(){
+  var height = $(this).height();
+   $( ".bx-viewport" ).css( "height", height );
+});
   </script>
 
 <script>
