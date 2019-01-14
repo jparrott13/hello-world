@@ -2363,9 +2363,21 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
 <script src="https://jparrott13.github.io/hello-world/resources/js/radar.js"></script> 
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+		<script>
+		document.documentElement.addEventListener('DOMContentLoaded', function(event)  {
+    var $tgt = $('.bx-viewport')[0];
+    var tgt = document.querySelector('.bx-viewport');
+    tgt.style.height = ""
+    tgt.removeAttribute('height');
+    tgt.style.removeProperty('height');
+    $tgt.css('height', '');
+    $tgt.removeAttr('height');
 
+}, false);
+	  </script>
 	  
 	  <script>
+
     $(document).ready(function(){
       $('.preview-slider').bxSlider(
       {
@@ -2381,8 +2393,10 @@ mode:'vertical',
   });
     });
 		  
- 
+		  
+
 	  
+
   </script>
 	  
 
