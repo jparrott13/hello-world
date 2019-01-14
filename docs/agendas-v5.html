@@ -1578,7 +1578,22 @@
     $tgt.removeAttr('height');
 
 }, false);
-	  </script>  
+	  </script>
+	  
+	  <script>
+    $(document).ready(function(){
+      $('.preview-slider').bxSlider(
+      {
+    captions: false,
+	mode: 'vertical',
+	  controls: true,
+	   pager: false,
+	  maxSlides: 1,
+		  
+  });
+    });
+  </script>
+
 <script>
     $(document).ready(function(){
       $('.slider').bxSlider(
@@ -1592,19 +1607,6 @@
     });
   </script>
 	  
-<script>
-    $(document).ready(function(){
-      $('.preview-slider').bxSlider(
-      {
-    captions: false,
-	mode: 'vertical',
-	  controls: true,
-	   pager: false,
-	  maxSlides: 1,
-		  
-  });
-    });
-  </script>
 
 </body>
 </html>
