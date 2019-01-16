@@ -266,6 +266,14 @@
     color: #0071DC;
     padding: 2px 0px 2px 2px;
 }
+	
+/* FF Browser Fix */
+	
+	@-moz-document url-prefix() {
+    .inner-wrapper .bx-wrapper .bx-controls-direction a {
+    top: 9%;
+}
+}
 
 /* ============================
                 Mobile 
