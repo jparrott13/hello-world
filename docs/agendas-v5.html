@@ -2073,10 +2073,23 @@
               </li>
                 <li class="day">
                 <div class="date">10</div>
-                  <div data-target="#17Q2A2" class="event liToggle IC APPROVE">
+					<ul class="multi-event-slider">
+                  <li><div data-target="#17Q2A2" class="event liToggle IC APPROVE">
                     <div class="event-desc"> Committee Meeting </div>
                     <div class="event-time"> 6:00pm to 8:30pm </div>
                   </div>
+					  </li>
+						  <li><div data-target="#17Q2A2" class="event liToggle IC APPROVE">
+                    <div class="event-desc"> Committee Meeting </div>
+                    <div class="event-time"> 6:00pm to 8:30pm </div>
+                  </div>
+					  </li>
+						  <li><div data-target="#17Q2A2" class="event liToggle IC APPROVE">
+                    <div class="event-desc"> Committee Meeting </div>
+                    <div class="event-time"> 6:00pm to 8:30pm </div>
+                  </div>
+					  </li>
+						</ul>
               </li>
                 <li class="day">
                 <div class="date">11</div>
@@ -3908,6 +3921,19 @@ $(window).resize(function() {
   });
     });
   </script>
+	  
+	<script>
+    $(document).ready(function(){
+      $('.multi-event-slider').bxSlider(
+      {
+		  pager: true,
+	  controls: false,
+	  maxSlides: 1,
+	
+  });
+    });
+  </script>  
+	  
 	  
 
 </body>
