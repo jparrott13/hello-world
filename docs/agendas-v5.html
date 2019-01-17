@@ -104,7 +104,7 @@
 	color: #8e352e;
 	text-decoration: none;
 }
-.calendar div {
+.calendar ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -112,7 +112,7 @@
 		height: auto;
 
 }
-.calendar div {
+.calendar li {
 	display: block;
 	float: left;
 	width: 14.342%;
@@ -122,11 +122,11 @@
 	margin-right: -1px;
 	margin-bottom: -1px;
 }
-.calendar div.weekdays {
+.calendar ul.weekdays {
 	height: 40px;
 	background: transparent;
 }
-.calendar div.weekdays div {
+.calendar ul.weekdays li {
 	text-align: center;
 	text-transform: uppercase;
 	line-height: 20px;
@@ -136,7 +136,7 @@
 	font-size: 1em;
 	font-weight: 500;
 }
-.calendar .days div {
+.calendar .days li {
 	height: 128px;
 }
 .calendar .date {
@@ -199,7 +199,7 @@
 	text-decoration: none;
 	cursor: pointer;
 }
-.mini-calendar div {
+.mini-calendar ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -208,11 +208,11 @@
 
 }
 	
-.mini-calendar div:last-of-type {
+.mini-calendar ul:last-of-type {
 	padding: 0em 0em 1em 0em;
 }	
 	
-.mini-calendar div {
+.mini-calendar li {
 	display: block;
 	float: left;
 	width: 14.342%;
@@ -222,11 +222,11 @@
 	margin-right: -1px;
 	margin-bottom: -1px;
 }
-.mini-calendar div.weekdays {
+.mini-calendar ul.weekdays {
 	height: 20px;
 	background: transparent;
 }
-.mini-calendar div.weekdays div {
+.mini-calendar ul.weekdays li {
 	text-align: center;
 	text-transform: uppercase;
 	line-height: 10px;
@@ -236,7 +236,7 @@
 	font-size: 0.7em;
 	font-weight: 500;
 }
-.mini-calendar .days div {
+.mini-calendar .days li {
 	height: 52px;
 }
 .mini-calendar .date {
@@ -307,7 +307,7 @@
 .calendar .weekdays, #calendar .other-month {
 	display: none;
 }
-.calendar div {
+.calendar li {
 	height: auto !important;
 	border: 1px solid #ededed;
 	width: 100%;
@@ -383,7 +383,7 @@
     </div>
   </div>
   <div class="controls-box bl-none controls-row bt-none">
-    <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer">Filter <span class="inline-block bg-grey-lighter rounded-fdivl px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
+    <button class="bg-white hover:bg-grey-lightest text-grey-darkest font-semibold py-2 px-4 border-none rounded shadow mr-2 toggle-filter no-outline relative flex filters-applied-true cursor-pointer">Filter <span class="inline-block bg-grey-lighter rounded-full px-2 py-1 ml-2 text-xs font-semibold text-grey-darkest my--dot25">3</span></button>
     <a href="index.html" class="menu-button bg-white hover:bg-grey-lightest text-grey-darkest font-semibold  px-4 border-none rounded shadow mr-2 no-outline relative flex cursor-pointer">Back to Gantt</a> </div>
   
   <!-- Filter Modal -->
@@ -395,13 +395,13 @@
       </div>
       <div class="applied-filters pb-4 px-4"> <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Actuarial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span> <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest mr-2">Financial Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span> <span class="inline-block bg-grey-lighter rounded px-3 py-1 text-sm font-semibold text-grey-darkest">Investment Office<a class="text-grey remove-filter ml-2" href="#" title="Remove filter"><i class="fas fa-times"></i></a></span> </div>
       <div>
-        <div class="list-reset flex border-b tabs-nav my-0" role="tablist">
+        <ul class="list-reset flex border-b tabs-nav my-0" role="tablist">
           <li class="mr-1"> <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold active" href="#" data-target="filterSection1">Program</a> </li>
           <li class="mr-1"> <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Committee</a> </li>
           <li class="mr-1"> <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Publisher</a> </li>
           <li class="mr-1"> <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection2">Item Type</a> </li>
           <li class="mr-1"> <a class="inline-block py-4 px-4 text-grey-darkest hover:text-grey-darker font-semibold" href="#" data-target="filterSection3">Policy Power</a> </li>
-        </div>
+        </ul>
         <div class="body">
           <div class="tab-content active" id="filterSection1">
             <fieldset>
@@ -487,148 +487,148 @@
           <!--first month-->
           <div class="mini-calendar"><a data-slide-index="2">
             <h2>January 2018</h2>
-            <div class="weekdays">
-              <div>Sun</div>
-              <div>Mon</div>
-              <div>Tues</div>
-              <div>Wed</div>
-              <div>Thurs</div>
-              <div>Fri</div>
-              <div>Sat</div>
-            </div>
+            <ul class="weekdays">
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tues</li>
+              <li>Wed</li>
+              <li>Thurs</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
-              <div class="day other-month">
+            <ul class="days">
+              <li class="day other-month">
                 <div class="date">31</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">1</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">2</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">3</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">4</div>
-              </div>
+              </li>
               
               <!-- Days in current month -->
               
-              <div class="day">
+              <li class="day">
                 <div class="date">5</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">6</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">7</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">8</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">9</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">10</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">11</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">12</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">13</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">14</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">15</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">16</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">17</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">18</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">19</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">20</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">21</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">22</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">23</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">24</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">25</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">26</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">27</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">28</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">29</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">30</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">31</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">1</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">2</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">3</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             </a> </div>
         </div>
         <!-- /. first month --> 
@@ -639,153 +639,153 @@
         <div class="calendar-wrap">
           <div class="mini-calendar"><a data-slide-index="3">
             <h2>February 2018</h2>
-            <div class="weekdays">
-              <div>Sun</div>
-              <div>Mon</div>
-              <div>Tues</div>
-              <div>Wed</div>
-              <div>Thurs</div>
-              <div>Fri</div>
-              <div>Sat</div>
-            </div>
+            <ul class="weekdays">
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tues</li>
+              <li>Wed</li>
+              <li>Thurs</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
-              <div class="day other-month">
+            <ul class="days">
+              <li class="day other-month">
                 <div class="date">28</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">29</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">30</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">31</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">1</div>
-              </div>
+              </li>
               
               <!-- Days in current month -->
               
-              <div class="day">
+              <li class="day">
                 <div class="date">2</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">3</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">4</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">5</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">6</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">7</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">8</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">9</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">10</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">11</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">12</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">13</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">14</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">15</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">16</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">17</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">18</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">19</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">20</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">21</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">22</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">23</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">24</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">25</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">26</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">27</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">28</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">1</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">1</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">23</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             </a> </div>
           <!-- /. second month --> 
         </div>
       </div>
-      <!--/sdivde 2 --> 
+      <!--/slide 2 --> 
       <!--slide 3 -->
       <div>
         <div class="calendar-wrap"> 
@@ -793,148 +793,148 @@
           <!--first month-->
           <div class="mini-calendar"><a data-slide-index="4">
             <h2>March 2018</h2>
-            <div class="weekdays">
-              <div>Sun</div>
-              <div>Mon</div>
-              <div>Tues</div>
-              <div>Wed</div>
-              <div>Thurs</div>
-              <div>Fri</div>
-              <div>Sat</div>
-            </div>
+            <ul class="weekdays">
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tues</li>
+              <li>Wed</li>
+              <li>Thurs</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
-              <div class="day other-month">
+            <ul class="days">
+              <li class="day other-month">
                 <div class="date">30</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">31</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">1</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">2</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">3</div>
-              </div>
+              </li>
               
               <!-- Days in current month -->
               
-              <div class="day">
+              <li class="day">
                 <div class="date">4</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">5</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">6</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">7</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">8</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">9</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">10</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">11</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">12</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">13</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">14</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">15</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">16</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">17</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">18</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">19</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">20</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">21</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">22</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">23</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">24</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">25</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">26</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
-              <div class="day">
+            <ul class="days">
+              <li class="day">
                 <div class="date">27</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">28</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">29</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">30</div>
-              </div>
-              <div class="day">
+              </li>
+              <li class="day">
                 <div class="date">31</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">1</div>
-              </div>
-              <div class="day other-month">
+              </li>
+              <li class="day other-month">
                 <div class="date">2</div>
-              </div>
-            </div>
+              </li>
+            </ul>
             </a> </div>
         </div>
         <!-- /. first month --> 
@@ -944,7 +944,7 @@
         <div class="calendar-wrap">
           <div class="mini-calendar"><a data-slide-index="5">
             <h2>April 2018</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -952,11 +952,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -981,11 +981,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -1007,11 +1007,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -1033,11 +1033,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -1059,11 +1059,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -1085,7 +1085,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
           <!-- /. second month --> 
         </div>
@@ -1099,7 +1099,7 @@
           <!--first month-->
           <div class="mini-calendar"><a data-slide-index="6">
             <h2>May 2018</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -1107,11 +1107,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -1136,11 +1136,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -1162,11 +1162,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -1188,11 +1188,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -1214,11 +1214,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -1240,7 +1240,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
         </div>
         <!-- /. first month --> 
@@ -1249,7 +1249,7 @@
         <div class="calendar-wrap">
           <div class="mini-calendar"><a data-slide-index="7">
             <h2>June 2018</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -1257,11 +1257,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -1286,11 +1286,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -1312,11 +1312,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -1338,11 +1338,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -1364,11 +1364,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -1390,7 +1390,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
           <!-- /. second month --> 
         </div>
@@ -1403,8 +1403,8 @@
           
           <!--first month-->
           <div class="mini-calendar"><a data-slide-index="8">
-            <h2>Jdivy 2018</h2>
-            <div class="weekdays">
+            <h2>July 2018</h2>
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -1412,11 +1412,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -1441,11 +1441,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -1467,11 +1467,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -1493,11 +1493,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -1519,11 +1519,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -1545,7 +1545,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
         </div>
         <!-- /. first month --> 
@@ -1557,7 +1557,7 @@
         <div class="calendar-wrap">
           <div class="mini-calendar"><a data-slide-index="9">
             <h2>August 2018</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -1565,11 +1565,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -1594,11 +1594,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -1620,11 +1620,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -1646,17 +1646,16 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
               <li class="day">
                 <div class="date">21</div>
-
               </li>
               <li class="day">
                 <div class="date">22</div>
@@ -1673,11 +1672,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -1699,7 +1698,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
           <!-- /. second month --> 
         </div>
@@ -1716,7 +1715,7 @@
           <!--first month-->
           <div class="mini-calendar"><a data-slide-index="6">
             <h2>September 2018</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -1724,11 +1723,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -1753,11 +1752,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -1779,11 +1778,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -1805,11 +1804,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -1831,11 +1830,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -1857,7 +1856,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
         </div>
         <!-- /. first month --> 
@@ -1866,7 +1865,7 @@
         <div class="calendar-wrap">
           <div class="mini-calendar"><a data-slide-index="7">
             <h2>October 2018</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -1874,11 +1873,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -1903,11 +1902,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -1929,11 +1928,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -1955,11 +1954,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -1981,11 +1980,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -2007,7 +2006,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
           <!-- /. second month --> 
         </div>
@@ -2021,7 +2020,7 @@
           <!--first month-->
           <div class="mini-calendar"><a data-slide-index="8">
             <h2>November 2018</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -2029,11 +2028,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -2058,11 +2057,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -2084,11 +2083,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -2110,11 +2109,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -2136,11 +2135,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -2162,7 +2161,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
         </div>
         <!-- /. first month --> 
@@ -2174,7 +2173,7 @@
         <div class="calendar-wrap">
           <div class="mini-calendar"><a data-slide-index="9">
             <h2>December 2018</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -2182,11 +2181,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -2211,11 +2210,11 @@
               <li class="day">
                 <div class="date">5</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -2237,11 +2236,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -2263,11 +2262,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -2289,11 +2288,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -2315,7 +2314,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
           <!-- /. second month --> 
         </div>
@@ -2331,7 +2330,7 @@
           <!--first month-->
           <div class="mini-calendar"><a data-slide-index="0">
             <h2>January 2019</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -2339,11 +2338,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -2368,11 +2367,11 @@
               <li class="day">
                 <div class="date">5</div>
 				</li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -2394,11 +2393,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -2420,11 +2419,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -2450,11 +2449,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -2476,7 +2475,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
         </div>
         <!-- /. first month --> 
@@ -2488,7 +2487,7 @@
         <div class="calendar-wrap">
           <div class="mini-calendar"><a data-slide-index="1">
             <h2>February 2019</h2>
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sun</li>
               <li>Mon</li>
               <li>Tues</li>
@@ -2496,11 +2495,11 @@
               <li>Thurs</li>
               <li>Fri</li>
               <li>Sat</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -2525,11 +2524,11 @@
               <li class="day">
                 <div class="date">5</div>
                  </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -2551,11 +2550,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -2577,11 +2576,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -2603,11 +2602,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -2629,7 +2628,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
             </a> </div>
         </div>
         <!-- /. second month --> 
@@ -2655,7 +2654,7 @@
             <h2>January 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -2663,11 +2662,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -2694,11 +2693,11 @@
                 <div class="date">5</div>
                
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -2713,7 +2712,7 @@
               </li>
               <li class="day">
                 <div class="date">10</div>
-                <div class="mdivti-event-slider">
+                <div class="multi-event-slider">
                   <div>
                     <div data-target="#17Q2A2" class="event liToggle">
                       <div class="event-desc"> Committee Meeting #1 </div>
@@ -2740,11 +2739,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -2767,11 +2766,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -2808,11 +2807,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -2835,7 +2834,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -2850,7 +2849,7 @@
             <h2>February 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -2858,11 +2857,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">28</div>
               </li>
@@ -2885,11 +2884,11 @@
               <li class="day">
                 <div class="date">3</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">4</div>
               </li>
@@ -2912,11 +2911,11 @@
               <li class="day">
                 <div class="date">10</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">11</div>
               </li>
@@ -2939,11 +2938,11 @@
               <li class="day">
                 <div class="date">17</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">18</div>
               </li>
@@ -2966,11 +2965,11 @@
               <li class="day">
                 <div class="date">24</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">25</div>
               </li>
@@ -2993,7 +2992,7 @@
               <li class="day">
                 <div class="date">3</div>
               </li>
-            </div>
+            </ul>
             
           
           </div>
@@ -3010,7 +3009,7 @@
             <h2>March 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -3018,11 +3017,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -3055,11 +3054,11 @@
                   <div class="event-time"> 2:00pm to 5:00pm </div>
                 </div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -3085,11 +3084,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -3115,11 +3114,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -3145,11 +3144,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -3175,7 +3174,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -3190,7 +3189,7 @@
             <h2>April 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -3198,11 +3197,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -3235,11 +3234,11 @@
                   <div class="event-time"> 2:00pm to 5:00pm </div>
                 </div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -3265,11 +3264,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -3295,11 +3294,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -3325,11 +3324,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -3355,7 +3354,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -3369,7 +3368,7 @@
             <h2>May 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -3377,11 +3376,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -3414,11 +3413,11 @@
                   <div class="event-time"> 2:00pm to 5:00pm </div>
                 </div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -3444,11 +3443,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -3474,11 +3473,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -3504,11 +3503,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -3534,7 +3533,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -3549,7 +3548,7 @@
             <h2>June 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -3557,11 +3556,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -3594,11 +3593,11 @@
                   <div class="event-time"> 2:00pm to 5:00pm </div>
                 </div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -3624,11 +3623,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -3654,11 +3653,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -3684,11 +3683,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -3714,7 +3713,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -3726,10 +3725,10 @@
       <div>
         <div class="calendar-wrap">
           <header>
-            <h2>Jdivy 2019</h2>
+            <h2>July 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -3737,11 +3736,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -3774,11 +3773,11 @@
                   <div class="event-time"> 2:00pm to 5:00pm </div>
                 </div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -3804,11 +3803,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -3834,11 +3833,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -3864,11 +3863,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -3894,7 +3893,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -3909,7 +3908,7 @@
             <h2>August 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -3917,11 +3916,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -3954,11 +3953,11 @@
                   <div class="event-time"> 2:00pm to 5:00pm </div>
                 </div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -3984,11 +3983,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -4014,11 +4013,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -4044,11 +4043,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -4074,7 +4073,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -4089,7 +4088,7 @@
             <h2>September 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -4097,11 +4096,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -4135,11 +4134,11 @@
                   <div class="event-time"> 2:00pm to 5:00pm </div>
                 </div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -4165,11 +4164,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -4195,11 +4194,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -4225,11 +4224,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -4255,7 +4254,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -4270,7 +4269,7 @@
             <h2>October 2019</h2>
           </header>
           <div class="calendar">
-            <div class="weekdays">
+            <ul class="weekdays">
               <li>Sunday</li>
               <li>Monday</li>
               <li>Tuesday</li>
@@ -4278,11 +4277,11 @@
               <li>Thursday</li>
               <li>Friday</li>
               <li>Saturday</li>
-            </div>
+            </ul>
             
             <!-- Days from previous month -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day other-month">
                 <div class="date">30</div>
               </li>
@@ -4315,11 +4314,11 @@
                   <div class="event-time"> 2:00pm to 5:00pm </div>
                 </div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #2 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">6</div>
               </li>
@@ -4345,11 +4344,11 @@
               <li class="day">
                 <div class="date">12</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #3 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">13</div>
               </li>
@@ -4375,11 +4374,11 @@
               <li class="day">
                 <div class="date">19</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #4 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">20</div>
               </li>
@@ -4405,11 +4404,11 @@
               <li class="day">
                 <div class="date">26</div>
               </li>
-            </div>
+            </ul>
             
             <!-- Row #5 -->
             
-            <div class="days">
+            <ul class="days">
               <li class="day">
                 <div class="date">27</div>
               </li>
@@ -4435,7 +4434,7 @@
               <li class="day other-month">
                 <div class="date">2</div>
               </li>
-            </div>
+            </ul>
           </div>
           <!-- /. calendar --> 
         </div>
@@ -4452,7 +4451,7 @@
 <!-- Agenda Content #1 -->
 <div id="17Q2A2" class="overlaySidebar setPowerCat">
   <div class="titleArea">
-    <h2>Fdivl Agenda</h2>
+    <h2>Full Agenda</h2>
     <button type="button" class="close" aria-label="Close"> <i class="fas fa-times"></i> </button>
   </div>
   <div class="body">
@@ -4461,12 +4460,12 @@
     <hr>
     <div class="agenda">
       <p><span class="label">Agenda Items</span></p>
-      <div>
+      <ul>
         <li><a href="#">Item</a></li>
         <li><a href="#">Item</a></li>
         <li><a href="#">Item</a></li>
         <li><a href="#">Item</a></li>
-      </div>
+      </ul>
     </div>
   </div>
 </div>
@@ -4537,12 +4536,12 @@ $(window).resize(function() {
   </script> 
 <script>
     $(document).ready(function(){
-      $('.mdivti-event-slider').bxSlider(
+      $('.multi-event-slider').bxSlider(
       {
 
 	  controls: false,
 	  maxSlides: 1,
-	preventDefadivtSwipeX: true,
+	preventDefaultSwipeX: true,
 		noSwiping: true,  
 		   touchEnabled: false,
 
