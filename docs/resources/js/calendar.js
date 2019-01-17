@@ -1,5 +1,5 @@
 	
-   $(window).load(function(){
+   $(document).ready(function(){
 	 $('.slider').bxSlider(
       {
     captions: true,
@@ -21,12 +21,7 @@
 	  slideWidth: 376,
 	  controls: true,
 	   pager: false,
-	  minSlides: 2,
-	slideMargin: 10,
-	
 	  touchEnabled: false,
-	  infiniteLoop: false,
-	   hideControlOnEnd: true,
 	            startSlide: 13,
   }); 
 	    
