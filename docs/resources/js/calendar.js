@@ -23,6 +23,7 @@
 	   pager: false,
 	  touchEnabled: false,
 	            startSlide: 13,
+	      maxSlides: 2,
   }); 
 	    
 	    
