@@ -22,7 +22,7 @@
 	  controls: true,
 	   pager: false,
 	  touchEnabled: false,
-	            startSlide: 13,
+	            startSlide: 12,
 	      moveSlides: 1,
 	   
   }); 
