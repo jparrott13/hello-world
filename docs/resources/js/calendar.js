@@ -24,6 +24,8 @@
 	  touchEnabled: false,
 	            startSlide: 12,
 	      moveSlides: 1,
+		  infiniteLoop: false,
+		  hideControlOnEnd: true,
 	   
   }); 
 	    
