@@ -18,11 +18,12 @@
       {
    	mode: 'vertical',
 		  captions: false,
-	  slideWidth: 376,
+	      minSlides: 2,
 	  controls: true,
 	   pager: false,
 	  touchEnabled: false,
 	            startSlide: 13,
+	      moveSlides: 1,
 	   
   }); 
 	    
