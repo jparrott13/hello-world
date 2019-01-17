@@ -1,38 +1,20 @@
-var slider,
-  oBxSettings = { 
-  	mode: 'vertical',
+    $(document).ready(function(){
+      $('.preview-slider').bxSlider(
+      {
+   	mode: 'vertical',
 		  captions: false,
 	  slideWidth: 376,
 	  controls: true,
 	   pager: false,
+	  minSlides: 2,
+	slideMargin: 10,
+	      startSlide: 13,
 	  touchEnabled: false,
 	  infiniteLoop: false,
 	   hideControlOnEnd: true,
-	   startSlide: 13,
+  });
+    });
 
-  };
-
-function init() {
-  // Set maxSlides depending on window width
-  oBxSettings.minSlides = window.outerWidth < 845 ? 1 : 2;
-}
-
-$(document).ready(function() {
-  init();
-  // Initial bxSlider setup
-  slider = $('.preview-slider').bxSlider(oBxSettings);
-});
-
-$(window).resize(function() {
-  // Update bxSlider when window crosses 845px breakpoint
-  if ((window.outerWidth<845 && window.prevWidth>=845)
-    || (window.outerWidth>=845 && window.prevWidth<845)) {
-    init();
-    slider.reloadSlider(oBxSettings);
-  }
-  window.prevWidth = window.outerWidth;
-});
-	
 	
     $(document).ready(function(){
       $('.slider').bxSlider(
