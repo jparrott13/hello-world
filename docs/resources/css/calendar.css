@@ -1,373 +1,358 @@
+.bx-wrapper {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+}
+.agenda-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+}
+.preview-wrapper {
+	width: 25%;
+	float: left;
+	    padding: 0em 1.25em 0em 1.5em;
+	align-self: center;
+	
+}
+.preview-wrapper .bx-wrapper .bx-controls-direction a {
+	transform: rotate(90deg);
+	left: 50%;
+}
+.preview-wrapper .bx-wrapper .bx-controls-direction .bx-prev {
+	top: -15px !important;
+}
+.preview-wrapper .bx-wrapper .bx-controls-direction .bx-next {
+	top: 100% !important;
+	margin-top: 10px;
+}
+ .preview-slider .calendar-wrap {
 
+	 height: 330px;
+	
+}
+/* .preview-slider {
+	height:630px;
+} */
+	
+	.slider .bx-wrapper .bx-pager  {
+		position:relative;
+		bottom:auto;
+		padding-top:0px;
+		
+	}
+	
+.day .bx-wrapper {
+    height: 50px !important;
+}	
+	
 .inner-wrapper {
-    margin: 0 auto;
-    position: relative;
-    display: block;
-    width: 65%;
-    padding: 50px 0px 0px 0px;
+	width: 75%;
+	float: right;
+	    padding: 0em 1.5em 0em 1.25em;
+	align-self: center;
+}
+.inner-wrapper .bx-wrapper {
+	height: 746px;
+}
+.inner-wrapper .bx-wrapper .bx-controls-direction a {
+	top: 5%;
+}
+.inner-wrapper .bx-wrapper .bx-controls-direction .bx-prev {
+	left: 15px;
+}
+.inner-wrapper .bx-wrapper .bx-controls-direction .bx-next {
+	right: 15px;
+}
+.inner-wrapper .calendar-wrap h2 {
+	-webkit-margin-before: 0.1em;
+	font-size: 2.6em;
+	text-indent: 2em;
+	-webkit-margin-after: 0.1em;
+}
+.menu-button {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-decoration: none;
+}
+.quarter {
+	float: right;
+	position: absolute;
+	left: 25%;
+	top: 1%;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.calendar {
+	width: 100%;
+	height: 700px;
+}
+.calendar a {
+	color: #8e352e;
+	text-decoration: none;
+}
+.calendar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+		height: auto;
+
+}
+.calendar li {
+	display: block;
+	float: left;
+	width: 14.342%;
+	padding: 5px;
+	box-sizing: border-box;
+	border: solid 1px hsla(0, 0%, 0%, 0.15);
+	margin-right: -1px;
+	margin-bottom: -1px;
+}
+.calendar ul.weekdays {
+	height: 40px;
+	background: transparent;
+}
+.calendar ul.weekdays li {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 20px;
+	border: none !important;
+	padding: 10px 6px;
+	color: #444444;
+	font-size: 1em;
+	font-weight: 500;
+}
+.calendar .days li {
+	height: 128px;
+}
+.calendar .date {
+	text-align: center;
+	margin: 0px 5px 5px 5px;
+	background: transparent;
+	color: #444444;
+	width: 20px;
+	border-radius: 50%;
+	float: right;
+}
+.calendar .event {
+	clear: both;
+	display: block;
+	font-size: 12px;
+	padding: 5px;
+	margin-bottom: 5px;
+	line-height: 14px;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: rgba(0, 113, 220, 0.15);
+	border-left: 5px solid rgba(0, 113, 220, 1);
+}
+.calendar .event-desc {
+	color: #444444;
+	margin: 2px 2px 2px 0px;
+	text-decoration: none;
+	font-weight: 600;
+}
+.calendar .event-time {
+	margin-bottom: 2px;
+}
+.calendar .other-month {
+	background-color: rgba(235, 235, 235, 0.4);
+	color: #666;
+}
+/*  div.event-slide {
+		height:auto !important;
+		  padding:0px;
+		  border:none;
+		  margin:0 auto;
+		  
+	  }	  */
+	  
+	  
+/* Mini Calendars */
+	  
+.mini-calendar {
+	width: 100%;
+	 height: inherit;
+	margin: 0 auto;
+}
+.mini-calendar h2 {
+	font-size: 1em;
+	-webkit-margin-before: 0.1em;
+	-webkit-margin-after: 0.3em;
+	color: #212529;
+}
+.mini-calendar a {
+	text-decoration: none;
+	cursor: pointer;
+}
+.mini-calendar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: auto;
+
+}
+	
+.mini-calendar ul:last-of-type {
+	padding: 0em 0em 1em 0em;
+}	
+	
+.mini-calendar li {
+	display: block;
+	float: left;
+	width: 14.342%;
+	padding: 2px;
+	box-sizing: border-box;
+	border: solid 1px hsla(0, 0%, 0%, 0.15);
+	margin-right: -1px;
+	margin-bottom: -1px;
+}
+.mini-calendar ul.weekdays {
+	height: 20px;
+	background: transparent;
+}
+.mini-calendar ul.weekdays li {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 10px;
+	border: none !important;
+	padding: 5px 3px;
+	color: #444444;
+	font-size: 0.7em;
+	font-weight: 500;
+}
+.mini-calendar .days li {
+	height: 52px;
+}
+.mini-calendar .date {
+	text-align: center;
+	margin-bottom: 3px;
+	padding: 2px;
+	background: transparent;
+	color: #444444;
+	width: 20px;
+	border-radius: 50%;
+	float: right;
+	font-size: 0.7em;
+}
+.mini-calendar .event {
+	clear: both;
+	display: block;
+	font-size: 10px;
+	border-radius: 4px;
+	padding: 3px;
+	margin-top: 20px;
+	margin-bottom: 3px;
+	line-height: 7px;
+	background: #e4f2f2;
+	border: 1px solid #b5dbdc;
+	color: #009aaf;
+	text-decoration: none;
+}
+.mini-calendar .event-desc {
+	color: #666;
+	margin: 1px 0 3px 0;
+	text-decoration: none;
+}
+.mini-calendar .other-month {
+	background: #f5f5f5;
+	color: #666;
+}
+.fa-circle {
+	 font-size: 0.6em;
+    color: #0071DC;
+    padding: 2px 0px 2px 2px;
+}
+	
+/* FF Browser Fix */
+	
+	@-moz-document url-prefix() {
+    .inner-wrapper .bx-wrapper .bx-controls-direction a {
+    top: 9%;
+}
+		
+		.preview-wrapper {
+			align-self:end;
+		}		
+		
+		
 }
 
-#calendar {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  width: 100%;
-  margin: 0 auto;
-  height: auto;
-  overflow: hidden;
+/* ============================
+                Mobile 
+   ============================*/
+@media(max-width: 768px) {
+.inner-wrapper {
+	width: 100%
 }
-
-.header {
-  height: 50px;
-  width: 100%;
-  background: transparent;
-  text-align: center;
-  position:relative;
-  z-index: 100;
-  margin-bottom: 35px;
+	
+	.calendar {
+		height:auto;
+	}	
+.calendar .weekdays, #calendar .other-month {
+	display: none;
 }
-
-.header h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 2em;
-  color:#444;
-  line-height: 50px;
-  font-weight: 500;
-  letter-spacing: 1px;
+.calendar li {
+	height: auto !important;
+	border: 1px solid #ededed;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: -1px;
 }
-
-.left, .right {
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  top: 50%;
-  margin-top: -7.5px;
-  cursor: pointer;
+.calendar .date {
+	float: none;
 }
-
-.left {
-  border-width: 7.5px 10px 7.5px 0;
-  border-color: transparent rgba(160, 159, 160, 1) transparent transparent;
-  left: 20px;
+.agenda-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	display: block;
 }
-
-.right {
-  border-width: 7.5px 0 7.5px 10px;
-  border-color: transparent transparent transparent rgba(160, 159, 160, 1);
-  right: 20px;
+.preview-wrapper {
+	float: none;
+	width: 100%;
+	margin: 0 auto;
 }
-
-.month {
-  /*overflow: hidden;*/
-  opacity: 0;
+.inner-wrapper {
+	width: 100%;
+	float: none;
+	margin: 0 auto;
 }
-
-.month.new {
-  -webkit-animation: fadeIn 1s ease-out;
-  opacity: 1;
+	
+	
+	.inner-wrapper .bx-wrapper .bx-controls-direction a {
+	top: 1%;
 }
-
-.month.in.next {
-  -webkit-animation: moveFromTopFadeMonth .4s ease-out;
-  -moz-animation: moveFromTopFadeMonth .4s ease-out;
-  animation: moveFromTopFadeMonth .4s ease-out;
-  opacity: 1;
+.inner-wrapper .bx-wrapper .bx-controls-direction .bx-prev {
+	left: 10px;
 }
-
-.month.out.next {
-  -webkit-animation: moveToTopFadeMonth .4s ease-in;
-  -moz-animation: moveToTopFadeMonth .4s ease-in;
-  animation: moveToTopFadeMonth .4s ease-in;
-  opacity: 1;
+.inner-wrapper .bx-wrapper .bx-controls-direction .bx-next {
+	right: 10px;
 }
-
-.month.in.prev {
-  -webkit-animation: moveFromBottomFadeMonth .4s ease-out;
-  -moz-animation: moveFromBottomFadeMonth .4s ease-out;
-  animation: moveFromBottomFadeMonth .4s ease-out;
-  opacity: 1;
+	
+.inner-wrapper .calendar-wrap h2 {
+	-webkit-margin-before: 0.2em;
+	font-size: 1.6em;
+	text-indent: 0px;
+	text-align: center;
+	-webkit-margin-after: 0.2em;
+}	
+	
+	
+.mini-calendar {
+	width: 100%
 }
-
-.month.out.prev {
-  -webkit-animation: moveToBottomFadeMonth .4s ease-in;
-  -moz-animation: moveToBottomFadeMonth .4s ease-in;
-  animation: moveToBottomFadeMonth .4s ease-in;
-  opacity: 1;
+.preview-slider .calendar-wrap {
+	margin: 0 auto;
 }
-
-.week {
- background: transparent;
+.inner-wrapper .bx-wrapper {
+	height: auto;
 }
-
-.day {
-  display: inline-block;
-  width: 14%;
-  padding: 10px;
-  text-align: center;
-  vertical-align: top;
-  cursor: pointer;
-  background: transparent;
-  position: relative;
-  z-index: 100;
+.slider {
+	height: auto;
 }
-
-.day.other {
- color: rgba(255, 255, 255, .3);
-}
-
-.day.today {
-  color: rgba(156, 202, 235, 1);
-}
-
-.day-name {
-  font-size: 9px;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  color: #444444;
-  letter-spacing: .7px;
-}
-
-.day-number {
-  font-size: 24px;
-  letter-spacing: 1.5px;
-}
-
-
-.day .day-events {
-  list-style: none;
-  margin-top: 3px;
-  text-align: center;
-  height: 12px;
-  line-height: 6px;
-  overflow: hidden;
-}
-
-.day .day-events span {
-  vertical-align: top;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  width: 5px;
-  height: 5px;
-  line-height: 5px;
-  margin: 0 1px;
-}
-
-.blue { background: rgba(156, 202, 235, 1); }
-.orange { background: rgba(247, 167, 0, 1); }
-.green { background: rgba(153, 198, 109, 1); }
-.yellow { background: rgba(249, 233, 0, 1); }
-
-.details {
-    position: relative;
-    width: 50%;
-    height: 75px;
-    background: rgba(164, 164, 164, 1);
-    border-radius: 4px;
-    margin: 0 auto;
-}
-
-.details.in {
-  -webkit-animation: moveFromTopFade .5s ease both;
-  -moz-animation: moveFromTopFade .5s ease both;
-  animation: moveFromTopFade .5s ease both;
-}
-
-.details.out {
-  -webkit-animation: moveToTopFade .5s ease both;
-  -moz-animation: moveToTopFade .5s ease both;
-  animation: moveToTopFade .5s ease both;
-}
-
-.arrow {
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  margin-left: -2px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 0 5px 5px 5px;
-  border-color: transparent transparent rgba(164, 164, 164, 1) transparent;
-  transition: all 0.7s ease;
-}
-
-.events {
-  height: 75px;
-  padding: 7px 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.events.in {
-  -webkit-animation: fadeIn .3s ease both;
-  -moz-animation: fadeIn .3s ease both;
-  animation: fadeIn .3s ease both;
-}
-
-.events.in {
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  animation-delay: .3s;
-}
-
-.details.out .events {
-  -webkit-animation: fadeOutShrink .4s ease both;
-  -moz-animation: fadeOutShink .4s ease both;
-  animation: fadeOutShink .4s ease both;
-}
-
-.events.out {
-  -webkit-animation: fadeOut .3s ease both;
-  -moz-animation: fadeOut .3s ease both;
-  animation: fadeOut .3s ease both;
-}
-
-.event {
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: .5px;
-  padding: 2px 16px;
-  vertical-align: top;
-}
-
-.event.empty {
-  color: #eee;
-}
-
-.event-category {
-  height: 10px;
-  width: 10px;
-  display: inline-block;
-  margin: 6px 0 0;
-  vertical-align: top;
-}
-
-.event span {
-  display: inline-block;
-  padding: 0 0 0 7px;
-}
-
-.legend {
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  background: transparent;
-  line-height: 30px;
-}
-
-.entry {
-  position: relative;
-  padding: 0 0 0 25px;
-  font-size: 13px;
-  display: inline-block;
-  line-height: 30px;
-  background: transparent;
-}
-
-.entry:after {
-  position: absolute;
-  content: '';
-  height: 5px;
-  width: 5px;
-  top: 12px;
-  left: 14px;
-}
-
-.entry.blue:after { background: rgba(156, 202, 235, 1); }
-.entry.orange:after { background: rgba(247, 167, 0, 1); }
-.entry.green:after { background: rgba(153, 198, 109, 1); }
-.entry.yellow:after { background: rgba(249, 233, 0, 1); }
-
-/* Animations are cool!  */
-@-webkit-keyframes moveFromTopFade {
-  from { opacity: .3; height:0px; margin-top:0px; -webkit-transform: translateY(-100%); }
-}
-@-moz-keyframes moveFromTopFade {
-  from { height:0px; margin-top:0px; -moz-transform: translateY(-100%); }
-}
-@keyframes moveFromTopFade {
-  from { height:0px; margin-top:0px; transform: translateY(-100%); }
-}
-
-@-webkit-keyframes moveToTopFade {
-  to { opacity: .3; height:0px; margin-top:0px; opacity: 0.3; -webkit-transform: translateY(-100%); }
-}
-@-moz-keyframes moveToTopFade {
-  to { height:0px; -moz-transform: translateY(-100%); }
-}
-@keyframes moveToTopFade {
-  to { height:0px; transform: translateY(-100%); }
-}
-
-@-webkit-keyframes moveToTopFadeMonth {
-  to { opacity: 0; -webkit-transform: translateY(-30%) scale(.95); }
-}
-@-moz-keyframes moveToTopFadeMonth {
-  to { opacity: 0; -moz-transform: translateY(-30%); }
-}
-@keyframes moveToTopFadeMonth {
-  to { opacity: 0; -moz-transform: translateY(-30%); }
-}
-
-@-webkit-keyframes moveFromTopFadeMonth {
-  from { opacity: 0; -webkit-transform: translateY(30%) scale(.95); }
-}
-@-moz-keyframes moveFromTopFadeMonth {
-  from { opacity: 0; -moz-transform: translateY(30%); }
-}
-@keyframes moveFromTopFadeMonth {
-  from { opacity: 0; -moz-transform: translateY(30%); }
-}
-
-@-webkit-keyframes moveToBottomFadeMonth {
-  to { opacity: 0; -webkit-transform: translateY(30%) scale(.95); }
-}
-@-moz-keyframes moveToBottomFadeMonth {
-  to { opacity: 0; -webkit-transform: translateY(30%); }
-}
-@keyframes moveToBottomFadeMonth {
-  to { opacity: 0; -webkit-transform: translateY(30%); }
-}
-
-@-webkit-keyframes moveFromBottomFadeMonth {
-  from { opacity: 0; -webkit-transform: translateY(-30%) scale(.95); }
-}
-@-moz-keyframes moveFromBottomFadeMonth {
-  from { opacity: 0; -webkit-transform: translateY(-30%); }
-}
-@keyframes moveFromBottomFadeMonth {
-  from { opacity: 0; -webkit-transform: translateY(-30%); }
-}
-
-@-webkit-keyframes fadeIn  {
-  from { opacity: 0; }
-}
-@-moz-keyframes fadeIn  {
-  from { opacity: 0; }
-}
-@keyframes fadeIn  {
-  from { opacity: 0; }
-}
-
-@-webkit-keyframes fadeOut  {
-  to { opacity: 0; }
-}
-@-moz-keyframes fadeOut  {
-  to { opacity: 0; }
-}
-@keyframes fadeOut  {
-  to { opacity: 0; }
-}
-
-@-webkit-keyframes fadeOutShink  {
-  to { opacity: 0; padding: 0px; height: 0px; }
-}
-@-moz-keyframes fadeOutShink  {
-  to { opacity: 0; padding: 0px; height: 0px; }
-}
-@keyframes fadeOutShink  {
-  to { opacity: 0; padding: 0px; height: 0px; }
 }
