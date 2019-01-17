@@ -10,6 +10,7 @@ var slider,
 	  touchEnabled: false,
 	  infiniteLoop: false,
 	   hideControlOnEnd: true,
+	   startSlide: 12,
 
   };
 
