@@ -7,6 +7,7 @@ var slider,
 	   pager: false,
 	  minSlides: 2,
 	slideMargin: 10,
+	  startSlide: 12,
 	  touchEnabled: false,
 	  infiniteLoop: false,
 	   hideControlOnEnd: true,
@@ -46,6 +47,7 @@ $(window).resize(function() {
 		   touchEnabled: false,
 		  infiniteLoop: false,
 		  hideControlOnEnd: true,
+	      startSlide: 12,
 		pagerCustom: '#calendar-picker'
   });
 		
