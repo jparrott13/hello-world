@@ -1,5 +1,5 @@
 	
-    $(document).ready(function(){
+   $(window).load(function(){
 	 $('.slider').bxSlider(
       {
     captions: true,
