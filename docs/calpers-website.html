@@ -1,0 +1,788 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CalPERS builds retirement and health security for California state, school, and public agency members. We manage the largest public pension fund in the US.">
+    <link rel="shortcut icon" href="/calpers.ico"/>
+    <title>California Public Employees' Retirement System - CalPERS</title>
+    <meta property="og:title" content="California Public Employees' Retirement System"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.calpers.ca.gov/page/home"/>
+    <meta property="og:site_name" content="CalPERS"/>
+   
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TVMFZD9');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css?ver=1.21">
+    <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/css/jquery.bxslider.css?ver=1.9">
+    <link rel="stylesheet" type="text/css" href="/resources/css/style.css?ver=2.0">
+    <link rel="stylesheet" type="text/css" media="print" href="/resources/css/print.css">
+
+    <!--[if lt IE 9]>
+    <script src="/resources/js/html5shiv.js"></script>
+    <script src="/resources/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/resources/js/jquery.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
+    <script src="/resources/js/jquery.bxslider.min.js?ver=1.8"></script>
+    <script src="/resources/js/bxslider.js"></script>
+    <script src="/resources/js/accordion-glyphicon.js"></script>
+    <script src="/resources/js/external-target-blank.js"></script>
+    <script src="/resources/js/iframe-height.js?ver=1.11"></script>
+    <script src="/resources/js/iframe-custom.js?ver=1.11"></script>
+    <script src="/resources/js/back-to-top.js"></script>
+    <script src="/resources/js/widgets.js?ver=1.9"></script>
+    <script src="/resources/js/jquery.validate.js"></script>
+    <script src="/resources/js/youtube.js?ver=1.9"></script>
+	<script src="/resources/js/stripe-hover-table.js"></script>
+
+            <style>
+            html {
+                overflow-y: scroll;
+            }
+        </style>
+    
+</head>
+<body class="index">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVMFZD9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-25763786-1', 'ca.gov');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+	ga('set', 'anonymizeIp', true);
+
+</script>
+
+<script>
+//Script to remove campaign links from URL
+
+if(document.URL.indexOf("?utm_source=Redirect&utm_medium=Web&utm_campaign=retired-site-redirect") >= 0){ 
+
+  //$(document).ready(function () {
+	  var addressURL = window.location.href;
+	  var editedAddressURL = addressURL.replace("?utm_source=Redirect&utm_medium=Web&utm_campaign=retired-site-redirect", "");
+	  
+     window.history.pushState("addressURL", document.title, editedAddressURL);
+  //});
+  
+  }
+
+</script>
+
+<script>
+if (typeof jQuery != 'undefined') {
+    var filetypes = /\.(zip|exe|dmg|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+    var baseHref = '';
+    if (jQuery('base').attr('href') != undefined) baseHref = jQuery('base').attr('href');
+    var hrefRedirect = '';
+ 
+    jQuery('body').on('click', 'a', function(event) {
+        var el = jQuery(this);
+        var track = true;
+        var href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') : '';
+        var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]);
+        if (!href.match(/^javascript:/i)) {
+            var elEv = []; elEv.value=0, elEv.non_i=false;
+            if (href.match(/^mailto\:/i)) {
+                elEv.category = 'email';
+                elEv.action = 'click';
+                elEv.label = href.replace(/^mailto\:/i, '');
+                elEv.loc = href;
+            }
+            else if (href.match(filetypes)) {
+                var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                elEv.category = 'download';
+                elEv.action = 'click-' + extension[0];
+                elEv.label = href.replace(/ /g,'-');
+                elEv.loc = baseHref + href;
+            }
+            else if (href.match(/^https?\:/i) && !isThisDomain) {
+                elEv.category = 'external';
+                elEv.action = 'click';
+                elEv.label = href.replace(/^https?\:\/\//i, '');
+                elEv.non_i = true;
+                elEv.loc = href;
+            }
+            else if (href.match(/^tel\:/i)) {
+                elEv.category = 'telephone';
+                elEv.action = 'click';
+                elEv.label = href.replace(/^tel\:/i, '');
+                elEv.loc = href;
+            }
+            else track = false;
+ 
+            if (track) {
+                var ret = true;
+ 
+                if((elEv.category == 'external' || elEv.category == 'download') && (el.attr('target') == undefined || el.attr('target').toLowerCase() != '_blank') ) {
+                    hrefRedirect = elEv.loc;
+ 
+                    ga('send','event', elEv.category.toLowerCase(),elEv.action.toLowerCase(),elEv.label.toLowerCase(),elEv.value,{
+                        'nonInteraction': elEv.non_i ,
+                        'hitCallback':gaHitCallbackHandler
+                    });
+ 
+                    ret = false;
+                }
+                else {
+                    ga('send','event', elEv.category.toLowerCase(),elEv.action.toLowerCase(),elEv.label.toLowerCase(),elEv.value,{
+                        'nonInteraction': elEv.non_i
+                    });
+                }
+ 
+                return ret;
+            }
+        }
+    });
+ 
+    gaHitCallbackHandler = function() {
+        window.location.href = hrefRedirect;
+    }
+}
+</script><!-- HEADER -->
+<!--<img alt="CalPERS Logo" class="visible-print" src="/resources/img/calpers-logo.png" height="40">-->
+
+<!-- Global Navigation -->
+
+<div class="navbar navbar-default navbar-static-top navbar-global">
+    <div class="container relative">
+        
+        <!-- Skip to content link for Screen readers and keyboard users only -->
+        <a href="#main" style="position:absolute; font-size:.8em;" class="sr-only sr-only-focusable"
+           aria-label="Skip to main content">Skip to main content</a>
+
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 logoContainer">
+                <div class="navbar-header display-flex"><a class="navbar-brand" href="/page/home">
+                        <div class="logoMain logo">
+                            <svg version="1.1" id="CalPERS_Logo" role="img" aria-label="CalPERS Logo"
+                                 aria-labelledby="title" aria-describedby="desc" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 436.9 108.6"
+                                 xml:space="preserve" focusable="false">
+                                <title id="title">CalPERS Logo</title>
+                                <desc id="desc">CalPERS Logo</desc>
+                                <g class="calpersFill">
+                                    <g>
+                                        <path d="M178.9,95.7c-1.4,1.1-8.5,3.7-17.4,3.7c-17.7,0-34.9-8.2-34.9-31.7c0-24.7,20.4-32.1,35.1-32.1c9.4,0,16.5,2.3,18.9,3.8    C181.3,43,182,49.4,182,54l-2.3,0.6c-0.9-3.8-1.7-15.7-18.1-15.7c-15.2,0-24.2,9.6-24.2,26.9c0,15.8,7,30.1,23.9,30.1    c16.5,0,17.7-8.1,20.5-15.4l2.3,0.6C182.9,89.7,178.9,95.7,178.9,95.7z"/>
+                                        <g>
+                                            <path d="M246,95.7c-3.4-0.4-4.2-0.4-4.2-6.8V36.6c-3.9,0-11.4,0.8-14.3,1.5l0.3,2l1.4-0.2c0.2,0,0.8-0.1,1.3-0.1     c3.3,0,3.3,4.3,3.3,11.6v37.5c0,6.4-0.8,6.4-4.1,6.8l-1.9,0.3l0,2h19.9l0-2L246,95.7z"/>
+                                        </g>
+                                        <path d="M296.2,95.9l3.3-0.3c3.6-0.4,3.6-0.8,3.6-12.1V51.3c0-11.3,0-11.7-3.6-12.1l-3.3-0.3v-2h39.9c0.4,2,1,5.6,1,9.8    c0,2.1-0.2,2.9-0.2,3.7l-2.2,0.4c-2-9.9-2.2-11.3-15.3-11.3h-7.7v25.4h8.2c7.2,0,8.9-0.1,9.4-3.9l0.5-3.1h2.4v16.7h-2.4l-0.5-3.1    c-0.6-3.8-2.2-3.9-9.4-3.9h-8.2v26.6c3.3,0.6,6.8,1.2,10.1,1.2c14.7,0,15.6-5.6,17.5-13.1l2.3,0.4c-0.3,5.9-1.5,10.3-3,15.4h-42.4    V95.9L296.2,95.9z"/>
+                                        <path d="M296.8,53.5c0-15.3-13.7-16.7-22.5-16.7h-24.1v2l3.3,0.3c3.6,0.4,3.6,0.8,3.6,12.1v32.2c0,11.3,0,11.7-3.6,12.1l-3.3,0.3    v2h24v-2l-3.3-0.3c-5.1-0.4-5.1-0.8-5.1-12.1V72l8.3,0C282.8,72,296.8,66.1,296.8,53.5z M265.7,40.7c1.9-0.4,3.8-0.7,5.7-0.7    c8.3,0,15.6,3.3,15.6,14.2c0,13.8-10.4,15.8-14.4,15.8h-6.9V40.7z"/>
+                                        <path d="M424.2,96.2c5.2-2.9,8.3-8,8.3-14.2c0-11.1-7.6-15-14.9-19.1l-5.1-2.9c-5-3-9-5.9-9-11.4c0-6.2,4.7-10.1,10.1-10.1    c10.5,0,11.9,8,12.9,12.7h2.3c0-2.3-0.2-9.8-0.9-12.8c-2.4-1.5-7-3-12.8-3c-9.8,0-19.2,4.7-19.2,16c0,6.9,4.9,12.7,10.2,15.5    l5.9,3.2c7.2,3.2,12.9,7.9,12.9,14.6c0,15.6-24.7,13.3-30.4,9.9c-3.9-2.3-7.5-6.6-11.4-13.5c-2.5-4.4-5.5-10.4-6.9-12.9    c5.1-2.4,12.8-7.5,12.8-16.1c0-14.1-12.4-15.4-21.2-15.4h-24.1v2l3.3,0.3c3.6,0.4,3.6,0.8,3.6,12.1v32.2c0,11.3,0,11.7-3.6,12.1    l-3.3,0.3v2H366v-2l-3.3-0.3c-3.5-0.4-3.5-0.8-3.5-12.1V71.3h3.4c1.9,0,4.2,0,5.7,1.2c1.2,1,3.3,4.5,5.7,9.1    c1.9,3.3,4,8.9,9.5,13.6C389.8,100.6,412,103.1,424.2,96.2z M364.4,68.7h-5.3v-28c1.9-0.4,3.8-0.7,5.7-0.7    c7.2,0,14.3,3.3,14.3,14.2C379.2,64.6,372.2,68.7,364.4,68.7z"/>
+                                        <path d="M210,76.5h1.3v15.6c-0.6,0.9-3,3.8-7,3.8c-5.3,0-8.6-3.1-8.6-8.4C195.7,78.8,204.8,76.5,210,76.5z M195.7,87.5    c0,5.3,3.3,8.4,8.6,8.4c4.1,0,6.4-2.9,7-3.8V76.5H210C204.8,76.5,195.7,78.8,195.7,87.5z M225.9,95.7l0.1,1.1    c-1.2,0.8-3,1.9-6.4,1.9c-4.2-0.1-5.8-1.8-7.3-3.5c-3,1.9-6.4,3.9-13.6,3.9c-6.8,0-11.5-3.9-11.5-9c0-12,16-15.6,24.1-18V70    c0-6.1-1.7-11.4-8.6-11.4c-7.4,0-9.7,5.8-11.5,9.3h-0.7c-1-1.1-1.8-2-2.4-3.7c2.8-3.7,8.7-9.9,18.5-9.9c10.5,0,12.8,5.6,12.8,15    v13.2c0,6.5-0.6,13.4,5.1,13.4C225.2,95.9,225.6,95.8,225.9,95.7z M211.3,76.5H210c-5.3,0-14.3,2.3-14.3,11c0,5.3,3.3,8.4,8.6,8.4    c4.1,0,6.4-2.9,7-3.8V76.5z"/>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <polygon points="104.4,98.6 111.5,95.6 112.4,97.1    "/>
+                                            <polygon points="109.8,92.6 96,97.2 108.4,90.2    "/>
+                                            <polygon points="104.8,84.2 106.7,87.4 90,94.7 104.8,84.2    "/>
+                                            <polygon points="100.2,76.3 103,81.1 83.8,92.7 100.2,76.3    "/>
+                                            <polygon points="94.5,66.7 98.6,73.6 77.7,91 94.5,66.7    "/>
+                                            <polygon points="87.5,54.7 93.2,64.4 72,89.8 87.5,54.7    "/>
+                                            <polygon points="78.8,40 86.4,52.8 66.7,89.2    "/>
+                                            <polygon points="77.6,38 62.5,89.5 66.8,19.6    "/>
+                                            <polygon points="51.2,17.7 58.5,5.4 65.7,17.8 59.2,90.2 51.2,17.7    "/>
+                                            <polygon points="41.9,33.6 50.2,19.5 56.2,91.4 41.9,33.6    "/>
+                                            <polygon points="35.9,43.8 40.8,35.4 53.8,92.6 35.9,43.8    "/>
+                                            <polygon points="46.7,98 4,98 25.7,61.2    "/>
+                                            <polygon points="49.2,95.9 26.8,59.2 29.9,53.9    "/>
+                                            <polygon points="51.5,94.1 31.1,51.9 34.8,45.6    "/>
+                                        </g>
+                                    </g>
+                                </g>
+</svg>
+                        </div>
+
+
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 hidden-xs print-hidden">
+                <div class="navbar-collapse collapse flexEndCenter">
+
+                    <ul class="nav navbar-nav text-uppercase">
+                        <li class=""><a href="/page/investments">Investments</a></li>
+                        <li class=""><a href="/page/newsroom">Newsroom</a></li>
+                        <li class=""><a href="/page/contact">Contact</a></li>
+                        <li class=""><a href="/page/about">About</a></li>
+                        <!-- uncomment to display search link -->
+                        <!--
+                        <li><a href="/page/search">Search</a></li>
+                        //-->
+                        <!-- end commented out section -->
+                    </ul>
+
+                    <!-- comment out to hide search form -->
+										<div id="search-desktop">
+											<script>
+												(function() {
+    										var cx = '001779225245372747843:bay2jf0erxa';
+    										var gcse = document.createElement('script');
+    										gcse.type = 'text/javascript';
+    										gcse.async = true;
+    										gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    										var s = document.getElementsByTagName('script')[0];
+    										s.parentNode.insertBefore(gcse, s);
+  											})();
+  										window.onload = function(){
+  											if (document.getElementById('gsc-i-id1') !=null) {
+												document.getElementById('gsc-i-id1').setAttribute("placeholder", "SEARCH")
+												}
+												if (document.getElementById('gsc-i-id2') !=null) {
+												document.getElementById("gsc-i-id2").setAttribute("placeholder", "SEARCH")
+												}
+											};
+											</script>
+											<gcse:searchbox-only resultsUrl="/page/search" enableAutoComplete="true"></gcse:searchbox-only>
+										</div> 	<!-- id="search-source" -->
+                    <!-- end comment out to hide search form -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Main Tabs Navigation -->
+<!-- Mobile version -->
+<div class="navbar navbar-inverse navbar-static-top navbar-tab">
+    <div class="container">
+        <div class="navbar-header">
+            <!--<a class="navbar-brand visible-xs" href="/page/home">
+                <span class="sr-only">CalPERS</span>
+                <img alt="CalPERS Logo" class="logo hidden-xs" src="/resources/img/calpers-logo.png">
+                <img alt="CalPERS Logo" class="logo visible-xs" src="/resources/img/calpers-logo-mobile2x.png">
+            </a>-->
+            <button class="navbar-toggle pull-left" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                    aria-label="Menu"><i class="fa fa-reorder"></i></button>
+            <!-- comment out to hide search form -->
+            <button onclick="move_search()" class="navbar-toggle pull-right" type="button" data-toggle="collapse" data-target=".search-collapse"
+                    aria-label="Search"><i class="fa fa-search" title="Search icon"></i></button>
+            <!-- end comment out to hide search form -->
+        </div>
+        <!-- comment out to hide search form -->
+        <div class="search-collapse collapse">
+			<div id="search-mobile">
+		
+			</div>
+        </div>
+        <!-- end comment out to hide search form -->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/page/home"><span
+                                class="glyphicon glyphicon-home hidden-xs" aria-hidden="true">&nbsp; </span>Home</a>
+                </li>
+                <li class=""><a href="/page/active-members" id="members"
+                                                             aria-expanded="false">Active
+                        Members</a>
+                    <div class="visible-xs">
+                        <!-- Subnav for Active Members -->
+<div class="navbar navbar-default navbar-category">
+	<div class="container">
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class=""><a href="/page/active-members/retirement-benefits" aria-describedby="members">Retirement Benefits</a></li>
+				<li class=""><a href="/page/active-members/health-benefits" aria-describedby="members">Health Benefits</a></li>
+				<li class=""><a href="/page/active-members/death-benefits" aria-describedby="members">Death Benefits</a></li>
+			</ul>
+		</div>
+	</div>
+</div>                    </div>
+                </li>
+                <li class=""><a href="/page/retirees" id="retirees"
+                                                              aria-expanded="false">Retirees</a>
+                    <div class="visible-xs">
+                        <!-- Subnav for Retired Members -->
+<div class="navbar navbar-default navbar-category">
+	<div class="container">
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class=""><a href="/page/retirees/cost-of-living" aria-describedby="retirees">Cost of Living</a></li>
+				<li class=""><a href="/page/retirees/health-and-medicare" aria-describedby="retirees">Health &amp; Medicare</a></li>
+				<li class=""><a href="/page/retirees/retirement-checks" aria-describedby="retirees">Retirement Checks</a></li>
+				<li class=""><a href="/page/retirees/taxes" aria-describedby="retirees">Taxes</a></li>
+				<li class=""><a href="/page/retirees/working-after-retirement" aria-describedby="retirees">Working After Retirement</a></li>
+			</ul>
+		</div>
+	</div>
+</div>                    </div>
+                </li>
+                <li class=""><a href="/page/employers" id="employers"
+                                                               aria-expanded="false">Employers</a>
+                    <div class="visible-xs">
+                        <!-- Subnav for Active Members -->
+<div class="navbar navbar-default navbar-category">
+	<div class="container">
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class=""><a href="/page/employers/actuarial-services" aria-describedby="employers">Actuarial Services</a></li>
+				<li class=""><a href="/page/employers/benefit-programs" aria-describedby="employers">Benefit Programs</a></li>
+				<li class=""><a href="/page/employers/contracts" aria-describedby="employers">Contracts</a></li>
+				<li class=""><a href="/page/employers/mycalpers-technical-requirements" aria-describedby="employers">my|CalPERS Technical Requirements</a></li>
+				<li class=""><a href="/page/employers/policies-and-procedures" aria-describedby="employers">Policies &amp; Procedures</a></li>
+			</ul>
+		</div>
+	</div>
+</div>                    </div>
+                </li>
+                <li class="visible-xs "><a href="/page/investments">Investments</a>
+                </li>
+                <li class="visible-xs "><a href="/page/newsroom">Newsroom</a></li>
+                <li class="visible-xs "><a href="/page/contact">Contact</a></li>
+                <li class="visible-xs "><a href="/page/about">About</a></li>
+                <!-- uncomment to display search link -->
+                <!--
+                  <li class="visible-xs"><a href="/page/search">Search</a></li>
+                //-->
+                <!-- end commented out section -->
+                <li class="visible-xs"><a href="https://my.calpers.ca.gov/" target="_blank">my|CalPERS Log In</a></li>
+            </ul>
+            <a href="https://my.calpers.ca.gov/" class="btn btn-primary pull-right hidden-xs" target="_blank">my|CalPERS
+                Log In</a>
+        </div>
+    </div>
+</div>
+
+<!-- END HEADER --> 
+<script>
+function move_search(){
+
+    //the desktop_width of value is from boostrap.css. Search for @media (min-width: 720) {
+	var desktop_width = 720;  
+		
+		
+	if($(window).width()  >= desktop_width  ){
+		//desktop
+		
+		//check if search form exists in search-mobile div
+		if($("#search-mobile").find("form").length){ 
+				earch_form_mobile = $("#search-mobile").find("form").detach();
+				earch_form_mobile.appendTo("#search-desktop");
+		}
+		
+		//check if search form exists in search-desktop div
+	}else if( $("#search-desktop").find("form").length ) {
+		// mobile
+		
+		var search_form_desktop	= $("#search-desktop").find("form").detach();
+		search_form_desktop.appendTo("#search-mobile");
+			
+	}
+}// end of function move_search(){
+	
+$(document).ready(function(){
+	move_search();
+
+	$(window).resize(function() {
+		move_search();
+	});
+});
+</script>
+<div class="hidden-xs nav-category">
+</div>
+
+<!-- ==========================CONTENT STARTS HERE ========================== -->
+<div id="main" tabindex="-1" role="main">
+
+<div class="home">
+    <div class="section section-1">
+        <div class="container">
+
+            <!--- Homepage Title -->
+            <div id="pageTitle">
+                <h1 class="sr-only">CalPERS - Homepage</h1>
+            </div>
+
+            
+			<div class="carousel slide" id="mycarousel">
+<ol class="carousel-indicators">
+	<li class="active" data-slide-to="0" data-target="#mycarousel" title="Slide 1">&nbsp;</li>
+	<!--<li data-slide-to="1" data-target="#mycarousel" title="Slide 2">&nbsp;</li>-->
+</ol>
+
+<div class="carousel-inner">
+<div class="item active"><img alt="" src="/img/banners/home-quick-tips-cbees.jpg" style="width: 100%;" />
+<div class="carousel-caption">
+<h2 class="h1">CalPERS Benefits Education Event</h2>
+
+<p>Join us in Sacramento on March 1 &amp; 2 to get a wealth of information about your retirement and health benefits.</p>
+
+<p><a class="btn btn-large btn-primary" href="/page/education-center/member-education/benefits-education-events/cec-register&amp;eventId=1000960" id="homepage-ad-02">I Want to Attend</a></p>
+</div>
+</div>
+<!--<div class="item"><img alt="" src="/img/banners/home-quick-tips-cbees.jpg" style="width: 100%;" /><div class="carousel-caption"><h2 class="h1">CalPERS Benefits Education Event</h2><p>Join us March 1 & 2 to get a wealth of information about your retirement and health benefits.</p><p><a class="btn btn-large btn-primary" href="/page/education-center/member-education/benefits-education-events/cec-register&eventId=1000960" id="homepage-ad-02">I Want to Attend</a></p></div></div>--></div>
+<!--<a class="left carousel-control" data-slide="prev" href="#mycarousel" id="left-carousel-button"><span class="sr-only">Previous Slide</span> <img alt="Previous slide" src="/resources/img/chevron-circle-left.svg" /></a> <a class="right carousel-control" data-slide="next" href="#mycarousel" id="right-carousel-button"> <span class="sr-only">Next Slide</span> <img alt="Next slide" src="/resources/img/chevron-circle-right.svg" /></a>--></div>
+
+        </div>
+    </div>
+    <div class="content">
+                <div class="section section-2">
+            <div class="container">
+                <div class="row">
+
+                    <!-- i want to module -->
+                    <div class="col-md-4">
+                        <div class="bucket">
+                            <h2 id="i-want-to"><span class="icon icon-i-want-to"></span> I Want To . . . <small class="muted"></small></h2>
+<ul>
+	<li aria-labelledby="i-want-to"><a href="/page/education-center">Attend Training &amp; Events</a></li>
+	<li aria-labelledby="i-want-to"><a href="/page/active-members/retirement-benefits/service-disability-retirement/retirement-estimate-calculator">Calculate My Retirement Estimate</a></li>
+	<li aria-labelledby="i-want-to"><a href="/page/active-members/retirement-benefits/service-credit/service-credit-cost-estimator">Estimate Service Credit Cost</a></li>
+	<li aria-labelledby="i-want-to"><a href="/page/about/job-opportunities">Find a Job</a></li>
+	<li aria-labelledby="i-want-to"><a href="/page/active-members/retirement-benefits/service-disability-retirement/power-of-attorney">Learn About Power of Attorney</a></li>
+	<li aria-labelledby="i-want-to"><a href="https://www.youtube.com/playlist?list=PLIKoYJoLyluJ_VMEolpw50mp_SIuV_TeE" target="_blank" title="opens in new window">Plan My Financial Future</a></li>
+	<li aria-labelledby="i-want-to"><a href="/page/active-members/death-benefits/beneficiary-designation">Update My Beneficiary</a></li>
+	<li aria-labelledby="i-want-to"><a href="/page/active-members/health-benefits/plans-and-rates">View Health Plan Rates</a></li>
+	<li aria-labelledby="i-want-to"><a href="/page/contact/headquarters-regional-offices">Visit a Regional Office</a></li>
+</ul>
+<!--End of list-->                        </div>
+                    </div>
+
+                    <!-- life events module -->
+                    <div class="col-md-4">
+                        <div class="bucket">
+                            <h2 id="life-events"><span class="icon icon-life-events"></span> Life Events <small class="muted"></small></h2>
+<ul>
+	<li aria-labelledby="life-events"><a href="/page/life-events/birth-adoption">Birth or Adoption</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/death-terminal-illness">Death or Terminal Illness</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/domestic-partnership">Domestic Partnership</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/injury-disability">Injury/Disability</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/leave-of-absence">Leave of Absence</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/leaving-calpers-membership">Leaving CalPERS Membership</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/marriage-divorce">Marriage or Divorce</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/name-address-changes">Name or Address Changes</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/retirement">Retirement</a></li>
+	<li aria-labelledby="life-events"><a href="/page/life-events/returning-to-work">Returning to Work</a></li>
+</ul>
+<!--End of list-->                            <div class="view-all"><a href="/page/life-events" title="View all life events">View All</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- forms & publications module -->
+                    <div class="col-md-4">
+                        <div class="bucket">
+                            <h2 id="forms-publications"><span class="icon icon-forms-publications"></span> Forms & Publications <small class="muted"></small></h2>
+<ul>
+	<li aria-labelledby="forms-publications"><a href="/docs/forms-publications/2019-health-benefit-summary.pdf" target="_blank" title="opens in new window">Health Benefit Summary (PDF)</a></li>
+	<li aria-labelledby="forms-publications"><a href="/docs/forms-publications/health-benefits-enrollment-form.pdf" target="_blank" title="opens in new window">Health Benefit Plan Enrollment Form (Active) (HBD-12) (PDF)</a></li>
+	<li aria-labelledby="forms-publications"><a href="https://news.calpers.ca.gov/" target="_blank" title="opens in new window">PERSpective Newsletter</a></li>
+	<li aria-labelledby="forms-publications"><a href="/docs/forms-publications/planning-service-retirement.pdf" target="_blank" title="opens in new window">Planning Your Service Retirement (PUB 1) (PDF)</a></li>
+	<li aria-labelledby="forms-publications"><a href="/docs/forms-publications/service-credit-purchase-options.pdf" target="_blank" title="opens in new window">Service Credit Purchase Options (PUB 12) (PDF)</a></li>
+	<li aria-labelledby="forms-publications"><a href="/docs/forms-publications/special-power-of-attorney-form.pdf" target="_blank" title="opens in new window">Special Power of Attorney (PDF)</a></li>
+	<li aria-labelledby="forms-publications"><a href="/docs/forms-publications/retirement-allowance-request.pdf" target="_blank" title="opens in new window">Retirement Allowance Estimate Request (PDF)</a></li>
+</ul>
+<!--End of list-->                            <div class="view-all"><a href="/page/forms-publications"
+                                                     title="View all Forms and Publications">View All</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-3">
+            <div class="container">
+                <div class="row">
+
+                    <!-- news module -->
+                    <div class="col-md-6">
+                        <div class="bucket bucket-news">
+                                            <h2 id="news">News  <small class="muted"></small></h2>
+            <ul>
+	<li aria-labelledby="news"><a href="/page/newsroom/for-the-record/2019/calpers-statement-on-chatham-eureka-funds-holdings">CalPERS Statement on Chatham Eureka Fund</a></li>
+	<li aria-labelledby="news"><a href="/page/newsroom/calpers-news/2019/board-elects-chairs-vice-chairs">CalPERS&#39; Board Elects Committee Chairs, Vice Chairs</a></li>
+	<li aria-labelledby="news"><a href="/page/newsroom/for-the-record/2019/calpers-is-ahead-in-calculating-liabilities">CalPERS is Ahead of the Fed in Calculating Liabilities</a></li>
+</ul>
+<!--End of list-->                        </div>
+                    </div>
+
+                    <!-- events module -->
+                    <div class="col-md-6">
+                        <div class="bucket">
+                                            <h2 id="events">Events  <small class="muted"></small></h2>
+            <table class="table table-condensed table-noborder">
+	<thead class="sr-only">
+		<tr>
+			<th scope="col">Event Date</th>
+			<th scope="col">Event Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="white-space: nowrap;">March 1-2</td>
+			<td><a href="/page/education-center/member-education/benefits-education-events/calendar">CalPERS Benefits Education Event - Sacramento</a></td>
+		</tr>
+		<tr>
+			<td style="white-space: nowrap;">March 18-20</td>
+			<td><a href="/page/about/board/board-meetings">Board Meetings</a></td>
+		</tr>
+	</tbody>
+</table>                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            <div class="container">
+                <hr>
+            </div>
+            <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css">
+
+
+<script src="/resources/js/iframe-custom.js"></script>
+
+<div class="subscribe-social">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 subscribe" role="region" aria-labelledby="subscribe" aria-describedby="subscribe-description">
+          <h2 id="subscribe">Subscribe</h2>
+          <p id="subscribe-description">By Email for Newsletters and Alerts</p>
+        <div class="input-group" style="display:inline">
+          <form id="emailsubform" class="form-inline" method="post" action="#">
+              <label for="email">Enter Email Address</label><br>
+              <input type="text" class="form-control" id="email" aria-label="Enter Email Address" name="email" placeholder="Enter Email Address" aria-required="true">
+              <span class="input-group-btn">
+              <button type="submit" id="bnt_subscribe" name="bnt_subscribe"  class="btn btn-primary" aria-label="Submit email address for email subscription" value="1" >Subscribe</button>
+            </span>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6 social hidden-xs">
+        <h2>Follow</h2>
+        <p>By Social Network</p>
+        <ul class="list-inline get-connected">
+          <li><a href="https://www.facebook.com/mycalpers" target="_blank" title="Facebook"><span class="sr-only">Facebook</span><i class="fa fa-facebook-square fa-3x"></i></a></li>
+          <li><a href="https://twitter.com/CalPERS" target="_blank" title="Twitter"><span class="sr-only">Twitter</span><i class="fa fa-twitter-square fa-3x"></i></a></li>
+          <li><a href="https://www.youtube.com/CalPERS" target="_blank" title="YouTube"><span class="sr-only">YouTube</span><i class="fa fa-youtube-square fa-3x"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/calpers" target="_blank" title="LinkedIn"><span class="sr-only">LinkedIn</span><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+          <li><a href="https://instagram.com/calpers/" target="_blank" title="Instagram"><span class="sr-only">Instagram</span><i class="fa fa-instagram fa-3x"></i></a></li>
+          <li><a href="/page/rss" target="_parent" title="RSS Feed"><span class="sr-only">RSS Feed</span><i class="fa fa-rss-square fa-3x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var form = document.getElementById("emailsubform");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            //email regex
+            var emailRegExp = new RegExp(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/);
+            var email = document.getElementById("email");
+            //check if input matches email regex
+            var emailErrorMsg;
+            if(email.value == "") {
+                emailErrorMsg = "Please enter an email address.";
+            } else if (email.value.match(/@/) == null) {
+                emailErrorMsg = "Please include an '@' in the email address. '" +  email.value +"' is missing an '@'."
+            } else if(email.value.match(emailRegExp) == null) {
+                emailErrorMsg = "Please enter an email address in the following format, username@example.org, to continue.";
+            } else {
+                validate();
+            }
+            var emailErrorEl = document.getElementById("emailSubError");
+            if(emailErrorMsg != undefined) {
+                if (emailErrorEl == null) {
+                    //append error message
+                    var tempEl = document.createElement("div")
+                    tempEl.innerHTML = '<span class="alert alert-danger subscribe-home-alert" id="emailSubError" role="alert">' + emailErrorMsg + '</span>';
+                    tempEl = tempEl.firstChild;
+                    email.parentElement.insertBefore(tempEl, email);
+                } else {
+                    var emailSubError = document.getElementById("emailSubError");
+                    if (emailSubError.innerText == emailErrorMsg) {
+                        emailSubError.innerHTML = emailErrorMsg + "\xa0";
+                    } else {
+                        emailSubError.innerHTML = emailErrorMsg;
+                    }
+                }
+            }
+        });
+    });
+
+</script>        </div>
+    </div>
+    <div class="section section-4">
+        <div class="container">
+
+            <!-- videos module -->
+            <div class="bucket">
+                                <h2 id="videos">Videos  <small class="muted"></small></h2>
+            <div class="row hidden-xs">
+<div class="col-sm-8 col-md-8">
+<div class="featured">
+<div class="thumbnail">
+<div class="inner-thumbnail"><a aria-hidden="true" href="https://www.youtube.com/watch?v=kEk0TTkHdC8" tabindex="-1" target="_blank" title="Opens in new window"><img alt="CalPERS Quick Tip: CalPERS Benefits Education Events (CBEEs)" role="presentation" src="https://img.youtube.com/vi/kEk0TTkHdC8/maxresdefault.jpg" style="width: 100%;" /></a></div>
+
+<div class="caption"><a href="https://www.youtube.com/watch?v=kEk0TTkHdC8" target="_blank" title="Opens in new window"><span class="videoTitle">CalPERS Quick Tip: CalPERS Benefits Education Events (CBEEs)</span><span class="video-duration">Video Length: <time datetime="PT00H01M14S">01:14</time></span></a></div>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-4 col-md-offset-1">
+
+<div class="thumbnail">
+<div class="inner-thumbnail"><a aria-hidden="true" href="https://www.youtube.com/watch?v=lArYKMbR4DI" tabindex="-1" target="_blank" title="Opens in new window"><img alt="CalPERS Quick Tip: Medicare" role="presentation" src="https://img.youtube.com/vi/lArYKMbR4DI/mqdefault.jpg" /></a></div>
+
+<div class="caption"><a href="https://www.youtube.com/watch?v=lArYKMbR4DI" target="_blank" title="Opens in new window"><span class="videoTitle">CalPERS Quick Tip: Medicare</span><br />
+<span class="video-duration">Video Length: <time datetime="PT00H01M18S">01:18</time></span></a></div>
+</div>
+
+<div class="thumbnail">
+<div class="inner-thumbnail"><a aria-hidden="true" href="https://www.youtube.com/watch?v=eR-xaSg_ZE0" tabindex="-1" target="_blank" title="Opens in new window"><img alt="CalPERS Quick Tip: Cost-of-Living Adjustment (COLA)" role="presentation" src="https://img.youtube.com/vi/eR-xaSg_ZE0/mqdefault.jpg" /></a></div>
+
+<div class="caption"><a href="https://www.youtube.com/watch?v=eR-xaSg_ZE0" target="_blank" title="Opens in new window"><span class="videoTitle">CalPERS Quick Tip: Cost-of-Living Adjustment (COLA)</span><br />
+<span class="video-duration">Video Length: <time datetime="PT00H01M08S">01:08</time></span></a></div>
+</div>
+
+</div>
+</div>
+<!-- MOBILE VIDEOS SECTION BELOW -->
+
+<div class="visible-xs">
+<ul class="bxslider">
+	<li><a aria-hidden="true" href="https://www.youtube.com/watch?v=kEk0TTkHdC8" tabindex="-1" target="_blank" title="Opens in new window"><img alt="CalPERS Quick Tip: CalPERS Benefits Education Events (CBEEs)" role="presentation" src="https://img.youtube.com/vi/kEk0TTkHdC8/mqdefault.jpg" /></a>
+	<div class="caption"><a href="https://www.youtube.com/watch?v=kEk0TTkHdC8" target="_blank" title="Opens in new window"><span class="videoTitle">CalPERS Quick Tip: CalPERS Benefits Education Events (CBEEs)</span><br />
+	<span class="video-duration">Video Length: <time datetime="PT00H01M14S">01:14</time></span></a></div>
+	</li>
+	<li><a aria-hidden="true" href="https://www.youtube.com/watch?v=lArYKMbR4DI" tabindex="-1" target="_blank" title="Opens in new window"><img alt="CalPERS Quick Tip: Medicare" role="presentation" src="https://img.youtube.com/vi/lArYKMbR4DI/mqdefault.jpg" /></a>
+	<div class="caption"><a href="https://www.youtube.com/watch?v=lArYKMbR4DI" target="_blank" title="Opens in new window"><span class="videoTitle">CalPERS Quick Tip: Medicare</span><br />
+	<span class="video-duration">Video Length: <time datetime="PT00H01M18S">01:18</time></span></a></div>
+	</li>
+	<li><a aria-hidden="true" href="https://www.youtube.com/watch?v=eR-xaSg_ZE0" tabindex="-1" target="_blank" title="Opens in new window"><img alt="CalPERS Quick Tip: Cost-of-Living Adjustment (COLA)" role="presentation" src="https://img.youtube.com/vi/eR-xaSg_ZE0/mqdefault.jpg" /></a>
+	<div class="caption"><a href="https://www.youtube.com/watch?v=eR-xaSg_ZE0" target="_blank" title="Opens in new window"><span class="videoTitle">CalPERS Quick Tip: Cost-of-Living Adjustment (COLA)</span><br />
+	<span class="video-duration">Video Length: <time datetime="PT00H01M08S">01:08</time></span></a></div>
+	</li>
+</ul>
+</div>                <div class="view-all"><a href="https://www.youtube.com/CalPERS" title="View all Videos">View
+                        CalPERS Videos</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-5">
+        <div class="container">
+
+            <!-- calpers facts module -->
+            <div class="bucket">
+                                <h2 id="calpers_facts">CalPERS Facts  <small class="muted"></small></h2>
+            <div class="row faq-home">
+<div class="col-sm-8">
+<div class="panel panel-default">
+<div class="panel-body">
+<h3 id="pension-buck">The CalPERS Pension Buck</h3>
+
+<p>As of June 2018, CalPERS&#39; income over the last 20 years demonstrates that every dollar spent on public employee pensions comes from the following <a href="/page/about/organization/facts-at-a-glance/pension-buck">sources</a>:</p>
+<img alt="The CalPERS Pension Buck: 59 cents comes from CalPERS investment earnings, 28 cents comes from CalPERS employers, and 13 cents comes from CalPERS members" src="/img/home-calpers-facts-left.jpg" /></div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="panel panel-default">
+<div class="panel-body">
+<h3>CalPERS Members</h3>
+<!--10/10/2017-->
+
+<p>As of June 30, 2018<br />
+&nbsp;</p>
+<img alt="Pie Chart Showing CalPERS Member Demographic Percentages: Of the 1.9 million CalPERS members, 38% are school members, 31% are public agency members, and 31% are state members." src="/img/home-calpers-facts-right.jpg" /></div>
+</div>
+</div>
+</div>                <div class="view-all"><a href="/page/about/organization/facts-at-a-glance"
+                                         title="View all CalPERS Facts">View All</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-6">
+        <div class="container">
+
+            <!-- statewide initiatives module -->
+            <div class="bucket">
+                <ul class="list-inline text-center">
+	<li><a class="no-icon" href="http://registertovote.ca.gov/" target="_blank" title="opens in new window"><img alt="Register to Vote Button" src="/img/initiative-register-to-vote.jpg" /></a></li>
+	<li><a class="no-icon" href="https://saveourwater.com/" target="_blank" title="opens in new window"><img alt="Save Our Water Button" src="/img/initiative-save-our-water.jpg" /></a></li>
+	<li><a class="no-icon" href="http://www.flexalert.org/" target="_blank" title="opens in new window"><img alt="Flex Alert Button" src="/img/initiative-flex-alert.jpg" /></a></li>
+</ul>            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+<!-- ==========================CONTENT ENDS HERE ========================== -->
+
+
+<a href="#" title="Go to top of page." aria-label="back to top" class="back-to-top hidden-print"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+
+<!-- FOOTER -->
+
+<div class="footer text-center">
+    <div class="date-stamp">
+    <div class="container"> Updated: February 25, 2019 </div>
+  </div>
+    <div class="container"> 
+    <!-- Social Media Links -->
+    <ul class="list-inline get-connected">
+      <li><a href="https://www.facebook.com/mycalpers" target="_blank" title="Opens in a new window"><span class="sr-only">Visit the CalPERS Facebook page.</span><i class="fa fa-facebook-square fa-3x fa-inverse"></i></a></li>
+      <li><a href="https://twitter.com/CalPERS" target="_blank" title="Opens in a new window"><span class="sr-only">Visit the CalPERS Twitter page.</span><i class="fa fa-twitter-square fa-3x fa-inverse"></i></a></li>
+      <li><a href="https://www.youtube.com/CalPERS" target="_blank" title="Opens in a new window"><span class="sr-only">Visit the CalPERS YouTube channel.</span><i class="fa fa-youtube-square fa-3x fa-inverse"></i></a></li>
+      <li><a href="https://www.linkedin.com/company/calpers" target="_blank" title="Opens in a new window"><span class="sr-only">Visit the CalPERS LinkedIn profile.</span><i class="fa fa-linkedin-square fa-3x fa-inverse"></i></a></li>
+      <li><a href="https://instagram.com/calpers/" target="_blank" title="Opens in a new window"><span class="sr-only">Visit the CalPERS Instagram page.</span><i class="fa fa-instagram fa-3x fa-inverse"></i></a></li>
+      <li><a href="/page/rss" title="Opens in a new window"><span class="sr-only">RSS Feed</span><i class="fa fa-rss-square fa-3x fa-inverse"></i></a></li>
+    </ul>
+    <p><span class="tagline">We serve those who serve California.</span><br>
+      &copy; Copyright 2019 California Public Employees' Retirement System (CalPERS) | <span class="state-ca"><a href="http://www.ca.gov" target="_blank" title="Opens in a new window">State of California</a></span></p>
+    <!-- Global Footer Links -->
+    <ul class="list-inline text-uppercase">
+      <li><a href="/page/contact" title="Contact CalPERS.">Contact</a></li>
+      <li><a href="/page/about/job-opportunities" title="Explore Job Opportunities at CalPERS.">Job Opportunities</a></li>
+      <li><a href="/page/email-subscriptions" title="Subscribe to CalPERS newsletters and alerts.">Subscribe</a></li>
+      <li><a href="/page/privacy-policy" title="Read our online privacy policy to learn more about the data we collect.">Privacy Policy</a></li>
+      <li><a href="/page/conditions-of-use" title="Learn how the information on our CalPERS websites can be utilized .">Conditions of Use</a></li>
+      <li><a href="/page/accessibility" title="Read about our commitment to making our websites accessible to all visitors.">Accessibility</a></li>
+      <li><a href="/page/bilingual-services" title="Request assistance from CalPERS Bilingual Services.">Bilingual Services</a></li>
+      <li><a href="/page/judges-retirement-system" title="Learn more about the CalPERS Judges' Retirement System.">Judges' Retirement System</a></li>
+      <li><a href="/page/site-map" title="Sitemap - See a list of all pages on the CalPERS website.">Site Map</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- END FOOTER --> </body>
+</html>
