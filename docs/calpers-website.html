@@ -303,7 +303,7 @@ if (typeof jQuery != 'undefined') {
         <!-- end comment out to hide search form -->
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/page/home"><span
+                <li><a href="/page/home"><span
                                 class="glyphicon glyphicon-home hidden-xs" aria-hidden="true">&nbsp; </span>Home</a>
                 </li>
                 <li class=""><a href="/page/active-members" id="members"
@@ -371,8 +371,44 @@ if (typeof jQuery != 'undefined') {
                 <!-- end commented out section -->
                 <li class="visible-xs"><a href="https://my.calpers.ca.gov/" target="_blank">my|CalPERS Log In</a></li>
             </ul>
-            <a href="https://my.calpers.ca.gov/" class="btn btn-primary pull-right hidden-xs" target="_blank">my|CalPERS
-                Log In</a>
+			
+			
+			        <ul class="nav navbar-nav pull-right">
+         
+                <li class="active"><a href="/page/active-members" id="members"
+                                                             aria-expanded="false">My Account</a>
+                    <div class="visible-xs">
+                        <!-- Subnav for Active Members -->
+<div class="navbar navbar-default navbar-category">
+	<div class="container">
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav pull-right">
+				<li class=""><a href="/page/active-members/retirement-benefits" aria-describedby="members">Statements</a></li>
+				<li class=""><a href="/page/active-members/health-benefits" aria-describedby="members">Benefits</a></li>
+				<li class=""><a href="/page/active-members/death-benefits" aria-describedby="members">Calculators</a></li>
+			</ul>
+		</div>
+	</div>
+</div>                    </div>
+                </li>
+
+
+                <li class="visible-xs "><a href="/page/investments">Investments</a>
+                </li>
+                <li class="visible-xs "><a href="/page/newsroom">Newsroom</a></li>
+                <li class="visible-xs "><a href="/page/contact">Contact</a></li>
+                <li class="visible-xs "><a href="/page/about">About</a></li>
+                <!-- uncomment to display search link -->
+                <!--
+                  <li class="visible-xs"><a href="/page/search">Search</a></li>
+                //-->
+                <!-- end commented out section -->
+                <li class="visible-xs"><a href="https://my.calpers.ca.gov/" target="_blank">my|CalPERS Log In</a></li>
+            </ul>
+			
+			
+			
+		
         </div>
     </div>
 </div>
