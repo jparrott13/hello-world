@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    <meta name="robots" content="noindex, nofollow">
+  
+
+<!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="twitter:card" value="summary">
+<meta name="twitter:site" content="@CalPERS">
+<meta property="og:type" content="application">
+
+<!-- Title and meta description
+================================================== -->
+  
+
+<title>Retirement Estimate Calculator</title>
+<meta property="og:title" content="Retirement Estimate Calculator">
+
+<link rel="canonical" href="https://my.calpers.ca.gov/">
+<meta property="og:url" content="https://my.calpers.ca.gov/">
+
+<!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="/mss/favicon.ico">
+  <link rel="icon" type="image/png" href="/mss/favicon.ico">
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/mss/favicon.ico">
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="/mss/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/mss/favicon.ico">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/mss/favicon.ico">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/mss/favicon.ico">
+
+
+<style>
+#modaal-title{
+	margin-top: .5em;
+}
+</style>
+
+<!-- CSS
+================================================== -->
+
+<!-- From PSR -->
+<script type="text/javascript" src="/mss/js/prototype-1.7.3.js"></script>		 
+<!-- JS Includes -->
+<script type="text/javascript" src="/mss/js/jquery-3.3.1.min.js"></script>
+
+<script> 
+	var $j = jQuery.noConflict();
+	var isEpt = true;
+	var surveyTriggeredElement; //used for storing the element/menu reference that triggered the survey.
+	
+	function elementSupportsAttribute(element, attribute) {
+		  var test = document.createElement(element);
+		  if (attribute in test) {
+		    return true;
+		  } else {
+		    return false;
+		  }
+		};
+
+	function menuBlur()
+	{
+		if($j('#nav').css( "background-color") && $j('#nav').css( "background-color") == "rgb(23, 48, 79)") {
+			Psr.show('hidden_nav');
+			$j('#nav  li').removeClass('hover');
+			$j('#nav  a').removeClass('hover');
+			$j('ul.hover').removeClass('hover');
+			$j('ul.hide').addClass('active');
+			$j('ul.hide').removeClass('hide');
+			$j('#hidden-secondary-menu').html($j("#nav > li.active").find("ul").html());
+		}else{ //if CSS is disabled hide the dynamic size adjustments hidden nav
+			Psr.hide('hidden_nav');
+		}
+	}		
+
+
+	function populateHiddenSecondary()
+	{
+		if($j("#nav > li.hover") &&  $j("#nav > li.hover").html()){
+			$j('#hidden-secondary-menu').html($j("#nav > li.hover").find("ul").html());
+		}else{
+			$j('#hidden-secondary-menu').html($j("#nav > li.active").find("ul").html());
+		}
+	}
+	
+	function menuSetup()
+	{
+		$j('#nav > li').hover(
+			function() {
+				var current = $j(this);
+
+				$j.doTimeout( 'menublur' );
+				
+				if ( !current.hasClass('active') )
+				{					
+					$j.doTimeout( 'menuhover', 250, 
+						function() {	
+							$j('#nav > li').removeClass('hover');															
+							$j('#nav > li > a').removeClass('hover');
+							current.children('a').addClass('hover');
+							
+							$j('ul.active').addClass('hide');
+							$j('ul.active').removeClass('active');
+							
+							current.addClass('hover');							
+							current.find('ul').addClass('hover');
+							populateHiddenSecondary();
+						});
+				} 
+				else 
+				{
+					menuBlur();
+				}
+			},
+			function() {
+				$j.doTimeout( 'menuhover' );
+				$j.doTimeout( 'menublur', 250, menuBlur);
+			}
+		);
+
+		$j('#nav a').focus(
+			function()
+			{
+				var current = $j(this);
+
+				if ( !current.hasClass('active') && !current.parent().parent().hasClass('active') )
+				{	
+					$j('ul.active').addClass('hide');
+					$j('ul.active').removeClass('active');
+
+					current.addClass('hover');		
+					current.parent().addClass('hover');
+					if ( current.parent().parent().attr('id') != 'nav')
+					{
+						current.parent().parent().addClass('hover');
+						current.parent().parent().parent().find('a').addClass('hover');
+						current.parent().parent().parent().addClass('hover');
+					}
+				}
+				else if ( current.parent().parent().hasClass('active') )
+				{
+					current.addClass('hover');		
+					current.parent().addClass('hover');
+				}
+				populateHiddenSecondary();
+			});
+
+		$j('#nav a').blur(
+			function()
+			{
+				menuBlur();
+			});
+		
+	}
+
+	function setupTextareaPlaceholder()
+	{
+		if (!elementSupportsAttribute('textarea', 'placeholder')) {
+			
+			$j('[placeholder]').focus(function() {
+				  var input = $j(this);
+				  if (input.val() == input.attr('placeholder')) {
+				    input.val('');
+				    input.removeClass('placeholder');
+				  }
+				}).blur(function() {
+				  var input = $j(this);
+				  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+				    input.addClass('placeholder');
+				    input.val(input.attr('placeholder'));
+				  }
+				}).blur().parents('form').submit(function() {
+				  $j(this).find('[placeholder]').each(function() {
+				    var input = $j(this);
+				    if (input.val() == input.attr('placeholder')) {
+				      input.val('');
+				    }
+				  })
+				}); 
+		}
+	}
+
+
+	var urlContext = '/mss';	
+</script>
+
+
+<!-- From PSR -->
+<script src="/mss/js/calendar-popup.js"></script>
+<script src="/mss/js/application.js"></script>
+<script>
+	Psr.Request = Class.create({
+		initialize : function(url, options){
+			if( options.method && options.method.toUpperCase() == 'POST' ){
+				options.parameters = options.parameters || {};
+				options.parameters.psrFormToken='';
+			}
+			new Ajax.Request(url, options);
+		}
+	});
+
+	function closeSurvey()
+	{
+		dismissSurvey();
+		$j('#surveyPrompt').remove();
+		if(surveyTriggeredElement != null){
+			location.href=surveyTriggeredElement.attr("href");
+		}
+	}
+
+	function dismissSurvey()
+	{
+		$j.post(
+				"<f:url value='/ept/home/survey.html",
+				{ surveyName: "" } );
+	}
+</script>
+<script src="/mss/js/cognoslaunch.js"></script>
+<script type="text/javascript" src="/mss/js/forms.js"></script>
+
+<script type="text/javascript" src="/mss/js/ept/ept.js"></script>		
+				
+<!-- CSS Includes -->
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/datatables.min.css" />
+<style>
+	.roundedCorners, input[type='button'], input[type='submit'], a.doSomething, .mainButton, .button, .tabbedContainer > ul > li a
+	{
+		behavior: url(<c:url value="resources/css/ept/pie/PIE.htc"/>);
+	}
+</style>
+
+
+  </head>
+  <body>
+<a class="mycal-skipnav" href="#main-content">Skip to main content</a>
+   <div class="mycal-overlay"></div>
+   <header class="mycal-header mycal-header-extended" role="banner">
+					<div class="mycal-navbar">
+						  <div class="mycal-logo" id="extended-logo">
+						    <em class="mycal-logo-text">
+						      <a href="home.jsp" title="Return to the Home Page" aria-label="Return to the Home Page">
+							<img alt="myCalPERS" src="http://lgdimcip1:20410/mss/images/ept/header_logo.png"></a>
+						    </em>
+						  </div>
+						  <button class="mycal-menu-btn">Menu</button>
+					</div>
+					<nav role="navigation" class="mycal-nav">
+						<div class="mycal-nav-inner">
+					    	<button class="mycal-nav-close">
+					  	<img src="http://lgdimcip1:20410/mss/img/close.svg" alt="close">
+						</button>
+
+	<div class="mycal-nav-secondary">
+	  <ul class="mycal-nav-secondary-links">
+	    <li class="mycal-nav-secondary-item">
+	      Logged in as <strong>ELMINDA</strong>
+	    </li>
+	    <li class="mycal-nav-secondary-item">
+	        <a href="help.jsp">Documentation</a>
+	    </li>
+	    <li class="mycal-nav-secondary-item">
+	      <a href="#">Log Out</a>
+	    </li >
+	    <li class="mycal-nav-secondary-item">
+			<a href="#">						
+						No New Messages
+			</a>	    
+	    </li>
+	  </ul>
+	</div>
+						
+		<ul class="mycal-nav-primary mycal-accordion">		
+	
+    		    	<li class="mycal-nav-primary-item" id="50000"><a class="mycal-nav-link" href="home.jsp" aria-expanded="false"> <span>Home</span></a></li>
+			
+					<li id="global_51000"><button class="mycal-accordion-button mycal-nav-link  mycal-current" aria-expanded="false" aria-controls="extended-nav-section-51000">
+						<span>Retirement</span>
+    					</button>
+    					<ul id="extended-nav-section-51000" class="mycal-nav-submenu">
+					
+							<li class="mycal-nav-submenu-item"> <a id="51000_510001" href="page1.jsp">Retirement Summary</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="51000_510200" href="page1.jsp">Service Credit Purchase</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="51000_510301" href="page1.jsp">Retirement Estimate Calculator</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="51000_510401" href="page1.jsp">Apply For Retirement</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="51000_510403" href="page1.jsp">Beneficiaries</a></li>
+							
+				</ul>
+				
+			</li>
+			
+					<li class="mycal-nav-primary-item" id="global_53000"><button class="mycal-accordion-button mycal-nav-link " aria-expanded="false" aria-controls="extended-nav-section-53000">
+						<span>Health</span>
+    					</button>
+    					<ul id="extended-nav-section-53000" class="mycal-nav-submenu">
+					
+							<li class="mycal-nav-submenu-item"> <a id="53000_530001" href="page1.jsp">Health Plan Summary</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="53000_530003" href="page1.jsp">Find a Medical Plan</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="53000_530004" href="page1.jsp">Open Enrollment</a></li>
+							
+				</ul>
+				
+			</li>
+			
+					<li class="mycal-nav-primary-item" id="global_53500"><button class="mycal-accordion-button mycal-nav-link " aria-expanded="false" aria-controls="extended-nav-section-53500">
+						<span>Statements</span>
+    					</button>
+    					<ul id="extended-nav-section-53500" class="mycal-nav-submenu">
+					
+							<li class="mycal-nav-submenu-item"> <a id="53500_535001" href="page1.jsp">Annual Member Statements</a></li>
+							
+				</ul>
+				
+			</li>
+			
+					<li class="mycal-nav-primary-item" id="global_54000"><button class="mycal-accordion-button mycal-nav-link " aria-expanded="false" aria-controls="extended-nav-section-54000">
+						<span>Education Resources</span>
+    					</button>
+    					<ul id="extended-nav-section-54000" class="mycal-nav-submenu">
+					
+							<li class="mycal-nav-submenu-item"> <a id="54000_540000" href="page1.jsp">Resource Center</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="54000_540001" href="page1.jsp">Publications</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="54000_540100" href="page1.jsp">Classes</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="54000_540101" href="page1.jsp">Appointments</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="54000_540102" href="page1.jsp">Events</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="54000_540103" href="page1.jsp">Education Activity &amp; History</a></li>
+							
+				</ul>
+				
+			</li>
+			
+					<li class="mycal-nav-primary-item" id="global_55000"><button class="mycal-accordion-button mycal-nav-link " aria-expanded="false" aria-controls="extended-nav-section-55000">
+						<span>Profile</span>
+    					</button>
+    					<ul id="extended-nav-section-55000" class="mycal-nav-submenu">
+					
+							<li class="mycal-nav-submenu-item"> <a id="55000_550001" href="page1.jsp">Contact Information</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="55000_550003" href="page1.jsp">Security Settings</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="55000_550005" href="page1.jsp">Mailing Preferences</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="55000_550002" href="page1.jsp">Personal Information</a></li>
+							
+				</ul>
+				
+			</li>
+			
+					<li class="mycal-nav-primary-item" id="global_56000"><button class="mycal-accordion-button mycal-nav-link " aria-expanded="false" aria-controls="extended-nav-section-56000">
+						<span>Message Center</span>
+    					</button>
+    					<ul id="extended-nav-section-56000" class="mycal-nav-submenu">
+					
+							<li class="mycal-nav-submenu-item"> <a id="56000_560001" href="page1.jsp">Message Inbox</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="56000_560002" href="page1.jsp">Send a Message</a></li>
+							
+							<li class="mycal-nav-submenu-item"> <a id="56000_560003" href="help.jsp">Documentation</a></li>
+							
+				</ul>
+				
+			</li>
+	</ul>
+</div>
+  </nav>
+</header>  
+
+<main id="main-content">
+<div class="main-content">
+<div class="grid-container">
+	<h1 class="mycal-sr-only">Home Page</h1>
+	<div class="panelHeader">
+			<h2 class="display-inline">CalPERS Account Summary</h2>
+					last reported
+					9/30/2018
+	</div>
+	<div class="grid-row">
+		<div class="tablet:grid-col">
+			<h3>Total Balance</h3>
+			<span class="big3">$35,079.70</span><br>
+			<div class="grid-row">
+				<div class="tablet:grid-col">
+					<h3>Contributions</h3>
+					<span class="big2">$29,393.92</span>
+				</div>
+				<div class="tablet:grid-col">
+					<h3>Interest</h3>
+					<span class="big2">$5,685.78</span>
+				</div>
+			</div>
+			<div class="grid-row">
+				<a
+					href="#"
+					title="Retirement Contributions on your Retirement Summary">View
+					Retirement Contribution Details</a>
+			</div>
+		</div>
+		<div class="tablet:grid-col">
+			<h3>Total Service Credit</h3>
+			<span class="big3">30.276</span><span class="big2">years</span><br>
+			<div class="grid-row">
+				<div class="tablet:grid-col">
+					<h3>Your Current Membership</h3>
+					<span class="big2">State Miscellaneous</span>
+				</div>
+			</div>
+			<div class="grid-row">
+				<a
+					href="#"
+					title="Retirement Contributions on your Retirement Summary">View
+					Service Credit Information</a>
+			</div>
+		</div>
+		<div class="tablet:grid-col">
+			<h3>Estimated Earliest Retirement</h3>
+			<span class="big3">0.000</span><span class="big2">years</span><br>
+			<div class="grid-row">
+				<div class="tablet:grid-col">
+					<h3>Your Retirement Formula</h3>
+					<span class="big2">2% @ 55</span>
+				</div>
+			</div>
+			<div class="grid-row">
+				<a
+					href="#"
+					title="Retirement Contributions on your Retirement Summary">Calculate
+					a Retirement Estimate</a>
+			</div>
+			<div class="grid-row">
+				<a
+					href="#"
+					title="Retirement Contributions on your Retirement Summary">Apply
+					for Retirement</a>
+			</div>
+		</div>
+		<div class="tablet:grid-col">
+			<a class="linkedImage"
+				href="#"><img
+				width="228"
+				src="http://lgdimcip1:20410/mss/images/ept/billboard/default-banner-formsPubs.jpg"
+				alt="Publication Center"></a>
+		</div>
+	</div>
+	<hr/>
+</div>
+
+
+
+
+<div class="grid-container">
+	last reported 9/30/2018
+	<div class="grid-row">
+		<div class="grid-col-4">
+			<div class="yourInfoDashboadIcon">
+				<img src="http://lgdimcip1:20410/mss/images/ept/homepage/your-information-icon.png"
+					alt="">
+			</div>
+			<div class="yourInfoDashboadContent">
+				<h3>Your Information</h3>
+				<ul>
+
+					<li><a
+						href="#"
+						title="Go to your Beneficiaries">Add or Change Your
+							Beneficiaries</a></li>
+
+					<li><a
+						href="#"
+						title="Go to your Contact Information">Update Your Contact
+							Information</a></li>
+					<li><a
+						href="#"
+						title="Get your CalPERS ID">Find Your CalPERS ID</a></li>
+
+					<li><a
+						href="#"
+						title="Get your Membership Date">Find Your Membership Date</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="grid-col-4">
+			<div class="yourInfoDashboadIcon">
+				<img src="http://lgdimcip1:20410/mss/images/ept/homepage/request-a-letter-icon.png"
+					alt="">
+			</div>
+			<div class="yourInfoDashboadContent">
+				<h3>
+					<a
+						href="#"
+						title="Go to Request A Letter">Request a Letter</a>
+				</h3>
+
+
+
+				<p>
+					Need a <strong>Member Account Balance</strong> or <strong>Verification
+						of Deposit</strong> letter? We can send documents on your behalf to a third
+					party.
+				</p>
+
+
+			</div>
+		</div>
+		<div class="grid-col-4">
+			<div class="yourInfoDashboardRegion">
+				<div class="yourInfoDashboadIcon">
+					<img
+						src="http://lgdimcip1:20410/mss/images/ept/homepage/looking-for-classes-icon.png"
+						alt="">
+				</div>
+				<div class="yourInfoDashboadContent">
+					<h3>
+						<a
+							href="#"
+							title="Go to Find Classes">Find Classes</a>
+					</h3>
+
+
+
+					<p>Take advantage of events and trainings designed to help you
+						make informed decisions about your retirement.</p>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+		<hr/>
+</div>
+<div class="grid-container">
+	<div class="grid-row">
+		<div class="grid-col-4">
+			<h3>Health Enrollment</h3>
+			<div class="yourInfoDashboadIcon">
+				<img src="http://lgdimcip1:20410/mss/images/ept/healthCarriers/blueShield.png" alt="Blue Shield of California logo">
+			</div>
+			<div class="yourInfoDashboadContent">
+				<p>You are enrolled in Blue Shield Access+ effective January 01, 2016.</p>
+				<a href="#" title="Go to your Health Summary">View Current Health Coverage Details</a>
+			</div>
+		</div>
+		<div class="grid-col-4">
+			<h3>Health Benefits Information</h3>
+			<p>
+			Learn about <a href="#" title="Go to Open Enrollment">Open Enrollment</a> opportunities and updates.</p>
+			<p><a href="#" title="Go to Find A Medical Plan">Find a Medical Plan</a>, or get information 
+			about <a href="https://www.calpers.ca.gov/page/active-members/health-benefits/plans-and-rates" title="Opens in a new window - Go to Plans &amp; Rates" target="_blank">Plans &amp; Rates</a>, 
+			including online tools, health and wellness resources, and plan coverage.</p>
+		</div>
+	</div>
+</div>
+</div>
+</main>
+<script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script>  
+<script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ba-dotimeout.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.plugins.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.cookies.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/mock.js"></script>
+<!-- Modal -->
+	<script type="text/javascript" src="resources/mss/js/modaal.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/calendar.js" />	
+
+<script type="text/javascript" src="resources/mss/js/datepicker.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/uswds-2_4-mycal.js"></script>
+<script type="text/javascript" src="resources/mss/js/styleguide.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/datatables.min.js"></script>
+<footer class="mycal-footer mycal-footer-slim" role="contentinfo">
+  <div class="grid-container mycal-footer-return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="mycal-footer-primary-section">
+     <div class="grid-row">
+        <nav class="mycal-footer-nav">
+          <ul class="add-list-reset grid-row grid-gap">
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/privacy-policy" title="Opens in a new window" target="_blank">Privacy Policy</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/conditions-of-use" title="Opens in a new window" target="_blank">Conditions of Use</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/accessibility" title="Opens in a new window" target="_blank">Accessibility</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/contact" title="Contact us">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  </body>
+</html>
+<script>
+	$j('a[target]').addClass('mycal-external_link');
+Event.observe(window, "load", function(){ 
+		if($j('.tabbedContainer > ul > li > a')){
+			$j('.tabbedContainer > ul > li > a').attr('aria-expanded', 'false');
+		}
+		if ( $j('.tabbedContainer > ul > li > a.active').length == 0)
+		{
+			$j('.tabbedContainer > ul > li:first > a').addClass('active');
+			$j('.tabbedContainer > ul > li:first > a').attr('aria-expanded', 'true');
+			$j('.tabbedContainer > ul > li:first > a').parent().next().find('a').addClass('leftShadow');
+			$j ( $j('.tabbedContainer > ul > li:first > a').attr('href') ).show();
+		}
+		else if ( $j('.tabbedContainer > ul > li > a.active').length == 1 )
+		{
+			$j ( $j('.tabbedContainer > ul > li> a.active').attr('href') ).show();
+			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
+		}
+		
+		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
+		
+		$j('.tabbedContainer > ul > li > a').click(function() {
+			var containerId = $j(this).parent().parent().parent().attr('id');
+			var targetId = $j(this).attr("href");
+			
+			$j('#' + containerId + ' > ul > li > a').removeClass('active').removeClass('rightShadow').removeClass('leftShadow');
+			$j('#' + containerId + ' > ul > li > a').attr('aria-expanded', 'false');
+			$j(this).addClass('active');
+			$j(this).attr('aria-expanded', 'true');
+			$j(this).parent().prev().find('a').addClass('rightShadow');
+			$j(this).parent().next().find('a').addClass('leftShadow');			
+			$j('#' + containerId + ' > div.content').hide();
+			$j('#' + containerId + ' > div' + targetId +  '.content').show();
+		});
+	
+	});		
+</script>
+<script>
+	$j('[aria-controls="extended-nav-section-51000"]').removeClass('mycal-current');
+	$j('[href="home.jsp"]').addClass('mycal-current');
+</script>
