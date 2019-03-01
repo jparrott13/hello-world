@@ -1,0 +1,1773 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    <meta name="robots" content="noindex, nofollow">
+  
+
+<!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title and meta description
+================================================== -->
+  
+
+<title>myCalPERS new responsive design based on United States Web Design System v2.4 (beta)</title>
+<meta property="og:title" content="myCalPERS new responsive design">
+
+<!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="http://lgdimcip1:20410/mss/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="http://lgdimcip1:20410/mss/img/favicons/favicon.png">
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="http://lgdimcip1:20410/mss/img/favicons/favicon-192.png">
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="http://lgdimcip1:20410/mss/img/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://lgdimcip1:20410/mss/img/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://lgdimcip1:20410/mss/img/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://lgdimcip1:20410/mss/img/favicons/favicon-144.png">
+
+<!-- CSS
+================================================== -->
+<!-- env: demo -->
+
+
+<link rel="stylesheet" href="resources/mss/css/v2style.css">
+<link rel="stylesheet" href="resources/mss/css/uswds-2_4-mycal.css">
+<script type="text/javascript" src="resources/mss/js/forms.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>		
+				
+<!-- CSS Includes -->
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />
+<!-- From PSR -->
+<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>		 
+<!-- JS Includes -->
+<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
+<script src="resources/mss/js/calendar-popup.js"></script>
+<script src="resources/mss/js/application.js"></script>
+<script> 
+	var $j = jQuery.noConflict();
+</script>
+  </head>
+  <body class="page-utilities layout-styleguide ">
+    <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
+
+    <header class="mycal-header site-header site-header-dark" role="banner">
+  <div class="mycal-navbar site-header-navbar">
+    <div class="mycal-logo site-logo" id="logo">
+      <em class="mycal-logo-text">
+        <a class="margin-right-05" href="home.jsp" title="Home" aria-label="United States Web Design System home">
+          <span aria-hidden="true" class="site-title-short">USWDS</span>
+          <span class="site-title">myCalPERS</span>
+        </a>
+      </em>
+    </div>
+    <button class="mycal-menu-btn">Menu</button>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+  <li>
+    <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');">
+      Based on USWDS v2.0 <span class="text-normal">Beta 4</span>
+    </a>
+  </li>
+</ul>
+
+  </div>
+</header>
+<nav class="site-nav-secondary sticky">
+  <ul>
+  
+  <li class="mycal-nav-submenu-item">
+	<a href="home.jsp">
+	  <span>
+	    Demo
+	  </span>
+	</a>
+  </li>
+  <li class="mycal-nav-submenu-item">
+	<a href="https://v2.designsystem.digital.gov/">
+	  <span>
+	    Additional Documentation
+	  </span>
+	</a>
+  </li>
+
+  </ul>
+</nav>
+<div class="mycal-overlay"></div>
+
+<nav role="navigation" class="mycal-nav sidenav-mobile">
+  <button class="mycal-nav-close">
+    <img src="http://lgdimcip1:20410/mss/img/close.svg" alt="close" style="">
+  </button>
+  <div class="mycal-nav-inner">
+    <ul class="mycal-nav-primary mycal-accordion">
+      
+  <li class="mycal-nav-primary-item">
+  
+  
+    
+
+<button class="mycal-accordion-button mycal-nav-link" aria-controls="nav-documentation" aria-expanded="false">
+  Documentation
+</button>
+<ul id="nav-documentation" class="mycal-nav-submenu" hidden="">
+  
+  
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-patterns.html">
+  <span>
+    Accordions
+  </span>
+</a>
+
+  </li>
+  <li class="mycal-nav-submenu-item">
+<a href="mss-alerts.html">
+  <span>
+    Alerts
+  </span>
+</a>
+
+  </li>
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-buttons.html">
+  <span>
+    Buttons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-clearfix.html">
+  <span>
+    Clearfix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-flex.html">
+  <span>
+    Flex 
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-formcontrols.html">
+  <span>
+    Form Controls
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-grid.html">
+  <span>
+    Grid Layout
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-icons.html">
+  <span>
+    Icons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-labels.html">
+  <span>
+    Labels
+  </span>
+</a>
+
+
+    
+  </li>
+
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-tables.html">
+  <span>
+    Tables
+  </span>
+</a>
+
+
+    
+  </li>
+
+</ul>
+  
+  </li>
+
+</ul>
+
+  
+  </li>
+
+
+    </ul>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+  <li>
+    <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');">
+      <span class="text-normal">Based on USWDS</span>v2.0 <span class="text-normal">Beta 4</span>
+    </a>
+  </li>
+</ul>
+
+  </div>
+</nav>
+
+  <aside class="sidenav">
+    
+    
+    <ul class="site-sidenav mycal-sidenav">
+      
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-patterns.html">
+  
+    Accordions
+  
+</a>
+
+    
+    
+    
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-alerts.html">
+    Alerts
+
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-buttons.html">
+     Buttons
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-clearfix.html">
+    Clearfix
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item is-current">
+    
+
+<a href="mss-flex.html"  class="mycal-current">
+    Flex 
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-formcontrols.html">
+    Form Controls
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+<a href="mss-grid.html">
+  
+    Grid Layout
+</a>
+
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-icons.html">
+    Icons
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-labels.html">
+    Labels
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+<a href="mss-tables.html">
+    Tables
+</a>
+
+  </li>
+
+
+    </ul>
+    
+  </aside>
+<main id="main-content">
+    <div class="sidenav-main-content">
+    <div class="styleguide-content">
+      <header>
+        
+          
+            <p class="site-subheading">Utilities</p>
+          
+        
+        <h1 id="flex" class="site-page-title">Flex</h1>
+        
+      </header>
+
+      <p class="site-font-lead mycal-font-lead">Set an itemâ€™s flexbox properties.</p>
+
+
+
+
+      <div class="utilities-properties">
+  <h3 class="utilities-property-title">CSS properties</h3>
+  <div class="margin-top-1">
+    <span class="property utilities-property">align-items</span>
+    <span class="property utilities-property">flex</span>
+    <span class="property utilities-property">flex-direction</span>
+    <span class="property utilities-property">flex-wrap</span>
+    <span class="property utilities-property">justify-content</span>
+    <span class="property utilities-property">order</span>
+  </div>
+</div>
+
+<section class="utilities-section">
+<div class="utilities-section-title-bar mycal-grid-row">
+  <h2 class="utilities-section-title mycal-grid-col">Examples and usage</h2>
+  <p class="utilities-section-helper mycal-grid-col">Utilities, values, and variants may be activated and deactivated in <a href="#advanced-settings" class="text-ink text-no-wrap">advanced settings</a>.</p>
+</div>
+
+
+  <section class="utility" id="utility-flex">
+    <section class="utility-title-bar">
+  <div class="mycal-grid-row">
+    <div class="mycal-grid-col utility-name">
+      <h3 class="utility-title">Flex</h3>
+      
+        <p class="utility-property">CSS property: <span class="utility-property-code">flex</span></p>
+      
+    </div>
+
+    <ul class="mycal-grid-col utility-scope">
+      
+        <li class="utility-scope-button-disabled">responsive</li>
+      
+      
+        <li class="utility-scope-button-disabled">active</li>
+      
+      
+        <li class="utility-scope-button-disabled">hover</li>
+      
+      
+        <li class="utility-scope-button-disabled">focus</li>
+      
+      
+        <li class="utility-scope-button-disabled">visited</li>
+      
+    </ul>
+  </div>
+</section>
+
+    <section class="utility-examples">
+
+    
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-1</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            <span class="utility-class">.flex-1</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            <span class="utility-class">.flex-1</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            <span class="utility-class">.flex-1</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-2">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-2</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-3">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-3</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-4">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-4</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-5">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-5</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-6">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-6</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-7">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-7</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-8">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-8</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-9">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-9</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-10">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-10</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-11">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-11</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-12">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-12</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-auto">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-auto</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid-row grid-gap-sm margin-bottom-1">
+        <div class="grid-col flex-fill">
+          <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105">
+            <span class="utility-class text-no-wrap">.flex-fill</span>
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+        <div class="grid-col flex-1">
+          <div class="height-6 width-full display-flex flex-align-center border border-base-dark flex-justify-center">
+            
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="mycal-accordion-bordered mycal-code-sample margin-top-4 margin-bottom-1">
+        <button class="mycal-accordion-button" aria-controls="code-flex" aria-expanded="false">Code</button>
+        <div id="code-flex" class="mycal-accordion-content">
+<div class="font-mono-xs">
+            <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-3"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-5"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-6"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-7"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-8"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-9"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-10"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-11"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-12"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-auto"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col flex-fill"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>            </div>
+          </div><!-- markdown -->
+        </div><!-- code-content -->
+      </div><!-- code-sample -->
+
+    </section><!-- examples -->
+  </section><!-- utility -->
+
+  <section class="utility" id="utility-flex-direction">
+    <section class="utility-title-bar">
+  <div class="mycal-grid-row">
+    <div class="mycal-grid-col utility-name">
+      <h3 class="utility-title">Flex direction</h3>
+      
+        <p class="utility-property">CSS property: <span class="utility-property-code">flex-direction</span></p>
+      
+    </div>
+
+    <ul class="mycal-grid-col utility-scope">
+      
+        <li class="utility-scope-button-disabled">responsive</li>
+      
+      
+        <li class="utility-scope-button-disabled">active</li>
+      
+      
+        <li class="utility-scope-button-disabled">hover</li>
+      
+      
+        <li class="utility-scope-button-disabled">focus</li>
+      
+      
+        <li class="utility-scope-button-disabled">visited</li>
+      
+    </ul>
+  </div>
+</section>
+
+    <section class="utility-examples">
+
+    
+      <div class="border padding-1 radius-md margin-bottom-2">
+        <span class="utility-class">.flex-column</span>
+        <div class="grid-row flex-column margin-top-2">
+          <div class="grid-col flex-1 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+            </div>
+          </div>
+          <div class="grid-col flex-1 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+            </div>
+          </div>
+          <div class="grid-col flex-1 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+            </div>
+          </div>
+          <div class="grid-col flex-1 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="border padding-1 radius-md">
+        <span class="utility-class">.flex-row</span>
+        <div class="grid-row flex-row margin-top-2">
+          <div class="grid-col flex-1 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+            </div>
+          </div>
+          <div class="grid-col flex-1 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+            </div>
+          </div>
+          <div class="grid-col flex-1 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+            </div>
+
+          </div>
+          <div class="grid-col flex-1 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <div class="mycal-accordion-bordered mycal-code-sample margin-top-4 margin-bottom-1">
+      <button class="mycal-accordion-button" aria-controls="code-flex-direction" aria-expanded="false">Code</button>
+      <div id="code-flex-direction" class="mycal-accordion-content">
+<div class="font-mono-xs">
+            <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row flex-column"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row flex-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>            </div>
+          </div><!-- markdown -->
+        </div><!-- code-content -->
+      </div><!-- code-sample -->
+
+    </section><!-- examples -->
+  </section><!-- utility -->
+
+  <section class="utility" id="utility-flex-wrap">
+    <section class="utility-title-bar">
+  <div class="mycal-grid-row">
+    <div class="mycal-grid-col utility-name">
+      <h3 class="utility-title">Flex wrap</h3>
+      
+        <p class="utility-property">CSS property: <span class="utility-property-code">flex-wrap</span></p>
+      
+    </div>
+
+    <ul class="mycal-grid-col utility-scope">
+      
+        <li class="utility-scope-button-disabled">responsive</li>
+      
+      
+        <li class="utility-scope-button-disabled">active</li>
+      
+      
+        <li class="utility-scope-button-disabled">hover</li>
+      
+      
+        <li class="utility-scope-button-disabled">focus</li>
+      
+      
+        <li class="utility-scope-button-disabled">visited</li>
+      
+    </ul>
+  </div>
+</section>
+
+    <section class="utility-examples">
+
+    
+      <div class="border padding-1 radius-md margin-bottom-2">
+        <span class="utility-class">.flex-wrap</span>
+        <div class="grid-row flex-wrap margin-top-2">
+          <div class="grid-col-4 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              <span class="utility-class">.grid-col-4</span>
+            </div>
+          </div>
+          <div class="grid-col-4 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              <span class="utility-class">.grid-col-4</span>
+            </div>
+          </div>
+          <div class="grid-col-4 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              <span class="utility-class">.grid-col-4</span>
+            </div>
+          </div>
+          <div class="grid-col-4 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              <span class="utility-class">.grid-col-4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="border padding-1 radius-md">
+        <span class="utility-class">.flex-no-wrap</span>
+        <div class="grid-row flex-no-wrap margin-top-2">
+          <div class="grid-col-4 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              <span class="utility-class">.grid-col-4</span>
+            </div>
+          </div>
+          <div class="grid-col-4 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              <span class="utility-class">.grid-col-4</span>
+            </div>
+          </div>
+          <div class="grid-col-4 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              <span class="utility-class">.grid-col-4</span>
+            </div>
+          </div>
+          <div class="grid-col-4 padding-1px">
+            <div class="height-6 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              <span class="utility-class">.grid-col-4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <div class="mycal-accordion-bordered mycal-code-sample margin-top-4 margin-bottom-1">
+      <button class="mycal-accordion-button" aria-controls="code-flex-wrap" aria-expanded="false">Code</button>
+      <div id="code-flex-wrap" class="mycal-accordion-content">
+<div class="font-mono-xs">
+            <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row flex-wrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row flex-no-wrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>            </div>
+          </div><!-- markdown -->
+        </div><!-- code-content -->
+      </div><!-- code-sample -->
+
+    </section><!-- examples -->
+  </section><!-- utility -->
+
+  <section class="utility" id="utility-flex-align">
+    <section class="utility-title-bar">
+  <div class="mycal-grid-row">
+    <div class="mycal-grid-col utility-name">
+      <h3 class="utility-title">Flex align</h3>
+      
+        <p class="utility-property">CSS property: <span class="utility-property-code">flex-align</span></p>
+      
+    </div>
+
+    <ul class="mycal-grid-col utility-scope">
+      
+        <li class="utility-scope-button-disabled">responsive</li>
+      
+      
+        <li class="utility-scope-button-disabled">active</li>
+      
+      
+        <li class="utility-scope-button-disabled">hover</li>
+      
+      
+        <li class="utility-scope-button-disabled">focus</li>
+      
+      
+        <li class="utility-scope-button-disabled">visited</li>
+      
+    </ul>
+  </div>
+</section>
+
+    <section class="utility-examples">
+
+    
+      <div class="border padding-1 radius-md margin-bottom-2">
+        <div class="padding-bottom-4 border-bottom margin-bottom-2">
+          <span class="utility-class">.flex-column</span>
+        </div>
+      
+        <span class="utility-class">.flex-align-start</span>
+          <div class="grid-row flex-column flex-align-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+          </div>
+      
+        <span class="utility-class">.flex-align-center</span>
+          <div class="grid-row flex-column flex-align-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+          </div>
+      
+        <span class="utility-class">.flex-align-end</span>
+          <div class="grid-row flex-column flex-align-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+          </div>
+      
+        <span class="utility-class">.flex-align-stretch</span>
+          <div class="grid-row flex-column flex-align-stretch margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+          </div>
+      
+        </div>
+    
+      <div class="border padding-1 radius-md">
+        <div class="padding-bottom-4 border-bottom margin-bottom-2">
+          <span class="utility-class">.flex-row</span>
+        </div>
+      
+        <span class="utility-class">.flex-align-start</span>
+          <div class="grid-row flex-row flex-align-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+          </div>
+      
+        <span class="utility-class">.flex-align-center</span>
+          <div class="grid-row flex-row flex-align-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+          </div>
+      
+        <span class="utility-class">.flex-align-end</span>
+          <div class="grid-row flex-row flex-align-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+          </div>
+      
+        <span class="utility-class">.flex-align-stretch</span>
+          <div class="grid-row flex-row flex-align-stretch margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+            <div class="grid-auto padding-1px">
+              <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+              </div>
+            </div>
+          </div>
+      
+        </div>
+    
+
+    <div class="mycal-accordion-bordered mycal-code-sample margin-top-4 margin-bottom-1">
+      <button class="mycal-accordion-button" aria-controls="code-flex-align" aria-expanded="false">Code</button>
+      <div id="code-flex-align" class="mycal-accordion-content">
+<div class="font-mono-xs">
+            <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-flex flex-column"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-start"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-center"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-end"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-stretch"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-flex flex-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-start"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-center"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-end"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-stretch"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>            </div>
+          </div><!-- markdown -->
+        </div><!-- code-content -->
+      </div><!-- code-sample -->
+
+    </section><!-- examples -->
+  </section><!-- utility -->
+
+  <section class="utility" id="utility-flex-justify">
+    <section class="utility-title-bar">
+  <div class="mycal-grid-row">
+    <div class="mycal-grid-col utility-name">
+      <h3 class="utility-title">Flex justify</h3>
+      
+        <p class="utility-property">CSS property: <span class="utility-property-code">justify-content</span></p>
+      
+    </div>
+
+    <ul class="mycal-grid-col utility-scope">
+      
+        <li class="utility-scope-button-disabled">responsive</li>
+      
+      
+        <li class="utility-scope-button-disabled">active</li>
+      
+      
+        <li class="utility-scope-button-disabled">hover</li>
+      
+      
+        <li class="utility-scope-button-disabled">focus</li>
+      
+      
+        <li class="utility-scope-button-disabled">visited</li>
+      
+    </ul>
+  </div>
+</section>
+
+    <section class="utility-examples">
+
+      <div class="border padding-1 radius-md margin-bottom-2">
+        <div class="padding-bottom-4 border-bottom margin-bottom-2">
+          <span class="utility-class">.flex-row</span>
+        </div>
+        
+          <span class="utility-class">.flex-justify</span>
+            <div class="grid-row flex- flex-justify margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+            </div>
+        
+          <span class="utility-class">.flex-justify-start</span>
+            <div class="grid-row flex- flex-justify-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+            </div>
+        
+          <span class="utility-class">.flex-justify-center</span>
+            <div class="grid-row flex- flex-justify-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+            </div>
+        
+          <span class="utility-class">.flex-justify-end</span>
+            <div class="grid-row flex- flex-justify-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-7 minw-7 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-8 minw-8 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-9 minw-9 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+              <div class="grid-auto padding-1px">
+                <div class="height-full minh-10 minw-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center">
+                </div>
+              </div>
+            </div>
+        
+        </div>
+
+    <div class="mycal-accordion-bordered mycal-code-sample margin-top-4 margin-bottom-1">
+      <button class="mycal-accordion-button" aria-controls="code-flex-justify" aria-expanded="false">Code</button>
+      <div id="code-flex-justify" class="mycal-accordion-content">
+<div class="font-mono-xs">
+            <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-flex flex-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-start"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-center"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-end"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-align-stretch"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>            </div>
+          </div><!-- markdown -->
+        </div><!-- code-content -->
+      </div><!-- code-sample -->
+
+    </section><!-- examples -->
+  </section><!-- utility -->
+
+  <section class="utility" id="utility-order">
+    <section class="utility-title-bar">
+  <div class="mycal-grid-row">
+    <div class="mycal-grid-col utility-name">
+      <h3 class="utility-title">Order</h3>
+      
+        <p class="utility-property">CSS property: <span class="utility-property-code">order</span></p>
+      
+    </div>
+
+    <ul class="mycal-grid-col utility-scope">
+      
+        <li class="utility-scope-button-disabled">responsive</li>
+      
+      
+        <li class="utility-scope-button-disabled">active</li>
+      
+      
+        <li class="utility-scope-button-disabled">hover</li>
+      
+      
+        <li class="utility-scope-button-disabled">focus</li>
+      
+      
+        <li class="utility-scope-button-disabled">visited</li>
+      
+    </ul>
+  </div>
+</section>
+
+    <section class="utility-examples">
+
+    <div class="grid-row grid-gap-sm">
+      
+        <div class="grid-col-auto order-11">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 1</span>
+            <span class="utility-class">.order-11</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-10">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 2</span>
+            <span class="utility-class">.order-10</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-9">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 3</span>
+            <span class="utility-class">.order-9</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-8">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 4</span>
+            <span class="utility-class">.order-8</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-7">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 5</span>
+            <span class="utility-class">.order-7</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-6">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 6</span>
+            <span class="utility-class">.order-6</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-5">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 7</span>
+            <span class="utility-class">.order-5</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-4">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 8</span>
+            <span class="utility-class">.order-4</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-3">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 9</span>
+            <span class="utility-class">.order-3</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-2">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 10</span>
+            <span class="utility-class">.order-2</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-1">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 11</span>
+            <span class="utility-class">.order-1</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-0">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 12</span>
+            <span class="utility-class">.order-0</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-initial">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 13</span>
+            <span class="utility-class">.order-initial</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-last">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 14</span>
+            <span class="utility-class">.order-last</span>
+          </div>
+        </div>
+      
+        <div class="grid-col-auto order-first">
+          <div class="padding-x-1 padding-y-1 border border-secondary-light margin-y-1px display-flex flex-column flex-align-start">
+            <span class="font-sans-3xs text-red-warm-50v margin-bottom-2">intital: 15</span>
+            <span class="utility-class">.order-first</span>
+          </div>
+        </div>
+      
+    </div>
+
+    <div class="mycal-accordion-bordered mycal-code-sample margin-top-4 margin-bottom-1">
+      <button class="mycal-accordion-button" aria-controls="code-order" aria-expanded="false">Code</button>
+      <div id="code-order" class="mycal-accordion-content">
+<div class="font-mono-xs">
+            <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-11"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-10"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-9"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-8"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-7"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-6"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-5"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-3"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-0"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-initial"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-last"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-col order-first"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>            </div>
+          </div><!-- markdown -->
+        </div><!-- code-content -->
+      </div><!-- code-sample -->
+
+    </section><!-- examples -->
+  </section><!-- utility -->
+
+</section>
+    </div>
+    </div>
+  </main>
+
+
+</div>
+<script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script>  
+<script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ba-dotimeout.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.plugins.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.cookies.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/mock.js"></script>
+<!-- Modal -->
+	<script type="text/javascript" src="resources/mss/js/modaal.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/calendar.js" />	
+
+<script type="text/javascript" src="resources/mss/js/datepicker.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/uswds-2_4-mycal.js"></script>
+<script type="text/javascript" src="resources/mss/js/styleguide.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/datatables.min.js"></script>
+<footer class="mycal-footer mycal-footer-slim" role="contentinfo">
+  <div class="grid-container mycal-footer-return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="mycal-footer-primary-section">
+     <div class="grid-row">
+        <nav class="mycal-footer-nav">
+          <ul class="add-list-reset grid-row grid-gap">
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/privacy-policy" title="Opens in a new window" target="_blank">Privacy Policy</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/conditions-of-use" title="Opens in a new window" target="_blank">Conditions of Use</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/accessibility" title="Opens in a new window" target="_blank">Accessibility</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/contact" title="Contact us">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  </body>
+</html>
+<script>
+	$j('a[target]').addClass('mycal-external_link');
+Event.observe(window, "load", function(){ 
+		if($j('.tabbedContainer > ul > li > a')){
+			$j('.tabbedContainer > ul > li > a').attr('aria-expanded', 'false');
+		}
+		if ( $j('.tabbedContainer > ul > li > a.active').length == 0)
+		{
+			$j('.tabbedContainer > ul > li:first > a').addClass('active');
+			$j('.tabbedContainer > ul > li:first > a').attr('aria-expanded', 'true');
+			$j('.tabbedContainer > ul > li:first > a').parent().next().find('a').addClass('leftShadow');
+			$j ( $j('.tabbedContainer > ul > li:first > a').attr('href') ).show();
+		}
+		else if ( $j('.tabbedContainer > ul > li > a.active').length == 1 )
+		{
+			$j ( $j('.tabbedContainer > ul > li> a.active').attr('href') ).show();
+			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
+		}
+		
+		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
+		
+		$j('.tabbedContainer > ul > li > a').click(function() {
+			var containerId = $j(this).parent().parent().parent().attr('id');
+			var targetId = $j(this).attr("href");
+			
+			$j('#' + containerId + ' > ul > li > a').removeClass('active').removeClass('rightShadow').removeClass('leftShadow');
+			$j('#' + containerId + ' > ul > li > a').attr('aria-expanded', 'false');
+			$j(this).addClass('active');
+			$j(this).attr('aria-expanded', 'true');
+			$j(this).parent().prev().find('a').addClass('rightShadow');
+			$j(this).parent().next().find('a').addClass('leftShadow');			
+			$j('#' + containerId + ' > div.content').hide();
+			$j('#' + containerId + ' > div' + targetId +  '.content').show();
+		});
+	
+	});		
+</script>
