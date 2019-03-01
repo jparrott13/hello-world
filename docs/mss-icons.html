@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    <meta name="robots" content="noindex, nofollow">
+  
+
+<!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title and meta description
+================================================== -->
+  
+
+<title>myCalPERS new responsive design based on United States Web Design System v2.4 (beta)</title>
+<meta property="og:title" content="myCalPERS new responsive design">
+
+<!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="http://lgdimcip1:20410/mss/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="http://lgdimcip1:20410/mss/img/favicons/favicon.png">
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="http://lgdimcip1:20410/mss/img/favicons/favicon-192.png">
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="http://lgdimcip1:20410/mss/img/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://lgdimcip1:20410/mss/img/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://lgdimcip1:20410/mss/img/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://lgdimcip1:20410/mss/img/favicons/favicon-144.png">
+
+<!-- CSS
+================================================== -->
+<!-- env: demo -->
+
+
+<link rel="stylesheet" href="resources/mss/css/v2style.css">
+<link rel="stylesheet" href="resources/mss/css/uswds-2_4-mycal.css">
+<script type="text/javascript" src="resources/mss/js/forms.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>		
+				
+<!-- CSS Includes -->
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />
+<!-- From PSR -->
+<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>		 
+<!-- JS Includes -->
+<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
+<script src="resources/mss/js/calendar-popup.js"></script>
+<script src="resources/mss/js/application.js"></script>
+<script> 
+	var $j = jQuery.noConflict();
+</script>
+  </head>
+  <body class="page-utilities layout-styleguide ">
+    <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
+
+    <header class="mycal-header site-header site-header-dark" role="banner">
+  <div class="mycal-navbar site-header-navbar">
+    <div class="mycal-logo site-logo" id="logo">
+      <em class="mycal-logo-text">
+        <a class="margin-right-05" href="home.jsp" title="Home" aria-label="United States Web Design System home">
+          <span aria-hidden="true" class="site-title-short">USWDS</span>
+          <span class="site-title">myCalPERS</span>
+        </a>
+      </em>
+    </div>
+    <button class="mycal-menu-btn">Menu</button>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+  <li>
+    <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');">
+      Based on USWDS v2.0 <span class="text-normal">Beta 4</span>
+    </a>
+  </li>
+</ul>
+
+  </div>
+</header>
+<nav class="site-nav-secondary sticky">
+  <ul>
+  
+  <li class="mycal-nav-submenu-item">
+	<a href="home.jsp">
+	  <span>
+	    Demo
+	  </span>
+	</a>
+  </li>
+  <li class="mycal-nav-submenu-item">
+	<a href="https://v2.designsystem.digital.gov/">
+	  <span>
+	    Additional Documentation
+	  </span>
+	</a>
+  </li>
+
+  </ul>
+</nav>
+<div class="mycal-overlay"></div>
+
+<nav role="navigation" class="mycal-nav sidenav-mobile">
+  <button class="mycal-nav-close">
+    <img src="http://lgdimcip1:20410/mss/img/close.svg" alt="close" style="">
+  </button>
+  <div class="mycal-nav-inner">
+    <ul class="mycal-nav-primary mycal-accordion">
+      
+  <li class="mycal-nav-primary-item">
+  
+  
+    
+
+<button class="mycal-accordion-button mycal-nav-link" aria-controls="nav-documentation" aria-expanded="false">
+  Documentation
+</button>
+<ul id="nav-documentation" class="mycal-nav-submenu" hidden="">
+  
+  
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-patterns.html">
+  <span>
+    Accordions
+  </span>
+</a>
+
+  </li>
+  <li class="mycal-nav-submenu-item">
+<a href="mss-alerts.html">
+  <span>
+    Alerts
+  </span>
+</a>
+
+  </li>
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-buttons.html">
+  <span>
+    Buttons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-clearfix.html">
+  <span>
+    Clearfix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-flex.html">
+  <span>
+    Flex 
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-formcontrols.html">
+  <span>
+    Form Controls
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-grid.html">
+  <span>
+    Grid Layout
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-icons.html">
+  <span>
+    Icons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-labels.html">
+  <span>
+    Labels
+  </span>
+</a>
+
+
+    
+  </li>
+
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-tables.html">
+  <span>
+    Tables
+  </span>
+</a>
+
+
+    
+  </li>
+
+</ul>
+  
+  </li>
+
+</ul>
+
+  
+  </li>
+
+
+    </ul>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+  <li>
+    <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');">
+      <span class="text-normal">Based on USWDS</span>v2.0 <span class="text-normal">Beta 4</span>
+    </a>
+  </li>
+</ul>
+
+  </div>
+</nav>
+
+  <aside class="sidenav">
+    
+    
+    <ul class="site-sidenav mycal-sidenav">
+      
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-patterns.html">
+  
+    Accordions
+  
+</a>
+
+    
+    
+    
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-alerts.html">
+    Alerts
+
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-buttons.html">
+     Buttons
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-clearfix.html">
+    Clearfix
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-flex.html" >
+    Flex 
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-formcontrols.html" >
+    Form Controls
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+<a href="mss-grid.html">
+  
+    Grid Layout
+</a>
+
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item is-current">
+    
+
+<a href="mss-icons.html" class="mycal-current">
+    Icons
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-labels.html">
+    Labels
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+<a href="mss-tables.html">
+    Tables
+</a>
+
+  </li>
+
+
+    </ul>
+    
+  </aside>
+<main id="main-content">
+    <div class="sidenav-main-content">
+    <div class="styleguide-content mycal-prose">
+      <header>
+        
+          
+            <p class="site-subheading">Components</p>
+          
+        
+        <h1 id="icons" class="site-page-title">Icons</h1>
+        
+      </header>
+
+      <p class="site-font-lead mycal-font-lead">Icons communicate meaning in a graphical user interface.</p>
+
+      <p>The Design System uses a subset of <a href="https://fontawesome.com/">Font Awesome</a> icons on the project. They are available for use in <code class="highlighter-rouge">src/img</code>. If you need additional icons, use <a href="https://fontawesome.com/">Font Awesome</a> in your project.</p>
+      <p>All links with target attribute will have the class 'mycal-external_link' added automatically, to show the visual reference. For example <a href="http://www.calpers.ca.gov" target="_blank" class="mycal-external_link" target="_blank">CalPERS online</a>
+
+<div class="mycal-accordion-bordered">
+  <button class="mycal-button-unstyled mycal-accordion-button" aria-expanded="false" aria-controls="icons-docs">
+    Documentation
+  </button>
+  <div id="icons-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
+    <h4 class="mycal-heading">Implementation</h4>
+    <p>Use the Design System icons available in <code>src/img</code> or <a href="https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css">add Font Awesome to your project</a>. This project uses icons in two ways:</p>
+    <ul>
+      <li>SVGs with PNG fallbacks</li>
+      <li>CSS background images</li>
+    </ul>
+    <h4 class="mycal-heading">Accessibility</h4>
+    <p>Provide descriptive text when an icon is meaningful or has an action associated with it. Do not provide additional text when the icon is decorative.</p>
+    <p>See <a href="https://accessibility.digital.gov/front-end/images/">Images - Accessibility for Teams</a> and <a href="https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility">Accessibility - Font Awesome</a>.</p>
+    <h4 class="mycal-heading">Usability</h4>
+    <p>See <a href="https://www.nngroup.com/articles/icon-usability/">Icon Usability - Nielsen Norman Group</a>.</p>
+  </div>
+</div>
+
+    </div>
+    </div>
+  </main>
+
+</div>
+<script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script>  
+<script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ba-dotimeout.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.plugins.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.cookies.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/mock.js"></script>
+<!-- Modal -->
+	<script type="text/javascript" src="resources/mss/js/modaal.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/calendar.js" />	
+
+<script type="text/javascript" src="resources/mss/js/datepicker.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/uswds-2_4-mycal.js"></script>
+<script type="text/javascript" src="resources/mss/js/styleguide.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/datatables.min.js"></script>
+<footer class="mycal-footer mycal-footer-slim" role="contentinfo">
+  <div class="grid-container mycal-footer-return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="mycal-footer-primary-section">
+     <div class="grid-row">
+        <nav class="mycal-footer-nav">
+          <ul class="add-list-reset grid-row grid-gap">
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/privacy-policy" title="Opens in a new window" target="_blank">Privacy Policy</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/conditions-of-use" title="Opens in a new window" target="_blank">Conditions of Use</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/accessibility" title="Opens in a new window" target="_blank">Accessibility</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/contact" title="Contact us">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  </body>
+</html>
+<script>
+	$j('a[target]').addClass('mycal-external_link');
+Event.observe(window, "load", function(){ 
+		if($j('.tabbedContainer > ul > li > a')){
+			$j('.tabbedContainer > ul > li > a').attr('aria-expanded', 'false');
+		}
+		if ( $j('.tabbedContainer > ul > li > a.active').length == 0)
+		{
+			$j('.tabbedContainer > ul > li:first > a').addClass('active');
+			$j('.tabbedContainer > ul > li:first > a').attr('aria-expanded', 'true');
+			$j('.tabbedContainer > ul > li:first > a').parent().next().find('a').addClass('leftShadow');
+			$j ( $j('.tabbedContainer > ul > li:first > a').attr('href') ).show();
+		}
+		else if ( $j('.tabbedContainer > ul > li > a.active').length == 1 )
+		{
+			$j ( $j('.tabbedContainer > ul > li> a.active').attr('href') ).show();
+			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
+		}
+		
+		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
+		
+		$j('.tabbedContainer > ul > li > a').click(function() {
+			var containerId = $j(this).parent().parent().parent().attr('id');
+			var targetId = $j(this).attr("href");
+			
+			$j('#' + containerId + ' > ul > li > a').removeClass('active').removeClass('rightShadow').removeClass('leftShadow');
+			$j('#' + containerId + ' > ul > li > a').attr('aria-expanded', 'false');
+			$j(this).addClass('active');
+			$j(this).attr('aria-expanded', 'true');
+			$j(this).parent().prev().find('a').addClass('rightShadow');
+			$j(this).parent().next().find('a').addClass('leftShadow');			
+			$j('#' + containerId + ' > div.content').hide();
+			$j('#' + containerId + ' > div' + targetId +  '.content').show();
+		});
+	
+	});		
+</script>
