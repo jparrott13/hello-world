@@ -1,0 +1,1163 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+    <meta name="robots" content="noindex, nofollow">
+  
+
+<!-- Mobile Specific Metas
+================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title and meta description
+================================================== -->
+  
+
+<title>myCalPERS new responsive design based on United States Web Design System v2.4 (beta)</title>
+<meta property="og:title" content="myCalPERS new responsive design">
+
+<!-- Favicons
+================================================== -->
+  <!-- 128x128 -->
+  <link rel="shortcut icon" type="image/ico" href="http://lgdimcip1:20410/mss/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="http://lgdimcip1:20410/mss/img/favicons/favicon.png">
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="http://lgdimcip1:20410/mss/img/favicons/favicon-192.png">
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="http://lgdimcip1:20410/mss/img/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://lgdimcip1:20410/mss/img/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://lgdimcip1:20410/mss/img/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://lgdimcip1:20410/mss/img/favicons/favicon-144.png">
+
+<!-- CSS
+================================================== -->
+<!-- env: demo -->
+
+
+<link rel="stylesheet" href="resources/mss/css/v2style.css">
+<link rel="stylesheet" href="resources/mss/css/uswds-2_4-mycal.css">
+<script type="text/javascript" src="resources/mss/js/forms.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>		
+				
+<!-- CSS Includes -->
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />
+<!-- From PSR -->
+<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>		 
+<!-- JS Includes -->
+<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
+<script src="resources/mss/js/calendar-popup.js"></script>
+<script src="resources/mss/js/application.js"></script>
+<script> 
+	var $j = jQuery.noConflict();
+</script>
+  </head>
+  <body class="page-utilities layout-styleguide ">
+    <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
+
+    <header class="mycal-header site-header site-header-dark" role="banner">
+  <div class="mycal-navbar site-header-navbar">
+    <div class="mycal-logo site-logo" id="logo">
+      <em class="mycal-logo-text">
+        <a class="margin-right-05" href="home.jsp" title="Home" aria-label="United States Web Design System home">
+          <span aria-hidden="true" class="site-title-short">USWDS</span>
+          <span class="site-title">myCalPERS</span>
+        </a>
+      </em>
+    </div>
+    <button class="mycal-menu-btn">Menu</button>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+  <li>
+    <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');">
+      Based on USWDS v2.0 <span class="text-normal">Beta 4</span>
+    </a>
+  </li>
+</ul>
+
+  </div>
+</header>
+<nav class="site-nav-secondary sticky">
+  <ul>
+  
+  <li class="mycal-nav-submenu-item">
+	<a href="home.jsp">
+	  <span>
+	    Demo
+	  </span>
+	</a>
+  </li>
+  <li class="mycal-nav-submenu-item">
+	<a href="https://v2.designsystem.digital.gov/">
+	  <span>
+	    Additional Documentation
+	  </span>
+	</a>
+  </li>
+
+  </ul>
+</nav>
+<div class="mycal-overlay"></div>
+
+<nav role="navigation" class="mycal-nav sidenav-mobile">
+  <button class="mycal-nav-close">
+    <img src="http://lgdimcip1:20410/mss/img/close.svg" alt="close" style="">
+  </button>
+  <div class="mycal-nav-inner">
+    <ul class="mycal-nav-primary mycal-accordion">
+      
+  <li class="mycal-nav-primary-item">
+  
+  
+    
+
+<button class="mycal-accordion-button mycal-nav-link" aria-controls="nav-documentation" aria-expanded="false">
+  Documentation
+</button>
+<ul id="nav-documentation" class="mycal-nav-submenu" hidden="">
+  
+  
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-patterns.html">
+  <span>
+    Accordions
+  </span>
+</a>
+
+  </li>
+  <li class="mycal-nav-submenu-item">
+<a href="mss-alerts.html">
+  <span>
+    Alerts
+  </span>
+</a>
+
+  </li>
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-buttons.html">
+  <span>
+    Buttons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-clearfix.html">
+  <span>
+    Clearfix
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-flex.html">
+  <span>
+    Flex 
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-formcontrols.html">
+  <span>
+    Form Controls
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-grid.html">
+  <span>
+    Grid Layout
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-icons.html">
+  <span>
+    Icons
+  </span>
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-labels.html">
+  <span>
+    Labels
+  </span>
+</a>
+
+
+    
+  </li>
+
+  <li class="mycal-nav-submenu-item">
+    
+
+<a href="mss-tables.html">
+  <span>
+    Tables
+  </span>
+</a>
+
+
+    
+  </li>
+
+</ul>
+  
+  </li>
+
+</ul>
+
+  
+  </li>
+
+
+    </ul>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+  <li>
+    <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');">
+      <span class="text-normal">Based on USWDS</span>v2.0 <span class="text-normal">Beta 4</span>
+    </a>
+  </li>
+</ul>
+
+  </div>
+</nav>
+
+  <aside class="sidenav">
+    
+    
+    <ul class="site-sidenav mycal-sidenav">
+      
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-patterns.html">
+  
+    Accordions
+  
+</a>
+
+    
+    
+    
+    
+  
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-alerts.html">
+    Alerts
+
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-buttons.html">
+     Buttons
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-clearfix.html">
+    Clearfix
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-flex.html" >
+    Flex 
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item is-current">
+    
+
+<a href="mss-formcontrols.html"  class="mycal-current">
+    Form Controls
+</a>
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+<a href="mss-grid.html">
+  
+    Grid Layout
+</a>
+
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-icons.html">
+    Icons
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+
+<a href="mss-labels.html">
+    Labels
+</a>
+
+
+
+    
+  </li>
+
+  
+
+  
+  <li class="mycal-sidenav-item">
+    
+<a href="mss-tables.html">
+    Tables
+</a>
+
+  </li>
+
+
+    </ul>
+    
+  </aside>
+<main id="main-content">
+    <div class="sidenav-main-content">
+    <div class="styleguide-content mycal-prose">
+      <header>
+        
+          
+            <p class="site-subheading">Components</p>
+          
+        
+        <h1 id="form-controls" class="site-page-title">Form controls</h1>
+        
+      </header>
+
+      <p class="site-font-lead mycal-font-lead">Form controls allow users to enter information into a page.</p>
+
+
+
+
+      <h3 class="mycal-heading heading-margin-alt">Accessibility</h3>
+
+<p>As you customize these templates, make sure they meet the accessibility guidelines in this introduction and as described for each control.</p>
+
+<ul class="mycal-content-list">
+  <li>Display form controls in the same order in HTML as they appear on screen. Do not use CSS to rearrange the form controls. Screen readers narrate forms in the order they appear in the HTML.</li>
+  <li>Visually align validation messages with the input fields, so people using screen magnifiers can read them quickly.</li>
+  <li>Group each set of thematically related controls in a fieldset element. Use the legend element to offer a label within each one. The fieldset and legend elements make it easier for screen reader users to navigate the form.</li>
+  <li>Use a single legend for fieldset (this is required). One example of a common use of fieldset and legend is a question with radio button options for answers. The question text and radio buttons are wrapped in a fieldset, with the question itself being inside the legend tag.</li>
+  <li>Embed multiple fieldsets and legends for more complex forms.</li>
+  <li>Keep your form blocks in a vertical pattern. This approach is ideal, from an accessibility standpoint, because of limited vision that makes it hard to scan from right to left.</li>
+</ul>
+
+<h4>Supporting screen readers</h4>
+
+<p><b>Note:</b> These code examples have been designed to support a range of screen readers. That said, they may not work with all versions.</p>
+
+<h5>Known issues</h5>
+
+<ul class="mycal-content-list">
+  <li>VoiceOver on iOS currently does not support fieldset and legend for forms. You can address this by using <code>aria-labelledby="for-attribute-of-label id-of-legend id-of-additional-info"</code> on each input in the fieldset. Using <code>aria-labelledby</code> will overwrite the default text read by the screen reader, so it is important to include all relevant information.</li>
+  <li>VoiceOver on OS X currently does not support <code>aria-describedby</code>. Use <code>aria-labelledby</code> instead, and include all related fields, including, labels, legend, and hint text</li>
+</ul>
+
+<p>If you are a building a form with multiple controls, also consider the <a href="/form-templates/">accessibility guidelines in the â€œForm Templatesâ€ section</a>.</p>
+
+<section id="section-/form-controls/01-text-input">
+  <h2 class="mycal-heading heading-margin-alt" id="text-input">Text input</h2>
+  
+    <p class="mycal-font-lead">Text inputs allow people to enter any combination of letters, numbers, or symbols of their choosing (unless otherwise restricted). Text input boxes can span single or multiple lines.</p>
+  
+  <div class="preview mycal-prose ">
+  <form class="mycal-form">
+  <label class="mycal-label" for="input-type-text">Text input label</label>
+  <input class="mycal-input" id="input-type-text" name="input-type-text" type="text">
+
+  <label class="mycal-label" for="input-focus">Text input focused</label>
+  <input class="mycal-input mycal-focus" id="input-focus" name="input-focus" type="text">
+
+  <div class="mycal-form-group-error">
+    <label class="mycal-label mycal-input-error-label" for="input-error">Text input error</label>
+    <span class="mycal-input-error-message" id="input-error-message" role="alert">Helpful error message</span>
+    <input class="mycal-input mycal-input-error" id="input-error" name="input-error" type="text" aria-describedby="input-error-message">
+  </div>
+
+  <label class="mycal-label" for="input-success">Text input success</label>
+  <input class="mycal-input mycal-input-success" id="input-success" name="input-success" type="text">
+
+  <label class="mycal-label" for="input-type-textarea">Text area label</label>
+  <textarea class="mycal-textarea" id="input-type-textarea" name="input-type-textarea"></textarea>
+</form>
+</div>
+
+<div class="mycal-accordion-bordered mycal-code-sample">
+  
+  <button class="mycal-accordion-button" aria-controls="code-text-input" aria-expanded="false">Code</button>
+  <div id="code-text-input" class="mycal-accordion-content" hidden="">
+    
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"mycal-form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"input-type-text"</span><span class="nt">&gt;</span>Text input label<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-input"</span> <span class="na">id=</span><span class="s">"input-type-text"</span> <span class="na">name=</span><span class="s">"input-type-text"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"input-focus"</span><span class="nt">&gt;</span>Text input focused<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-input mycal-focus"</span> <span class="na">id=</span><span class="s">"input-focus"</span> <span class="na">name=</span><span class="s">"input-focus"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mycal-form-group-error"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label mycal-input-error-label"</span> <span class="na">for=</span><span class="s">"input-error"</span><span class="nt">&gt;</span>Text input error<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mycal-input-error-message"</span> <span class="na">id=</span><span class="s">"input-error-message"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>Helpful error message<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-input mycal-input-error"</span> <span class="na">id=</span><span class="s">"input-error"</span> <span class="na">name=</span><span class="s">"input-error"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">aria-describedby=</span><span class="s">"input-error-message"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"input-success"</span><span class="nt">&gt;</span>Text input success<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-input mycal-input-success"</span> <span class="na">id=</span><span class="s">"input-success"</span> <span class="na">name=</span><span class="s">"input-success"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"input-type-textarea"</span><span class="nt">&gt;</span>Text area label<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"mycal-textarea"</span> <span class="na">id=</span><span class="s">"input-type-textarea"</span> <span class="na">name=</span><span class="s">"input-type-textarea"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+
+  </div>
+</div>
+
+<div class="mycal-accordion-bordered mycal-accordion-docs">
+  <button class="mycal-button-unstyled mycal-accordion-button" aria-expanded="false" aria-controls="text-input-docs">
+    Documentation
+  </button>
+  <div id="text-input-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
+    <h4 class="mycal-heading">Accessibility</h4>
+    <p>If you customize the text inputs, ensure they continue to meet the the <a href="/form-controls/"> accessibility requirements that apply to all form controls.</a></p>
+    <ul class="mycal-content-list">
+      <li>Avoid placeholder text for accessibility reasons. Most browsersâ€™ default rendering of placeholder text does not provide a high enough contrast ratio.</li>
+      <li>Avoid breaking numbers with distinct sections (such as phone numbers, Social Security Numbers, or credit card numbers) into separate input fields. For example, use one input for phone number, not three (one for area code, one for local code, and one for number). Each field needs to be labeled for a screen reader and the labels for fields broken into segments are often not meaningful.</li>
+    </ul>
+    <h4 class="mycal-heading">Usability</h4>
+    <h5>When to use</h5>
+    <ul class="mycal-content-list">
+      <li>If you canâ€™t reasonably predict a userâ€™s answer to a prompt and there might be wide variability in usersâ€™ answers.</li>
+      <li>When using another type of input will make answering more difficult. For example, birthdays and other known dates are easier to type in than they are to select from a calendar picker.</li>
+      <li>When users want to be able to paste in a response.</li>
+    </ul>
+    <h5>When to consider something else</h5>
+    <ul class="mycal-content-list">
+      <li>When users are choosing from a specific set of options.</li>
+    </ul>
+    <h5>Guidance</h5>
+    <ul class="mycal-content-list">
+      <li>The length of the text input provides a hint to users as to how much text to write. Do not require users to write paragraphs of text into a single-line input box; use a text area instead.</li>
+      <li>Text inputs are among the easiest type of input for desktop users but are more difficult for mobile users.</li>
+      <li>Only show error validation messages or stylings after a user has interacted with a particular field.</li>
+      <li>Avoid using placeholder text that appears within a text field before a user starts typing. If placeholder text is no longer visible after a user clicks into the field, users will no longer have that text available when they need to review their entries. (People who have cognitive or visual disabilities have additional problems with placeholder text.)</li>
+    </ul>
+  </div>
+</div>
+
+</section>
+
+<section id="section-/form-controls/02-dropdown">
+  <h2 class="mycal-heading heading-margin-alt" id="dropdown">Dropdown</h2>
+  
+    <p class="mycal-font-lead">A dropdown allows users to select one option from a list.</p>
+  
+  <div class="preview mycal-prose preview-dropdown">
+  <form class="mycal-form">
+  <label class="mycal-label" for="options">Dropdown label</label>
+  <select class="mycal-select" name="options" id="options">
+    <option value="">- Select -</option>
+    <option value="value1">Option A</option>
+    <option value="value2">Option B</option>
+    <option value="value3">Option C</option>
+  </select>
+</form>
+</div>
+
+<div class="mycal-accordion-bordered mycal-code-sample">
+  
+  <button class="mycal-accordion-button" aria-controls="code-dropdown" aria-expanded="false">Code</button>
+  <div id="code-dropdown" class="mycal-accordion-content" hidden="">
+    
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"mycal-form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"options"</span><span class="nt">&gt;</span>Dropdown label<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"mycal-select"</span> <span class="na">name=</span><span class="s">"options"</span> <span class="na">id=</span><span class="s">"options"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value</span><span class="nt">&gt;</span>- Select -<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"value1"</span><span class="nt">&gt;</span>Option A<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"value2"</span><span class="nt">&gt;</span>Option B<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"value3"</span><span class="nt">&gt;</span>Option C<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+
+  </div>
+</div>
+
+<div class="mycal-accordion-bordered mycal-accordion-docs">
+  <button class="mycal-button-unstyled mycal-accordion-button" aria-expanded="false" aria-controls="dropdown-docs">
+    Documentation
+  </button>
+  <div id="dropdown-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
+    <h4 class="mycal-heading">Accessibility</h4>
+    <p>If you customize the dropdown, ensure it continues to meet the the <a href="/form-controls/"> accessibility requirements that apply to all form controls.</a></p>
+    <ul class="mycal-content-list">
+      <li>Make sure your dropdown has a label. Donâ€™t replace it with the default menu option (for example, removing the â€œStateâ€ label and just having the dropdown read â€œSelect a stateâ€ by default).</li>
+      <li>Donâ€™t use JavaScript to automatically submit the form (or do anything else) when an option is selected. Auto-submission disrupts screen readers because they select each option as they read them.</li>
+    </ul>
+
+    <h4 class="mycal-heading">Usability</h4>
+    <h5>When to use</h5>
+    <ul class="mycal-content-list">
+      <li>Use sparingly â€” only when a user needs to choose from about seven to 15 possible options and you have limited space to display the options.</li>
+    </ul>
+    <h5>When to consider something else</h5>
+    <ul class="mycal-content-list">
+      <li>If the list of options is very short. Use radio buttons instead.</li>
+      <li>If the list of options is very long. Let users type the same information into a text input that suggests possible options instead.</li>
+      <li>If you need to allow users to select more than one option at once. Users often donâ€™t understand how to select multiple items from dropdowns. Use checkboxes instead.</li>
+      <li>For site navigation (use the navigation components instead).</li>
+    </ul>
+    <h5>Guidance</h5>
+    <ul class="mycal-content-list">
+      <li>Test dropdowns thoroughly with members of your target audience. Several usability experts suggest they should be the â€œUI of last resort.â€ Many users find them confusing and difficult to use.</li>
+      <li>Avoid making options in one dropdown menu change based on the input to another. Users often donâ€™t understand how selecting an item in one impacts another.</li>
+      <li>When most users will (or should) pick a particular option, make it the default: <code>&lt;option selected=<wbr>"selected"&gt;Default<wbr>&lt;/option&gt;</code></li>
+      <li>Donâ€™t use JavaScript to automatically submit the form (or do anything else) when an option is selected. Offer a â€œsubmitâ€ button at the end of the form instead. Users often change their choices multiple times. Auto-submission is also less accessible.</li>
+    </ul>
+  </div>
+</div>
+
+</section>
+
+<section id="section-/form-controls/03-checkboxes">
+  <h2 class="mycal-heading heading-margin-alt" id="checkboxes">Checkboxes</h2>
+  
+    <p class="mycal-font-lead">Checkboxes allow users to select one or more options from a visible list.</p>
+  
+  <div class="preview mycal-prose ">
+  <form class="mycal-form">
+  <fieldset class="mycal-fieldset">
+    <legend class="mycal-sr-only">Historical figures 1</legend>
+    <ul class="mycal-input-list">
+      <li>
+        <input class="mycal-checkbox-input" id="truth" type="checkbox" name="historical-figures-1" value="truth" checked="">
+        <label class="mycal-checkbox-label" for="truth">Sojourner Truth</label>
+      </li>
+      <li>
+        <input class="mycal-checkbox-input" id="douglass" type="checkbox" name="historical-figures-1" value="douglass">
+        <label class="mycal-checkbox-label" for="douglass">Frederick Douglass</label>
+      </li>
+      <li>
+        <input class="mycal-checkbox-input" id="washington" type="checkbox" name="historical-figures-1" value="washington">
+        <label class="mycal-checkbox-label" for="washington">Booker T. Washington</label>
+      </li>
+      <li>
+        <input class="mycal-checkbox-input" id="carver" type="checkbox" name="historical-figures-1" disabled="">
+        <label class="mycal-checkbox-label" for="carver">George Washington Carver</label>
+      </li>
+    </ul>
+  </fieldset>
+</form>
+</div>
+
+<div class="mycal-accordion-bordered mycal-code-sample">
+  
+  <button class="mycal-accordion-button" aria-controls="code-checkboxes" aria-expanded="false">Code</button>
+  <div id="code-checkboxes" class="mycal-accordion-content" hidden="">
+    
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"mycal-form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"mycal-fieldset"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"mycal-sr-only"</span><span class="nt">&gt;</span>Historical figures 1<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"mycal-input-list"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-checkbox-input"</span> <span class="na">id=</span><span class="s">"truth"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"historical-figures-1"</span> <span class="na">value=</span><span class="s">"truth"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-checkbox-label"</span> <span class="na">for=</span><span class="s">"truth"</span><span class="nt">&gt;</span>Sojourner Truth<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-checkbox-input"</span> <span class="na">id=</span><span class="s">"douglass"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"historical-figures-1"</span> <span class="na">value=</span><span class="s">"douglass"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-checkbox-label"</span> <span class="na">for=</span><span class="s">"douglass"</span><span class="nt">&gt;</span>Frederick Douglass<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-checkbox-input"</span> <span class="na">id=</span><span class="s">"washington"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"historical-figures-1"</span> <span class="na">value=</span><span class="s">"washington"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-checkbox-label"</span> <span class="na">for=</span><span class="s">"washington"</span><span class="nt">&gt;</span>Booker T. Washington<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-checkbox-input"</span> <span class="na">id=</span><span class="s">"carver"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"historical-figures-1"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-checkbox-label"</span> <span class="na">for=</span><span class="s">"carver"</span><span class="nt">&gt;</span>George Washington Carver<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+
+  </div>
+</div>
+
+<div class="mycal-accordion-bordered mycal-accordion-docs">
+  <button class="mycal-button-unstyled mycal-accordion-button" aria-expanded="false" aria-controls="checkbox-docs">
+    Documentation
+  </button>
+  <div id="checkbox-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
+    <h4 class="mycal-heading">Accessibility</h4>
+    <p>If you customize the text inputs, ensure they continue to meet the the <a href="/form-controls/"> accessibility requirements that apply to all form controls.</a></p>
+    <ul class="mycal-content-list">
+      <li>Surround a related set of checkboxes with a <code>&lt;fieldset&gt;</code>. The <code>&lt;legend&gt;</code> provides context for the grouping. Do not use fieldset and legend for a single check.</li>
+      <li>The custom checkboxes here are accessible to screen readers because the default checkboxes are moved off-screen with <code>position: absolute; left: -999em</code>.</li>
+      <li>Each input should have a semantic <code>id</code> attribute, and its corresponding label should have the same value in itâ€™s <code>for</code> attribute.</li>
+      <li>The <code>title</code> attribute can replace <code>&lt;label&gt;</code>.</li>
+    </ul>
+
+    <h4 class="mycal-heading">Usability</h4>
+    <h5>When to use</h5>
+    <ul class="mycal-content-list">
+      <li>When a user can select any number of choices from a set list.</li>
+      <li>When a user needs to choose â€œyesâ€ or â€œnoâ€ on only one option (use a stand-alone checkbox). For example, to toggle a setting on or off.</li>
+      <li>When users need to see all the available options at a glance.</li>
+    </ul>
+    <h5>When to consider something different</h5>
+    <ul class="mycal-content-list">
+      <li>If there are too many options to display on a mobile screen.</li>
+      <li>If a user can only select one option from a list (use radio buttons instead).</li>
+    </ul>
+    <h5>Guidelines</h5>
+    <ul class="mycal-content-list">
+      <li>Users should be able to tap on or click on either the text label or the checkbox to select or deselect an option.</li>
+      <li>List options vertically if possible; horizontal listings can make it difficult to tell which label pertains to which checkbox.</li>
+      <li>Avoid using negative language in labels as they can be counterintuitive. For example, â€œI want to receive a promotional emailâ€ instead of â€œI donâ€™t want to receive promotional email.â€</li>
+      <li>If you customize, make sure selections are adequately spaced for touch screens.</li>
+    </ul>
+  </div>
+</div>
+
+</section>
+
+<section id="section-/form-controls/04-radio-buttons">
+  <h2 class="mycal-heading heading-margin-alt" id="radio-buttons">Radio buttons</h2>
+  
+    <p class="mycal-font-lead">Radio buttons allow users to see all available choices at once and select exactly one option.</p>
+  
+  <div class="preview mycal-prose ">
+  <form class="mycal-form">
+  <fieldset class="mycal-fieldset">
+    <legend class="mycal-sr-only">Historical figures 2</legend>
+    <ul class="mycal-input-list">
+      <li>
+        <input class="mycal-radio-input" id="stanton" type="radio" checked="" name="historical-figures-2" value="stanton">
+        <label class="mycal-radio-label" for="stanton">Elizabeth Cady Stanton</label>
+      </li>
+      <li>
+        <input class="mycal-radio-input" id="anthony" type="radio" name="historical-figures-2" value="anthony">
+        <label class="mycal-radio-label" for="anthony">Susan B. Anthony</label>
+      </li>
+      <li>
+        <input class="mycal-radio-input" id="tubman" type="radio" name="historical-figures-2" value="tubman">
+        <label class="mycal-radio-label" for="tubman">Harriet Tubman</label>
+      </li>
+    </ul>
+  </fieldset>
+</form>
+<br/>
+<form>
+    <fieldset class="mycal-fieldset">
+    <legend>List items inline</legend>
+    <ul class="mycal-input-list">
+      <li class="display-inline">
+        <input class="mycal-radio-input" id="stanton1" type="radio" checked="" name="historical-figures-20" value="stanton">
+        <label class="mycal-radio-label" for="stanton1">Elizabeth Cady Stanton</label>
+      </li>
+      <li class="display-inline">
+        <input class="mycal-radio-input" id="anthony1" type="radio" name="historical-figures-20" value="anthony">
+        <label class="mycal-radio-label" for="anthony1">Susan B. Anthony</label>
+      </li>
+      <li class="display-inline">
+        <input class="mycal-radio-input" id="tubman1" type="radio" name="historical-figures-20" value="tubman">
+        <label class="mycal-radio-label" for="tubman1">Harriet Tubman</label>
+      </li>
+    </ul>
+  </fieldset>
+ </form>
+</div>
+
+<div class="mycal-accordion-bordered mycal-code-sample">
+  
+  <button class="mycal-accordion-button" aria-controls="code-radio-buttons" aria-expanded="false">Code</button>
+  <div id="code-radio-buttons" class="mycal-accordion-content" hidden="">
+    
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"mycal-form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"mycal-fieldset"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"mycal-sr-only"</span><span class="nt">&gt;</span>Historical figures 2<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"mycal-input-list"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-radio-input"</span> <span class="na">id=</span><span class="s">"stanton"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">checked</span> <span class="na">name=</span><span class="s">"historical-figures-2"</span> <span class="na">value=</span><span class="s">"stanton"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-radio-label"</span> <span class="na">for=</span><span class="s">"stanton"</span><span class="nt">&gt;</span>Elizabeth Cady Stanton<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-radio-input"</span> <span class="na">id=</span><span class="s">"anthony"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"historical-figures-2"</span> <span class="na">value=</span><span class="s">"anthony"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-radio-label"</span> <span class="na">for=</span><span class="s">"anthony"</span><span class="nt">&gt;</span>Susan B. Anthony<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-radio-input"</span> <span class="na">id=</span><span class="s">"tubman"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"historical-figures-2"</span> <span class="na">value=</span><span class="s">"tubman"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-radio-label"</span> <span class="na">for=</span><span class="s">"tubman"</span><span class="nt">&gt;</span>Harriet Tubman<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+
+  </div>
+</div>
+
+<div class="mycal-accordion-bordered mycal-accordion-docs">
+  <button class="mycal-button-unstyled mycal-accordion-button" aria-expanded="false" aria-controls="radio-docs">
+    Documentation
+  </button>
+  <div id="radio-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
+    <h4 class="mycal-heading">Accessibility</h4>
+    <p>If you customize the radio buttons, ensure they continue to meet the the <a href="/form-controls/"> accessibility requirements that apply to all form controls.</a></p>
+    <ul class="mycal-content-list">
+      <li>Group related radio buttons together with <code>&lt;fieldset&gt;</code> and describe the group with <code>&lt;legend&gt;</code>.</li>
+      <li>Each radio button should have a <code>&lt;label&gt;</code>. Associate the two by matching the <code>&lt;label&gt;</code>â€™s for attribute to the <code>&lt;input&gt;</code>â€™s <code>id</code> attribute.</li>
+      <li>The <code>title</code> attribute can replace <code>&lt;label&gt;</code>.</li>
+    </ul>
+
+    <h4 class="mycal-heading">Usability</h4>
+    <h5>When to use</h5>
+    <ul class="mycal-content-list">
+      <li>When users need to select only one option out of a set of mutually exclusive choices.</li>
+      <li>When the number of available options can fit onto a mobile screen.</li>
+    </ul>
+    <h5>When to consider something else</h5>
+    <ul class="mycal-content-list">
+      <li>Consider checkboxes if  users need to select more than one option or if there is only one item to select.</li>
+      <li>Consider a  dropdown if you donâ€™t have enough space to list out all available options.</li>
+      <li>If users should be able to select zero of the options.</li>
+    </ul>
+    <h5>Guidance</h5>
+    <ul class="mycal-content-list">
+      <li>Users should be able to tap on or click on either the text "label" or the radio button to select or deselect an option.</li>
+      <li>Options that are listed vertically are easier to read than those that are listed horizontally. Horizontal listings can make it difficult to tell which label pertains to which radio button.</li>
+      <li>If you customize, make sure selections are adequately spaced for touch screens.</li>
+      <li>Use caution if you decide to set a default value. Setting a default value can discourage users from making conscious decisions, seem pushy, or alienate users who donâ€™t fit into your assumptions. If you are unsure, leave nothing selected by default.</li>
+    </ul>
+  </div>
+</div>
+
+</section>
+
+<section id="section-/form-controls/05-date-input">
+  <h2 class="mycal-heading heading-margin-alt" id="date-input">Date input</h2>
+  
+    <p class="mycal-font-lead">Three text fields are the easiest way for users to enter most dates.</p>
+  
+  <div class="preview mycal-prose ">
+  <form class="mycal-form">
+  <fieldset class="mycal-fieldset">
+    <legend class="mycal-legend">Date of birth</legend>
+    <span class="mycal-form-hint" id="dobHint">For example: 04 28 1986</span>
+    <div class="mycal-memorable-date">
+      <div class="mycal-form-group mycal-form-group-month">
+        <label class="mycal-label" for="date_of_birth_1">Month</label>
+        <input class="mycal-input mycal-input-inline" aria-describedby="dobHint" id="date_of_birth_1" name="date_of_birth_1" type="number" min="1" max="12" value="">
+      </div>
+      <div class="mycal-form-group mycal-form-group-day">
+        <label class="mycal-label" for="date_of_birth_2">Day</label>
+        <input class="mycal-input mycal-input-inline" aria-describedby="dobHint" id="date_of_birth_2" name="date_of_birth_2" type="number" min="1" max="31" value="">
+      </div>
+      <div class="mycal-form-group mycal-form-group-year">
+        <label class="mycal-label" for="date_of_birth_3">Year</label>
+        <input class="mycal-input mycal-input-inline" aria-describedby="dobHint" id="date_of_birth_3" name="date_of_birth_3" type="number" min="1900" max="2000" value="">
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div>
+
+<div class="mycal-accordion-bordered mycal-code-sample">
+  
+  <button class="mycal-accordion-button" aria-controls="code-date-input" aria-expanded="false">Code</button>
+  <div id="code-date-input" class="mycal-accordion-content" hidden="">
+    
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"mycal-form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"mycal-fieldset"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"mycal-legend"</span><span class="nt">&gt;</span>Date of birth<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"mycal-form-hint"</span> <span class="na">id=</span><span class="s">"dobHint"</span><span class="nt">&gt;</span>For example: 04 28 1986<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mycal-memorable-date"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mycal-form-group mycal-form-group-month"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"date_of_birth_1"</span><span class="nt">&gt;</span>Month<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-input mycal-input-inline"</span> <span class="na">aria-describedby=</span><span class="s">"dobHint"</span> <span class="na">id=</span><span class="s">"date_of_birth_1"</span> <span class="na">name=</span><span class="s">"date_of_birth_1"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">min=</span><span class="s">"1"</span> <span class="na">max=</span><span class="s">"12"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mycal-form-group mycal-form-group-day"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"date_of_birth_2"</span><span class="nt">&gt;</span>Day<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-input mycal-input-inline"</span> <span class="na">aria-describedby=</span><span class="s">"dobHint"</span> <span class="na">id=</span><span class="s">"date_of_birth_2"</span> <span class="na">name=</span><span class="s">"date_of_birth_2"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">min=</span><span class="s">"1"</span> <span class="na">max=</span><span class="s">"31"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mycal-form-group mycal-form-group-year"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"date_of_birth_3"</span><span class="nt">&gt;</span>Year<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-input mycal-input-inline"</span> <span class="na">aria-describedby=</span><span class="s">"dobHint"</span> <span class="na">id=</span><span class="s">"date_of_birth_3"</span> <span class="na">name=</span><span class="s">"date_of_birth_3"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">min=</span><span class="s">"1900"</span> <span class="na">max=</span><span class="s">"2000"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+
+  </div>
+</div>
+
+<div class="mycal-accordion-bordered">
+  <button class="mycal-button-unstyled mycal-accordion-button" aria-expanded="false" aria-controls="date-input-docs">
+    Documentation
+  </button>
+  <div id="date-input-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
+    <h4 class="mycal-heading">Implementation</h4>
+      <p>Currently, the max limit for the year input is set to 2000, but it should be changed depending on the context of the form.</p>
+    <h4 class="mycal-heading">Accessibility</h4>
+    <ul class="mycal-content-list">
+      <li>These text fields should follow the <a href="/form-controls/#text-inputs"> accessibility guidelines for all text inputs.</a></li>
+      <li>Do not use JavaScript to auto advance the focus from one field to the next. This makes it difficult for keyboard-only users to navigate and correct mistakes.</li>
+    </ul>
+
+    <h4 class="mycal-heading">Usability</h4>
+    <h5>When to use</h5>
+    <ul class="mycal-content-list">
+      <li>Use this format for most dates, particularly memorized dates.</li>
+    </ul>
+    <h5>When to consider something else</h5>
+    <ul class="mycal-content-list">
+      <li>If users are trying to schedule something, a calendar picker might make more sense. Be sure to also provide an option for text entry as well.</li>
+    </ul>
+    <h5>Guidelines</h5>
+    <ul class="mycal-content-list">
+      <li>Be sure each field is properly labeled â€” some countries enter dates in day, month, year order.</li>
+      <li>It may be tempting to switch all or some of these text fields to drop downs, but these tend to be more difficult to use than text boxes.</li>
+    </ul>
+  </div>
+</div>
+
+</section>
+
+<section id="section-/form-controls/06-validation">
+  <h2 class="mycal-heading heading-margin-alt" id="validation">Validation</h2>
+  
+    <p class="mycal-font-lead">Stating validation requirements up front, with live feedback, means users won't be left guessing.</p>
+  
+  <div class="preview mycal-prose ">
+  <form class="mycal-form">
+  <fieldset class="mycal-fieldset">
+    <legend class="mycal-legend">Enter a code</legend>
+    <div class="mycal-alert mycal-alert-info">
+      <div class="mycal-alert-body">
+        <h3 class="mycal-alert-heading">Code requirements</h3>
+        <ul class="mycal-checklist" id="validate-code">
+          <li class="mycal-checklist-item is-checked" data-validator="uppercase">Use at least one uppercase character</li>
+          <li class="mycal-checklist-item" data-validator="numerical">Use at least one number</li>
+        </ul>
+      </div>
+    </div>
+    <label class="mycal-label" for="code">Code</label>
+    <input class="mycal-input" id="code" name="code" type="text" aria-describedby="validate-code" data-validate-uppercase="[A-Z]" data-validate-numerical="\d" data-validation-element="#validate-code">
+    <input class="mycal-button" type="submit" value="Submit code">
+  </fieldset>
+</form>
+</div>
+
+<div class="mycal-accordion-bordered mycal-code-sample">
+  
+  <button class="mycal-accordion-button" aria-controls="code-validation" aria-expanded="false">Code</button>
+  <div id="code-validation" class="mycal-accordion-content" hidden="">
+    
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"mycal-form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"mycal-fieldset"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"mycal-legend"</span><span class="nt">&gt;</span>Enter a code<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mycal-alert mycal-alert-info"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mycal-alert-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"mycal-alert-heading"</span><span class="nt">&gt;</span>Code requirements<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"mycal-checklist"</span> <span class="na">id=</span><span class="s">"validate-code"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mycal-checklist-item is-checked"</span> <span class="na">data-validator=</span><span class="s">"uppercase"</span><span class="nt">&gt;</span>Use at least one uppercase character<span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mycal-checklist-item"</span> <span class="na">data-validator=</span><span class="s">"numerical"</span><span class="nt">&gt;</span>Use at least one number<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mycal-label"</span> <span class="na">for=</span><span class="s">"code"</span><span class="nt">&gt;</span>Code<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-input"</span> <span class="na">id=</span><span class="s">"code"</span> <span class="na">name=</span><span class="s">"code"</span> <span class="na">type=</span><span class="s">"text"</span>
+      <span class="na">aria-describedby=</span><span class="s">"validate-code"</span>
+      <span class="na">data-validate-uppercase=</span><span class="s">"[A-Z]"</span>
+      <span class="na">data-validate-numerical=</span><span class="s">"\d"</span>
+      <span class="na">data-validation-element=</span><span class="s">"#validate-code"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"mycal-button"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit code"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+
+  </div>
+</div>
+
+<div class="mycal-accordion-bordered">
+  <button class="mycal-button-unstyled mycal-accordion-button" aria-expanded="false" aria-controls="validation-docs">
+    Documentation
+  </button>
+  <div id="validation-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
+    <h4 class="mycal-heading">Implementation</h4>
+    <p>The validation component is intended primarily for usability, not as a robust security solution, since all the validation logic occurs on the client-side. The validation should be "mirrored" on the server-side for security purposes.</p>
+    <h4 class="mycal-heading">Guidance</h4>
+    <ul class="mycal-content-list">
+      <li>Input fields which have custom validation logic can automatically
+        provide helpful feedback to users if they are assigned a
+        <code>data-validation-element</code> attribute set to a
+        CSS selector that uniquely identifies a <code>.mycal-checklist</code>,
+        e.g. <code>data-validation-element="#validate-code"</code>.</li>
+      <li>
+        For each kind of validation you'd like to provide feedback on:
+        <ol>
+          <li>Come up with a name for the validator, e.g.
+            <code>uppercase</code>. It shouldn't have any spaces in it.</li>
+          <li>On one of the list elements in the <code>.mycal-checklist</code>,
+            set the <code>data-validator</code> attribute to the
+            name of the validator, e.g. <code>data-validator="uppercase"</code>.
+            This is the list item that will appear "checked" when the
+            validator's condition is met.</li>
+          <li>On the input field, add a field called
+            <code>data-validate-<em>validator name</em></code> and set
+            its value to a <a href="https://regexone.com/">regular
+            expression</a> that represents whether the validator's
+            condition is met, e.g. <code>data-validate-uppercase="[A-Z]"</code>.</li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</section>
+
+</div>
+    </div>
+  </main>
+
+</div>
+<script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script>  
+<script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ba-dotimeout.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.plugins.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.cookies.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/mock.js"></script>
+<!-- Modal -->
+	<script type="text/javascript" src="resources/mss/js/modaal.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/calendar.js" />	
+
+<script type="text/javascript" src="resources/mss/js/datepicker.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/uswds-2_4-mycal.js"></script>
+<script type="text/javascript" src="resources/mss/js/styleguide.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/datatables.min.js"></script>
+<footer class="mycal-footer mycal-footer-slim" role="contentinfo">
+  <div class="grid-container mycal-footer-return-to-top">
+    <a href="#">Return to top</a>
+  </div>
+  <div class="mycal-footer-primary-section">
+     <div class="grid-row">
+        <nav class="mycal-footer-nav">
+          <ul class="add-list-reset grid-row grid-gap">
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/privacy-policy" title="Opens in a new window" target="_blank">Privacy Policy</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/conditions-of-use" title="Opens in a new window" target="_blank">Conditions of Use</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/accessibility" title="Opens in a new window" target="_blank">Accessibility</a>
+            </li>
+            <li class="grid-col-auto mycal-footer-primary-content">
+              <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/contact" title="Contact us">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  </body>
+</html>
+<script>
+	$j('a[target]').addClass('mycal-external_link');
+Event.observe(window, "load", function(){ 
+		if($j('.tabbedContainer > ul > li > a')){
+			$j('.tabbedContainer > ul > li > a').attr('aria-expanded', 'false');
+		}
+		if ( $j('.tabbedContainer > ul > li > a.active').length == 0)
+		{
+			$j('.tabbedContainer > ul > li:first > a').addClass('active');
+			$j('.tabbedContainer > ul > li:first > a').attr('aria-expanded', 'true');
+			$j('.tabbedContainer > ul > li:first > a').parent().next().find('a').addClass('leftShadow');
+			$j ( $j('.tabbedContainer > ul > li:first > a').attr('href') ).show();
+		}
+		else if ( $j('.tabbedContainer > ul > li > a.active').length == 1 )
+		{
+			$j ( $j('.tabbedContainer > ul > li> a.active').attr('href') ).show();
+			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
+		}
+		
+		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
+		
+		$j('.tabbedContainer > ul > li > a').click(function() {
+			var containerId = $j(this).parent().parent().parent().attr('id');
+			var targetId = $j(this).attr("href");
+			
+			$j('#' + containerId + ' > ul > li > a').removeClass('active').removeClass('rightShadow').removeClass('leftShadow');
+			$j('#' + containerId + ' > ul > li > a').attr('aria-expanded', 'false');
+			$j(this).addClass('active');
+			$j(this).attr('aria-expanded', 'true');
+			$j(this).parent().prev().find('a').addClass('rightShadow');
+			$j(this).parent().next().find('a').addClass('leftShadow');			
+			$j('#' + containerId + ' > div.content').hide();
+			$j('#' + containerId + ' > div' + targetId +  '.content').show();
+		});
+	
+	});		
+</script>
