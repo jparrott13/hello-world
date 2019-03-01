@@ -1,0 +1,388 @@
+\/*
+	base styles
+*/
+.underlay-wrapper {
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+.underlay {
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:9998;
+}
+* html .underlay {
+	position:absolute;
+	left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+.underlay .underlayer {
+	position:relative;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:#000;
+}
+.underlay-wrapper iframe {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+}
+.dialog {
+    position:absolute;	
+	z-index:9999;
+	overflow:hidden;
+}
+.dialog-close {
+	cursor:pointer;
+}
+#size-change,.status {
+	position:absolute;
+	left:-9999px;
+	top:auto;
+	display:block;
+	overflow:hidden;
+	height:1em;
+	width:1em;
+}
+.loader {
+	background:url("../img/loader.gif") no-repeat center center;
+	width:100%;
+	height:67px;
+	position:relative;
+}
+.loader h3 {
+	text-align:center;
+	position:absolute;
+	width:100%;
+	bottom:0;
+	margin-bottom:0;
+}
+/*
+	custom styles
+*/
+.dialog {
+
+}
+body > .underlay-wrapper {
+	font-size: 1.4em;	
+}
+
+.dialog-wrapper-outer {
+	background:#fff;
+	margin:10px;
+	position:relative;
+	zoom:1;	
+	x-moz-border-radius: 5px;
+    x-webkit-border-radius: 5px;
+    xborder-radius: 5px;
+    border: 1px solid #ccc;
+}
+.dialog-wrapper-inner {
+	overflow:hidden;
+	padding:10px 15px 26px;
+	position:relative;
+}
+.dialog-title {
+	background:#365575;	
+	padding: 18px 18px 5px 18px;
+	left:0;
+	background: url("../../images/ept/dialog_bg.png") repeat-x;
+	x-moz-border-radius: 5px;
+    x-webkit-border-radius: 5px;	
+	xborder-radius: 5px;
+}
+.dialog-title * {
+	padding: 0 20px 10px 0;
+	margin:0;
+	font-weight: 400;
+}
+.dialog-title div {
+	border-bottom: 1px solid #ccc;	
+}
+.dialog-close {
+	position:absolute;
+	z-index:1000;
+	right:10px;
+	top:-1px;
+	background:url("../../images/ept/dialog_close.png") no-repeat;
+	height:30px;
+	width:30px;
+	display:block;
+	overflow:hidden;
+	border: none;
+}
+.hover-active,.focus-active {
+	
+}
+.mozilla .focus-active {
+	outline:1px dotted #000;
+}
+.dialog-close span {
+	position:absolute;
+	left:-9999px;
+	top:0;
+	height:1px;
+	width:1px;
+	overflow:hidden;
+}
+.dialog-buttons {
+	clear:both;
+	padding-top:12px;
+	margin-top:20px;	
+}
+.dialog-buttons-border {
+	border-top: 1px solid #d9d9d9;
+}
+.dialog-cancel,.dialog-action {
+	background: #ccc;
+	border: none;
+	cursor: pointer;
+	height: 22px;
+	float:left;
+	margin-left:5px;	
+}
+
+/* Shadow styles */
+.corner {
+	position:absolute;
+	height:30px;
+	width:30px;
+}
+.t-l {
+	background-image:url("../img/t-l.png");
+	left:0;
+	top:0;
+}
+.t-r {
+	background-image:url("../img/t-r.png");
+	right:0;
+	top:0;
+}
+.b-l {
+	background-image:url("../img/b-l.png");
+	bottom:0;
+	left:0;
+}
+.b-r {
+	background-image:url("../img/b-r.png");
+	bottom:0;
+	right:0;
+}
+.top-side {
+	position:absolute;
+	background-image:url("../img/top-side.png");
+	left:0;
+	top:0;
+	margin:0 30px;
+	height:11px;
+	overflow:hidden
+}
+.bottom-side {
+	position:absolute;
+	background-image:url("../img/bottom-side.png");
+	height:11px;
+	left:0;
+	bottom:0;
+	margin:0 30px;
+	overflow:hidden;
+}
+.left-side {
+	position:absolute;
+	background-image:url("../img/left-side.png");
+	left:0;
+	top:30px;
+	width:11px;
+}
+.right-side {
+	position:absolute;
+	background-image:url("../img/right-side.png");
+	right:0;
+	top:30px;
+	width:11px;
+}
+.semantic {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;	
+}
+.dialog-wrapper-inner-center > div {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	text-align: center;
+}
+
+
+
+/*Begin Callout CSS*/
+
+.callouts {
+	list-style-type: none;
+	padding-top: 0%;
+}
+
+.callout-title {
+	padding: 12px 10px 5px 10px;
+	font-size:1.2em;
+}
+
+.callout-title * {
+	padding: 0 20px 10px 0;
+	margin:0;
+}
+.callout-title div {
+	border-bottom: 1px solid #ccc;	
+}
+.callout-title h2 {
+	color: #333;	
+}
+
+.callouts a {
+	color: #4c7e11;
+	font-size:1.333em;
+}
+
+.callout-close {
+	position:absolute;
+	z-index:1000;
+	right:5px;
+	top:8px;
+	background:url("../../images/ept/callout_close.png") no-repeat;
+	height:30px;
+	width:30px;
+	display:block;
+	overflow:hidden;
+	border: none;
+}
+
+.callouts li {
+	display: inline-block;
+	position: relative;
+	padding: 15px;
+	background-color: #fff;
+	border-top: 5px solid #4c7e11;
+	border-right: 2px solid #4c7e11;
+	border-left: 2px solid #4c7e11;
+	border-bottom: 2px solid #4c7e11;
+	box-shadow: 0 0 10px #c1c1c1;
+}
+
+.calloutDiv{
+	position: absolute;
+	font-family: Helvetica, arial, helvetica neue, san-serif;
+	font-size: 62.5%;
+	color: #333;
+	font-size:1.4em;
+	line-height: 1.5em;	
+	z-index: 9998;
+}
+
+/* TOP */
+.callouts--top:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 66px;
+	top: -29px;
+  	border: 10px solid transparent;
+  	border-bottom: 19px solid rgb(118,153,41); /* IE8 Fallback */
+  	border-bottom: 19px solid rgba(118,153,41,0.5);
+  	z-index: 2;
+}
+
+.callouts--top:after {
+  	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 68px;
+	top: -25px;
+	border: 8px solid transparent;
+  	border-bottom: 16px solid #4c7e11;
+  	z-index: 3;
+}
+
+/* BOTTOM */
+.callouts--bottom:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 23px;
+	bottom: -42px;
+  	border: 10px solid transparent;
+  	border-top: 32px solid rgb(193,193,193); /* IE8 Fallback */
+  	border-top: 32px solid rgba(193,193,193,0.5);
+  	z-index: 2;
+}
+.callouts--bottom:after {
+  	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 25px;
+	bottom: -31px;
+  	border: 8px solid transparent;
+  	border-top: 24px solid #fff;
+  	z-index: 3;
+}
+
+/* LEFT */
+.callouts--left:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -42px;
+	top: 17px;
+  	border: 10px solid transparent;
+  	border-right: 32px solid rgb(193,193,193); /* IE8 Fallback */
+  	border-right: 32px solid rgba(193,193,193,0.5);
+  	z-index: 2;
+}
+.callouts--left:after {
+  	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -31px;
+	top: 20px;
+  	border: 8px solid transparent;
+  	border-right: 24px solid #fff;
+  	z-index: 3;
+}
+
+/* RIGHT */
+.callouts--right:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: -42px;
+	top: 17px;
+  	border: 10px solid transparent;
+  	border-left: 32px solid rgb(193,193,193); /* IE8 Fallback */
+  	border-left: 32px solid rgba(193,193,193,0.5);
+  	z-index: 2;
+}
+.callouts--right:after {
+  	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: -31px;
+	top: 20px;
+  	border: 8px solid transparent;
+  	border-left: 24px solid #fff;
+  	z-index: 3;
+}
+/*End Callout CSS*/
