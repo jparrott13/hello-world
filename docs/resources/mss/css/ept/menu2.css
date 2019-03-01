@@ -1,0 +1,299 @@
+ul.menu {
+	list-style: none;  
+    padding: 0;  
+    margin: 0;   
+    font-size: 1.2em;  
+}
+
+ul.menu li {  	    
+    margin: 0;  	      
+    position: relative; /*--Declare X and Y axis base for sub navigation--*/  
+}  
+
+ul.menu > li {
+	float: left; 
+	padding: 0 0 0 0; 
+	background: url("../../images/ept/menu/nav_edge.gif") repeat-y scroll right top transparent;
+	border-right: 1px solid #555555;
+}
+		
+ul.menu > li > a {  
+	color: #fff;
+	float: left;  
+	padding: 10px 15px;  	    
+   	display: block;  
+    text-decoration: none;   
+}
+
+ul.menu > li > a > .menuSubIndicator {
+	position: absolute; 
+	right: 5px;
+	bottom: 4px;
+	width: 8px;
+	height: 4px;
+	background: url("../../images/ept/menu/arrow.png") no-repeat;	
+}
+
+ul.menu > li > a.active > .menuSubIndicator {
+	background: url("../../images/ept/menu/arrow_active.png") no-repeat;
+}
+
+ul.menu > li > a:hover { 
+	xbackground: url("../../images/ept/menu/nav_bg_hover.gif") repeat-x;
+}
+
+ul.menu > li > a.active, ul.menu > li > a.active:hover {
+	background: none;
+	xbackground-color: #fafaff;
+	background: url("../../images/ept/menu/nav_bg_active.jpg") repeat-x;
+	color: #000;
+}  
+	
+ul.menu li ul a, ul.menu li ul li span {		
+	padding: 5px 10px; 
+	display: block;
+	text-decoration: none;	
+}
+
+ul.menu li ul li span {	
+	color: #264565;
+	padding-top: 10px;
+	margin-top: 10px;
+	font-weight: 600;
+	border-top: 1px solid #dfe3e4;	
+	font-size: 0.833em;	
+}
+
+ul.menu li ul a {	/* 2nd Level Items */
+	color: #264565;
+	font-weight: 400;
+	font-size: 0.833em;
+}
+
+ul.menu li ul a:hover {	/* 2nd Level Items */ 	
+	color: #fff;		
+	font-weight: 600;
+	background-color: #6a8236;
+}
+
+ul.menu li ul {  
+    list-style: none;  
+    position: absolute; /*--Important - Keeps subnav from affecting main navigation flow--*/  
+    left: -1px; top: 36px;  
+    background: #fafaff;  
+    margin: 0; 
+    padding: 10px 0;  
+    display: none;  
+    float: left;  
+    width: 200px;  
+    border-style: solid;
+    border-color: #111;
+    border-width: 0 1px 1px 1px;    
+    -moz-border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;   
+    border-radius: 0 0 3px 3px;
+    background-color: #fff; 
+    box-shadow: 3px 3px 3px #888;
+}
+
+
+
+/* BE SURE TO INCLUDE THE CSS RESET FOUND IN THE DEMO PAGE'S CSS */
+/*------------------------------------*\
+	NAV
+\*------------------------------------*/
+#nav, #hidden_nav {
+     list-style:none;
+     float: left;
+     margin: 0;            
+     width:100%;
+     padding-left: 0;
+     position: relative;
+     background: rgb(23, 48, 79);
+     background-image: linear-gradient(rgb(42, 77, 115) 0%, rgb(23, 48, 79) 66%);
+ 	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;    
+}
+
+#nav > li,  #hidden_nav > li {
+	border-left: 1px solid transparent;
+	border-right: 1px solid #66778e;
+     background: rgb(23, 48, 79);
+     background-image: linear-gradient(rgb(42, 77, 115) 0%, rgb(23, 48, 79) 66%);
+     float: left;
+}
+
+#nav a , #hidden_nav a {
+	font-size: 1.167em;
+	display:block;
+	padding:11px 22px;
+	color:#eeeeee;	
+	text-decoration:none;	
+}
+
+#nav > li > a, #hidden_nav > li > a {
+    padding: 9px 22px 6px 22px;
+    margin-bottom: 3px;
+    background: transparent;
+}
+
+#nav > li > a.active, #nav > li > a.hover {
+	color: #333;	
+	background:#eee;	
+}
+
+/*--- DROPDOWN ---*/
+#nav ul, #hidden_nav ul {
+    background:#eee url("../../images/ept/menu/subnav_bg.jpg") bottom repeat-x; 
+    list-style:none;
+    position:absolute;           
+    left:-9999px;
+    padding-left: 0px;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    min-height: 2.55rem;
+    white-space: nowrap;
+}
+#page.double #nav ul, #page.double #hidden_nav ul{ width: 986px; }
+#page.single #nav ul, #page.single #hidden_nav ul{ width: 986px; }
+
+#nav ul li, #hidden_nav ul li {	
+	float:left;
+}
+
+#nav a, #nav ul a, #hidden_nav a, #hidden_nav ul a {		
+	white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+    background: #eee;
+}
+
+#delete li:hover ul, #nav li.active ul, #nav li.hover ul { /* Display the dropdown on hover */	
+	left: 0; /* Bring back on-screen when needed */
+}
+
+#delete li:hover ul ul.hide, #nav li.active ul.hide {
+	left:-9999px;	
+}
+
+#delete > li:hover, #nav > li.active, #nav > li.hover {
+	border-top: 1px solid #cdcdcd;
+	border-left: 1px solid #cdcdcd;
+	border-right: 1px solid #cdcdcd;
+}
+
+#delete li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	background: #eee;
+	color: #333;	
+	text-decoration:underline;	
+}
+
+#nav li > ul a, #hidden_nav li > ul a {
+	color: #25415c;  
+    border-bottom: 2px solid #EEEEEE;
+}
+
+#delete li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	background: transparent;	
+	text-decoration:none;
+}
+#nav li:hover ul li a:hover, #nav li ul li.hover a.hover  { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	color: #333;
+}
+#nav li ul li.active, #hidden_nav li ul li.active {
+	border-bottom: 2px solid #25415C;
+}
+
+#nav > li, #nav ul a, #hidden_nav > li, #hidden_nav ul a {
+	padding: 3px 11px 3px 11px;
+}
+
+#nav > li > a.active, #nav > li.active > a.hide {
+	color: #25415c !important;
+}
+
+#nav ul, #hidden_nav ul {
+	top: 100%;
+}
+
+#nav > li:hover, #nav > li:focus, #nav > li.active, #nav > li.active > a.hide, #nav > li.hover {
+	background: #ECECED;
+}
+
+/* Take up space even when the border is not present. */
+#nav > li > a,
+#nav > li > ul > li > a,
+#hidden_nav > li > a,
+#hidden_nav > li > ul > li > a,
+ {
+	padding: 0px 6px 0px 6px !important;
+	border: 3px solid transparent;
+}
+
+#nav > li > ul > li:last-child:after,
+#hidden_nav > li > ul > li:last-child:after {
+    content: "";
+}
+
+#nav > li > ul > li > a,
+#hidden_nav > li > ul > li > a
+{
+/*	border-left: 1px solid #000;*/
+	margin-top: 7px;
+	margin-bottom: 9px;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+}
+
+#nav > li > a:focus,
+#nav > li > ul > li > a:focus
+{
+	outline: 3px solid #2d435c !important;
+}
+
+#nav > li > ul > li:hover {
+	float: left;
+	border-bottom: 2px solid #25415C;
+}
+
+#nav > li > a.hover {
+	font-weight: 600;
+}
+	
+.spacer {
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	font-size: 1.4rem;
+	line-height: 100%;
+}
+
+.hidden-secondary-menu {
+	visibility: hidden;
+	left: 0 !important;
+	position: relative !important;
+}
+
+.hidden-secondary-menu  > a {
+	display: none;
+}
+
+	
+.hidden-primary-menu {
+	visibility: hidden;
+	margin-top: 0 !important;
+	margin-bottom: 10px !important;
+}
+
+.hidden-primary-menu > li > a.active {
+	display: none !important;
+}
+
+#hidden_nav > li {
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-right: 0px !important;
+}
+
+#hidden_nav > li > ul > li > a {
+	margin-bottom: 10px;
+}
