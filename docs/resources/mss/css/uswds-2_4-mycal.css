@@ -1612,9 +1612,9 @@ p+* {
     -webkit-font-smoothing: auto;
     background-color: transparent;
     background-color: #f0f0f0;
-    background-image: url(../img/plus-white.png);
-    background-image: url(../img/plus-white.png), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-    background-image: url(../img/plus-white.png), linear-gradient(transparent, transparent);
+    background-image: url(http://lgdimcip1:20410/mss/img/plus-white.png);
+    background-image: url(http://lgdimcip1:20410/mss/img/plus-white.png), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    background-image: url(http://lgdimcip1:20410/mss/img/plus-white.png), linear-gradient(transparent, transparent);
     background-position: right 1.25rem center;
     background-repeat: no-repeat;
     background-size: 1rem;
