@@ -42,6 +42,12 @@
     border-color: #713517;
 }
 
+.mycal-button-hover {
+    color: #ffffff;
+    background-color: #8f431d;
+    border-color: #713517;
+}
+
 .mycal-button:focus {
 	    color: #a3582d;
     background-color: #fff;
@@ -50,8 +56,16 @@
     outline-offset: -3px;
 	
 }
+.mycal-button-focus {
+	    color: #a3582d;
+    background-color: #fff;
+    border-color: #a3582d;
+    outline-color: #a3582d;
+    outline-offset: -3px;
+	
+}
 
-.mycal-button.disabled{
+.mycal-button-disabled{
 opacity:.5;
 	
 }
