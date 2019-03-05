@@ -75,26 +75,26 @@ opacity:.5;
 
 .mycal-button-secondary, .mycal-button-secondary.active {
 	
-	color: #666666;
+	color: #000000;
     background-color: #dce8ef;
     border-color: #cbdde7;	
 }
 
 
 .mycal-button-secondary:hover {
-    color: #ffffff;
+    color: #000000;
     background-color: #b9d1df;
     border-color: #96bacf;
 }
 
 .mycal-button-secondary-hover {
-    color: #ffffff;
+    color: #000000;
     background-color: #b9d1df;
     border-color: #96bacf;
 }
 
 .mycal-button-secondary:focus {
-	    color: #666666;
+	    color: #000000;
     background-color: #fff;
     border-color: #a3582d;
     outline-color: #a3582d;
@@ -104,7 +104,7 @@ opacity:.5;
 	
 }
 .mycal-button-secondary-focus {
-	    color: #666666;
+	    color: #000000;
     background-color: #fff;
     border-color: #a3582d;
     outline-color: #a3582d;
