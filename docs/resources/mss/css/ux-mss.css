@@ -28,11 +28,31 @@
 
 }
 
-
-.mycal-button {
+.mycal-button, .mycal-button.active {
 	
 	color: #ffffff;
     background-color: #b95726;
-    border-color: #a44d22;
+    border-color: #a44d22;	
+}
+
+
+.mycal-button:hover {
+    color: #ffffff;
+    background-color: #8f431d;
+    border-color: #713517;
+}
+
+.mycal-button:focus {
+	    color: #a3582d;
+    background-color: #fff;
+    border-color: #a3582d;
+    outline-color: #a3582d;
+    outline-offset: -3px;
 	
 }
+
+.mycal-button.disabled{
+opacity:.5;
+	
+}
+
