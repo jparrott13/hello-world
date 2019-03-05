@@ -25,6 +25,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;	
+	    margin-right: .5rem;
 
 }
 
@@ -69,6 +70,47 @@
 
 .disabled{
 opacity:.5;
+	
+}
+
+.mycal-button-secondary, .mycal-button-secondary.active {
+	
+	color: #666666;
+    background-color: #dce8ef;
+    border-color: #cbdde7;	
+}
+
+
+.mycal-button-secondary:hover {
+    color: #ffffff;
+    background-color: #b9d1df;
+    border-color: #96bacf;
+}
+
+.mycal-button-secondary-hover {
+    color: #ffffff;
+    background-color: #b9d1df;
+    border-color: #96bacf;
+}
+
+.mycal-button-secondary:focus {
+	    color: #666666;
+    background-color: #fff;
+    border-color: #a3582d;
+    outline-color: #a3582d;
+    outline-offset: -3px;   
+	outline-style: solid;
+    outline-width: 3px;
+	
+}
+.mycal-button-secondary-focus {
+	    color: #666666;
+    background-color: #fff;
+    border-color: #a3582d;
+    outline-color: #a3582d;
+    outline-offset: -3px;
+	    outline-style: solid;
+    outline-width: 3px;
 	
 }
 
