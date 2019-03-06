@@ -89,16 +89,22 @@
 .disabled {
 	opacity: .5;
 }
-
 /*Color Boxes*/
 
+.color-box {
+	display: block;
+	margin-right: 2.35765%;
+	width: 75%;
+	margin-bottom: 0;
+	padding-bottom: 19%;
+}
+.color-box-inner-content {
+	position: absolute;
+	top: 100%;
+}
 .calpers-blue {
-	
 	background-color: #006699;
 }
-
-
 .calpers-grey {
-	
 	background-color: #88898d;
 }
