@@ -212,6 +212,10 @@ border-bottom:#cce0eb;
 	
 	}
 
+.mycal-nav .mycal-nav-primary {
+    background-color: #cce0eb;
+}
+
 .mycal-nav .mycal-nav-link, .mycal-nav .mycal-nav-primary > li > a {
     color: #000000;
 }
