@@ -44,6 +44,8 @@
 	border-color: #a3582d;
 	outline-color: #a3582d;
 	outline-offset: -3px;
+	outline-style: solid;
+	outline-width: 3px;
 }
 .mycal-button-secondary, .mycal-button-secondary.active {
 	color: #23518b;
