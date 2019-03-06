@@ -94,14 +94,11 @@
 .color-box {
 	display: block;
 	margin-right: 2.35765%;
-	width: 75%;
+	width: 80%;
 	margin-bottom: 0;
-	padding-bottom: 19%;
+	    padding-top: 65%;
 }
-.color-box-inner-content {
-	position: absolute;
-	top: 100%;
-}
+
 .calpers-blue {
 	background-color: #006699;
 }
