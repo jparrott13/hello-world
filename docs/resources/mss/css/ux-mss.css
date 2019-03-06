@@ -198,3 +198,35 @@
 	
 	background-color:#f4e4e4;
 }
+
+/* Header and Navigation Styles */
+
+.mycal-navbar {
+	
+	background-color:#00659e;
+}
+
+.mycal-nav {
+background-color: #cce0eb;
+border-bottom:#cce0eb;
+	
+	}
+
+.mycal-nav .mycal-nav-link, .mycal-nav .mycal-nav-primary > li > a {
+    color: #000000;
+}
+
+.mycal-nav-secondary {
+	
+	color:#ffffff;
+}
+
+.mycal-nav-secondary-links a {
+    color: #ffffff;
+ 
+}
+
+.mycal-nav-secondary-links a:hover {
+    color: #ffffff;
+ 
+}
