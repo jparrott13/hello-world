@@ -6,112 +6,83 @@
 
 
 .button {
- display: inline-block;
-    margin-bottom: 0;
-    font-weight: 500;
-    text-align: center;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 6px 12px;
-    font-size: 16px;
-    line-height: 1.6;
-    border-radius: 4px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;	
-	    margin-right: .5rem;   
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 500;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 16px;
+	line-height: 1.6;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-right: .5rem;
 	width: inherit;
-
 }
-
 .mycal-button, .mycal-button.active {
-	
 	color: #ffffff;
-    background-color: #b95726;
-    border-color: #a44d22;	
+	background-color: #b95726;
+	border-color: #a44d22;
 }
-
-
-.mycal-button:hover {
-    color: #ffffff;
-    background-color: #8f431d;
-    border-color: #713517;
+.mycal-button:hover, .mycal-button-hover {
+	color: #ffffff;
+	background-color: #8f431d;
+	border-color: #713517;
 }
-
-.mycal-button-hover {
-    color: #ffffff;
-    background-color: #8f431d;
-    border-color: #713517;
+.mycal-button:focus, .mycal-button-focus {
+	color: #a3582d;
+	background-color: #fff;
+	border-color: #a3582d;
+	outline-color: #a3582d;
+	outline-offset: -3px;
 }
-
-.mycal-button:focus {
-	    color: #a3582d;
-    background-color: #fff;
-    border-color: #a3582d;
-    outline-color: #a3582d;
-    outline-offset: -3px;
-	
-}
-.mycal-button-focus {
-	    color: #a3582d;
-    background-color: #fff;
-    border-color: #a3582d;
-    outline-color: #a3582d;
-    outline-offset: -3px;
-	    outline-style: solid;
-    outline-width: 3px;
-	
-}
-
-.disabled{
-opacity:.5;
-	
-}
-
 .mycal-button-secondary, .mycal-button-secondary.active {
-	
-	color: #000000;
-    background-color: #dce8ef;
-    border-color: #cbdde7;	
+	color: #23518b;
+	background-color: #cce0eb;
+	border-color: #9fc3d7;
 }
-
-
-.mycal-button-secondary:hover {
-    color: #000000;
-    background-color: #b9d1df;
-    border-color: #96bacf;
+.mycal-button-secondary:hover, .mycal-button-secondary-hover {
+	color: #103d77;
+	background-color: #96bacf;
+	border-color: #78aac6;
 }
-
-.mycal-button-secondary-hover {
-    color: #000000;
-    background-color: #b9d1df;
-    border-color: #96bacf;
-}
-
-.mycal-button-secondary:focus {
-	    color: #000000;
-    background-color: #fff;
-    border-color: #a3582d;
-    outline-color: #a3582d;
-    outline-offset: -3px;   
+.mycal-button-secondary:focus, .mycal-button-secondary-focus {
+	color: #23518b;
+	background-color: #cce0eb;
+	border-color: #9fc3d7;
+	outline-color: #a3582d;
+	outline-offset: -3px;
 	outline-style: solid;
-    outline-width: 3px;
-	
+	outline-width: 3px;
 }
-.mycal-button-secondary-focus {
-	    color: #000000;
-    background-color: #fff;
-    border-color: #a3582d;
-    outline-color: #a3582d;
-    outline-offset: -3px;
-	    outline-style: solid;
-    outline-width: 3px;
-	
+.mycal-button-tertiary, .mycal-button-tertiary.active {
+	color: #333333;
+	background-color: #ffffff;
+	border-color: #cccccc;
 }
-
+.mycal-button-tertiary:hover, .mycal-button-tertiary-hover {
+	color: #333333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+.mycal-button-tertiary:focus, .mycal-button-tertiary-focus {
+	color: #333333;
+	background-color: #ffffff;
+	border-color: #cccccc;
+	outline-color: #a3582d;
+	outline-offset: -3px;
+	outline-style: solid;
+	outline-width: 3px;
+}
+.disabled {
+	opacity: .5;
+}
