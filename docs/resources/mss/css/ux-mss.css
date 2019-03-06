@@ -89,3 +89,16 @@
 .disabled {
 	opacity: .5;
 }
+
+/*Color Boxes*/
+
+.calpers-blue {
+	
+	background-color: #006699;
+}
+
+
+.calpers-grey {
+	
+	background-color: #88898d;
+}
