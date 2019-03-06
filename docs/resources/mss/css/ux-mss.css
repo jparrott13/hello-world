@@ -120,8 +120,16 @@
 	background-color: #88898d;
 }
 
+.calpers-grey-hover {
+	background-color: #e2e2e2;
+}
+
 .dynamic-blue {
 	background-color: #0080b8;
+}
+
+.dynamic-blue-hover {
+	background-color: #e1ebef;
 }
 
 .dark-grey {
@@ -163,4 +171,30 @@
 
 .gray-lighter {
 	background-color:#eeeeee;
+}
+
+.green {
+	background-color:#689844;
+}
+.green-hover {
+	background-color:#dae2c7;
+}
+
+.yellow {
+	
+	background-color:#c49128;
+}
+
+.yellow-hover {
+	
+	background-color:#f9edcd;
+}
+.red {
+	
+	background-color:#cc0033;
+}
+
+.red-hover {
+	
+	background-color:#f4e4e4;
 }
