@@ -91,6 +91,11 @@
 }
 /*Color Boxes*/
 
+.colors > p {
+	
+	margin-top:.2em;
+}
+
 .color-box {
 	display: block;
 	margin-right: 2.35765%;
