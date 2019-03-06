@@ -37,6 +37,7 @@
 	color: #ffffff;
 	background-color: #8f431d;
 	border-color: #713517;
+	text-decoration: none;
 }
 .mycal-button:focus, .mycal-button-focus {
 	color: #a3582d;
