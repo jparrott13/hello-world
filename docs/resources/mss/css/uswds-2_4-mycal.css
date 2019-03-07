@@ -204,10 +204,10 @@ dfn {
     font-style: italic
 }
 
-h1 {
+/* h1 {
     font-size: 2rem;
     margin: .67rem 0
-}
+} */
 
 mark {
     background: #ff0;
@@ -1307,7 +1307,7 @@ a:visited {
     color: #00659e
 }
 
-.mycal-prose>h1 {
+/* .mycal-prose>h1 {
     font-size: 2.35065rem
 }
 
@@ -1348,6 +1348,7 @@ a:visited {
     line-height: 1.12707;
     text-transform: uppercase
 }
+*/
 
 .mycal-paragraph {
     line-height: 1.52155;
