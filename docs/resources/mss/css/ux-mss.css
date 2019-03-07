@@ -1,11 +1,37 @@
 @charset "utf-8";
+
+
+
+hr {
+	margin-top:.2em;
+}
+
+/* Body */
+
 body {
 	font-family: 'Open Sans', arial, sans-serif;
 	font-size: 16px;
-	font-weight: normal;
+	font-weight: 400;
 	line-height: 1.6;
 	color: #000000;
 }
+
+label {
+	
+	font-size: 0.875rem;
+		font-weight:600;
+	color:#000000;
+}
+
+.help-text {
+	
+	font-size: 0.875rem;
+	font-weight:600;
+	color:#333333;
+	margin:5px 0 5px 0;
+
+}
+
 /* Headings */
 
 .typography p {
@@ -42,6 +68,22 @@ h6 {
 	font-size: 1.0625;
 	font-weight: 500;
 }
+
+/* Numbers */
+
+.big-number {
+	font-size: 1.5rem;
+	font-weight:600;
+	color:#666666;	
+}
+
+.small-number {
+	font-size: 1.25rem;
+	font-weight:500;
+	color:#666666;	
+}
+
+
 /* Buttons */
 
 .button {
