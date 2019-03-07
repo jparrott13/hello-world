@@ -1,17 +1,42 @@
 @charset "utf-8";
-
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.6;
+	color: #000000;
+}
 /* Headings */
 
-h1 {
-color: #666666;
-font-family:'Open Sans', arial, sans-serif;
-	font-weight:500;
-	line-height:1.1;
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', arial, sans-serif;
+	line-height: 1.1;
+	color: #666666;
 }
-
-
-
-
+h1 {
+	font-size: 2.25rem;
+	font-weight: 500;
+}
+h2 {
+	font-size: 1.75rem;
+	font-weight: 300;
+}
+h3 {
+	font-size: 1.625m;
+	font-weight: 300;
+}
+h4 {
+	font-size: 1.4375;
+	font-weight: 300;
+}
+h5 {
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+h6 {
+	font-size: 1.0625;
+	font-weight: 500;
+}
 /* Buttons */
 
 .button {
@@ -101,149 +126,110 @@ font-family:'Open Sans', arial, sans-serif;
 /*Color Boxes*/
 
 .colors p {
-	
-	margin-top:.2em;
+	margin-top: .2em;
 }
-
 .color-box {
 	display: block;
 	margin-right: 2.35765%;
 	width: 80%;
 	margin-bottom: 0;
-	    padding-top: 65%;
+	padding-top: 65%;
 }
-
 .color-box-small {
-    display: block;
-    margin-right: 2.35765%;
-    width: 80%;
-    margin-bottom: 0;
-    padding-bottom: 50%;
+	display: block;
+	margin-right: 2.35765%;
+	width: 80%;
+	margin-bottom: 0;
+	padding-bottom: 50%;
 }
-
-
 .calpers-blue {
 	background-color: #006699;
 }
 .calpers-grey {
 	background-color: #88898d;
 }
-
 .navbar-blue {
 	background-color: #cce0eb;
 }
-
 .calpers-grey-hover {
 	background-color: #e2e2e2;
 }
-
 .dynamic-blue {
 	background-color: #0080b8;
 }
-
 .dynamic-blue-hover {
 	background-color: #e1ebef;
 }
-
 .dark-grey {
 	background-color: #666666;
 }
-
 .sunspark-gold {
 	background-color: #f4b125;
 }
-
 .white {
 	background-color: #ffffff;
 	border: 1px solid #000000;
 }
-
 .spark-orange {
 	background-color: #b95726;
 }
-
 .purple {
 	background-color: #715192;
 }
-
 .gray-darker {
-	background-color:#222222;
+	background-color: #222222;
 }
-
 .gray-dark {
-	background-color:#333333;
+	background-color: #333333;
 }
-
 .gray {
-	background-color:#555555;
+	background-color: #555555;
 }
-
 .gray-light {
-	background-color:#777777;
+	background-color: #777777;
 }
-
 .gray-lighter {
-	background-color:#eeeeee;
+	background-color: #eeeeee;
 }
-
 .green {
-	background-color:#689844;
+	background-color: #689844;
 }
 .green-hover {
-	background-color:#dae2c7;
+	background-color: #dae2c7;
 }
-
 .yellow {
-	
-	background-color:#c49128;
+	background-color: #c49128;
 }
-
 .yellow-hover {
-	
-	background-color:#f9edcd;
+	background-color: #f9edcd;
 }
 .red {
-	
-	background-color:#cc0033;
+	background-color: #cc0033;
 }
-
 .red-hover {
-	
-	background-color:#f4e4e4;
+	background-color: #f4e4e4;
 }
-
 /* Header and Navigation Styles */
 
 .mycal-navbar {
-	
-	background-color:#00659e;
+	background-color: #00659e;
 }
-
 .mycal-nav {
-background-color: #cce0eb;
-border-bottom:#cce0eb;
-	
-	}
-
+	background-color: #cce0eb;
+	border-bottom: #cce0eb;
+}
 .mycal-nav .mycal-nav-primary {
-    background-color: #cce0eb;
+	background-color: #cce0eb;
 }
-
 .mycal-nav .mycal-nav-link, .mycal-nav .mycal-nav-primary > li > a {
-    color: #000000;
+	color: #000000;
 }
-
 .mycal-nav-secondary {
-	
-	color:#ffffff;
+	color: #ffffff;
 }
-
 .mycal-nav-secondary-links a {
-    color: #ffffff;
- 
+	color: #ffffff;
 }
-
 .mycal-nav-secondary-links a:hover {
-    color: #ffffff;
- 
+	color: #ffffff;
 }
