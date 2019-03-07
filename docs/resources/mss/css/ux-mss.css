@@ -268,6 +268,9 @@ h6 {
 }
 .red-hover {
 	background-color: #f4e4e4;
+	
+	
+	
 }
 /* Header and Navigation Styles */
 
@@ -278,6 +281,11 @@ h6 {
 	background-color: #cce0eb;
 	border-bottom: #cce0eb;
 }
+
+.mycal-nav.is-visible{
+	background-color: #00659e;	
+}
+
 .mycal-nav .mycal-nav-primary {
 	background-color: #cce0eb;
 }
