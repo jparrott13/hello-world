@@ -6,6 +6,18 @@ hr {
 	margin-top:.2em;
 }
 
+.mycal-alert {
+	margin-bottom:20px;
+}
+
+.mycal-alert-body h3, .mycal-alert-body p {
+	color: #000000;
+}
+
+.mycal-alert-heading {
+	font-weight:700;
+}
+
 /* Body */
 
 body {
