@@ -47,8 +47,10 @@ label {
 /* Headings */
 
 .typography p {
-	margin-top: .2em;
-	font-size: 0.875rem;
+	    margin-top: 0px;
+    font-size: 0.875rem;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
