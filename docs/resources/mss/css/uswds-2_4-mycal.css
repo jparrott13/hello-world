@@ -1492,12 +1492,12 @@ var {
     color: #fff
 }
 
-.mycal-prose>p,
+/* .mycal-prose>p,
 p {
     line-height: 1.52155;
     margin-bottom: 0;
     margin-top: 0;
-    /*max-width: 66ch*/
+   max-width: 66ch
 }
 
 *+p,
@@ -1505,7 +1505,7 @@ p {
 .mycal-prose>p+*,
 p+* {
     margin-top: 1em
-}
+} 
 
 .mycal-prose>h1,
 .mycal-prose>h2,
@@ -1534,7 +1534,7 @@ p+* {
 .mycal-prose>h5+*,
 .mycal-prose>h6+* {
     margin-top: 1em
-}
+} */
 
 .mycal-accordion {
     color: #171717;
