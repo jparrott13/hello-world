@@ -185,7 +185,8 @@ h6 {
 /*Color Boxes*/
 
 .colors p {
-	margin-top: .2em;
+		margin-top: 0px;
+	font-size: 0.875rem;
 }
 .color-box {
 	display: block;
