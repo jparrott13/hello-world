@@ -351,6 +351,27 @@ a:focus {
 }
 
 
+/* Footer */
+
+.mycal-footer-nav {
+	text-tranform: uppercase;
+}
+
+li.mycal-footer-primary-content:before {
+
+    border-left: 1px solid #ffffff;
+    color:#ffffff;
+}
+
+
+span.mycal-footer-primary-copyright {
+	    color: #ffffff;
+    display: block;
+    padding: .75rem;
+	
+}
+
+
 /* Progress Bar Test */
  .progressbar {
       counter-reset: step;
