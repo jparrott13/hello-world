@@ -353,11 +353,11 @@ a:focus {
 
 /* Footer */
 
-.mycal-footer-nav {
+.mycal-footer-nav * {
 	text-tranform: uppercase;
 }
 
-li.mycal-footer-primary-content:before {
+li.grid-col-auto.mycal-footer-primary-content:before {
 
     border-left: 1px solid #ffffff;
     color:#ffffff;
