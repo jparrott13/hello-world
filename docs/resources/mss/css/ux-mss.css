@@ -354,12 +354,12 @@ a:focus {
 /* Footer */
 
 .mycal-footer-nav * {
-	text-tranform: uppercase;
+	text-transform: uppercase;
 }
 
-li.grid-col-auto.mycal-footer-primary-content:before {
-
-    border-left: 1px solid #ffffff;
+li.mycal-footer-primary-content:before {
+font-family: "FontAwesome";
+   content: "\007C";
     color:#ffffff;
 }
 
