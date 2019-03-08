@@ -46,7 +46,14 @@ label {
 	font-weight:400;
 	color:#333333;
 	margin:5px 0 5px 0;
+}
 
+.disclaimer-text {
+	
+	font-size: 0.875rem;
+	font-weight:400;
+	color:#000000;
+	margin:5px 0 5px 0;
 }
 
 /* Headings */
@@ -62,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans', arial, sans-serif;
 	line-height: 1.1;
 	color: #666666;
+	margin:30px 0 15px 0;
 }
 h1 {
 	font-size: 2.25rem;
@@ -87,6 +95,37 @@ h6 {
 	font-size: 1.0625rem;
 	font-weight: 300;
 }
+
+h2.sidebar {
+	font-size:1.125rem;
+	margin: 5px 0 15px 0;
+}
+
+p.sidebar {
+	line-height: 1.4;
+	padding:5px 0 5px 0;
+	text-align:left;
+}
+
+/* Links */
+
+a {
+    color: #00659e;
+	text-decoration:none;
+}
+
+a:hover {
+    color: #003c5e;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: solid;
+    outline: 3px solid #39659b;
+    outline-offset: 4px;
+    border-radius: 0;
+}
+
 
 /* Numbers */
 
