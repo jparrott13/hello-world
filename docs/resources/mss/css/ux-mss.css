@@ -28,6 +28,11 @@ body {
 	color: #000000;
 }
 
+p {
+    margin: 0 0 12.5px;	
+	
+}
+
 label {
 	
 	font-size: 0.875rem;
@@ -38,7 +43,7 @@ label {
 .helper-text {
 	
 	font-size: 0.875rem;
-	font-weight:600;
+	font-weight:400;
 	color:#333333;
 	margin:5px 0 5px 0;
 
@@ -80,7 +85,7 @@ h5 {
 }
 h6 {
 	font-size: 1.0625rem;
-	font-weight: 500;
+	font-weight: 300;
 }
 
 /* Numbers */
