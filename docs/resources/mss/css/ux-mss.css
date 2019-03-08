@@ -355,6 +355,13 @@ a:focus {
 
 .mycal-footer-nav * {
 	text-transform: uppercase;
+	font-size:0.875rem;
+}
+
+li.mycal-footer-primary-content {
+	line-height:1em;
+	padding: 5px 0;
+	
 }
 
 li.mycal-footer-primary-content:before {
@@ -363,14 +370,23 @@ font-family: "FontAwesome";
     color:#ffffff;
 }
 
+li.mycal-footer-primary-content:first-child:before {
+	
+	content:"";
+}
+
 
 span.mycal-footer-primary-copyright {
 	    color: #ffffff;
     display: block;
     padding: .75rem;
+	margin:0 10px;
 	
 }
 
+.mycal-footer-primary-section .mycal-footer-primary-link {
+	margin:0 10px;
+}
 
 /* Progress Bar Test */
  .progressbar {
