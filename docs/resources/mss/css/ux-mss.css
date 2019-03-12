@@ -159,9 +159,15 @@ background:url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat
 
 .mycal-footer-primary-link.mycal-external_link:hover:after {
 
-background:url(http://lgdimcip1:20410/mss/img/external-link-white-hover.png) no-repeat 0 0;
+background:url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat 0 0;
 	background-size: 100%;
 }
+
+.mycal-footer-primary-section .mycal-footer-primary-link {
+	margin:0 10px;
+	text-decoration:underline;
+}
+
 
 a.tooltip {
 	 border-bottom: 1px dashed;
@@ -397,6 +403,8 @@ a.tooltip {
 }
 
 
+
+
 /* Footer */
 
 .mycal-footer-nav * {
@@ -430,9 +438,6 @@ span.mycal-footer-primary-copyright {
 	
 }
 
-.mycal-footer-primary-section .mycal-footer-primary-link {
-	margin:0 10px;
-}
 
 /* Progress Bar Test */
  .progressbar {
