@@ -142,7 +142,7 @@ background:url(http://lgdimcip1:20410/mss/img/external-link.svg) no-repeat 0 0;
 
 }
 
-.mycal-external_link:after:hover {
+.mycal-external_link:hover:after {
 
 background:url(http://lgdimcip1:20410/mss/img/external-link-hover.svg) no-repeat 0 0;
 	    background-size: 100%;
@@ -156,7 +156,7 @@ background:url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat
 }
 
 
-.mycal-footer-primary-link.mycal-external_link:after:hover {
+.mycal-footer-primary-link.mycal-external_link:hover:after {
 
 background:url(http://lgdimcip1:20410/mss/img/external-link-white-hover.png) no-repeat 0 0;
 }
