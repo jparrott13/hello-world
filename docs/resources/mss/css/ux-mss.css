@@ -153,12 +153,14 @@ background:url(http://lgdimcip1:20410/mss/img/external-link-hover.svg) no-repeat
 .mycal-footer-primary-link.mycal-external_link:after {
 
 background:url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat 0 0;
+	background-size: 100%;
 }
 
 
 .mycal-footer-primary-link.mycal-external_link:hover:after {
 
 background:url(http://lgdimcip1:20410/mss/img/external-link-white-hover.png) no-repeat 0 0;
+	background-size: 100%;
 }
 
 a.tooltip {
