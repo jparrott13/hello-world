@@ -121,20 +121,31 @@ p.sidebar {
 
 a {
     color: #00659e;
-	text-decoration:none;
+	text-decoration:underline;
 	cursor:pointer;
 }
 
-a:hover {
+a:hover, a.hover {
     color: #003c5e;
     text-decoration: underline;
 }
 
-a:focus {
+a:focus, a.focus {
     outline: solid;
     outline: 3px solid #39659b;
     outline-offset: 4px;
     border-radius: 0;
+}
+
+a:visited, a.visited {
+    color:#715192;
+}
+
+
+.mycal-external_link:after {
+
+background:url(http://lgdimcip1:20410/mss/img/external-link.svg) no-repeat 0 0;
+
 }
 
 
