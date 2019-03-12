@@ -107,6 +107,16 @@ p.sidebar {
 	text-align:left;
 }
 
+.tooltip {
+	 border-bottom: 1px dashed;
+    cursor: help;
+    font-weight: normal;
+    font-size: 85%;
+    margin-top: -3px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
 /* Links */
 
 a {
