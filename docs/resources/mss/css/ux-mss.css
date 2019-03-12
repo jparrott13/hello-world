@@ -150,6 +150,11 @@ background:url(http://lgdimcip1:20410/mss/img/external-link-hover.svg) no-repeat
 }
 
 
+.mycal-footer-primary-section .mycal-footer-primary-link:focus, a.mycal-footer-primary-link.focus {
+    outline-color: #fff;
+    outline-offset: -5px;
+}
+
 .mycal-footer-primary-link.mycal-external_link:after {
 
 background:url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat 0 0;
