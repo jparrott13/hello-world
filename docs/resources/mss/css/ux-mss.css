@@ -134,6 +134,65 @@ a:visited, a.visited {
     color:#715192;
 }
 
+a.primary-nav-link {
+	color:#000000;
+	text-decoration:underline;
+	font-size:1.125rem;
+	line-height:25px;
+	padding:10px 15px;
+	font-weight;400;
+}
+
+a.primary-nav-link.active {
+	
+		font-weight:600;
+}
+
+a.primary-nav-link.active:hover {
+	
+		color:#000000;
+}
+
+a.primary-nav-link:hover, a.primary-nav-link.hover {
+	
+color:#00659e;
+}
+
+a.primary-nav-link:focus, a.primary-nav-link.focus {
+	 outline: solid;
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 0;
+	    margin: 5px;
+}
+
+a.secondary-nav-link {
+		color:#000000;
+	text-decoration:underline;
+	font-size:1rem;
+	line-height:16px;
+	padding:10px 12px;
+	font-weight;400;
+}
+
+a.secondary-nav-link.active {
+	
+		font-weight:600;
+}
+
+a.secondary-nav-link:hover, a.secondary-nav-link.hover {
+	
+	color:#00659e;
+}
+
+a.secondary-nav-link:focus, a.secondary-nav-link.focus {
+	
+	 outline: solid;
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 0;
+	    margin: 5px;
+}
 
 .mycal-external_link:after {
 
