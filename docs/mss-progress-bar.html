@@ -70,6 +70,100 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/ux-mss.css" />
 
+	
+	<style>
+	.progress-steps p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.progress-steps .steps-count {
+    font-weight: bold;
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+    margin-bottom: .5em;
+}
+
+.progress-steps ol.steps {
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+    margin-bottom: .3em;
+}
+
+.progress-steps dl, .progress-steps ol, .progress-steps ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.progress-steps ol.steps li {
+    display: inline-block;
+    position: relative;
+    float: none;
+    margin: .4em 40px .4em 0;
+}
+
+.progress-steps ol.steps li.completed:after {
+    background: #4a7c10;
+}
+
+.progress-steps ol.steps li:after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    background: #edeff0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    width: calc(100% + 40px);
+    bottom: -9px;
+}
+
+.progress-steps ol.steps li:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #edeff0;
+}
+
+.progress-steps ol.steps li.completed:before {
+    background: #4a7c10;
+}
+
+.progress-steps ol.steps li {
+    display: inline-block;
+    position: relative;
+    float: none;
+    margin: .4em 40px .4em 0;
+}
+
+.progress-steps {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.progress-steps ol.steps li:last-child {
+    margin: .4em 0;
+}
+
+.progress-steps ol.steps li:last-child:after{
+    display: none;
+}
+
+.progress-steps ol.steps li.active:before {
+    background: #4a7c10;
+}
+	</style>
 <!-- From PSR -->
 <script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>
 <!-- JS Includes -->
@@ -174,13 +268,7 @@
 		  
         <h2>Step #/#</h2>
        
-		    <ul class="progressbar">
-          <li class="active">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-  </ul> 
-		  
+<div class="progress-steps"><p class="steps-count">Step 1 of 7</p><ol class="steps"><li class="active"><span class="sr-only">Security Agreement</span></li><li><span class="sr-only">Identify Yourself</span></li><li><span class="sr-only">Verify Your Identity</span></li><li><span class="sr-only">Username and Password</span></li><li><span class="sr-only">Personal Security</span></li><li><span class="sr-only">Security Questions</span></li><li><span class="sr-only">Registration Complete</span></li></ol></div>
 		  
       </div>
       <div class="mycal-accordion-bordered mycal-code-sample">
