@@ -148,10 +148,7 @@ a.primary-nav-link.active {
 		font-weight:600;
 }
 
-a.primary-nav-link.active:hover {
-	
-		color:#000000;
-}
+
 
 a.primary-nav-link:hover, a.primary-nav-link.hover {
 	
@@ -182,7 +179,7 @@ a.secondary-nav-link.active {
 
 a.secondary-nav-link:hover, a.secondary-nav-link.hover {
 	
-	color:#00659e;
+	color:#000000;
 }
 
 a.secondary-nav-link:focus, a.secondary-nav-link.focus {
@@ -503,52 +500,107 @@ span.mycal-footer-primary-copyright {
 }
 
 
-/* Progress Bar Test */
- .progressbar {
-      counter-reset: step;
-  }
-  .progressbar li {
-      list-style-type: none;
-      width: 25%;
-      float: left;
-      font-size: 12px;
-      position: relative;
-      text-align: center;
-      text-transform: uppercase;
-      color: #7d7d7d;
-  }
-  .progressbar li:before {
-      width: 30px;
-      height: 30px;
-      content: counter(step);
-      counter-increment: step;
-      line-height: 30px;
-      border: 2px solid #7d7d7d;
-      display: block;
-      text-align: center;
-      margin: 0 auto 10px auto;
-      border-radius: 50%;
-      background-color: white;
-  }
-  .progressbar li:after {
-      width: 100%;
-      height: 2px;
-      content: '';
-      position: absolute;
-      background-color: #7d7d7d;
-      top: 15px;
-      left: -50%;
-      z-index: -1;
-  }
-  .progressbar li:first-child:after {
-      content: none;
-  }
-  .progressbar li.active {
-      color: green;
-  }
-  .progressbar li.active:before {
-      border-color: #55b776;
-  }
-  .progressbar li.active + li:after {
-      background-color: #55b776;
-  }
+/* Progress Bar */
+
+	.progress-steps p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.progress-steps .steps-count {
+    font-weight: bold;
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+    margin-bottom: .5em;
+}
+
+.progress-steps ol.steps {
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+    margin-bottom: .3em;
+}
+
+.progress-steps dl, .progress-steps ol, .progress-steps ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.progress-steps ol.steps li {
+    display: inline-block;
+    position: relative;
+    float: none;
+    margin: .4em 40px .4em 0;
+}
+
+.progress-steps ol.steps li.completed:after {
+    background: #4a7c10;
+}
+
+.progress-steps ol.steps li:after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    background: #edeff0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    width: calc(100% + 40px);
+    bottom: -9px;
+}
+
+.progress-steps ol.steps li:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #edeff0;
+}
+
+.progress-steps ol.steps li.completed:before {
+    background: #4a7c10;
+}
+
+.progress-steps ol.steps li {
+    display: inline-block;
+    position: relative;
+    float: none;
+    margin: .4em 40px .4em 0;
+}
+
+.progress-steps {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.progress-steps ol.steps li:last-child {
+    margin: .4em 0;
+}
+
+.progress-steps ol.steps li:last-child:after{
+    display: none;
+}
+
+.progress-steps ol.steps li.active:before {
+    background: #4a7c10;
+}
+
+span.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
