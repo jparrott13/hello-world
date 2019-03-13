@@ -140,7 +140,7 @@ a.primary-nav-link {
 	font-size:1.125rem;
 	line-height:25px;
 	padding:10px 15px;
-	font-weight;400;
+	font-weight:400;
 }
 
 a.primary-nav-link.active {
@@ -160,7 +160,7 @@ color:#00659e;
 
 a.primary-nav-link:focus, a.primary-nav-link.focus {
 	 outline: solid;
-    outline: 3px solid #ffffff;
+    outline: 3px solid #00659e;
     outline-offset: 4px;
     border-radius: 0;
 	    margin: 5px;
@@ -188,7 +188,7 @@ a.secondary-nav-link:hover, a.secondary-nav-link.hover {
 a.secondary-nav-link:focus, a.secondary-nav-link.focus {
 	
 	 outline: solid;
-    outline: 3px solid #ffffff;
+    outline: 3px solid #00659e;
     outline-offset: 4px;
     border-radius: 0;
 	    margin: 5px;
