@@ -475,14 +475,20 @@ a.tooltip {
         font-size: 2.12941rem;
         margin: .5rem 0 .1rem;
          max-width: 100%;
-		text-align:center;
+	
     }
    
     }
 
 
+@media screen and (max-width: 63.99em) {
 
+.mycal-logo {
 
+    text-align: center;
+ 
+}
+}
 
 
 
