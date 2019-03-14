@@ -464,34 +464,34 @@ a.tooltip {
 
 
  .mycal-nav-primary button[aria-expanded=false] {
-        background-image: url(../img/angle-arrow-down-white.png);
-        background-image: url(../img/angle-arrow-down-white.png), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-        background-image: url(../img/angle-arrow-down-white.png), linear-gradient(transparent, transparent);
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-white.png);
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-white.png), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-white.png), linear-gradient(transparent, transparent);
         background-position: right 1rem top 53%;
         background-repeat: no-repeat;
         background-size: .5rem
     }
     .mycal-nav-primary button[aria-expanded=false]:focus, .mycal-nav-primary .mycal-accordion-button.mycal-current{
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.png);
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down.png);
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
         background-position: right 1rem top 53%;
         background-repeat: no-repeat;
         background-size: .5rem
     }
     .mycal-nav-primary button[aria-expanded=false]:hover {
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.png);
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), linear-gradient(transparent, transparent);
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-primary.png);
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), linear-gradient(transparent, transparent);
         background-repeat: no-repeat
     }
     .mycal-nav-primary button[aria-expanded=true] {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         background-color: #162e51;
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.png);
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.svg), linear-gradient(transparent, transparent);
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-hover.png);
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-hover.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+        background-image: url(https://lgdimcip1:20410/mss/img/angle-arrow-down-hover.svg), linear-gradient(transparent, transparent);
         background-position: right 1rem top 53%;
         background-repeat: no-repeat;
         background-size: .5rem;
