@@ -465,6 +465,27 @@ a.tooltip {
 
 
 
+/* TEST LOG OUT HEADER */
+
+@media screen and (min-width:64em) {
+	
+  
+
+    .mycal-header-extended.logout .mycal-logo {
+        font-size: 2.12941rem;
+        margin: .5rem 0 .1rem;
+         max-width: 100%;
+		text-align:center;
+    }
+   
+    }
+
+
+
+
+
+
+
 
 /* Footer */
 
