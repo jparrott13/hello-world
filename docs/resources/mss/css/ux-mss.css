@@ -495,6 +495,18 @@ a.tooltip {
         background-repeat: no-repeat;
         background-size: .8rem
     }
+
+.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]{
+	color: #000000;
+	background-color: #cce0eb;
+	font-weight: 700;
+        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.png);
+        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+        background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
+        background-position: right 1rem top 53%;
+        background-repeat: no-repeat;
+        background-size: .5rem;
+}
     .mycal-nav-primary button[aria-expanded=false]:hover {
         background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.png);
         background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
