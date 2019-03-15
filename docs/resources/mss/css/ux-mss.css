@@ -549,9 +549,9 @@ a.tooltip {
         padding: 1rem;
         position: absolute;
         width: 15rem;
-        z-index: 400
+        z-index: 400;
 			border: 1px solid #000000;
-  border-top: 0;
+  border-left: 0;
     }
 	
 
