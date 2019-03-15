@@ -568,6 +568,23 @@ a.tooltip {
 
     }
 	
+	
+	.mycal-nav-submenu  > li > a {
+    font-size: 1rem;
+    text-decoration: underline;
+    line-height: 1em !important;
+    font-weight: 400;
+    padding-left: 2rem;
+    color: #00659e !important;
+    margin: 0;
+}
+
+		.mycal-nav-submenu  > li > a:hover {
+ 
+    color: #003c5e !important;
+  
+}
+	
     }
 
 
