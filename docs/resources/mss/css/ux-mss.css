@@ -572,7 +572,7 @@ span.mycal-footer-primary-copyright {
 
 .progress-steps .steps-count {
     font-weight: bold;
-    color: grey;
+    color: #666666;
     text-transform: uppercase;
     letter-spacing: .25px;
     margin-bottom: .5em;
@@ -605,7 +605,7 @@ span.mycal-footer-primary-copyright {
     position: absolute;
     content: '';
     height: 5px;
-    background: #edeff0;
+    background: #e2e2e2;
     margin: 0;
     position: absolute;
     left: 50%;
@@ -625,11 +625,11 @@ span.mycal-footer-primary-copyright {
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background-color: #edeff0;
+    background-color: #e2e2e2;
 }
 
 .progress-steps ol.steps li.completed:before {
-    background: #4a7c10;
+    background: #689844;
 }
 
 .progress-steps ol.steps li {
@@ -653,7 +653,7 @@ span.mycal-footer-primary-copyright {
 }
 
 .progress-steps ol.steps li.active:before {
-    background: #4a7c10;
+    background: #689844;
 }
 
 span.sr-only {
