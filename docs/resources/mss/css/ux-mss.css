@@ -463,6 +463,22 @@ a.tooltip {
 }
 
 
+.mycal-nav .mycal-nav-link.mycal-current {
+	font-weight: 600;
+	background-color: #ffffff;
+
+}
+
+.mycal-nav .mycal-nav-link.mycal-current + ul.mycal-nav-submenu {
+	background-color:#ffffff;
+}
+
+.mycal-nav .mycal-nav-link.mycal-current:hover {
+	text-decoration:underline;
+	background-color:#ffffff;
+
+}
+
  .mycal-nav-primary button[aria-expanded=false] {
         background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-white.png);
         background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-white.png), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
@@ -510,6 +526,20 @@ a.tooltip {
      
     }
 
+	    .mycal-nav-submenu {
+	border: none;
+	background-color: #ffffff;
+	min-height: 35px;	    
+/*        background-color: #162e51; */
+        list-style-type: none;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 1rem;
+        position: absolute;
+        width: 15rem;
+        z-index: 400
+    }
+	
 
     .mycal-header-extended.logout .mycal-logo {
         font-size: 2.12941rem;
