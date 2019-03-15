@@ -542,7 +542,7 @@ a.tooltip {
 	border: none;
 	background-color: #ffffff;
 	min-height: 35px;	    
-/*        background-color: #162e51; */
+
         list-style-type: none;
         margin-bottom: 0;
         margin-top: 0;
@@ -550,6 +550,8 @@ a.tooltip {
         position: absolute;
         width: 15rem;
         z-index: 400
+			border: 1px solid #000000;
+  border-top: 0;
     }
 	
 
