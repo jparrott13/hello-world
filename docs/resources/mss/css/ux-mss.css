@@ -551,7 +551,7 @@ a.tooltip {
         width: 15rem;
         z-index: 400;
 			border: 1px solid #000000;
-  border-left: 0;
+  		border-top: 0;
     }
 	
 
