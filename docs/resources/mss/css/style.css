@@ -654,7 +654,8 @@ background: url(../../images/ept/result_error_field_icon.png) no-repeat 0px 3px;
 
 .fieldErrorMessage {
 	font-size: 0.875rem;
-	font-weight: 400;
+	font-weight: 600;
+	color: #cc0033;
 }
 
 div.fieldErrorMessage::before {
