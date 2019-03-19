@@ -49,27 +49,262 @@
 <!-- env: demo -->
 
 
-<link rel="stylesheet" href="resources/mss/css/v2style.css">
+<!--<link rel="stylesheet" href="resources/mss/css/v2style.css">
 <link rel="stylesheet" href="resources/mss/css/uswds-2_4-mycal.css">
 <script type="text/javascript" src="resources/mss/js/forms.js"></script>
 
-<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>		
+<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>		-->
 				
 <!-- CSS Includes -->
-<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
+<!--<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
 <link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
-<link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />-->
 <!-- From PSR -->
-<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>		 
+<!--<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>-->		 
 <!-- JS Includes -->
-<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
+<!--<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
 <script src="resources/mss/js/calendar-popup.js"></script>
-<script src="resources/mss/js/application.js"></script>
+<script src="resources/mss/js/application.js"></script> -->
+	  
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/psr-web/js/cp_analytics.js"></script>
+
+		
+<script>var teaLeafTargetUrl = "/psr-web/ept/public/systemaccess/tealeafTarget.html"</script>
+
+<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/ept/tealeaf/TealeafSDKConfig.js"></script>		
+<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/tealeaf/TealeafSDK.js"></script>
+
+<!-- From PSR -->
+<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/prototype.js"></script>
+		
+<!-- JS Includes -->
+<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/ept-mss/jquery-3.3.1.min.js"></script>
+
+<script> 
+	var $j = jQuery.noConflict();
+	var isEpt = true;
+	var surveyTriggeredElement; //used for storing the element/menu reference that triggered the survey.
+	
+	function elementSupportsAttribute(element, attribute) {
+		  var test = document.createElement(element);
+		  if (attribute in test) {
+		    return true;
+		  } else {
+		    return false;
+		  }
+		};
+
+	function setupTextareaPlaceholder()
+	{
+		if (!elementSupportsAttribute('textarea', 'placeholder')) {
+			
+			$j('[placeholder]').focus(function() {
+				  var input = $j(this);
+				  if (input.val() == input.attr('placeholder')) {
+				    input.val('');
+				    input.removeClass('placeholder');
+				  }
+				}).blur(function() {
+				  var input = $j(this);
+				  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+				    input.addClass('placeholder');
+				    input.val(input.attr('placeholder'));
+				  }
+				}).blur().parents('form').submit(function() {
+				  $j(this).find('[placeholder]').each(function() {
+				    var input = $j(this);
+				    if (input.val() == input.attr('placeholder')) {
+				      input.val('');
+				    }
+				  })
+				}); 
+		}
+	}
+
+	Event.observe(window, "load", function(){ 
+		addGAToDownloadLinks();
+
+		if($j('#nav > li.active')){
+			$j('#hidden-secondary-menu').html($j('#nav > li.active').find("ul").html());
+		}
+		
+		if ($j('#nav > li.active').length == 0)
+		{
+			//$j('#topNav').css("min-height",'38px');
+		}
+		else //if ( $j('#topNav ul.active').height() > 38 )
+		{
+			//$j('#topNav').css("min-height",'72px');
+			
+		}
+
+		if($j('.tabbedContainer > ul > li > a')){
+			$j('.tabbedContainer > ul > li > a').attr('aria-expanded', 'false');
+		}
+		if ( $j('.tabbedContainer > ul > li > a.active').length == 0)
+		{
+			$j('.tabbedContainer > ul > li:first > a').addClass('active');
+			$j('.tabbedContainer > ul > li:first > a').attr('aria-expanded', 'true');
+			$j('.tabbedContainer > ul > li:first > a').parent().next().find('a').addClass('leftShadow');
+			$j ( $j('.tabbedContainer > ul > li:first > a').attr('href') ).show();
+		}
+		else if ( $j('.tabbedContainer > ul > li > a.active').length == 1 )
+		{
+			$j ( $j('.tabbedContainer > ul > li> a.active').attr('href') ).show();
+			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
+		}
+		
+		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
+		
+		$j('.tabbedContainer > ul > li > a').click(function() {
+			var containerId = $j(this).parent().parent().parent().attr('id');
+			var targetId = $j(this).attr("href");
+			
+			$j('#' + containerId + ' > ul > li > a').removeClass('active').removeClass('rightShadow').removeClass('leftShadow');
+			$j('#' + containerId + ' > ul > li > a').attr('aria-expanded', 'false');
+			$j(this).addClass('active');
+			$j(this).attr('aria-expanded', 'true');
+			$j(this).parent().prev().find('a').addClass('rightShadow');
+			$j(this).parent().next().find('a').addClass('leftShadow');			
+			$j('#' + containerId + ' > div.content').hide();
+			$j('#' + containerId + ' > div' + targetId +  '.content').show();
+		});
+
+		setupTextareaPlaceholder();
+		
+		var restrictedContent = "<div class='notification'>"+
+							"<p><strong>You are restricted to READ-ONLY access for this moduke.<br\>"+
+							"Please contact us at <strong>888 CalPERS</strong> (or <strong>888</strong>-225-7377) for assistance.</p>"+
+							"</div>";
+		
+		
+		
+		
+		$j( " .error" ).focus();
+		
+		$j('.error > div > ul > li > a').each(function() {
+			search = $j(this).attr("href");
+			if(search != null && search.indexOf("#") >= 0){
+				search = search.replace("#","");
+				$j(this).attr("href", "#" + $j("input[name*='" + search + "'], select[name*='" + search + "'], textarea[name*='" + search + "']  ").attr("id"));
+			}
+		});
+	}); 		
+	    
+	var urlContext = '/psr-web';	
+</script>
+
+<script>
+	
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-25763786-9']);
+	_gaq.push(['_setDomainName', 'calpers.ca.gov']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+
+<!-- From PSR -->
+<script src="/psr-web/js/calendar-popup.js"></script>
+<script src="/psr-web/js/application.js"></script>
+<script>
+	Psr.Request = Class.create({
+		initialize : function(url, options){
+			if( options.method && options.method.toUpperCase() == 'POST' ){
+				options.parameters = options.parameters || {};
+				options.parameters.psrFormToken='6cJla8JIfqlCD82MvPdKrX0VA';
+			}
+			new Ajax.Request(url, options);
+		}
+	});
+
+		
+</script>
+				
+<!-- CSS Includes -->
+<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/uswds-2_4-mycal.css">
+<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/calendar.css">
+<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/progress-steps.css">
+	  
+	  <!-- UX Custom -->
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ux-mss.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<style>
+	.roundedCorners, input[type='button'], input[type='submit'], a.doSomething, .mainButton, .button, .tabbedContainer > ul > li a
+	{
+		behavior: url(/psr-web/css/ept/pie/PIE.htc);
+	}
+</style>
+
+		
+		
+		
+		<style>
+			
+		</style>
+						
+		<!-- Page Specific JS/CSS -->		
+		
+		<script type="text/javascript">
+		function returnToLogin() 
+		{
+			location.href='/psr-web/ept/public/systemaccess/eptLogin.html?psr.param0=vU1LBnuXujCt2G9id2fJS2lXFyXuFeH_';
+		}
+		
+		function goToForgotUsername() 
+		{
+			location.href='/psr-web/ept/public/systemaccess/username/userIdentification.html?psr.param1=vU1LBnuXujCt2G9id2fJS2lXFyXuFeH_';
+		}
+		
+		function goToForgotPassword() 
+		{
+			location.href='/psr-web/ept/public/systemaccess/password/userIdentification.html?psr.param2=vU1LBnuXujCt2G9id2fJS2lXFyXuFeH_';
+		}
+		
+	    Event.observe(window, 'load', function() {
+		    if ('SSN' == 'CID')
+		    	enablePersID();
+		    else	
+		    	enableSSN();	    
+	    });
+
+		function enableSSN()
+		{
+			$('idTypeSSN').checked = true;
+			Psr.show('ssnInput');
+			Psr.hide('cidInput');			
+		}
+		
+		function enablePersID()
+		{
+			$('idTypeCID').checked = true;
+			Psr.show('cidInput');
+			Psr.hide('ssnInput');			
+		}
+	</script>
+	
+	
+	
+		  
+	  
+	  
+	  
+	  
+	  
+	  
 <script> 
 	var $j = jQuery.noConflict();
 </script>
