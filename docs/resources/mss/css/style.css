@@ -659,6 +659,19 @@ background: url(../../images/ept/result_error_field_icon.png) no-repeat 0px 3px;
 	line-height: 27px;
 	background: url("../../images/ept/inline_error.png") no-repeat 0px 3px;
 }
+
+div.fieldErrorMessage::before {
+    content: "\f057";
+    font-family: 'FontAwesome' !important;
+    top: -3px;
+    color: #cc0033;
+    font-size: 1.25rem;
+    left: 10px;
+    margin: 27px 5px 27px 5px;
+}
+
+
+
 /* Explain this or QT next to all labels */
 label.info, input.info {
 	float: left;
