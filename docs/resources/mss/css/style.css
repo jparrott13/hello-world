@@ -595,6 +595,26 @@ a.tooltip {
     text-align: center;
  
 }
+	
+	
+	.mycal-navbar {
+    background-color: #cce0eb !important;
+    color: #333333 !important;
+}
+	
+	
+	.mycal-menu-btn {
+		 background-color: #cce0eb !important;
+    color: #333333 !important;
+		
+	}
+	
+	.mycal-menu-btn::before {
+		 font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+		
+	}
+}	
+	
 }
 
 
