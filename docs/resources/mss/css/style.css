@@ -306,7 +306,7 @@ a.tooltip {
 	outline-style: solid;
 	outline-width: 3px;
 }
-.mycal-button-secondary, .mycal-button-secondary.active {
+/*.mycal-button-secondary, .mycal-button-secondary.active {
 	color: #23518b;
 	background-color: #cce0eb;
 	border-color: #9fc3d7;
@@ -324,18 +324,18 @@ a.tooltip {
 	outline-offset: -3px;
 	outline-style: solid;
 	outline-width: 3px;
-}
-.mycal-button-tertiary, .mycal-button-tertiary.active {
+}*/
+.mycal-button-secondary, .mycal-button-secondary.active {
 	color: #333333;
 	background-color: #ffffff;
 	border-color: #cccccc;
 }
-.mycal-button-tertiary:hover, .mycal-button-tertiary-hover {
+.mycal-button-secondary:hover, .mycal-button-sedcondary-hover {
 	color: #333333;
 	background-color: #e6e6e6;
 	border-color: #adadad;
 }
-.mycal-button-tertiary:focus, .mycal-button-tertiary-focus {
+.mycal-button-secondary:focus, .mycal-button-secondary-focus {
 	color: #333333;
 	background-color: #ffffff;
 	border-color: #cccccc;
