@@ -784,8 +784,8 @@ span.sr-only {
   
  /** Error class add error icon **/
  /* div.fieldErrorMessage::before {
-    background: url(../../images/ept/result_error_field_icon.png) no-repeat 0px 3px; */
-}
+background: url(../../images/ept/result_error_field_icon.png) no-repeat 0px 3px; }*/
+
 .fieldErrorMessage {
 	font-size: 0.875rem;
     font-weight: 400;
