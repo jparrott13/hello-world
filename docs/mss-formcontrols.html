@@ -71,19 +71,19 @@
 <script src="resources/mss/js/calendar-popup.js"></script>
 <script src="resources/mss/js/application.js"></script> -->
 	  
-	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/psr-web/js/cp_analytics.js"></script>
+	<!--<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/psr-web/js/cp_analytics.js"></script>
 
 		
 <script>var teaLeafTargetUrl = "/psr-web/ept/public/systemaccess/tealeafTarget.html"</script>
 
 <script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/ept/tealeaf/TealeafSDKConfig.js"></script>		
-<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/tealeaf/TealeafSDK.js"></script>
+<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/tealeaf/TealeafSDK.js"></script> -->
 
 <!-- From PSR -->
-<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/prototype.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/prototype.js"></script>
 		
 <!-- JS Includes -->
-<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/ept-mss/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/jquery-3.3.1.min.js"></script>
 
 <script> 
 	var $j = jQuery.noConflict();
@@ -215,8 +215,8 @@
 
 
 <!-- From PSR -->
-<script src="/psr-web/js/calendar-popup.js"></script>
-<script src="/psr-web/js/application.js"></script>
+<script src="resources/mss/js/updated/calendar-popup.js"></script>
+<script src="resources/mss/js/updated/application.js"></script>
 <script>
 	Psr.Request = Class.create({
 		initialize : function(url, options){
@@ -232,12 +232,12 @@
 </script>
 				
 <!-- CSS Includes -->
-<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/uswds-2_4-mycal.css">
-<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/calendar.css">
-<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/uswds-2_4-mycal.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/calendar.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/datatables.min.css">
 <link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/ept-mss/progress-steps.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/progress-steps.css">
 	  
 	  <!-- UX Custom -->
 <link rel="stylesheet" type="text/css" href="resources/mss/css/ux-mss.css" />
@@ -1314,14 +1314,36 @@
   </main>
 
 </div>
-<script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script>  
+
+<!-- new Jquery UI --> 				
+<script type="text/javascript" src="resources/mss/js/updated/jquery-ui.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/jquery.dialogOptions.js"></script>
+
+<!-- datatable --> 				
+<script type="text/javascript" src="resources/mss/js/updated/datatables.min.js"></script>
+<!--  USWDS js -->
+<script type="text/javascript" src="resources/mss/js/updated/uswds-2_4-mycal.js"></script>
+
+<!--  Cutsom app specific -->
+<script type="text/javascript" src="resources/mss/js/updated/quicktip.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/ept.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/updated/application.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/ept/hoverIntent.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/ept/jquery.ba-dotimeout.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/ept/jquery.plugins.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/ept/jquery.cookies.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/ept/mock.js"></script>
+<script type="text/javascript" src="resources/mss/js/updated/ept/gatag.js"></script>
+
+<!-- <script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script>  
 <script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script>
 <script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script>
 <script type="text/javascript" src="resources/mss/js/ept/jquery.ba-dotimeout.min.js"></script>
 <script type="text/javascript" src="resources/mss/js/ept/jquery.plugins.js"></script>
 <script type="text/javascript" src="resources/mss/js/ept/jquery.cookies.min.js"></script>
-<script type="text/javascript" src="resources/mss/js/ept/mock.js"></script>
-<!-- Modal -->
+<script type="text/javascript" src="resources/mss/js/ept/mock.js"></script> -->
+<!-- Modal 
 	<script type="text/javascript" src="resources/mss/js/modaal.min.js"></script>
 <script type="text/javascript" src="resources/mss/js/calendar.js" />	
 
@@ -1329,7 +1351,7 @@
 <script type="text/javascript" src="resources/mss/js/uswds-2_4-mycal.js"></script>
 <script type="text/javascript" src="resources/mss/js/styleguide.js"></script>
 
-<script type="text/javascript" src="resources/mss/js/datatables.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/datatables.min.js"></script> -->
 <footer class="mycal-footer mycal-footer-slim" role="contentinfo">
   <div class="grid-container mycal-footer-return-to-top">
     <a href="#">Return to top</a>
@@ -1359,7 +1381,7 @@
   
   </body>
 </html>
-<script>
+<!--<script>
 	$j('a[target]').addClass('mycal-external_link');
 Event.observe(window, "load", function(){ 
 		if($j('.tabbedContainer > ul > li > a')){
@@ -1395,4 +1417,4 @@ Event.observe(window, "load", function(){
 		});
 	
 	});		
-</script>
+</script> -->
