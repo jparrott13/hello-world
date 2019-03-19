@@ -240,7 +240,7 @@
 <link rel="stylesheet" type="text/css" href="resources/mss/css/updated/progress-steps.css">
 	  
 	  <!-- UX Custom -->
-<link rel="stylesheet" type="text/css" href="resources/mss/css/ux-mss.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/style.css" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 <style>
 	.roundedCorners, input[type='button'], input[type='submit'], a.doSomething, .mainButton, .button, .tabbedContainer > ul > li a
@@ -312,13 +312,15 @@
   <body class="page-utilities layout-styleguide ">
     <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
 
-    <header class="mycal-header site-header site-header-dark" role="banner">
-  <div class="mycal-navbar site-header-navbar">
+
+	  
+    <header class="mycal-header mycal-header-extended logout  grid-col-12" role="banner">
+  <div class="mycal-navbar">
     <div class="mycal-logo site-logo" id="logo">
       <em class="mycal-logo-text">
-        <a class="margin-right-05" href="home.jsp" title="Home" aria-label="United States Web Design System home">
-          <span aria-hidden="true" class="site-title-short">USWDS</span>
-          <span class="site-title">myCalPERS</span>
+        <a href="#" title="Home" aria-label="United States Web Design System home">
+          <span aria-hidden="true" class="site-title-short" style="color:#ffffff;">USWDS</span>
+          <span class="site-title" style="color:#ffffff;">myCalPERS</span>
         </a>
       </em>
     </div>
@@ -334,16 +336,16 @@
   </div>
 </header>
 <nav class="site-nav-secondary sticky">
-  <ul>
+  <ul class="mycal-nav-submenu-list">
   
-  <li class="mycal-nav-submenu-item">
+  <li class="mycal-nav-submenu-list-item">
 	<a href="home.jsp">
 	  <span>
 	    Demo
 	  </span>
 	</a>
   </li>
-  <li class="mycal-nav-submenu-item">
+  <li class="mycal-nav-submenu-list-item">
 	<a href="https://v2.designsystem.digital.gov/">
 	  <span>
 	    Additional Documentation
@@ -753,18 +755,13 @@
 					<p id="firstName-help1" class="helper-text">Helper Text</p>
 					<input id="userIdentificationDto.firstName" name="userIdentificationDto.firstName" class="mycal-input" aria-labelledby="firstName-lbl1 firstName-help1" type="text" value="" size="35" maxlength="35">
 				</div>
-				<div class="grid-col-5">
-					<span id="lastName-lbl1"><label for="userIdentificationDto.lastName" id="userIdentificationDto.lastNameLbl">Text Input Required<span class="required">(required)</span></label></span>
-					<br>
-					<p id="lastName-help1" class="helper-text">Helper Text</p>
-					<input id="userIdentificationDto.lastName" name="userIdentificationDto.lastName" class="mycal-input" aria-labelledby="lastName-lbl1 lastName-help1" type="text" value="" size="35" maxlength="35">
-				</div>
+			
 			</div>
 	
 	<div class="grid-row grid-gap">
 			
 				<div class="grid-col-5">
-					<span id="lastName-lbl1"><label for="userIdentificationDto.lastName" id="userIdentificationDto.lastNameLbl">Text Input Required<span class="required">(required)</span></label></span>
+					<span id="lastName-lbl1"><label for="userIdentificationDto.lastName" id="userIdentificationDto.lastNameLbl">Text Input Required <span class="required">(required)</span></label></span>
 					<br>
 					<p id="lastName-help1" class="helper-text">Helper Text</p>
 					<input id="userIdentificationDto.lastName" name="userIdentificationDto.lastName" class="mycal-input" aria-labelledby="lastName-lbl1 lastName-help1" type="text" value="" size="35" maxlength="35">
@@ -1224,6 +1221,7 @@
   </button>
   <div id="date-input-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
     <h4 class="mycal-heading">Implementation</h4>
+
       <p>Currently, the max limit for the year input is set to 2000, but it should be changed depending on the context of the form.</p>
     <h4 class="mycal-heading">Accessibility</h4>
     <ul class="mycal-content-list">
