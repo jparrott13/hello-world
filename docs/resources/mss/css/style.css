@@ -847,7 +847,11 @@ span.sr-only {
        border-radius: 4px;
        -moz-border-radius: 4px;  
 }
-
+.error {
+  
+       border-radius: 4px;
+       -moz-border-radius: 4px;  
+}
 
 .success > div {
        background: url("../../images/ept/result_success.png") no-repeat 20px 20px #fff;
