@@ -56,6 +56,11 @@ label, .label {
 	margin:5px 0 5px 0;
 }
 
+span.required {
+    font-size: 0.875rem;
+    color: #cc0033;
+}
+
 /* Headings */
 
 .typography p {
@@ -690,7 +695,7 @@ span.mycal-footer-primary-copyright {
 }
 
 .progress-steps ol.steps li.completed:after {
-    background: #4a7c10;
+    background: #689844;
 }
 
 .progress-steps ol.steps li:after {
