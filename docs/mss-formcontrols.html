@@ -701,7 +701,7 @@
   </aside>
 <main id="main-content">
     <div class="sidenav-main-content">
-    <div class="styleguide-content mycal-prose">
+    <div class="grid-col-12">
       <header>
         
           
@@ -744,7 +744,42 @@
 <p>If you are a building a form with multiple controls, also consider the <a href="/form-templates/">accessibility guidelines in the â€œForm Templatesâ€ section</a>.</p>
 
 <section id="section-/form-controls/01-text-input">
-  <h2 class="mycal-heading heading-margin-alt" id="text-input">Text input</h2>
+  <h2 >Text input</h2>
+	
+	<div class="grid-row grid-gap">
+				 <div class="grid-col-5">
+					<span id="firstName-lbl1"><label>Text Input</label></span>
+					<br>
+					<p id="firstName-help1" class="helper-text">Helper Text</p>
+					<input id="userIdentificationDto.firstName" name="userIdentificationDto.firstName" class="mycal-input" aria-labelledby="firstName-lbl1 firstName-help1" type="text" value="" size="35" maxlength="35">
+				</div>
+				<div class="grid-col-5">
+					<span id="lastName-lbl1"><label for="userIdentificationDto.lastName" id="userIdentificationDto.lastNameLbl">Text Input Required<span class="required">(required)</span></label></span>
+					<br>
+					<p id="lastName-help1" class="helper-text">Helper Text</p>
+					<input id="userIdentificationDto.lastName" name="userIdentificationDto.lastName" class="mycal-input" aria-labelledby="lastName-lbl1 lastName-help1" type="text" value="" size="35" maxlength="35">
+				</div>
+			</div>
+	
+	<div class="grid-row grid-gap">
+			
+				<div class="grid-col-5">
+					<span id="lastName-lbl1"><label for="userIdentificationDto.lastName" id="userIdentificationDto.lastNameLbl">Text Input Required<span class="required">(required)</span></label></span>
+					<br>
+					<p id="lastName-help1" class="helper-text">Helper Text</p>
+					<input id="userIdentificationDto.lastName" name="userIdentificationDto.lastName" class="mycal-input" aria-labelledby="lastName-lbl1 lastName-help1" type="text" value="" size="35" maxlength="35">
+				</div>
+			</div>
+	
+		<div class="grid-row grid-gap">
+			
+				<div class="grid-col-5">
+					<span id="lastName-lbl1"><label for="userIdentificationDto.lastName" id="userIdentificationDto.lastNameLbl">Text Input Focused</label></span>
+					<br>
+					
+					<input id="userIdentificationDto.lastName" name="userIdentificationDto.lastName" class="mycal-input mycal-focus" aria-labelledby="lastName-lbl1 lastName-help1" type="text" value="" size="35" maxlength="35">
+				</div>
+			</div>
   
     <p class="mycal-font-lead">Text inputs allow people to enter any combination of letters, numbers, or symbols of their choosing (unless otherwise restricted). Text input boxes can span single or multiple lines.</p>
   
