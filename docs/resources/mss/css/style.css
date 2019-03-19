@@ -827,8 +827,8 @@ background: url(../../images/ept/result_error_field_icon.png) no-repeat 0px 3px;
 }
 
 .error > div > ul > li > a {
-       color: #000;
-       font-weight: 600;   
+       color: #00659e;
+       font-weight: 400;   
 }
 
 .success {
