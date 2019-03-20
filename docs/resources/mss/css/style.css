@@ -681,7 +681,7 @@ label.info, input.info {
 	margin-right: .75em;
 }
 /** Slider **/
-.bx-pager {
+/*.bx-pager {
 	text-align: center;
 	position: relative;
 	z-index: 9990;
@@ -694,7 +694,7 @@ label.info, input.info {
 .bx-pager a {
 	padding: 37px 25px;
 	display: inline;
-}
+} */
 /***** Content Elements (Action Result) *****/
 .success > div, .notification > div, .information > div, .error > div {
 	padding: 20px 20px 15px 65px;
