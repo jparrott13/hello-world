@@ -11,6 +11,11 @@ hr {
 .mycal-alert-heading {
 	font-weight: 700;
 }
+
+  a.mask { position: relative;
+    top: 0.75rem;
+}
+
 /* Body */
 
 body {
