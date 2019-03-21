@@ -706,6 +706,8 @@ a.selectedSicon {
 .bx-wrapper .bx-controls-direction a {
 	text-indent:inherit !important;
 	    top: 107% !important;
+	width: 20px !important;
+    height: 20px !important;
 }
 
 .bx-wrapper .bx-next {
@@ -714,14 +716,14 @@ a.selectedSicon {
 
 .bx-wrapper .bx-next:prev {
      outline: 3px solid #39659b !important;
-    outline-offset: 2px !important;
+    outline-offset: 9px !important;
   
 	
 }
 
 .bx-wrapper .bx-next:focus {
      outline: 3px solid #39659b !important;
-    outline-offset: 2px !important;
+    outline-offset: 9px !important;
  
 	
 }
@@ -735,8 +737,8 @@ a.selectedSicon {
     font-family: 'FontAwesome' !important;
     font-size: 2rem !important;
     color: #666666 !important;
-    top: 0 !important;
-    left: 0 !important;
+    top: -14px !important;
+    left: -4px !important;
     margin-right: 5px !important;
 }
 
@@ -753,8 +755,8 @@ a.selectedSicon {
     font-family: 'FontAwesome' !important;
     font-size: 2rem !important;
     color: #666666 !important;
-    top: 0 !important;
-    left: 0 !important;
+    top: -14px !important;
+    left: -4px !important;
     margin-right: 5px !important;
 }
 
