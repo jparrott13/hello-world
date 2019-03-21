@@ -700,6 +700,7 @@ a.selectedSicon {
 
 .bx-viewport {
 	padding:10px !important;
+	height:100% !important;
 }
 
 .bx-wrapper .bx-controls-direction a {
@@ -711,7 +712,7 @@ a.selectedSicon {
     /*right: 15rem !important; */
 }
 
-.bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
+.bx-wrapper .bx-next:prev {
      outline: 3px solid #39659b;
     outline-offset: 2px;
     border-radius: 0;
@@ -719,7 +720,7 @@ a.selectedSicon {
 	
 }
 
-.bx-wrapper .bx-next:focus, .bx-wrapper .bx-previous:hover {
+.bx-wrapper .bx-next:focus {
      outline: 3px solid #39659b;
     outline-offset: 2px;
     border-radius: 0;
@@ -757,6 +758,22 @@ a.selectedSicon {
     top: 0;
     left: 0;
     margin-right: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+      outline: 3px solid #39659b;
+    outline-offset: 2px;
+    border-radius: 0;
+    margin: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: #666666;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #ffffff;
+	border: 1px solid #666666;
 }
 
 /*.bx-pager {
