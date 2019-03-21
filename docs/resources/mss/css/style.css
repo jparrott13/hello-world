@@ -682,6 +682,10 @@ label.info, input.info {
 }
 /** Slider **/
 
+a.linkedImage {
+	display:inline-block;
+}
+
 .bx-wrapper {
 	width:100% !important;
 	max-width: 100% !important;
