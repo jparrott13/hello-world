@@ -733,7 +733,7 @@ a.selectedSicon {
 .bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
     position: absolute !important;
     font-family: 'FontAwesome' !important;
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
     color: #666666 !important;
     top: 0 !important;
     left: 0 !important;
@@ -748,10 +748,10 @@ a.selectedSicon {
     content: "\f137" !important;
 }
 
-.bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
+.bx-wrapper .bx-next:prev, .bx-wrapper .bx-prev:before {
     position: absolute !important;
     font-family: 'FontAwesome' !important;
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
     color: #666666 !important;
     top: 0 !important;
     left: 0 !important;
