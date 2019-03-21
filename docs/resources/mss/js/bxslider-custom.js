@@ -10,8 +10,8 @@ $j(function(){
 			  pager: true,
 			  nextText: "",
     			  prevText: "",
-			  nextSelector: "span",
-			  prevSelector: "span",
+			keyboardEnabled: true,
+			  pagerShortSeparator: 'short',
 			  hideControlOnEnd: true,
 			  adaptiveHeight: true
 		});
