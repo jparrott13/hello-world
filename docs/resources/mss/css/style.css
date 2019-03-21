@@ -686,6 +686,11 @@ a.linkedImage {
 	display:inline-block;
 }
 
+a.selectedSicon {
+
+    border: 5px solid #689844;
+}
+
 .bx-wrapper {
 	width:100% !important;
 	max-width: 100% !important;
@@ -723,7 +728,7 @@ a.linkedImage {
 }
 
 .bx-wrapper .bx-next:before {
-    content: "\f054";
+    content: "\f138";
 }
 
 .bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
@@ -741,7 +746,7 @@ a.linkedImage {
 }
 
 .bx-wrapper .bx-prev:before {
-    content: "\f053";
+    content: "\f137";
 }
 
 .bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
