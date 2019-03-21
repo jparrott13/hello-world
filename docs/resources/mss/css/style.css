@@ -699,8 +699,36 @@ label.info, input.info {
     right: 15rem !important;
 }
 
+.bx-wrapper .bx-next:before {
+    content: "\f054";
+}
+
+.bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    font-size: 30px;
+    color: #666666;
+    top: 0;
+    left: 0;
+    margin-right: 5px;
+}
+
 .bx-wrapper .bx-prev {
     left: 15rem !important;
+}
+
+.bx-wrapper .bx-prev:before {
+    content: "\f053";
+}
+
+.bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    font-size: 30px;
+    color: #666666;
+    top: 0;
+    left: 0;
+    margin-right: 5px;
 }
 
 /*.bx-pager {
