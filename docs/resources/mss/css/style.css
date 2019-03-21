@@ -706,6 +706,22 @@ a.linkedImage {
     /*right: 15rem !important; */
 }
 
+.bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
+     outline: 3px solid #39659b;
+    outline-offset: 2px;
+    border-radius: 0;
+    margin: 5px;
+	
+}
+
+.bx-wrapper .bx-next:focus, .bx-wrapper .bx-previous:hover {
+     outline: 3px solid #39659b;
+    outline-offset: 2px;
+    border-radius: 0;
+    margin: 5px;
+	
+}
+
 .bx-wrapper .bx-next:before {
     content: "\f054";
 }
