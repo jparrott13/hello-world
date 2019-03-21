@@ -682,8 +682,7 @@ label.info, input.info {
 }
 /** Slider **/
 
-.bw-wrapper {
-	
+.bx-wrapper {
 	width:100% !important;
 	max-width: 100% !important;
 	box-shadow:none !important;
@@ -696,7 +695,7 @@ label.info, input.info {
 }
 
 .bx-wrapper .bx-next {
-    right: 15rem !important;
+    /*right: 15rem !important; */
 }
 
 .bx-wrapper .bx-next:before {
@@ -706,7 +705,7 @@ label.info, input.info {
 .bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
     position: absolute;
     font-family: 'FontAwesome';
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #666666;
     top: 0;
     left: 0;
@@ -714,7 +713,7 @@ label.info, input.info {
 }
 
 .bx-wrapper .bx-prev {
-    left: 15rem !important;
+   /* left: 15rem !important; */
 }
 
 .bx-wrapper .bx-prev:before {
@@ -724,7 +723,7 @@ label.info, input.info {
 .bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
     position: absolute;
     font-family: 'FontAwesome';
-    font-size: 30px;
+    font-size: 1.5rem;
     color: #666666;
     top: 0;
     left: 0;
