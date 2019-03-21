@@ -10,6 +10,8 @@ $j(function(){
 			  pager: true,
 			  nextText: "",
     			  prevText: "",
+			  nextSelector: "span",
+			  prevSelector: "span",
 			  hideControlOnEnd: true,
 			  adaptiveHeight: true
 		});
