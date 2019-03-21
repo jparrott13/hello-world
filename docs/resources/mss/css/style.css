@@ -720,6 +720,7 @@ position: absolute;
 	    top: 0 !important;
 	width: 20px !important;
     height: 20px !important;
+	text-decoration:none;
 }
 
 .bx-wrapper .bx-next {
