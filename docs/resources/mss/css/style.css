@@ -705,13 +705,13 @@ a.selectedSicon {
 
 .bx-wrapper .bx-controls-direction a {
 	text-indent:inherit !important;
-	    top: 107% !important;
+	    top: 112% !important;
 	width: 20px !important;
     height: 20px !important;
 }
 
 .bx-wrapper .bx-next {
-    /*right: 15rem !important; */
+  right: 11% !important; 
 }
 
 .bx-wrapper .bx-prev:focus {
@@ -742,7 +742,7 @@ a.selectedSicon {
 }
 
 .bx-wrapper .bx-prev {
-   /* left: 15rem !important; */
+   left: 11% !important; 
 }
 
 .bx-wrapper .bx-prev:before {
