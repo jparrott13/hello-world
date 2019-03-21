@@ -684,22 +684,22 @@ label.info, input.info {
 
 .bw-wrapper {
 	
-	width:100%;
-	box-shadow:none;
-	border:none;
+	width:100% !important;
+	box-shadow:none !important;
+	border:none !;
 }
 
 .bx-wrapper .bx-controls-direction a {
-	text-indent:inherit;
-	    top: 107%;
+	text-indent:inherit !important;
+	    top: 107% !important;
 }
 
 .bx-wrapper .bx-next {
-    right: 15rem;
+    right: 15rem !important;
 }
 
 .bx-wrapper .bx-prev {
-    left: 15rem;
+    left: 15rem !important;
 }
 
 /*.bx-pager {
