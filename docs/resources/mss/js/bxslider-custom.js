@@ -3,7 +3,7 @@ $j(function(){
 			  slideWidth: 250,
 			  infiniteLoop: false,
 			  minSlides: 2,
-			  maxSlides: 3,
+			  maxSlides: 4,
 			  slideMargin: 10,
 			  pager: true,
 			  nextText: "",
