@@ -6,6 +6,8 @@ $j(function(){
 			  maxSlides: 3,
 			  slideMargin: 10,
 			  pager: true,
+			  nextText: "",
+      			  prevText: "",
 			  adaptiveHeight: true
 		});
 	});
