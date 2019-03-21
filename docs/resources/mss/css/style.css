@@ -703,9 +703,16 @@ a.selectedSicon {
 	height:100% !important;
 }
 
+.bx-wrapper .bx-controls-direction {
+position: absolute;
+    bottom: -30px;
+    width: 100%;
+	
+	}
+
 .bx-wrapper .bx-controls-direction a {
 	text-indent:inherit !important;
-	    top: 112% !important;
+	    top: 0 !important;
 	width: 20px !important;
     height: 20px !important;
 }
