@@ -693,6 +693,10 @@ a.linkedImage {
 	border:none !important;
 }
 
+.bx-viewport {
+	padding:10px !important;
+}
+
 .bx-wrapper .bx-controls-direction a {
 	text-indent:inherit !important;
 	    top: 107% !important;
