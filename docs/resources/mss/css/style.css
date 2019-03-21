@@ -713,33 +713,33 @@ a.selectedSicon {
 }
 
 .bx-wrapper .bx-next:prev {
-     outline: 3px solid #39659b;
-    outline-offset: 2px;
-    border-radius: 0;
-    margin: 5px;
+     outline: 3px solid #39659b !important;
+    outline-offset: 2px !important;
+    border-radius: 0 !important;
+    margin: 5px !important;
 	
 }
 
 .bx-wrapper .bx-next:focus {
-     outline: 3px solid #39659b;
-    outline-offset: 2px;
-    border-radius: 0;
-    margin: 5px;
+     outline: 3px solid #39659b !important;
+    outline-offset: 2px !important;
+    border-radius: 0 !important;
+    margin: 5px !important;
 	
 }
 
 .bx-wrapper .bx-next:before {
-    content: "\f138";
+    content: "\f138" !important;
 }
 
 .bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
-    position: absolute;
-    font-family: 'FontAwesome';
-    font-size: 1.5rem;
-    color: #666666;
-    top: 0;
-    left: 0;
-    margin-right: 5px;
+    position: absolute !important;
+    font-family: 'FontAwesome' !important;
+    font-size: 1.5rem !important;
+    color: #666666 !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-right: 5px !important;
 }
 
 .bx-wrapper .bx-prev {
@@ -747,33 +747,33 @@ a.selectedSicon {
 }
 
 .bx-wrapper .bx-prev:before {
-    content: "\f137";
+    content: "\f137" !important;
 }
 
 .bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
-    position: absolute;
-    font-family: 'FontAwesome';
-    font-size: 1.5rem;
-    color: #666666;
-    top: 0;
-    left: 0;
-    margin-right: 5px;
+    position: absolute !important;
+    font-family: 'FontAwesome' !important;
+    font-size: 1.5rem !important;
+    color: #666666 !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-right: 5px !important;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:focus {
-      outline: 3px solid #39659b;
-    outline-offset: 2px;
-    border-radius: 0;
-    margin: 5px;
+      outline: 3px solid #39659b !important;
+    outline-offset: 2px !important;
+    border-radius: 0 !important;
+    margin: 5px !important;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
-    background: #666666;
+    background: #666666 !important;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-    background: #ffffff;
-	border: 1px solid #666666;
+    background: #ffffff !important;
+	border: 1px solid #666666 !important;
 }
 
 /*.bx-pager {
