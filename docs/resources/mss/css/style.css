@@ -685,8 +685,9 @@ label.info, input.info {
 .bw-wrapper {
 	
 	width:100% !important;
+	max-width: 100% !important;
 	box-shadow:none !important;
-	border:none !;
+	border:none !important;
 }
 
 .bx-wrapper .bx-controls-direction a {
