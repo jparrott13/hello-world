@@ -698,6 +698,11 @@ a.selectedSicon {
 	border:none !important;
 }
 
+.bx-wrapper img {
+	width:100% !important;
+
+}
+
 .bx-viewport {
 	padding:10px !important;
 	height:100% !important;
