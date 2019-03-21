@@ -715,16 +715,14 @@ a.selectedSicon {
 .bx-wrapper .bx-next:prev {
      outline: 3px solid #39659b !important;
     outline-offset: 2px !important;
-    border-radius: 0 !important;
-    margin: 5px !important;
+  
 	
 }
 
 .bx-wrapper .bx-next:focus {
      outline: 3px solid #39659b !important;
     outline-offset: 2px !important;
-    border-radius: 0 !important;
-    margin: 5px !important;
+ 
 	
 }
 
@@ -763,8 +761,7 @@ a.selectedSicon {
 .bx-wrapper .bx-pager.bx-default-pager a:focus {
       outline: 3px solid #39659b !important;
     outline-offset: 2px !important;
-    border-radius: 0 !important;
-    margin: 5px !important;
+   
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
