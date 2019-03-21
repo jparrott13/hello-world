@@ -8,6 +8,7 @@ $j(function(){
 			  pager: true,
 			  nextText: "",
       			  prevText: "",
+			  hideControlOnEnd: true,
 			  adaptiveHeight: true
 		});
 	});
