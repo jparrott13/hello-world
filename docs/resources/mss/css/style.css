@@ -681,6 +681,27 @@ label.info, input.info {
 	margin-right: .75em;
 }
 /** Slider **/
+
+.bw-wrapper {
+	
+	width:100%;
+	box-shadow:none;
+	border:none;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	text-indent:inherit;
+	    top: 107%;
+}
+
+.bx-wrapper .bx-next {
+    right: 15rem;
+}
+
+.bx-wrapper .bx-prev {
+    left: 15rem;
+}
+
 /*.bx-pager {
 	text-align: center;
 	position: relative;
