@@ -526,13 +526,30 @@ a.tooltip {
 	content: "\f007";
 }
 }
-}
+
 /* Footer */
 
 .mycal-footer-nav * {
 	text-transform: uppercase;
 	font-size: 0.875rem;
+    max-width: 75rem;
 }
+
+
+.mycal-footer-nav li.grid-col-auto::before {
+    font-family: "FontAwesome";
+    content: "\007C";
+    color: #ffffff;
+    position: absolute;
+    top: 20%;
+    font-size: 1rem;
+}
+
+.mycal-footer-nav li.grid-col-auto:first-child:before  {
+    content: "";
+}
+
+
 li.mycal-footer-primary-content {
 	line-height: 0;
 	padding: 5px 0;
@@ -548,7 +565,7 @@ li.mycal-footer-primary-content:first-child:before {
 span.mycal-footer-primary-copyright {
 	color: #ffffff;
 	display: block;
-	padding: .75rem;
+	padding: .5rem;
 	margin: 0 10px;
 }
 /* Progress Bar */
