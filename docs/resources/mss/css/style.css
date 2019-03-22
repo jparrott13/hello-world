@@ -230,6 +230,10 @@ a.tooltip {
 	margin-right: .5rem;
 	width: inherit;
 }
+
+.button.large {
+	width:100%;
+}
 .mycal-button, .mycal-button.active {
 	color: #ffffff;
 	background-color: #b95726;
