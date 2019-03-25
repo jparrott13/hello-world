@@ -77,6 +77,13 @@
 <script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
 <script src="resources/mss/js/calendar-popup.js"></script>
 <script src="resources/mss/js/application.js"></script>
+	
+<!-- Popovers -->
+	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+	
+<script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+
+	
 <script> 
 	var $j = jQuery.noConflict();
 </script>
@@ -247,6 +254,18 @@
 
 
 <h2>Explain This</h2>
+		  
+		  <a tabindex="0" href="#" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><i class="fa fa-info-circle popover-dismiss" style="
+    font-size: 1.25rem;
+    color: #00659e;
+"></i></a>
+		  
+		  <script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
 
 <span><a id="ExplainThis" href="#inline-generic-content" class="modaal-generic-content tooltip">Explain This</a></span>
 		  
