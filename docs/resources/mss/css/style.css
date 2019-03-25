@@ -568,6 +568,24 @@ span.mycal-footer-primary-copyright {
 	padding: .5rem;
 	margin: 0 10px;
 }
+
+
+
+@media screen and (max-width:64em) {
+	
+ul.add-list-reset	{
+	display:block;
+	
+	}
+	
+.mycal-footer-nav li.grid-col-auto::before {
+    content: "";
+}	
+	
+}
+
+
+
 /* Progress Bar */
 
 .progress-steps p {
@@ -659,6 +677,10 @@ span.sr-only {
 	white-space: nowrap;
 	border: 0;
 }
+
+
+
+
 /** Changes **/
 .grid-row {
 	margin: 1rem 0;
@@ -883,5 +905,13 @@ position: absolute;
 .inlineValid {
 	padding-left: 25px;
 	line-height: 27px;
-	background: url("../../images/ept/inline_success.png") no-repeat 0px 3px;
+	background: url("images/ept/inline_success.png") no-repeat 0px 3px;
 }
+
+
+.inlineInvalid {
+       padding-left: 25px;
+       line-height: 27px;
+       background: url("images/ept/inline_error.png") no-repeat 0px 3px;
+}
+
