@@ -79,10 +79,17 @@
 <script src="resources/mss/js/application.js"></script>
 	
 <!-- Popovers -->
-	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	
 <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	
+	<script>
+	$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+	</script>
 	
 <script> 
 	var $j = jQuery.noConflict();
@@ -255,15 +262,17 @@
 
 <h2>Explain This</h2>
 		  
-		  <a tabindex="0" href="#" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><i class="fa fa-info-circle popover-dismiss" style="
+		  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+		  
+		  <!--<a tabindex="0" href="#" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><i class="fa fa-info-circle popover-dismiss" style="
     font-size: 1.25rem;
     color: #00659e;
-"></i></a>
+"></i></a> -->
 		  
 		  <script>
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-});
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
 </script>
 
 
