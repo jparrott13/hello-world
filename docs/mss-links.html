@@ -259,8 +259,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var instance = new Tooltip(document.getElementById("explainThisIcon"), {
         title: "This is the new icon Quicktip style.",
-        trigger: "click",
-		closeOnClickOutside: true
+        trigger: "click focus",
+		closeOnClickOutside: true,
+		html: true,
     });
     instance.hide();
 });
@@ -280,8 +281,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var instance = new Tooltip(document.getElementById("explainThis"), {
         title: "This is the new text Quicktip style.",
-        trigger: "click",
-		closeOnClickOutside: true
+        trigger: "click focus",
+		closeOnClickOutside: true,
+		html: true,
     });
     instance.hide();
 });
