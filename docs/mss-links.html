@@ -468,7 +468,7 @@ $('.popover-dismiss').popover({
 		  
 		
      
-    <a href ="" class="quicktip" id="explainThis">Explain This</a>
+    <a class="quicktip" id="explainThis">Explain This</a>
 
 
 <script>
@@ -479,7 +479,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var instance = new Tooltip(document.getElementById("explainThis"), {
         title: "Hey there",
-        trigger: "click focus",
+        trigger: "click",
 		closeOnClickOutside: true
     });
     instance.hide();
