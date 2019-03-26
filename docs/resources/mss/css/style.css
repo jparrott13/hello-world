@@ -1,917 +1,510 @@
-@charset "utf-8";
-hr {
-	margin-top: .2em;
-}
-.mycal-alert {
-	margin-bottom: 20px;
-}
-.mycal-alert-body h3, .mycal-alert-body p {
-	color: #000000;
-}
-.mycal-alert-heading {
-	font-weight: 700;
-}
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex, nofollow">
 
-  a.mask { position: relative;
-    top: 0.75rem;
-}
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Body */
+<!-- Title and meta description
+================================================== -->
 
-body {
-	font-family: 'Open Sans', arial, sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 1.6;
-	color: #000000;
-}
-p {
-	margin: 0 0 12.5px;
-}
-label, .label {
-	font-size: 1rem;
-	font-weight: 600;
-	color: #000000;
-}
-.helper-text {
-	font-size: 0.875rem;
-	font-weight: 400;
-	color: #333333;
-	margin: 0;
-}
-.disclaimer-text {
-	font-size: 0.875rem;
-	font-weight: 400;
-	color: #000000;
-	margin: 5px 0 5px 0;
-}
-span.required {
-	font-size: 0.875rem;
-	color: #cc0033;
-}
-/* Headings */
+<title>myCalPERS new responsive design based on United States Web Design System v2.4 (beta)</title>
+<meta property="og:title" content="myCalPERS new responsive design">
 
-.typography p {
-	margin-top: 0px;
-	font-size: 0.875rem;
-	-webkit-margin-before: 0px;
-	-webkit-margin-after: 0px;
-}
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', arial, sans-serif;
-	line-height: 1.1;
-	color: #666666;
-	margin: 30px 0 15px 0;
-}
-h1 {
-	font-size: 2.375rem;
-	font-weight: 500;
-}
-h2 {
-	font-size: 2.125rem;
-	font-weight: 300;
-}
-h3 {
-	font-size: 1.875rem;
-	font-weight: 300;
-}
-h4, .h4 {
-	font-size: 1.625rem;
-	font-weight: 300;
-}
-h5 {
-	font-size: 1.375rem;
-	font-weight: 300;
-}
-h6 {
-	font-size: 1.125rem;
-	font-weight: 300;
-}
-h2.sidebar {
-	font-size: 1.1875rem;
-	margin: 5px 0 15px 0;
-}
-p.sidebar {
-	line-height: 1.4;
-	padding: 5px 0 5px 0;
-	text-align: left;
-}
-/* Links */
+<!-- Favicons
+================================================== -->
+<!-- 128x128 -->
+<link rel="shortcut icon" type="image/ico" href="https://lgdimcip1:20410/mss/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="https://lgdimcip1:20410/mss/img/favicons/favicon.png">
 
-a {
-	color: #00659e;
-	text-decoration: underline;
-	cursor: pointer;
-}
-a:hover, a.hover {
-	color: #003c5e;
-	text-decoration: underline;
-}
-a:focus, a.focus {
-	outline: solid;
-	outline: 3px solid #39659b;
-	outline-offset: 4px;
-	border-radius: 0;
-	margin: 5px;
-}
-a:visited, a.visited {
-	color: #715192;
-}
-a.primary-nav-link {
-	color: #000000;
-	text-decoration: underline;
-	font-size: 1.125rem;
-	line-height: 25px;
-	padding: 10px 15px;
-	font-weight: 400;
-}
-a.primary-nav-link.active {
-	font-weight: 600;
-}
-a.primary-nav-link:hover, a.primary-nav-link.hover {
-	color: #00659e;
-}
-a.primary-nav-link:focus, a.primary-nav-link.focus {
-	outline: solid;
-	outline: 3px solid #00659e;
-	outline-offset: 4px;
-	border-radius: 0;
-	margin: 5px;
-}
-a.secondary-nav-link {
-	color: #000000;
-	text-decoration: underline;
-	font-size: 1rem;
-	line-height: 16px;
-	padding: 10px 12px;
- font-weight;
-400;
-}
-a.secondary-nav-link.active {
-	font-weight: 600;
-}
-a.secondary-nav-link:hover, a.secondary-nav-link.hover {
-	color: #000000;
-}
-a.secondary-nav-link:focus, a.secondary-nav-link.focus {
-	outline: solid;
-	outline: 3px solid #00659e;
-	outline-offset: 4px;
-	border-radius: 0;
-	margin: 5px;
-}
-.mycal-external_link:after {
-	background: url(http://lgdimcip1:20410/mss/img/external-link.svg) no-repeat 0 0;
-	background-size: 100%;
-}
-.mycal-external_link:hover:after {
-	background: url(http://lgdimcip1:20410/mss/img/external-link-hover.svg) no-repeat 0 0;
-	background-size: 100%;
-}
-.mycal-footer-primary-section .mycal-footer-primary-link:focus, a.mycal-footer-primary-link.focus {
-	outline-color: #fff;
-	outline-offset: -5px;
-}
-.mycal-footer-primary-link.mycal-external_link:after {
-	background: url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat 0 0;
-	background-size: 100%;
-}
-.mycal-footer-primary-link.mycal-external_link:hover:after {
-	background: url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat 0 0;
-	background-size: 100%;
-}
-.mycal-footer-primary-section .mycal-footer-primary-link {
-	margin: 0 10px;
-	text-decoration: underline;
-}
-a.tooltip {
-	border-bottom: 1px dashed;
-	cursor: help;
-	font-weight: normal;
-	font-size: 85%;
-	margin-top: -3px;
-	margin-left: 15px;
-	text-decoration: none;
-}
-/* Numbers */
+<!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://lgdimcip1:20410/mss/img/favicons/favicon-192.png">
 
-.big-number {
-	font-size: 1.6875rem;
-	font-weight: 600;
-	color: #666666;
-}
-.small-number {
-	font-size: 1.375rem;
-	font-weight: 500;
-	color: #666666;
-}
-/* Buttons */
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://lgdimcip1:20410/mss/img/favicons/favicon-57.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://lgdimcip1:20410/mss/img/favicons/favicon-72.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://lgdimcip1:20410/mss/img/favicons/favicon-114.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://lgdimcip1:20410/mss/img/favicons/favicon-144.png">
 
-.button {
-	display: inline-block;
-	margin-bottom: 0;
-	font-weight: 500;
-	text-align: center;
-	vertical-align: middle;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-	cursor: pointer;
-	background-image: none;
-	border: 1px solid transparent;
-	white-space: nowrap;
-	padding: 6px 12px;
-	font-size: 16px;
-	line-height: 1.6;
-	border-radius: 4px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin-right: .5rem;
-	width: inherit;
-}
+<!-- CSS
+================================================== -->
+<!-- env: demo -->
 
-.button.large {
-	width:100%;
-}
-.mycal-button, .mycal-button.active {
-	color: #ffffff;
-	background-color: #b95726;
-	border-color: #a44d22;
-}
-.mycal-button:hover, .mycal-button-hover {
-	color: #ffffff;
-	background-color: #8f431d;
-	border-color: #713517;
-	text-decoration: none;
-}
-.mycal-button:focus, .mycal-button-focus {
-	color: #a3582d;
-	background-color: #fff;
-	border-color: #a3582d;
-	outline-color: #a3582d;
-	outline-offset: -3px;
-	outline-style: solid;
-	outline-width: 3px;
-}
-/*.mycal-button-secondary, .mycal-button-secondary.active {
-	color: #23518b;
-	background-color: #cce0eb;
-	border-color: #9fc3d7;
-}
-.mycal-button-secondary:hover, .mycal-button-secondary-hover {
-	color: #103d77;
-	background-color: #96bacf;
-	border-color: #78aac6;
-}
-.mycal-button-secondary:focus, .mycal-button-secondary-focus {
-	color: #23518b;
-	background-color: #cce0eb;
-	border-color: #9fc3d7;
-	outline-color: #a3582d;
-	outline-offset: -3px;
-	outline-style: solid;
-	outline-width: 3px;
-}*/
-.mycal-button-secondary, .mycal-button-secondary.active {
-	color: #333333;
-	background-color: #ffffff;
-	border-color: #cccccc;
-}
-.mycal-button-secondary:hover, .mycal-button-sedcondary-hover {
-	color: #333333;
-	background-color: #e6e6e6;
-	border-color: #adadad;
-}
-.mycal-button-secondary:focus, .mycal-button-secondary-focus {
-	color: #333333;
-	background-color: #ffffff;
-	border-color: #cccccc;
-	outline-color: #a3582d;
-	outline-offset: -3px;
-	outline-style: solid;
-	outline-width: 3px;
-}
-.disabled {
-	opacity: .5;
-}
-/*Color Boxes*/
+<link rel="stylesheet" href="resources/mss/css/v2style.css">
+<link rel="stylesheet" href="resources/mss/css/uswds-2_4-mycal.css">
+<script type="text/javascript" src="resources/mss/js/forms.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>
 
-.colors p {
-	margin-top: 0px;
-	font-size: 0.875rem;
-}
-.color-box {
-	display: block;
-	margin-right: 2.35765%;
-	width: 80%;
-	margin-bottom: 0;
-	padding-top: 65%;
-}
-.color-box-small {
-	display: block;
-	margin-right: 2.35765%;
-	width: 80%;
-	margin-bottom: 0;
-	padding-bottom: 50%;
-}
-.calpers-blue {
-	background-color: #00659e;
-}
-.calpers-grey {
-	background-color: #88898d;
-}
-.navbar-blue {
-	background-color: #cce0eb;
-}
-.calpers-grey-hover {
-	background-color: #e2e2e2;
-}
-.dynamic-blue {
-	background-color: #0080b8;
-}
-.dynamic-blue-hover {
-	background-color: #e1ebef;
-}
-.dark-grey {
-	background-color: #666666;
-}
-.sunspark-gold {
-	background-color: #f4b125;
-}
-.white {
-	background-color: #ffffff;
-	border: 1px solid #000000;
-}
-.spark-orange {
-	background-color: #b95726;
-}
-.purple {
-	background-color: #715192;
-}
-.gray-darker {
-	background-color: #222222;
-}
-.gray-dark {
-	background-color: #333333;
-}
-.gray {
-	background-color: #555555;
-}
-.gray-light {
-	background-color: #777777;
-}
-.gray-lighter {
-	background-color: #eeeeee;
-}
-.green {
-	background-color: #689844;
-}
-.green-hover {
-	background-color: #dae2c7;
-}
-.yellow {
-	background-color: #c49128;
-}
-.yellow-hover {
-	background-color: #f9edcd;
-}
-.red {
-	background-color: #cc0033;
-}
-.red-hover {
-	background-color: #f4e4e4;
-}
-/* Header and Navigation Styles */
+<!-- CSS Includes -->
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />
 
-.mycal-navbar {
-	background-color: #00659e;
-}
-.mycal-nav {
-	background-color: #cce0eb;
-	border-bottom: #cce0eb;
-}
-.mycal-nav.is-visible {
-	background-color: #00659e;
-}
-.mycal-nav .mycal-nav-primary {
-	background-color: #cce0eb;
-}
-.mycal-nav .mycal-nav-link, .mycal-nav .mycal-nav-primary > li > a {
-	color: #000000;
-}
-.mycal-nav-secondary {
-	color: #ffffff;
-}
-.mycal-nav-secondary-links a {
-	color: #ffffff;
-}
-.mycal-nav-secondary-links a:hover {
-	color: #ffffff;
-}
-.mycal-nav .mycal-nav-link.mycal-current {
-	font-weight: 600;
-	background-color: #ffffff;
-}
-.mycal-nav .mycal-nav-link.mycal-current + ul.mycal-nav-submenu {
-	background-color: #ffffff;
-}
-.mycal-nav .mycal-nav-link.mycal-current:hover {
-	text-decoration: underline;
-	background-color: #ffffff;
-}
-.mycal-nav-primary button[aria-expanded=false] {
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
-	background-position: right .8rem top 53%;
-	background-repeat: no-repeat;
-	background-size: .8rem
-}
-.mycal-nav-primary button[aria-expanded=false]:focus, .mycal-nav-primary .mycal-accordion-button.mycal-current {
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.png);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
-	background-position: right .8rem top 53%;
-	background-repeat: no-repeat;
-	background-size: .8rem
-}
-.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
-	color: #000000;
-	background-color: #cce0eb;
-	font-weight: 700;
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.png);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
-	background-position: right .8rem top 53%;
-	background-repeat: no-repeat;
-	background-size: .8rem;
-}
-.mycal-nav-primary button[aria-expanded=false]:hover {
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.png);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), linear-gradient(transparent, transparent);
-	background-repeat: no-repeat
-}
-.mycal-nav-primary button[aria-expanded=true] {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	background-color: #162e51;
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.png);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.svg), linear-gradient(transparent, transparent);
-	background-position: right .8rem top 53%;
-	background-repeat: no-repeat;
-	background-size: .8rem;
-	color: #fff
-}
+<!-- CalPERS Website -->
+<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/calpers-theme.css">
 
-/* TEST LOG OUT HEADER */
+<!-- UX Custom -->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ux-mss.css" />
 
-@media screen and (min-width:64em) {
-.mycal-header-extended .mycal-navbar {
-	max-width: 160rem;
-}
-.mycal-nav-submenu {
-	border: none;
-	background-color: #ffffff;
-	min-height: 35px;
-	list-style-type: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 1rem;
-	position: absolute;
-	width: 15rem;
-	z-index: 400;
-	border: 1px solid #000000;
-	border-top: 0;
-}
-.mycal-header-extended.logout .mycal-logo {
-	font-size: 2.12941rem;
-	margin: .5rem 0 .1rem;
-	max-width: 100%;
-}
-.mycal-header-extended .mycal-nav-inner {
-	max-width: 160rem;
-}
-.mycal-nav-submenu > li > a {
-	font-size: 1rem;
-	text-decoration: underline;
-	line-height: 1em !important;
-	font-weight: 400;
-	padding-left: 2rem;
-	color: #00659e !important;
-	margin: 0;
-}
-.mycal-nav-submenu > li > a:hover {
-	color: #003c5e !important;
-}
-}
-
-@media screen and (max-width: 63.99em) {
-.mycal-logo {
-	text-align: center;
-}
-.mycal-navbar {
-	background-color: #cce0eb !important;
-	color: #333333 !important;
-}
-.mycal-menu-btn {
-	background-color: #cce0eb !important;
-	color: #333333 !important;
-}
-.mycal-menu-btn::before {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
-	content: "\f007";
-}
-}
-
-/* Footer */
-
-.mycal-footer-nav * {
-	text-transform: uppercase;
-	font-size: 0.875rem;
-    max-width: 75rem;
-}
-
-
-.mycal-footer-nav li.grid-col-auto::before {
-    font-family: "FontAwesome";
-    content: "\007C";
-    color: #ffffff;
-    position: absolute;
-    top: 20%;
-    font-size: 1rem;
-}
-
-.mycal-footer-nav li.grid-col-auto:first-child:before  {
-    content: "";
-}
-
-
-li.mycal-footer-primary-content {
-	line-height: 0;
-	padding: 5px 0;
-}
-li.mycal-footer-primary-content:before {
-	font-family: "FontAwesome";
-	content: "\007C";
-	color: #ffffff;
-}
-li.mycal-footer-primary-content:first-child:before {
-	content: "";
-}
-span.mycal-footer-primary-copyright {
-	color: #ffffff;
-	display: block;
-	padding: .5rem;
-	margin: 0 10px;
-}
-
-
-
-@media screen and (max-width:70em) {
+<!-- From PSR -->
+<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>
+<!-- JS Includes -->
+<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
+<script src="resources/mss/js/calendar-popup.js"></script>
+<script src="resources/mss/js/application.js"></script>
 	
-ul.add-list-reset	{
-	display:block;
+<!-- Popovers -->
 	
-	}
+	////Path to Popper - it is for dropsdowns etc in bootstrap
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+//Path to bootsrap
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js "></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script>
 	
-.mycal-footer-nav li.grid-col-auto::before {
-    content: "";
-}	
+<script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> -->
 	
-}
-
-
-
-/* Progress Bar */
-
-.progress-steps p {
-	text-align: center;
-	font-size: 14px;
-	color: #555;
-}
-.progress-steps .steps-count {
-	font-weight: bold;
-	color: #666666;
-	text-transform: uppercase;
-	letter-spacing: .25px;
-	margin-bottom: .5em;
-}
-.progress-steps ol.steps {
-	background-color: transparent;
-	padding: 0;
-	text-align: center;
-	margin-bottom: .3em;
-}
-.progress-steps dl, .progress-steps ol, .progress-steps ul {
-	margin-top: 0;
-	margin-bottom: 1rem;
-}
-.progress-steps ol.steps li {
-	display: inline-block;
-	position: relative;
-	float: none;
-	margin: .4em 40px .4em 0;
-}
-.progress-steps ol.steps li.completed:after {
-	background: #689844;
-}
-.progress-steps ol.steps li:after {
-	position: absolute;
-	content: '';
-	height: 5px;
-	background: #e2e2e2;
-	margin: 0;
-	position: absolute;
-	left: 50%;
-	width: calc(100% + 40px);
-	bottom: -9px;
-}
-.progress-steps ol.steps li:before {
-	content: '';
-	position: absolute;
-	z-index: 1;
-	left: 50%;
-	right: auto;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-	height: 12px;
-	width: 12px;
-	border-radius: 50%;
-	background-color: #e2e2e2;
-}
-.progress-steps ol.steps li.completed:before {
-	background: #689844;
-}
-.progress-steps ol.steps li {
-	display: inline-block;
-	position: relative;
-	float: none;
-	margin: .4em 40px .4em 0;
-}
-.progress-steps {
-	margin: 0 auto;
-	text-align: center;
-	margin-bottom: 1em;
-}
-.progress-steps ol.steps li:last-child {
-	margin: .4em 0;
-}
-.progress-steps ol.steps li:last-child:after {
-	display: none;
-}
-.progress-steps ol.steps li.active:before {
-	background: #689844;
-}
-span.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	white-space: nowrap;
-	border: 0;
-}
-
-
-
-
-/** Changes **/
-.grid-row {
-	margin: 1rem 0;
-}
-.no-close .ui-dialog-titlebar-close {
-	display: none;
-}
-#bprBanner {
-	background: #ff0;
-	font-weight: bold;
-	padding: 2px;
-	text-align: center;
-	font-size: .80em;
-	border: 1px solid #444
-}
-/** Error class add error icon **/
- /* div.fieldErrorMessage::before {
-background: url(../../images/ept/result_error_field_icon.png) no-repeat 0px 3px; }*/
-
-.fieldErrorMessage {
-	font-size: 0.875rem;
-	font-weight: 600;
-	color: #cc0033;
-}
-
-div.fieldErrorMessage::before {
-    content: "\f057";
-    font-family: 'FontAwesome' !important;
-    top: -3px;
-    color: #cc0033;
-    font-size: 1.25rem;
-    left: 10px;
-    margin: 27px 5px 27px 5px;
-}
-
-
-
-/* Explain this or QT next to all labels */
-label.info, input.info {
-	float: left;
-	margin-right: .75em;
-}
-/** Slider **/
-
-a.linkedImage {
-	display:inline-block;
-}
-
-a.selectedSicon {
-
-    border: 5px solid #689844;
-}
-
-.bx-wrapper {
-	width:100% !important;
-	max-width: 100% !important;
-	box-shadow:none !important;
-	border:none !important;
-}
-
-.bx-wrapper img {
-	width:100% !important;
-
-}
-
-.bx-viewport {
-	padding:10px !important;
-	height:100% !important;
-}
-
-.bx-wrapper .bx-controls-direction {
-position: absolute;
-    bottom: -30px;
-    width: 100%;
 	
-	}
-
-.bx-wrapper .bx-controls-direction a {
-	text-indent:inherit !important;
-	    top: 0 !important;
-	width: 20px !important;
-    height: 20px !important;
-	text-decoration:none;
-}
-
-.bx-wrapper .bx-next {
-  right: 11% !important; 
-}
-
-.bx-wrapper .bx-prev:focus {
-     outline: 3px solid #39659b !important;
-    outline-offset: 9px !important;
-  
 	
-}
-
-.bx-wrapper .bx-next:focus {
-     outline: 3px solid #39659b !important;
-    outline-offset: 9px !important;
 	
-}
-
-.bx-wrapper .bx-next:before {
-    content: "\f138" !important;
-}
-
-.bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
-    position: absolute !important;
-    font-family: 'FontAwesome' !important;
-    font-size: 2rem !important;
-    color: #666666 !important;
-    top: -14px !important;
-    left: -4px !important;
-    margin-right: 5px !important;
-}
-
-.bx-wrapper .bx-prev {
-   left: 11% !important; 
-}
-
-.bx-wrapper .bx-prev:before {
-    content: "\f137" !important;
-}
-
-.bx-wrapper .bx-next:prev, .bx-wrapper .bx-prev:before {
-    position: absolute !important;
-    font-family: 'FontAwesome' !important;
-    font-size: 2rem !important;
-    color: #666666 !important;
-    top: -14px !important;
-    left: -4px !important;
-    margin-right: 5px !important;
-}
-
-.bx-wrapper .bx-pager.bx-default-pager a:focus {
-      outline: 3px solid #39659b !important;
-    outline-offset: 2px !important;
+	
+	<script>
+	$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+	</script>
+	
+<script> 
+	var $j = jQuery.noConflict();
+</script>
+</head>
+<body class="page-utilities layout-styleguide ">
+<a class="mycal-skipnav" href="#main-content">Skip to main content</a>
+<header class="mycal-header site-header site-header-dark" role="banner">
+  <div class="mycal-navbar site-header-navbar">
+    <div class="mycal-logo site-logo" id="logo"> <em class="mycal-logo-text"> <a class="margin-right-05" href="home.jsp" title="Home" aria-label="United States Web Design System home"> <span aria-hidden="true" class="site-title-short">USWDS</span> <span class="site-title">myCalPERS</span> </a> </em> </div>
+    <button class="mycal-menu-btn">Menu</button>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+      <li> <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');"> Based on USWDS v2.0 <span class="text-normal">Beta 4</span> </a> </li>
+    </ul>
+  </div>
+</header>
+<nav class="site-nav-secondary sticky">
+  <ul>
+    <li class="mycal-nav-submenu-item"> <a href="home.jsp"> <span> Demo </span> </a> </li>
+    <li class="mycal-nav-submenu-item"> <a href="https://v2.designsystem.digital.gov/"> <span> Additional Documentation </span> </a> </li>
+  </ul>
+</nav>
+<div class="mycal-overlay"></div>
+<nav role="navigation" class="mycal-nav sidenav-mobile">
+  <button class="mycal-nav-close"> <img src="https://lgdimcip1:20410/mss/img/close.svg" alt="close" style=""> </button>
+  <div class="mycal-nav-inner">
+    <ul class="mycal-nav-primary mycal-accordion">
+      <li class="mycal-nav-primary-item">
+        <button class="mycal-accordion-button mycal-nav-link" aria-controls="nav-documentation" aria-expanded="false"> Documentation </button>
+         <ul id="nav-documentation" class="mycal-nav-submenu" hidden="">
+          <li class="mycal-nav-submenu-item"> <a href="mss-patterns.html"> <span> Accordions </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-alerts.html"> <span> Alerts </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-buttons.html"> <span> Buttons </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-clearfix.html"> <span> Clearfix </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-colors.html"> <span> Colors </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-flex.html"> <span> Flex </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-footer.html"> <span> Footer </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-formcontrols.html"> <span> Form Controls </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-grid.html"> <span> Grid Layout </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-header.html"> <span> Header </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-icons.html"> <span> Icons </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-labels.html"> <span> Labels </span> </a> </li>
+			  <li class="mycal-nav-submenu-item mycal-curent"> <a href="mss-links.html"> <span> Links </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-progress-bar.html"> <span> Progress Bars </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-quick-tips.html"> <span> Quick Tips </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-sidebars.html"> <span> Sidebars </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-tables.html"> <span> Tables </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-typography.html"> <span> Typography </span> </a> </li>
+        </ul>
+      </li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+      <li> <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');"> <span class="text-normal">Based on USWDS</span>v2.0 <span class="text-normal">Beta 4</span> </a> </li>
+    </ul>
+  </div>
+</nav>
+<aside class="sidenav">
+  <ul class="site-sidenav mycal-sidenav">
+    <li class="mycal-sidenav-item"> <a href="mss-patterns.html"> Accordions </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-alerts.html"> Alerts </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-buttons.html"> Buttons </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-clearfix.html"> Clearfix </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-colors.html"> Colors </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-flex.html"> Flex </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-footer.html"> Footer </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-formcontrols.html"> Form Controls </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-grid.html"> Grid Layout </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-header.html"> Header </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-icons.html"> Icons </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-labels.html"> Labels </a> </li>
+	   <li class="mycal-sidenav-item is-current"> <a href="mss-links.html"  class="mycal-current"> Links </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-progress-bars.html"> Progress Bars </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-quick-tips.html"> Quick Tips </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-sidebars.html"> Sidebars </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-tables.html"> Tables </a> </li>
+    <li class="mycal-sidenav-item"> <a href="mss-typography.html"> Typography </a> </li>
+  </ul>
+</aside>
+<main id="main-content">
+  <div class="sidenav-main-content">
+    <div class="styleguide-content mycal-prose">
+	<div class="mycal-alert mycal-alert-warning" >
+  <div class="mycal-alert-body">
+    <h3 class="mycal-alert-heading">Ready for Review</h3>
+    <p class="mycal-alert-text">Needs review by: ACT & DEV</p>
+  </div>
+</div>
+	
+		
+      <header>
+        <p class="site-subheading">Components</p>
+        <h1 id="buttons" class="site-page-title">Links</h1>
+      </header>
+      <p class="site-font-lead mycal-font-lead">Links lead users to a different page or further information.</p>
+      <div class="preview mycal-prose ">
+		  
+		     <h2>Header & Footer</h2>
+<div class="grid-row flex-wrap margin-top-2">
+		<div class="calpers-blue mycal-footer-primary-section grid-col-2 text-center">
+		 <a href="#" class="mycal-footer-primary-link">Link</a>
+		  </div>
+			
+			<div class="calpers-blue mycal-footer-primary-section grid-col-2 text-center">
+			<a href="#" class="mycal-footer-primary-link focus">Focus Link</a>
+		  </div>
+		  </div>
+		 <h3>External</h3> 
+		  
+		  			<div class="calpers-blue mycal-footer-primary-section grid-col-2 text-center">
+		  <a target="_blank"  href="#" class="mycal-footer-primary-link">Link</a>
+		  </div>
+		  
    
-}
+		     <h2>Primary Navigation</h2>
+		  
+	<div class="grid-row flex-wrap margin-top-2 text-center">
+		  
+		  <div class="navbar-blue padding-105 grid-col-3">
+		  <a class="primary-nav-link" href="#">Default Link</a>
+		  </div>
 
-.bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
-    background: #666666 !important;
-}
+				  			<div class="navbar-blue padding-105 grid-col-3">
+		  <a class="primary-nav-link active" href="#" >Active Link</a>
+		  </div>
+		  
+		  	  			<div class="navbar-blue padding-105 grid-col-3">
+		  <a class="primary-nav-link hover" href="#" >Hover Link</a>
+		  </div>
+		  
+		   	  			<div class="navbar-blue padding-105 grid-col-3">
+		  <a class="primary-nav-link focus" href="#" >Focus Link</a>
+		  </div>
+		
+		</div>
+		  
+		  <h3>Secondary Dropdown</h3>
+		  
+		  	  
+	<div class="grid-row flex-wrap margin-top-2 text-center">
+		    			<div class="navbar-blue padding-105 grid-col-2">
+		  <a class="secondary-nav-link" href="#" >Default Link</a>
+		  </div>
+		  
+		     			<div class="navbar-blue padding-105 grid-col-2">
+		  <a class="secondary-nav-link active"  href="#" >Active Link</a>
+		  </div>
+		  
+		  
+		    			<div class="navbar-blue padding-105 grid-col-2">
+		  <a class="secondary-nav-link hover" href="#" >Hover Link</a>
+		  </div>
+		  
+		   			<div class="navbar-blue padding-105 grid-col-2">
+		  <a class="secondary-nav-link focus" href="#" >Focus Link</a>
+		  </div>
+		  </div>
+		  
+		  <h2>Contextual, Sidebar, & Quick Tip</h2>
 
-.bx-wrapper .bx-pager.bx-default-pager a {
-    background: #ffffff !important;
-	border: 1px solid #666666 !important;
-}
+	<p>This is an <a href="#">active link</a> example.</p>
+	  <p>This is a <a  class="visited"  href="#">visited link</a> example.</p>
+		  <p>This is a <a  class="hover"  href="#">hover link</a> example.</p>
+		  <p>This is a <a  class="focus"  href="#">link with focus</a> example.</p>
+ <h3>External</h3> 
 
-/*.bx-pager {
-	text-align: center;
-	position: relative;
-	z-index: 9990;
-	background: #428752;
-	padding: 19px 0;
-}
-.bx-pager a.active {
-	background: url(images/slider-active-arrow.png) no-repeat center top;
-}
-.bx-pager a {
-	padding: 37px 25px;
-	display: inline;
-} */
-/***** Content Elements (Action Result) *****/
-.success > div, .notification > div, .information > div, .error > div {
-	padding: 20px 20px 15px 65px;
-}
-.success, .notification, .information, .error {
-	margin: 0 10px 10px 10px;
-}
-.success h2, .notification h2, .information h2, .error h2 {
-	font-size: 15px;
-	color: #000;
-}
-.notification ul, .error ul, .information ul, .success ul {
-	margin-top: 0;
-	padding-left: 15px;
-}
-.error > div > ul > li > a {
-	color: #00659e;
-	font-weight: 400;
-}
-.success {
-	border: 4px solid #E1E9D0;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-}
-.notification {
-	border: 4px solid #f3e4cb;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-}
-.information {
-	border: 4px solid #425b83;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-}
-.error {
-	background-color: #f4e4e4;
-	border-color: #edd2d6;
-	color: #cc0033;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-}
-.success > div {
-	background: url("../../images/ept/result_success.png") no-repeat 20px 20px #fff;
-	border: 1px solid #6a8236;
-}
-.notification > div {
-	border: 1px solid #ffb600;
-	background: url("../../images/ept/result_notify.png") no-repeat 20px 20px #fff;
-}
-.information > div {
-	border: 1px solid #425b83;
-	background: url("../../images/ept/info-circle.png") no-repeat 20px 20px #fff;
-}
-.error > div {
-	border: 1px solid #edd2d6;
-	background: url(../../images/ept/result_error.png) no-repeat 20px 20px #f4e4e4;
-	color: #cc0033;
-}
-.inlineValid {
-	padding-left: 25px;
-	line-height: 27px;
-	background: url("images/ept/inline_success.png") no-repeat 0px 3px;
-}
+  <p>This is an <a target="_blank" href="#">external link</a> example.</p>
 
 
-.inlineInvalid {
-       padding-left: 25px;
-       line-height: 27px;
-       background: url("images/ept/inline_error.png") no-repeat 0px 3px;
-}
+<h2>Explain This</h2>
+		  
+		  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+		  
+		  <!--<a tabindex="0" href="#" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><i class="fa fa-info-circle popover-dismiss" style="
+    font-size: 1.25rem;
+    color: #00659e;
+"></i></a> -->
+		  
+		  <script>
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+})
+</script>
+		  
+<!-- Popper.JS Implementation -->
+		  
+		  
+		  <div class="my-button">reference</div>
+<div class="my-popper">popper</div>
+		  
+		  <script>var reference = document.querySelector('.my-button');
+var popper = document.querySelector('.my-popper');
+var popperInstance = new Popper(reference, popper, {
+  // popper options here
+});</script>
+		  
+		
 
+
+<span><a id="ExplainThis" href="#inline-generic-content" class="modaal-generic-content tooltip">Explain This</a></span>
+		  
+	<span><a id="ExplainThisFocus" href="#" class="modaal-generic-content tooltip focus">Explain This Focus</a></span>	  
+		
+	<div id="inline-generic-content" style="display:none;">
+		<h2>Explain This Heading</h2>
+			<p>Explanatory content here.
+			</p>
+			<input type="button" class="mycal-button" value="OK" onclick="$j('#ExplainThis').modaal('close');">	
+	</div>
+
+
+      </div>
+      <div class="mycal-accordion-bordered mycal-code-sample">
+        <button class="mycal-accordion-button" aria-controls="code-buttons" aria-expanded="false">Code</button>
+        <div id="code-buttons" class="mycal-accordion-content" hidden="">
+          <div class="language-html highlighter-rouge">
+            <div class="highlight">
+              <pre class="highlight"><code><span class="nt">&lt;h6&gt;</span>Default<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button "</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button  mycal-button-hover"</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button  mycal-button-active"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button  mycal-focus"</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button "</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;h6&gt;</span>Secondary color<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-secondary"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-secondary mycal-button-hover"</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-secondary mycal-button-active"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-secondary mycal-focus"</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-secondary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;h6&gt;</span>Accent cool color<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-accent-cool"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-accent-cool mycal-button-hover"</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-accent-cool mycal-button-active"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-accent-cool mycal-focus"</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-accent-cool"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;h6&gt;</span>Base color<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-base"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-base mycal-button-hover"</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-base mycal-button-active"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-base mycal-focus"</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-base"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;h6&gt;</span>Outline<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline mycal-button-hover"</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline mycal-button-active"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline mycal-focus"</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;h6&gt;</span>Outline inverse<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-base-darkest padding-1"</span> <span class="na">style=</span><span class="s">"max-width: fit-content"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline-inverse"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline-inverse mycal-button-hover"</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline-inverse mycal-button-active"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline-inverse mycal-focus"</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-outline-inverse"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;h6&gt;</span>Big button<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mycal-button mycal-button-big"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mycal-accordion-bordered">
+        <button class="mycal-button-unstyled mycal-accordion-button" aria-expanded="false" aria-controls="accordion-bordered-docs"> Documentation </button>
+        <div id="accordion-bordered-docs" aria-hidden="false" class="mycal-accordion-content mycal-prose">
+          <h4 class="mycal-heading">Implementation</h4>
+          <p>The examples demonstrate how to use button elements. To use a button style on a link, add the <code>mycal-button</code> class to your link.</p>
+          <p>To use a different style button on your link, add the special button class in addition to <code>mycal-button</code>:</p>
+          <ul>
+            <li><code>mycal-button-primary-alt</code></li>
+            <li><code>mycal-button-secondary</code></li>
+            <li><code>mycal-button-gray</code></li>
+            <li><code>mycal-button-outline</code></li>
+            <li><code>mycal-button-outline-inverse</code></li>
+            <li><code>mycal-button-disabled</code></li>
+            <li><code>mycal-button-big</code></li>
+          </ul>
+          <p>For example, a secondary button style would use the following code: <code>&lt;a class="mycal-button mycal-button-secondary" href="/my-link"&gt;My button&lt;/a&gt;</code></p>
+          <h4 class="mycal-heading">Accessibility</h4>
+          <ul class="mycal-content-list">
+            <li>Buttons should display a visible focus state when users tab to them.</li>
+            <li>Avoid using <code>&lt;div&gt;</code> or <code>&lt;img&gt;</code> tags to create buttons. Screen readers don't automatically know either is a usable button.</li>
+            <li>When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button, but pressing the Enter key triggers a link.</li>
+          </ul>
+          <h4 class="mycal-heading">Usability</h4>
+          <h5>When to use</h5>
+          <ul class="mycal-content-list">
+            <li>Use buttons for the most important actions you want users to take on your site, such as "download," "sign up," or "log out."</li>
+          </ul>
+          <h5>When to consider something else</h5>
+          <ul class="mycal-content-list">
+            <li>If you want to lead users between pages of a website. Use links instead.</li>
+            <li>Less popular or less important actions may be visually styled as links.</li>
+          </ul>
+          <h5>Guidance</h5>
+          <ul class="mycal-content-list">
+            <li>Generally, use primary buttons for actions that go to the next step and use secondary buttons for actions that happen on the current page.</li>
+            <li>Style the button most users should click in a way that distinguishes from other buttons on the page. Try using the  â€œlarge buttonâ€ or the most visually distinct fill color.</li>
+            <li>Make sure buttons should look clickableâ€”use color variations to distinguish static, hover and active states.</li>
+            <li>Avoid using too many buttons on a page.</li>
+            <li>Use sentence case for button labels. </li>
+            <li>Button labels should be as short as possible with â€œtrigger wordsâ€ that your users will recognize to clearly explain what will happen when the button is clicked (for example, â€œdownload,â€ â€œviewâ€ or â€œsign upâ€).</li>
+            <li>Make the first word of the buttonâ€™s label a verb. For example, instead of â€œComplaint Filingâ€ label the button â€œFile a complaint.â€</li>
+            <li>At times, consider adding an icon to signal specific actions (â€œdownloadâ€, â€œopen in a new windowâ€, etc). </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+<script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script> 
+<script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script> 
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script> 
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ba-dotimeout.min.js"></script> 
+<script type="text/javascript" src="resources/mss/js/ept/jquery.plugins.js"></script> 
+<script type="text/javascript" src="resources/mss/js/ept/jquery.cookies.min.js"></script> 
+<script type="text/javascript" src="resources/mss/js/ept/mock.js"></script> 
+<!-- Modal --> 
+<script type="text/javascript" src="resources/mss/js/modaal.min.js"></script> 
+<script type="text/javascript" src="resources/mss/js/calendar.js" /> 
+<script type="text/javascript" src="resources/mss/js/datepicker.min.js"></script> 
+<script type="text/javascript" src="resources/mss/js/uswds-2_4-mycal.js"></script> 
+<script type="text/javascript" src="resources/mss/js/styleguide.js"></script> 
+<script type="text/javascript" src="resources/mss/js/datatables.min.js"></script>
+<footer class="mycal-footer mycal-footer-slim" role="contentinfo">
+  <div class="grid-container mycal-footer-return-to-top"> <a href="#">Return to top</a> </div>
+  <div class="mycal-footer-primary-section">
+    <div class="grid-row">
+      <nav class="mycal-footer-nav">
+        <ul class="add-list-reset grid-row grid-gap">
+          <li class="grid-col-auto mycal-footer-primary-content"> <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/privacy-policy" title="Opens in a new window" target="_blank">Privacy Policy</a> </li>
+          <li class="grid-col-auto mycal-footer-primary-content"> <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/conditions-of-use" title="Opens in a new window" target="_blank">Conditions of Use</a> </li>
+          <li class="grid-col-auto mycal-footer-primary-content"> <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/accessibility" title="Opens in a new window" target="_blank">Accessibility</a> </li>
+          <li class="grid-col-auto mycal-footer-primary-content"> <a class="mycal-footer-primary-link" href="https://www.calpers.ca.gov/page/contact" title="Contact us">Contact Us</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  </div>
+</footer>
+</body>
+</html>
+<script>
+	$j('a[target]').addClass('mycal-external_link');
+Event.observe(window, "load", function(){ 
+		if($j('.tabbedContainer > ul > li > a')){
+			$j('.tabbedContainer > ul > li > a').attr('aria-expanded', 'false');
+		}
+		if ( $j('.tabbedContainer > ul > li > a.active').length == 0)
+		{
+			$j('.tabbedContainer > ul > li:first > a').addClass('active');
+			$j('.tabbedContainer > ul > li:first > a').attr('aria-expanded', 'true');
+			$j('.tabbedContainer > ul > li:first > a').parent().next().find('a').addClass('leftShadow');
+			$j ( $j('.tabbedContainer > ul > li:first > a').attr('href') ).show();
+		}
+		else if ( $j('.tabbedContainer > ul > li > a.active').length == 1 )
+		{
+			$j ( $j('.tabbedContainer > ul > li> a.active').attr('href') ).show();
+			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
+		}
+		
+		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
+		
+		$j('.tabbedContainer > ul > li > a').click(function() {
+			var containerId = $j(this).parent().parent().parent().attr('id');
+			var targetId = $j(this).attr("href");
+			
+			$j('#' + containerId + ' > ul > li > a').removeClass('active').removeClass('rightShadow').removeClass('leftShadow');
+			$j('#' + containerId + ' > ul > li > a').attr('aria-expanded', 'false');
+			$j(this).addClass('active');
+			$j(this).attr('aria-expanded', 'true');
+			$j(this).parent().prev().find('a').addClass('rightShadow');
+			$j(this).parent().next().find('a').addClass('leftShadow');			
+			$j('#' + containerId + ' > div.content').hide();
+			$j('#' + containerId + ' > div' + targetId +  '.content').show();
+		});
+	
+	});	
+	
+	
+	
+</script>
+
+
+<!-- Page Specific JS/CSS -->		
+<script type="text/javascript">
+
+	$j(".modaal-generic-content").modaal({
+	content_source: '#inline-generic-content',
+	hide_close: true
+	});
+	
+</script>
+
+<!-- CalPERS Website -->
+<script src="https://www.calpers.ca.gov/resources/js/jquery.min.js"></script>
+<script src="https://www.calpers.ca.gov/resources/js/bootstrap.min.js"></script>
+<script src="https://www.calpers.ca.gov/resources/js/accordion-glyphicon.js"></script>
