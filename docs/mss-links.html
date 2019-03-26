@@ -24,25 +24,6 @@
 <title>myCalPERS new responsive design based on United States Web Design System v2.4 (beta)</title>
 <meta property="og:title" content="myCalPERS new responsive design">
 
-<!-- Favicons
-================================================== -->
-<!-- 128x128 -->
-<link rel="shortcut icon" type="image/ico" href="https://lgdimcip1:20410/mss/img/favicons/favicon.ico">
-<link rel="icon" type="image/png" href="https://lgdiquimcip1:20410/mss/img/favicons/favicon.png">
-
-<!-- 192x192, as recommended for Android
-  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
-  -->
-<link rel="icon" type="image/png" sizes="192x192" href="https://lgdimcip1:20410/mss/img/favicons/favicon-192.png">
-
-<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="https://lgdimcip1:20410/mss/img/favicons/favicon-57.png">
-<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://lgdimcip1:20410/mss/img/favicons/favicon-72.png">
-<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://lgdimcip1:20410/mss/img/favicons/favicon-114.png">
-<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://lgdimcip1:20410/mss/img/favicons/favicon-144.png">
 
 <!-- CSS
 ================================================== -->
@@ -50,24 +31,12 @@
 
 <link rel="stylesheet" href="resources/mss/css/v2style.css">
 <link rel="stylesheet" href="resources/mss/css/uswds-2_4-mycal.css">
-<script type="text/javascript" src="resources/mss/js/forms.js"></script>
-<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>
 
 <!-- CSS Includes -->
 <link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
-
-<link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
-<link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
-<link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />
-
-<!-- CalPERS Website -->
-<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/jquery.bxslider.css">
-<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/calpers-theme.css">
 
 <!-- UX Custom -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
@@ -78,8 +47,6 @@
 <script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>
 <!-- JS Includes -->
 <script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
-<script src="resources/mss/js/calendar-popup.js"></script>
-<script src="resources/mss/js/application.js"></script>
 	
 <!-- Popovers -->
 	
@@ -100,170 +67,13 @@
 	
 	
 	
-	
-	<!--<script>
-	$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-	</script> -->
+
 	
 	<link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
 	
 	<!-- <link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/all.css">-->
 	<style>
-		
-		a.quicktip /*.tooltip*/ {
-	border-bottom: 1px dashed;
-	cursor: help;
-	font-weight: normal;
-	font-size: 85%;
-	margin-top: -3px;
-	margin-left: 15px;
-	text-decoration: none;
-}
-	.link-anchor {
-  position: relative;
-  width: 0;
-  font-size: .8em;
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-}
-.anchor-wrapper {
-  border: none;
-}
-.anchor-wrapper:hover .link-anchor {
-  opacity: 1;
-}
 
-section h1[id]:focus,
-section h2[id]:focus,
-section h3[id]:focus,
-section h4[id]:focus,
-section h5[id]:focus {
-  outline: 0;
-}
-
-
-.popper,
-.tooltip {
-    position: absolute;
-    background: #ffffff;
-    color: black;
-    width: 150px;
-    border-radius: 3px;
-    border:1px solid #666666;
-    padding: 10px;
-    text-align: center;
-	font-size:0.875rem;
-}
-.style5 .tooltip {
-    background: #1E252B;
-    color: #FFFFFF;
-    max-width: 200px;
-    width: auto;
-    font-size: .8rem;
-    padding: .5em 1em;
-}
-.popper .popper__arrow,
-.tooltip .tooltip-arrow {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    position: absolute;
-    margin: 5px;
-}
-
-.tooltip .tooltip-arrow,
-.popper .popper__arrow {
-    border-color: #666666;
-}
-.style5 .tooltip .tooltip-arrow {
-    border-color: #666666;
-}
-.popper[x-placement^="top"],
-.tooltip[x-placement^="top"] {
-    margin-bottom: 5px;
-}
-		
-		
-.tooltip[x-placement^="top"] .tooltip-arrow::before, .tooltip-arrow::before {
-    border-width: 5px 5px 0 5px;
-    border-left-color: #ffffff;
-    border-right-color: #ffffff;
-    border-bottom-color: #ffffff;
-    bottom: -5px;
-    left: calc(50% 5px);
-    margin-top: 0;
-    margin-bottom: 0;
-    border-color: #ffffff;
-    position: absolute;
-    border-style: solid;
-    z-index: 999999;
-}		
-		
-		
-.popper[x-placement^="top"] .popper__arrow,
-.tooltip[x-placement^="top"] .tooltip-arrow {
-    border-width: 5px 5px 0 5px;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    bottom: -5px;
-    left: calc(50% - 5px);
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.popper[x-placement^="bottom"],
-.tooltip[x-placement^="bottom"] {
-    margin-top: 5px;
-}
-.tooltip[x-placement^="bottom"] .tooltip-arrow,
-.popper[x-placement^="bottom"] .popper__arrow {
-    border-width: 0 5px 5px 5px;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-top-color: transparent;
-    top: -5px;
-    left: calc(50% - 5px);
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.tooltip[x-placement^="right"],
-.popper[x-placement^="right"] {
-    margin-left: 5px;
-}
-.popper[x-placement^="right"] .popper__arrow,
-.tooltip[x-placement^="right"] .tooltip-arrow {
-    border-width: 5px 5px 5px 0;
-    border-left-color: transparent;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    left: -5px;
-    top: calc(50% - 5px);
-    margin-left: 0;
-    margin-right: 0;
-}
-.popper[x-placement^="left"],
-.tooltip[x-placement^="left"] {
-    margin-right: 5px;
-}
-.popper[x-placement^="left"] .popper__arrow,
-.tooltip[x-placement^="left"] .tooltip-arrow {
-    border-width: 5px 0 5px 5px;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    right: -5px;
-    top: calc(50% - 5px);
-    margin-left: 0;
-    margin-right: 0;
-}
-
-	</style>
-	
-<script> 
-	var $j = jQuery.noConflict();
-</script>
 </head>
 <body class="page-utilities layout-styleguide ">
 <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
