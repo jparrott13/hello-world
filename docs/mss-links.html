@@ -19,11 +19,28 @@
 <!-- Title and meta description
 ================================================== -->
 
-	
-	
 <title>myCalPERS new responsive design based on United States Web Design System v2.4 (beta)</title>
 <meta property="og:title" content="myCalPERS new responsive design">
 
+<!-- Favicons
+================================================== -->
+<!-- 128x128 -->
+<link rel="shortcut icon" type="image/ico" href="https://lgdimcip1:20410/mss/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="https://lgdimcip1:20410/mss/img/favicons/favicon.png">
+
+<!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://lgdimcip1:20410/mss/img/favicons/favicon-192.png">
+
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://lgdimcip1:20410/mss/img/favicons/favicon-57.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://lgdimcip1:20410/mss/img/favicons/favicon-72.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://lgdimcip1:20410/mss/img/favicons/favicon-114.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://lgdimcip1:20410/mss/img/favicons/favicon-144.png">
 
 <!-- CSS
 ================================================== -->
@@ -31,39 +48,207 @@
 
 <link rel="stylesheet" href="resources/mss/css/v2style.css">
 <link rel="stylesheet" href="resources/mss/css/uswds-2_4-mycal.css">
+<script type="text/javascript" src="resources/mss/js/forms.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>
 
 <!-- CSS Includes -->
 <link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
+
+<link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
 <link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />
+
+<!-- CalPERS Website -->
+<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://www.calpers.ca.gov/resources/css/calpers-theme.css">
 
 <!-- UX Custom -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="resources/mss/css/style.css" />
-	
-
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ux-mss.css" />
 	<link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
+
+<!-- From PSR -->
+<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>
+<!-- JS Includes -->
+<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
+<script src="resources/mss/js/calendar-popup.js"></script>
+<script src="resources/mss/js/application.js"></script>
 	
- <link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/all.css">
-
-
-	<!-- Popovers -->
+<!-- Popovers -->
 	
-
+	////Path to Popper - it is for dropsdowns etc in bootstrap
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 
-
+//Path to bootsrap
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	
 	<script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js "></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script>
 	
-
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script> -->
 	
+	
+	
+	
+	
+	<!--<script>
+	$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+	</script> -->
+	
+	
+	<style>
+		
+		.fa {
+			font-family: 'FontAwesome' !important;
+		}		
+		
+	.link-anchor {
+  position: relative;
+  width: 0;
+  font-size: .8em;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+.anchor-wrapper {
+  border: none;
+}
+.anchor-wrapper:hover .link-anchor {
+  opacity: 1;
+}
+section h1[id]:focus,
+section h2[id]:focus,
+section h3[id]:focus,
+section h4[id]:focus,
+section h5[id]:focus {
+  outline: 0;
+}
+p.thin {
+    font-weight: 100;
+    margin: 0;
+    line-height: 1.2em;
+}
+p.bold {
+    font-weight: 900;
+    margin: 0;
+    margin-top: -5px;
+}
+.rel {
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    border-style: dotted;
+    border-color: white;
+    border-width: medium;
+}
+.popper,
+.tooltip {
+    position: absolute;
+    background: #FFC107;
+    color: black;
+    width: 150px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    padding: 10px;
+    text-align: center;
+}
+.style5 .tooltip {
+    background: #1E252B;
+    color: #FFFFFF;
+    max-width: 200px;
+    width: auto;
+    font-size: .8rem;
+    padding: .5em 1em;
+}
+.popper .popper__arrow,
+.tooltip .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 5px;
+}
+.tooltip .tooltip-arrow,
+.popper .popper__arrow {
+    border-color: #FFC107;
+}
+.style5 .tooltip .tooltip-arrow {
+    border-color: #1E252B;
+}
+.popper[x-placement^="top"],
+.tooltip[x-placement^="top"] {
+    margin-bottom: 5px;
+}
+.popper[x-placement^="top"] .popper__arrow,
+.tooltip[x-placement^="top"] .tooltip-arrow {
+    border-width: 5px 5px 0 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    bottom: -5px;
+    left: calc(50% - 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.popper[x-placement^="bottom"],
+.tooltip[x-placement^="bottom"] {
+    margin-top: 5px;
+}
+.tooltip[x-placement^="bottom"] .tooltip-arrow,
+.popper[x-placement^="bottom"] .popper__arrow {
+    border-width: 0 5px 5px 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    top: -5px;
+    left: calc(50% - 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.tooltip[x-placement^="right"],
+.popper[x-placement^="right"] {
+    margin-left: 5px;
+}
+.popper[x-placement^="right"] .popper__arrow,
+.tooltip[x-placement^="right"] .tooltip-arrow {
+    border-width: 5px 5px 5px 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    left: -5px;
+    top: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+}
+.popper[x-placement^="left"],
+.tooltip[x-placement^="left"] {
+    margin-right: 5px;
+}
+.popper[x-placement^="left"] .popper__arrow,
+.tooltip[x-placement^="left"] .tooltip-arrow {
+    border-width: 5px 0 5px 5px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    right: -5px;
+    top: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+}
+	</style>
+	
+<script> 
+	var $j = jQuery.noConflict();
+</script>
 </head>
 <body class="page-utilities layout-styleguide ">
 <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
@@ -252,7 +437,6 @@ $('.popover-dismiss').popover({
     <p class="thin">Flips when hits viewport</p>
     <div class="popper__arrow" x-arrow></div>
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function(){
         var pop1 = new Popper(example5reference1, example5popper1, {
@@ -260,53 +444,31 @@ $('.popover-dismiss').popover({
         });
     }, false);
 </script>-->
-		<a tabindex="0" id="explainThisIcon"><i class="fa fa-info-circle"></i></a> 
+		  <i class="fa fa-info-circle"></i>
 		  
-		  
-
-	
-		<script>
-
-document.addEventListener('DOMContentLoaded', function(){
-
-
-    var instance = new Tooltip(document.getElementById("explainThisIcon"), {
-        title: "This is the new icon Quicktip style.",
-        trigger: "click",
-		closeOnClickOutside: true,
-		html: true,
-    });
-    instance.hide();
-});
-
-</script> 
-		  
-		  
-     
- <!--   <a tabindex="0"  class="quicktip" id="explainThis">Explain This</a>
-
+		
+        
+            <div class="rel" id="explainThis" style="width: 40%">
+    <p>Explain This</p>
+</div>
 
 <script>
-
 document.addEventListener('DOMContentLoaded', function(){
     var index = 0;
     var popper;
-
     var instance = new Tooltip(document.getElementById("explainThis"), {
-        title: "This is the new text Quicktip style.",
-        trigger: "click",
-		closeOnClickOutside: true,
-		html: true,
+        title: "Hey there",
+        trigger: "click focus",
+		closeOnClickOutside: true
     });
     instance.hide();
 });
-
-</script> -->
+</script>
 		  
 
-<span><a id="ExplainThis" href="#inline-generic-content" class="modaal-generic-content quicktip">Explain This</a></span>
+<span><a id="ExplainThis" href="#inline-generic-content" class="modaal-generic-content tooltip">Explain This</a></span>
 		  
-	<span><a id="ExplainThisFocus" href="#" class="modaal-generic-content quicktip focus">Explain This Focus</a></span>	  
+	<span><a id="ExplainThisFocus" href="#" class="modaal-generic-content tooltip focus">Explain This Focus</a></span>	  
 		
 	<div id="inline-generic-content" style="display:none;">
 		<h2>Explain This Heading</h2>
@@ -423,17 +585,6 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 </main>
 </div>
-
-<!-- From PSR -->
-<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>
-<!-- JS Includes -->
-<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
-	
-
-	
-	
-
-<script type="text/javascrpit" scr="resources/mss/css/font-awesome/all.js"></script>
 <script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script> 
 <script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script> 
 <script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script> 
@@ -510,7 +661,6 @@ Event.observe(window, "load", function(){
 
 <!-- Page Specific JS/CSS -->		
 <script type="text/javascript">
-
 	$j(".modaal-generic-content").modaal({
 	content_source: '#inline-generic-content',
 	hide_close: true
