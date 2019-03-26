@@ -145,39 +145,18 @@ section h5[id]:focus {
   outline: 0;
 }
 
-p.thin {
-    font-weight: 100;
-    margin: 0;
-    line-height: 1.2em;
-}
-
-p.bold {
-    font-weight: 900;
-    margin: 0;
-    margin-top: -5px;
-}
-
-.rel {
-    width: 30%;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-    padding: 20px;
-    border-style: dotted;
-    border-color: white;
-    border-width: medium;
-}
 
 .popper,
 .tooltip {
     position: absolute;
-    background: #FFC107;
+    background: #ffffff;
     color: black;
     width: 150px;
     border-radius: 3px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    border:1px solid #666666;
     padding: 10px;
     text-align: center;
+	font-size:0.875rem;
 }
 .style5 .tooltip {
     background: #1E252B;
@@ -465,9 +444,25 @@ $('.popover-dismiss').popover({
         });
     }, false);
 </script>-->
-		  <i class="fa fa-info-circle"></i>
+		<a tabindex="0" id="explainThisIcon"><i class="fa fa-info-circle"></i></a> 
 		  
-		
+		<script>
+
+document.addEventListener('DOMContentLoaded', function(){
+    var index = 0;
+    var popper;
+
+    var instance = new Tooltip(document.getElementById("explainThisIcon"), {
+        title: "This is the new icon Quicktip style.",
+        trigger: "click",
+		closeOnClickOutside: true
+    });
+    instance.hide();
+});
+
+</script>
+		  
+		  
      
     <a tabindex="0"  class="quicktip" id="explainThis">Explain This</a>
 
@@ -479,7 +474,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var popper;
 
     var instance = new Tooltip(document.getElementById("explainThis"), {
-        title: "Hey there",
+        title: "This is the new text Quicktip style.",
         trigger: "click",
 		closeOnClickOutside: true
     });
