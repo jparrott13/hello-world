@@ -274,6 +274,20 @@ $('.popover-dismiss').popover({
   trigger: 'focus'
 })
 </script>
+		  
+<!-- Popper.JS Implementation -->
+		  
+		  
+		  <div class="my-button">reference</div>
+<div class="my-popper">popper</div>
+		  
+		  <script>var reference = document.querySelector('.my-button');
+var popper = document.querySelector('.my-popper');
+var popperInstance = new Popper(reference, popper, {
+  // popper options here
+});</script>
+		  
+		
 
 
 <span><a id="ExplainThis" href="#inline-generic-content" class="modaal-generic-content tooltip">Explain This</a></span>
