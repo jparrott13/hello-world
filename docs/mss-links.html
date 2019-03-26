@@ -420,22 +420,22 @@ p.bold {
 
 <h2>Explain This</h2>
 		  
-		  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+		<!--  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
 		  
-		  <!--<a tabindex="0" href="#" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><i class="fa fa-info-circle popover-dismiss" style="
+		  <a tabindex="0" href="#" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><i class="fa fa-info-circle popover-dismiss" style="
     font-size: 1.25rem;
     color: #00659e;
-"></i></a> -->
+"></i></a> 
 		  
 		  <script>
 $('.popover-dismiss').popover({
   trigger: 'focus'
 })
-</script>
+</script>-->
 		  
 <!-- Popper.JS Implementation -->
 		  
-		  <div class="popper" id="example5popper1">
+		 <!-- <div class="popper" id="example5popper1">
     <p class="bold">Popper on bottom</p>
     <p class="thin">Flips when hits viewport</p>
     <div class="popper__arrow" x-arrow></div>
@@ -447,12 +447,12 @@ $('.popover-dismiss').popover({
             placement: 'bottom'
         });
     }, false);
-</script>
+</script>-->
 		  
 		
-        <div class="example">
-            <div class="rel" id="example20treference1" style="width: 40%">
-    <p class="bold">Manually triggered</p>
+        
+            <div class="rel" id="explainThis" style="width: 40%">
+    <i class="fa fa-info-circle”"></i>
 </div>
 
 <script>
@@ -461,11 +461,12 @@ document.addEventListener('DOMContentLoaded', function(){
     var index = 0;
     var popper;
 
-    var instance = new Tooltip(document.getElementById("example20treference1"), {
+    var instance = new Tooltip(document.getElementById("explainThis"), {
         title: "Hey there",
-        trigger: "click",
+        trigger: "click focus",
+		closeOnClickOutside: true,
     });
-    instance.show();
+    instance.toggle();
 });
 
 </script>
