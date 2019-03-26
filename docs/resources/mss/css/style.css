@@ -51,6 +51,13 @@ span.required {
 }
 /* Headings */
 
+
+.fa-info-circle {
+	
+	font-size: 1.25rem;
+    color: #00659e;
+}
+
 .typography p {
 	margin-top: 0px;
 	font-size: 0.875rem;
@@ -193,6 +200,158 @@ a.tooltip {
 	margin-left: 15px;
 	text-decoration: none;
 }
+
+/* Popovers */
+
+		a.quicktip /*.tooltip*/ {
+	border-bottom: 1px dashed;
+	cursor: help;
+	font-weight: normal;
+	font-size: 85%;
+	margin-top: -3px;
+	margin-left: 15px;
+	text-decoration: none;
+}
+	.link-anchor {
+  position: relative;
+  width: 0;
+  font-size: .8em;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+.anchor-wrapper {
+  border: none;
+}
+.anchor-wrapper:hover .link-anchor {
+  opacity: 1;
+}
+
+section h1[id]:focus,
+section h2[id]:focus,
+section h3[id]:focus,
+section h4[id]:focus,
+section h5[id]:focus {
+  outline: 0;
+}
+
+
+.popper,
+.tooltip {
+    position: absolute;
+    background: #ffffff;
+    color: black;
+    width: 150px;
+    border-radius: 3px;
+    border:1px solid #666666;
+    padding: 10px;
+    text-align: center;
+	font-size:0.875rem;
+}
+.style5 .tooltip {
+    background: #1E252B;
+    color: #FFFFFF;
+    max-width: 200px;
+    width: auto;
+    font-size: .8rem;
+    padding: .5em 1em;
+}
+.popper .popper__arrow,
+.tooltip .tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    margin: 5px;
+}
+
+.tooltip .tooltip-arrow,
+.popper .popper__arrow {
+    border-color: #666666;
+}
+.style5 .tooltip .tooltip-arrow {
+    border-color: #666666;
+}
+.popper[x-placement^="top"],
+.tooltip[x-placement^="top"] {
+    margin-bottom: 5px;
+}
+		
+		
+.tooltip[x-placement^="top"] .tooltip-arrow::before, .tooltip-arrow::before {
+    border-width: 5px 5px 0 5px;
+    border-left-color: #ffffff;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+    bottom: -5px;
+    left: calc(50% 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+    border-color: #ffffff;
+    position: absolute;
+    border-style: solid;
+    z-index: 999999;
+}		
+		
+		
+.popper[x-placement^="top"] .popper__arrow,
+.tooltip[x-placement^="top"] .tooltip-arrow {
+    border-width: 5px 5px 0 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    bottom: -5px;
+    left: calc(50% - 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.popper[x-placement^="bottom"],
+.tooltip[x-placement^="bottom"] {
+    margin-top: 5px;
+}
+.tooltip[x-placement^="bottom"] .tooltip-arrow,
+.popper[x-placement^="bottom"] .popper__arrow {
+    border-width: 0 5px 5px 5px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    top: -5px;
+    left: calc(50% - 5px);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.tooltip[x-placement^="right"],
+.popper[x-placement^="right"] {
+    margin-left: 5px;
+}
+.popper[x-placement^="right"] .popper__arrow,
+.tooltip[x-placement^="right"] .tooltip-arrow {
+    border-width: 5px 5px 5px 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    left: -5px;
+    top: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+}
+.popper[x-placement^="left"],
+.tooltip[x-placement^="left"] {
+    margin-right: 5px;
+}
+.popper[x-placement^="left"] .popper__arrow,
+.tooltip[x-placement^="left"] .tooltip-arrow {
+    border-width: 5px 0 5px 5px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    right: -5px;
+    top: calc(50% - 5px);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
 /* Numbers */
 
 .big-number {
@@ -914,3 +1073,4 @@ position: absolute;
        line-height: 27px;
        background: url("images/ept/inline_error.png") no-repeat 0px 3px;
 }
+
