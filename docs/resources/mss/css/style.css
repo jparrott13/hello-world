@@ -890,6 +890,21 @@ div.fieldErrorMessage::before {
     margin: 27px 5px 27px 5px;
 }
 
+.inlineValid {
+	font-size: 0.875rem;
+	font-weight:600;
+	color: #689844;
+}
+
+div.inlineValid::before {
+    content: "\f058";
+    font-family: 'FontAwesome' !important;
+    top: -3px;
+    color: #689844;
+    font-size: 1.25rem;
+    left: 10px;
+    margin: 27px 5px 27px 5px;
+}
 
 
 /* Explain this or QT next to all labels */
@@ -1076,16 +1091,5 @@ position: absolute;
 	background: url(../../images/ept/result_error.png) no-repeat 20px 20px #f4e4e4;
 	color: #cc0033;
 }
-.inlineValid {
-	padding-left: 25px;
-	line-height: 27px;
-	background: url("images/ept/inline_success.png") no-repeat 0px 3px;
-}
 
-
-.inlineInvalid {
-       padding-left: 25px;
-       line-height: 27px;
-       background: url("images/ept/inline_error.png") no-repeat 0px 3px;
-}
 
