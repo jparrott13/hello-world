@@ -551,6 +551,7 @@ section h5[id]:focus {
 
 .mycal-navbar {
 	background-color: #00659e;
+	border: none !important;
 }
 .mycal-nav {
 	background-color: #cce0eb;
@@ -636,6 +637,7 @@ section h5[id]:focus {
 @media screen and (min-width:64em) {
 .mycal-header-extended .mycal-navbar {
 	max-width: 160rem;
+	border: none !important;
 }
 .mycal-nav-submenu {
 	border: none;
