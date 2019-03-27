@@ -746,6 +746,7 @@ span.mycal-footer-primary-copyright {
 	
 .mycal-footer-nav ul.flex-wrap.grid-row	{
 	display:block;
+	    padding-left: 0;
 	
 	}
 	
