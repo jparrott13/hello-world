@@ -677,9 +677,9 @@ section h5[id]:focus {
 .mycal-logo {
 	text-align: center;
 }
-.mycal-navbar {
+/*.mycal-navbar {
 	background-color: #cce0eb !important;
-	color: #333333 !important;
+	color: #333333 !important; */
 }
 .mycal-menu-btn {
 	background-color: #cce0eb !important;
