@@ -121,6 +121,12 @@ a:focus, a.focus {
 	border-radius: 0;
 	margin: 5px;
 }
+
+
+.mycal-prose>a:focus {
+    outline-offset: 4px;
+}
+
 a:visited, a.visited {
 	color: #715192;
 }
