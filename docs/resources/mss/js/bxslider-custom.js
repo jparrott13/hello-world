@@ -13,6 +13,7 @@ $j(function(){
 			keyboardEnabled: true,
 			  pagerShortSeparator: 'short',
 			  hideControlOnEnd: true,
-			  adaptiveHeight: true
+			  adaptiveHeight: true,
+			  touchEnabled: false
 		});
 	});
