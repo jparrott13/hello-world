@@ -271,7 +271,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     var instance = new Tooltip(document.getElementById("explainThisIcon"), {
-        title: "This is the new icon Quicktip style.",
+       // title: "This is the new icon Quicktip style.",
+		template: "<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"><p>You can find it on any letter you receive from CalPERS.</p><p>It is a unique 10-digit number we assign to each member as an alternative to using your Social Security number when conducting business with CalPERS.</p></div></div>",
         trigger: "click focus",
 		closeOnClickOutside: true,
 		html: true,
