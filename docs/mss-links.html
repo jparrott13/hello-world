@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var instance = new Tooltip(document.getElementById("explainThisIcon"), {
         title: "This is the new icon Quicktip style.",
-        trigger: "click",
+        trigger: "click focus",
 		closeOnClickOutside: true,
 		html: true,
     });
@@ -283,28 +283,31 @@ document.addEventListener('DOMContentLoaded', function(){
 		  
 		  
      
- <!--   <a tabindex="0"  class="quicktip" id="explainThis">Explain This</a>
+		<a tabindex="0" id="explainThisIconFocus"><i class="fa fa-info-circle"></i></a> 
+		  
+		  
 
-
-<script>
+	
+		<script>
 
 document.addEventListener('DOMContentLoaded', function(){
-    var index = 0;
-    var popper;
 
-    var instance = new Tooltip(document.getElementById("explainThis"), {
-        title: "This is the new text Quicktip style.",
-        trigger: "click",
+
+    var instance = new Tooltip(document.getElementById("explainThisIconFocus"), {
+        title: "This is the new icon Quicktip style with focus.",
+        trigger: "click focus",
 		closeOnClickOutside: true,
 		html: true,
     });
     instance.hide();
 });
 
-</script> -->
+</script> 
+		  		  
 		  
 
-<span><a id="ExplainThis" href="#inline-generic-content" class="modaal-generic-content quicktip">Explain This</a></span>
+
+<!-- <span><a id="ExplainThis" href="#inline-generic-content" class="modaal-generic-content quicktip">Explain This</a></span>
 		  
 	<span><a id="ExplainThisFocus" href="#" class="modaal-generic-content quicktip focus">Explain This Focus</a></span>	  
 		
@@ -313,7 +316,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			<p>Explanatory content here.
 			</p>
 			<input type="button" class="mycal-button" value="OK" onclick="$j('#ExplainThis').modaal('close');">	
-	</div>
+	</div> -->
 
 
       </div>
