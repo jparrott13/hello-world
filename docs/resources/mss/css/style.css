@@ -1066,17 +1066,23 @@ position: absolute;
 	font-weight: 400;
 }
 .success {
-	border: 4px solid #E1E9D0;
+	background-color:#dae2c7l;
+	border-color:#689844;
+	color:#689844;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 }
 .notification {
-	border: 4px solid #f3e4cb;
+	background-color:#f9edcd;
+	border-color:#c49128;
+	color:#c49128;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 }
 .information {
-	border: 4px solid #425b83;
+	background-color:#e1ebef;
+	border-color:#0080b8;
+	color:#0080b8;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 }
@@ -1088,21 +1094,64 @@ position: absolute;
 	-moz-border-radius: 4px;
 }
 .success > div {
-	background: url("../../images/ept/result_success.png") no-repeat 20px 20px #fff;
-	border: 1px solid #6a8236;
+	border: 1px solid #689844;
+	position: relative;
 }
+
+.success > div::before {
+	content:"\f058";
+	color:#689844;
+	font-family:"FontAwesome" !important;
+	font-size:2.25rem;
+	position:absolute;
+	top:0.25rem;
+	left:1.25rem;
+}
+
 .notification > div {
-	border: 1px solid #ffb600;
-	background: url("../../images/ept/result_notify.png") no-repeat 20px 20px #fff;
+	border: 1px solid #c49128;
+	position: relative;
 }
+
+.notification > div::before {
+	content:"\f06a";
+	color:#c49128;
+	font-family:"FontAwesome" !important;
+	font-size:2.25rem;
+	position:absolute;
+	top:0.25rem;
+	left:1.25rem;
+}
+
 .information > div {
-	border: 1px solid #425b83;
-	background: url("../../images/ept/info-circle.png") no-repeat 20px 20px #fff;
+	border: 1px solid #0080b8;
+	position: relative;
 }
+
+.information > div::before {
+	content:"\f05a";
+	color:#0080b8;
+	font-family:"FontAwesome" !important;
+	font-size:2.25rem;
+	position:absolute;
+	top:0.25rem;
+	left:1.25rem;
+}
+
 .error > div {
 	border: 1px solid #edd2d6;
-	background: url(../../images/ept/result_error.png) no-repeat 20px 20px #f4e4e4;
 	color: #cc0033;
+	position: relative;
+}
+
+.error > div::before {
+	content:"\f057";
+	color:#cc0033;
+	font-family:"FontAwesome" !important;
+	font-size:2.25rem;
+	position:absolute;
+	top:0.25rem;
+	left:1.25rem;
 }
 
 
