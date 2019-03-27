@@ -246,7 +246,7 @@ section h5[id]:focus {
     position: absolute;
     background: #ffffff;
     color: black;
-    width: 150px;
+    width: 100%;
     border-radius: 3px;
     border:1px solid #666666;
     padding: 10px;
