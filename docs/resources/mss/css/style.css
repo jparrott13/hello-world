@@ -782,7 +782,7 @@ input[type=checkbox], input[type=radio] {
 
 
 
-.mycal-radio-input:checked+.mycal-radio-label:before {
+/*.mycal-radio-input:checked+.mycal-radio-label:before {
     -webkit-box-shadow: 0 0 0 2px #666666, inset 0 0 0 2px #fff;
     box-shadow: 0 0 0 2px #666666, inset 0 0 0 2px #fff;
 }
@@ -807,7 +807,7 @@ input[type=checkbox], input[type=radio] {
     border-radius: 99rem;
     height: 1rem;
     width: 1rem;
-}
+} */
 
 .mycal-input.mycal-input-success,
 .mycal-range.mycal-input-success,
@@ -1118,25 +1118,43 @@ position: absolute;
 }
 .success {
 	background-color:#dae2c7;
-	border-color:#689844;
-	color:#689844;
+	border-color:#d5d9b6;
+	color:#000000;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
+}
+
+.success a {
+	color:#496a30;
+	font-weight:600;
 }
 .notification {
 	background-color:#f9edcd;
-	border-color:#c49128;
-	color:#c49128;
+	border-color:#f6dab6;
+	color:#000000;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 }
+
+.notification a {
+	color:#9a7221;
+	font-weight:600;
+	
+}
+
+
 .information {
 	background-color:#e1ebef;
 	border-color:#0080b8;
-	color:#0080b8;
+	color:#000000;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 }
+
+.information a {
+	color:#
+	}
+
 .error {
 	background-color: #f4e4e4;
 	border-color: #edd2d6;
@@ -1144,6 +1162,13 @@ position: absolute;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 }
+
+.error a {
+	
+	font-weight:600;
+	color: #990026;
+}
+
 .success > div {
 	border: 1px solid #689844;
 	position: relative;
