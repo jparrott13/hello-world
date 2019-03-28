@@ -2,11 +2,11 @@
 
 $j(function(){
 		  $j('.bxslider').bxSlider({
-			 slideWidth: 240,
+			 slideWidth: 238,
 			  infiniteLoop: false,
 			  minSlides: 2,
 			  maxSlides: 4,
-			  moveSlides:4,
+			  moveSlides:5,
 			
 			  pager: true,
 			  nextText: "",
