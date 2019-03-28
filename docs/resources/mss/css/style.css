@@ -972,8 +972,8 @@ a.selectedSicon {
 }
 
 .bx-wrapper img {
-	width:100% !important;
-    padding: 0 .25rem 0 0rem;
+    width: 100% !important;
+    padding: .25rem;
 }
 
 .bx-viewport {
