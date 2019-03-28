@@ -2,7 +2,6 @@
 
 $j(function(){
 		  $j('.bxslider').bxSlider({
-			 slideWidth: 960,
 			  infiniteLoop: false,
 			  minSlides: 1,
 			  maxSlides: 1,
