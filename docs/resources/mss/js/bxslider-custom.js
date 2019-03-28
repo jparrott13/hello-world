@@ -13,7 +13,7 @@ $j(function(){
 			  nextText: "",
     			  prevText: "",
 			keyboardEnabled: true,
-			  pagerShortSeparator: 'short',
+
 			  hideControlOnEnd: true,
 			  adaptiveHeight: true,
 			  touchEnabled: false
