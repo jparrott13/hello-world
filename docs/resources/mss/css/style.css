@@ -562,6 +562,9 @@ div.mycal-logo img {
 .mycal-navbar {
 	background-color: #00659e;
 	border: none !important;
+	
+    height: inherit;
+
 }
 .mycal-nav {
 	background-color: #cce0eb;
@@ -648,7 +651,6 @@ div.mycal-logo img {
 .mycal-header-extended.logout .mycal-navbar {
 	max-width: 160rem;
 	border: none !important;
-	    padding: 3.75rem 0 !important;
 }
 .mycal-nav-submenu {
 	border: none;
