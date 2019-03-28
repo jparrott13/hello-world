@@ -14,6 +14,6 @@ $j(function(){
 			  hideControlOnEnd: true,
 			  adaptiveHeight: true,
 			  touchEnabled: false,
-			  shrinkItems: true
+			 
 		});
 	});
