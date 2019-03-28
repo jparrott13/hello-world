@@ -976,9 +976,9 @@ a.selectedSicon {
     padding: .25rem;
 }
 
-/*.bx-viewport {
+.bx-viewport {
 	padding:10px !important;
-}*/
+}
 
 .bx-wrapper .bx-controls-direction {
 position: absolute;
