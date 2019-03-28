@@ -550,7 +550,7 @@ section h5[id]:focus {
 /* Header and Navigation Styles */
 
 
-#headerLogoID img {
+a#headerLogoId > img{
 	width:210px;
 }
 
