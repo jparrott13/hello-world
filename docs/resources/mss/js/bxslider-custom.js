@@ -7,8 +7,9 @@ $j(function(){
 			  minSlides: 2,
 			  maxSlides: 4,
 			  moveSlides:5,
-			
+				
 			  pager: true,
+			  pageType: 'short',
 			  nextText: "",
     			  prevText: "",
 			keyboardEnabled: true,
