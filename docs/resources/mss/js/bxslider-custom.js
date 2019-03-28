@@ -7,7 +7,7 @@ $j(function(){
 			  minSlides: 2,
 			  maxSlides: 3,
 			  moveSlides:4,
-			  slideMargin: 10,
+			
 			  pager: true,
 			  nextText: "",
     			  prevText: "",
