@@ -2,7 +2,7 @@
 
 $j(function(){
 		  $j('.bxslider').bxSlider({
-			 slideWidth: 235,
+			 slideWidth: 240,
 			  infiniteLoop: false,
 			  minSlides: 2,
 			  maxSlides: 4,
@@ -14,6 +14,7 @@ $j(function(){
 			keyboardEnabled: true,
 			  hideControlOnEnd: true,
 			  adaptiveHeight: true,
-			  touchEnabled: false
+			  touchEnabled: false,
+			  shrinkItems: true
 		});
 	});
