@@ -2,13 +2,13 @@
 
 $j(function(){
 		  $j('.bxslider').bxSlider({
-			 slideWidth: 300,
+			 slideWidth: 320,
 			  infiniteLoop: false,
 			  minSlides: 2,
-			  maxSlides: 4,
-			  moveSlides:5,
+			  maxSlides: 3,
+			  moveSlides:4,
 			  pager: true,
-			  pagerType: 'short',
+			  //pagerType: 'short',
 			  nextText: "",
     			  prevText: "",
 			keyboardEnabled: true,
