@@ -550,8 +550,8 @@ section h5[id]:focus {
 /* Header and Navigation Styles */
 
 
-a#headerLogoId > img{
-	width:210px;
+div.mycal-logo img {
+    width: 210px;
 }
 
 
@@ -645,9 +645,10 @@ a#headerLogoId > img{
 /* TEST LOG OUT HEADER */
 
 @media screen and (min-width:64em) {
-.mycal-header-extended .mycal-navbar {
+.mycal-header-extended.logout .mycal-navbar {
 	max-width: 160rem;
 	border: none !important;
+	    padding: 3.75rem 0 !important;
 }
 .mycal-nav-submenu {
 	border: none;
