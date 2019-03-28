@@ -6,6 +6,7 @@ $j(function(){
 			  infiniteLoop: false,
 			  minSlides: 2,
 			  maxSlides: 3,
+			  moveSlides:3,
 			  slideMargin: 10,
 			  pager: true,
 			  nextText: "",
