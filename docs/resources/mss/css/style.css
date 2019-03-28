@@ -967,9 +967,13 @@ a.selectedSicon {
 	border:none !important;
 }
 
+.bxslider .grid-row {
+    margin: .25rem 0;
+}
+
 .bx-wrapper img {
 	width:100% !important;
-
+    padding: 0 .25rem 0 0rem;
 }
 
 .bx-viewport {
