@@ -11,7 +11,7 @@ $j(function(){
 			  //pagerType: 'short',
 			  nextText: "",
     			  prevText: "",
-			keyboardEnabled: true,
+			//keyboardEnabled: true,
 			  hideControlOnEnd: true,
 			  adaptiveHeight: true,
 			  touchEnabled: false,
