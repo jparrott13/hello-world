@@ -1,7 +1,7 @@
 
 
 $j(function(){
-		  $j('.bxslider').bxSlider({
+		  $j('.slider').bxSlider({
 			 slideWidth: 309,
 			  infiniteLoop: false,
 			  minSlides: 2,
