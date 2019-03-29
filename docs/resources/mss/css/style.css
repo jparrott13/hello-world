@@ -556,7 +556,7 @@ div.mycal-logo img {
 
 
 .mycal-header-extended.logout .mycal-logo {
-	    padding: 1.5rem 0;
+	    padding: .5rem 0;
 }
 
 .mycal-navbar {
@@ -673,7 +673,7 @@ div.mycal-logo img {
 	font-size: 2.12941rem;
 	margin: 0 !important;
 	max-width: 100%;
-	    padding: 1.5rem 0;
+	    padding: .5rem 0;
 }
 .mycal-header-extended .mycal-nav-inner {
 	max-width: 160rem;
