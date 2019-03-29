@@ -2,10 +2,10 @@
 
 $j(function(){
 		  $j('.bxslider').bxSlider({
-			  infiniteLoop: false,
+			  infiniteLoop: true,
 			  minSlides: 1,
 			  maxSlides: 1,
-			
+				
 			  pager: true,
 			  //pagerType: 'short',
 			  nextText: "",
