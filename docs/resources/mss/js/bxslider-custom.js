@@ -11,7 +11,7 @@ $j(function(){
 			  nextText: "",
     			  prevText: "",
 		keyboardEnabled: true,
-			  hideControlOnEnd: true,
+			  hideControlOnEnd: false,
 			  adaptiveHeight: true,
 			  touchEnabled: false,
 			 
