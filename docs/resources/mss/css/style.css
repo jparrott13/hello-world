@@ -599,51 +599,17 @@ div.mycal-logo img {
 	text-decoration: underline;
 	background-color: #ffffff;
 }
-.mycal-nav-primary button[aria-expanded=false] {
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
-	background-position: right .8rem top 53%;
-	background-repeat: no-repeat;
-	background-size: .8rem
+
+@media screen and (min-width: 64em) {
+.mycal-header-extended .mycal-current:after, .mycal-header-extended .mycal-accordion-button.mycal-nav-link::after, .mycal-header-extended [aria-expanded=true]:after {
+    bottom: 0;
+    height: .25rem;
+    font-family: "FontAwesome";
+    content: "\f107";
+    color: #000000;
 }
-.mycal-nav-primary button[aria-expanded=false]:focus, .mycal-nav-primary .mycal-accordion-button.mycal-current {
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.png);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
-	background-position: right .8rem top 53%;
-	background-repeat: no-repeat;
-	background-size: .8rem
 }
-.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
-	color: #000000;
-	background-color: #cce0eb;
-	font-weight: 700;
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.png);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down.svg), linear-gradient(transparent, transparent);
-	background-position: right .8rem top 53%;
-	background-repeat: no-repeat;
-	background-size: .8rem;
-}
-.mycal-nav-primary button[aria-expanded=false]:hover {
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.png);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-primary.svg), linear-gradient(transparent, transparent);
-	background-repeat: no-repeat
-}
-.mycal-nav-primary button[aria-expanded=true] {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	background-color: #162e51;
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.png);
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.svg), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-	background-image: url(http://lgdimcip1:20410/mss/img/angle-arrow-down-hover.svg), linear-gradient(transparent, transparent);
-	background-position: right .8rem top 53%;
-	background-repeat: no-repeat;
-	background-size: .8rem;
-	color: #fff
-}
+
 
 /* TEST LOG OUT HEADER */
 
