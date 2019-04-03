@@ -633,7 +633,10 @@ div.mycal-logo img {
 	border-top: 0;
 }
 
-	
+	li.mycal-nav-secondary-item button.mycal-nav-link {
+    background-color: transparent;
+    border: none;
+}
 	
 .mycal-header-extended.logout .mycal-logo {
 	font-size: 2.12941rem;
@@ -662,10 +665,96 @@ div.mycal-logo img {
 .mycal-logo {
 	text-align: center;
 }
-/*.mycal-navbar {
-	background-color: #cce0eb !important;
-	color: #333333 !important; */
+.mycal-nav{
+	padding:0;
 }
+	
+	
+.mycal-nav .mycal-nav-primary > li {
+    border-top: 1px solid #000000;
+    padding: 0;
+  
+}
+	
+	.mycal-nav .mycal-nav-primary > li:first-child {
+    /*border-left: 1px solid #000000;*/
+}
+	
+	.mycal-nav .mycal-nav-primary > li:last-child {
+    border-bottom: 1px solid #000000;
+}
+	
+	
+.mycal-nav-primary .mycal-current:after {
+    /*DELETE FROM USWDS*/
+	display:none;
+}	
+	
+.mycal-nav .mycal-nav-link:hover, .mycal-nav .mycal-accordion-button.mycal-nav-link:hover {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+}	
+	
+	.mycal-nav-submenu-item {
+    border:none;
+    font-size: 1rem;
+}
+	
+	
+.mycal-nav-primary button[aria-expanded=false]::after {
+
+    font-family: "FontAwesome";
+    content: "\f107";
+    color: #000000;
+    float: right;
+    font-size: 1.5rem;
+}
+	
+button[aria-expanded=true].mycal-accordion-button.mycal-nav-link.mycal-current span::after {
+    font-family: "FontAwesome";
+    content: "\f077";
+    color: #000000;
+    float: right;
+    margin-top: -.25rem;
+}
+	
+	
+li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-expanded=true] ~ ul.mycal-nav-submenu {
+    background-color: #ffffff;
+}	
+
+	.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]{
+		
+	 font-family: "FontAwesome";
+    content: "\f077";
+    color: #000000;
+    float: right;
+    margin-top: -.25rem;	
+	}
+	
+.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
+
+    border-top: 1px solid #000000;
+}	
+	
+	.mycal-nav-secondary {
+    color: #000000;
+}
+.mycal-nav-secondary-links a {
+    color: #000000;
+}	
+	
+.mycal-nav .mycal-nav-link.mycal-current {
+    text-decoration: none;
+
+}	
+	
+}	
+	
+	
+	
+	
 .mycal-menu-btn {
 	background-color: #cce0eb !important;
 	color: #333333 !important;
@@ -676,7 +765,38 @@ div.mycal-logo img {
     content: "\f0c9";
     margin: .5rem;
 }
+
+.mycal-nav-close::before {
+    font-family: "FontAwesome";
+    font-weight: 900;
+    content: "\f00d";
+    margin: 0 .5rem;
+    float: left;
 }
+
+
+.mycal-nav-close {
+    -ms-flex: none;
+    -webkit-box-flex: 0;
+    -webkit-font-smoothing: auto;
+    border: 0;
+    border-radius: 0;
+    color: currentColor;
+    flex: none;
+    float: right;
+    font-weight: 400;
+    height:auto;
+    margin:	1rem;
+    padding: 0;
+    text-align: left;
+    text-align: center;
+    width:auto;
+}
+
+.mycal-nav.is-visible {
+    background-color: #cce0eb;
+}
+
 
 /* Footer */
 
