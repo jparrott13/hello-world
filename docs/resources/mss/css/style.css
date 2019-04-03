@@ -659,6 +659,21 @@ div.mycal-logo img {
 .mycal-nav-submenu > li > a:hover {
 	color: #003c5e !important;
 }
+	
+.mycal-nav-secondary-links .mycal-nav-secondary-item+.mycal-nav-secondary-item:after {
+    color: #ffffff;
+    content: "|";
+    padding-right: .25rem;
+}
+	
+	.mycal-nav-secondary-links .mycal-nav-secondary-item:last-child::before {
+    font-family: "FontAwesome";
+    content: "\f0e0";
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+	
+	
 }
 
 @media screen and (max-width: 63.99em) {
