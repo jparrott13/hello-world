@@ -671,9 +671,10 @@ div.mycal-logo img {
 	color: #333333 !important;
 }
 .mycal-menu-btn::before {
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
-	content: "\f007";
+    font-family: "FontAwesome";
+    font-weight: 900;
+    content: "\f0c9";
+    margin: .5rem;
 }
 }
 
