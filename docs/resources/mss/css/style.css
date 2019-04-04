@@ -717,6 +717,12 @@ color:#ffffff;
 	padding:0;
 }
 	
+	ul.mycal-nav-secondary-links > li.mycal-nav-secondary-item:first-child {
+    background-color: #ffffff;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: .75rem 0;
+}
 	
 .mycal-nav .mycal-nav-primary > li {
     border-top: 1px solid #000000;
@@ -798,7 +804,14 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 .mycal-nav .mycal-nav-link.mycal-current {
     text-decoration: none;
 
-}	
+}
+	
+	
+	button.mycal-nav-link {
+		background:transparent;
+		border:none;
+		font-size:18px;
+	}	
 	
 }	
 	
