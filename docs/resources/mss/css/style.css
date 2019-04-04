@@ -723,7 +723,9 @@ color:#ffffff;
     padding: 0;
   
 }
-	
+	.mycal-nav-secondary-links li.mycal-nav-secondary-item button.mycal-nav-link > span {
+		color:#000000;
+	}
 	.mycal-nav .mycal-nav-primary > li:first-child {
     /*border-left: 1px solid #000000;*/
 }
