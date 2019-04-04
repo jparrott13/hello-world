@@ -607,7 +607,33 @@ div.mycal-logo img {
     font-family: "FontAwesome";
     content: "\f107";
     color: #000000;
+	display:contents;
 }
+	
+	
+.mycal-nav-primary button[aria-expanded=false] {
+        background-image: none;
+         background-image: none;
+         background-image: none;
+       
+    }
+    .mycal-nav-primary button[aria-expanded=false]:focus, .mycal-nav-primary .mycal-accordion-button.mycal-current{
+        background-image: none; background-image: none; background-image: none;
+      
+    }
+    .mycal-nav-primary button[aria-expanded=false]:hover {
+         background-image: none; background-image: none; background-image: none;
+        background-repeat: no-repeat
+    }
+    .mycal-nav-primary button[aria-expanded=true] {
+      background-image: none; background-image: none; background-image: none;
+        background-position: right 1rem top 53%;
+        background-repeat: no-repeat;
+        background-size: .5rem;
+        color: #fff
+    }	
+	
+	
 }
 
 
@@ -1337,4 +1363,4 @@ position: absolute;
 	left:1.25rem;
 }
 
- 
+
