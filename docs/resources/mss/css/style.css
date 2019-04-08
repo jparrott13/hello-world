@@ -675,6 +675,12 @@ color:#ffffff;
     font-weight: 600;
 }	
 	
+.mycal-nav-secondary-item > a > i.fa-envelope {
+    font-size: 1.5rem;
+    margin: 0.55rem;
+    color: #ffffff;
+}	
+	
 }
 
 
