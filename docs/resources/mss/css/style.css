@@ -727,7 +727,7 @@ color:#ffffff;
 	color: #003c5e !important;
 }
 	
-.mycal-nav-secondary-links .mycal-nav-secondary-item+.mycal-nav-secondary-item:after {
+.mycal-nav-secondary-links .mycal-nav-secondary-item:after {
     color: #ffffff;
     content: "|";
     padding-right: .25rem;
