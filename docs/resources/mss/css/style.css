@@ -94,15 +94,23 @@ h6 {
 	font-size: 1.125rem;
 	font-weight: 300;
 }
-h2.sidebar {
+.sidebar h2 {
 	font-size: 1.1875rem;
 	margin: 5px 0 15px 0;
 }
-p.sidebar {
+.sidebar p {
 	line-height: 1.4;
 	padding: 5px 0 5px 0;
 	text-align: left;
+	font-size: 1rem;
 }
+
+.sidebar {
+    padding: .8375rem;
+    border: 1px solid #00659e;
+    margin-bottom: 1.25rem;
+}
+
 /* Links */
 
 a {
