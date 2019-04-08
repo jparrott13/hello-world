@@ -640,6 +640,32 @@ color:#ffffff;
         color: #fff
     }	
 	
+	.mycal-nav-secondary-links .mycal-nav-secondary-item:last-child:after {
+    content: "";
+}
+	
+.messages {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0.55rem;
+}	
+.messages::after {
+    content: "1";
+    position: absolute;
+    background: #F4B125;
+    height: 1rem;
+    top: -.25rem;
+    right: -0.5rem;
+    width: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    font-size: .75rem;
+    border-radius: 50%;
+    color: #000;
+    border: #F4B125;
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 600;
+}	
 	
 }
 
@@ -699,11 +725,9 @@ color:#ffffff;
     padding-right: .25rem;
 }
 	
-	.mycal-nav-secondary-links .mycal-nav-secondary-item:last-child::before {
-    font-family: "FontAwesome";
-    content: "\f0e0";
-    color: #ffffff;
-    font-size: 1.25rem;
+	.mycal-nav-secondary-links .mycal-nav-secondary-item+.mycal-nav-secondary-item:last-child:after {
+    content: "";
+    padding: 0;
 }
 	
 	
