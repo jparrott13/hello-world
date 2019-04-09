@@ -1493,7 +1493,7 @@ div.breadcrumb > a {
 
 @media screen and (max-width: 40em) {
 	
-nav.breadcrumb	{
+nav.mycal-breadcrumb	{
 	display:none;
 	}
 
