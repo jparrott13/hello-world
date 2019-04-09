@@ -1422,3 +1422,29 @@ position: absolute;
 }
 
 
+/* Table Styles */
+
+table p {
+	margin:0;
+}
+thead {
+	    background-color: #00659e;
+    color: #ffffff;
+}
+
+tr {
+	padding:.75rem;
+}
+
+tbody tr {
+	border-bottom: 1px solid #666666;
+}
+
+td.read {
+	background-color:#eeeeee;
+}
+
+td p.expire {
+	color:#b95726;
+	font-weight:900;
+}
