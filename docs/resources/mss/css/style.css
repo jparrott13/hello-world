@@ -1433,8 +1433,17 @@ tbody tr {
 	border-bottom: 1px solid #666666;
 }
 
-td.read {
+tr.read {
 	background-color:#eeeeee;
+}
+
+tr.unread {
+	background-color:#ffffff;
+}
+
+tr.select {
+	
+      background-color: #dce8ef !important;
 }
 
 td p.expire {
