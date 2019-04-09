@@ -1450,3 +1450,27 @@ td p.expire {
 	color:#b95726;
 	font-weight:900;
 }
+
+
+/* Breadcrumbs */
+
+.mycal-unstyled-list li {
+    display: inline-block;
+	font-size:.875rem;
+	font-weight: 600;
+}
+.mycal-unstyled-list li::after {
+    color: #333333;
+    padding: 0 5px;
+    line-height: .875rem;
+    font-size: .875rem;
+    font-family: 'FontAwesome';
+    content: "\f054";
+    font-weight: 400;
+}
+
+.mycal-unstyled-list li:last-child::after {
+
+    content: "";
+
+}
