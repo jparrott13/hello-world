@@ -980,7 +980,7 @@ input[type=checkbox], input[type=radio] {
 .mycal-checkbox-input:checked+.mycal-checkbox-label:before, .mycal-radio-input:checked+.mycal-radio-label:before {
    
     background-color: #666666;
-    box-shadow: 0 0 0 2px #666666;
+
 }
 .mycal-checkbox-label:before, .mycal-radio-label:before {
 
