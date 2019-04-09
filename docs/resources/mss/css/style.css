@@ -973,18 +973,18 @@ input[type=checkbox], input[type=radio] {
     width: 1rem;
 }
 .mycal-radio-input:checked+.mycal-radio-label:before {
-    -webkit-box-shadow: 0 0 0 2px #666666, inset 0 0 0 2px #fff;
+   
     box-shadow: 0 0 0 2px #666666, inset 0 0 0 2px #fff;
 }
 
 .mycal-checkbox-input:checked+.mycal-checkbox-label:before, .mycal-radio-input:checked+.mycal-radio-label:before {
-    -webkit-box-shadow: 0 0 0 2px #666666;
+   
     background-color: #666666;
     box-shadow: 0 0 0 2px #666666;
 }
 .mycal-checkbox-label:before, .mycal-radio-label:before {
-    -webkit-box-shadow: 0 0 0 2px #757575;
-    box-shadow: 0 0 0 2px #757575;
+
+    box-shadow: 0 0 0 2px #666666;
     line-height: 1rem;
     margin-right: .75rem;
 }
