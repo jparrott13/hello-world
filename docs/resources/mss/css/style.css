@@ -165,8 +165,7 @@ a.secondary-nav-link {
 	font-size: 1rem;
 	line-height: 16px;
 	padding: 10px 12px;
- font-weight;
-400;
+ font-weight: 400;
 }
 a.secondary-nav-link.active {
 	font-weight: 600;
@@ -1048,7 +1047,6 @@ input[type=checkbox], input[type=radio] {
 	height: 5px;
 	background: #e2e2e2;
 	margin: 0;
-	position: absolute;
 	left: 50%;
 	width: calc(100% + 40px);
 	bottom: -9px;
@@ -1344,9 +1342,9 @@ position: absolute;
 	-moz-border-radius: 4px;
 }
 
-.information a {
+/*.information a {
 	color:#
-	}
+	}*/
 
 .error {
 	background-color: #f4e4e4;
