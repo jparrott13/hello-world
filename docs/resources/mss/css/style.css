@@ -967,9 +967,12 @@ input[type=checkbox], input[type=radio] {
     margin: .5rem;
 }
 
-
-
-/*.mycal-radio-input:checked+.mycal-radio-label:before {
+.mycal-radio-label:before {
+    border-radius: 99rem;
+    height: 1rem;
+    width: 1rem;
+}
+.mycal-radio-input:checked+.mycal-radio-label:before {
     -webkit-box-shadow: 0 0 0 2px #666666, inset 0 0 0 2px #fff;
     box-shadow: 0 0 0 2px #666666, inset 0 0 0 2px #fff;
 }
@@ -979,22 +982,12 @@ input[type=checkbox], input[type=radio] {
     background-color: #666666;
     box-shadow: 0 0 0 2px #666666;
 }
-
 .mycal-checkbox-label:before, .mycal-radio-label:before {
     -webkit-box-shadow: 0 0 0 2px #757575;
     box-shadow: 0 0 0 2px #757575;
     line-height: 1rem;
     margin-right: .75rem;
 }
-.mycal-input-error {
-    border: .25rem solid #cc0033;
-}
-
-.mycal-radio-label:before {
-    border-radius: 99rem;
-    height: 1rem;
-    width: 1rem;
-} */
 
 .mycal-input.mycal-input-success,
 .mycal-range.mycal-input-success,
