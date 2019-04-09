@@ -615,7 +615,7 @@ color:#ffffff;
 }
 
 @media screen and (min-width: 64em) {
-.mycal-header-extended .mycal-current:after, .mycal-header-extended .mycal-accordion-button.mycal-nav-link::after, .mycal-header-extended [aria-expanded=false]:after {
+ .mycal-header-extended [aria-expanded=false]:after {
     bottom: 0;
     height: .25rem;
     font-family: "FontAwesome";
@@ -624,14 +624,14 @@ color:#ffffff;
 	display:contents;
 }
 	
-	.mycal-header-extended .mycal-current:hover:after, .mycal-header-extended .mycal-accordion-button.mycal-nav-link:hover:after, .mycal-header-extended [aria-expanded=false]:hover:after {
+.mycal-header-extended [aria-expanded=false]:hover:after {
  
    color:#00659e !important
 
 }
 
 	
-	.mycal-header-extended .mycal-current:after, .mycal-header-extended .mycal-accordion-button.mycal-nav-link::after, .mycal-header-extended [aria-expanded=true]:after {
+ .mycal-header-extended [aria-expanded=true]:after {
     bottom: 0;
     height: .25rem;
     font-family: "FontAwesome";
