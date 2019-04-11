@@ -684,7 +684,7 @@ color:#ffffff;
     content: "";
 }
 	
-	.mycal-nav-secondary-links a:focus {
+	.mycal-nav-secondary-links a:focus, a#headerLogoId:focus {
     outline: solid;
     outline: 3px solid #ffffff;
     outline-offset: 4px;
@@ -727,11 +727,8 @@ color:#ffffff;
     color: #ffffff;
 }
 	
-.mycal-header-extended .mycal-nav-secondary-item > .mycal-nav-link::after {
-    font-family: "FontAwesome";
-    content: "\f107";
+.mycal-nav-secondary-item button.mycal-nav-link::after {
     color: #ffffff !important;
-    margin: .5rem !important;
 }
 	
 .mycal-header-extended .mycal-nav-secondary-item > .mycal-nav-link::hover {
