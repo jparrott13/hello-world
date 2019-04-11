@@ -741,7 +741,10 @@ color:#ffffff;
     color:#ffffff;
 	text-decoration:underline;
 	background-color:transparent;
-}		
+}	
+	
+	
+	
 	
 }
 
@@ -806,6 +809,13 @@ color:#ffffff;
     padding: 0;
 }
 	
+	.mycal-nav-primary-item .mobile	 {
+		display:none;
+	}
+	
+	.mycal-mobile-secondary-links {
+		display:none;
+	}
 	
 }
 
@@ -917,6 +927,15 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 		border:none;
 		font-size:18px;
 	}	
+	
+	
+	.mycal-nav-primary-item .mobile	 {
+		display:block;
+	}
+	
+	.mycal-mobile-secondary-links {
+		display:block;
+	}
 	
 }	
 	
