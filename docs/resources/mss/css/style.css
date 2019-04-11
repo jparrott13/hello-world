@@ -705,7 +705,7 @@ color:#ffffff;
     margin: 0.55rem;
 }	
 	
-	
+
 	
 	.unreadMessages {
 position: absolute;
@@ -852,7 +852,7 @@ position: absolute;
     /*border-left: 1px solid #000000;*/
 }
 	
-	.mycal-nav .mycal-nav-primary li:last-child {
+	.mycal-nav .mycal-nav-primary li:nth-child(6){
     border-bottom: 1px solid #000000;
 }
 
@@ -959,7 +959,7 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 		display:block;
 		list-style-type:none;
 		-webkit-padding-start: 0;
-		padding-left:2rem;
+	margin-top: .75rem;
 	
 	}
 	
@@ -973,6 +973,30 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 	.mycal-nav-secondary {
 		display:none;
 	}
+	
+	.messages {
+		font-size: 1.5rem;
+    color: #000000;
+    margin-right: 0.55rem;
+	}
+	.unreadMessages {	
+      position: relative;
+    background: #F4B125;
+    height: 1rem;
+    top: -.5rem;
+    right: 1rem;
+    width: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    font-size: .75rem;
+    border-radius: 75%;
+    color: #000;
+    border: #F4B125;
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 600;
+    display: inline-block;
+	}	
+	
 	
 }	
 	
