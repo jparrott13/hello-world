@@ -937,6 +937,11 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 		display:block;
 	}
 	
+	
+	.mycal-nav-secondary {
+		display:none;
+	}
+	
 }	
 	
 	
