@@ -675,10 +675,22 @@ color:#ffffff;
         color: #fff
     }	
 	
+	.mycal-nav .mycal-nav-primary > li > a:focus, .mycal-nav .mycal-accordion-button.mycal-nav-link:focus {
+
+    margin: 0;
+}
+	
 	.mycal-nav-secondary-links .mycal-nav-secondary-item:last-child:after {
     content: "";
 }
 	
+	.mycal-nav-secondary-links a:focus {
+    outline: solid;
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 0;
+    margin: 5px;
+}
 	
 .mycal-nav .mycal-nav-link:hover, .mycal-nav .mycal-accordion-button.mycal-nav-link:hover {
     text-decoration: none;
