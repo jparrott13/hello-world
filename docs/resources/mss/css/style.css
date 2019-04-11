@@ -880,7 +880,7 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
     background-color: #ffffff;
 }	
 
-	.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]{
+	.mycal-nav .mycal-nav-primary button[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]:after{
 		
 	 font-family: "FontAwesome";
     content: "\f077";
@@ -891,8 +891,13 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 	
 .mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
 
-    border-top: 1px solid #000000;
+        font-weight: 600;
+	background-color:#ffffff;
 }	
+	
+	.mycal-nav-submenu {
+    background-color: #ffffff;
+}
 	
 	.mycal-nav-secondary {
     color: #000000;
@@ -921,6 +926,8 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 .mycal-menu-btn {
 	background-color: #cce0eb !important;
 	color: #333333 !important;
+	margin: .75rem;
+	    font-size: 1.05rem;
 }
 .mycal-menu-btn::before {
     font-family: "FontAwesome";
@@ -954,6 +961,7 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
     text-align: left;
     text-align: center;
     width:auto;
+	  font-size: 1.05rem;
 }
 
 .mycal-nav.is-visible {
