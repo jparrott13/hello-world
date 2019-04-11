@@ -834,6 +834,10 @@ color:#ffffff;
     padding: .75rem 0;
 }
 	
+	
+	.mycal-nav-primary {
+   margin-top:3rem;}
+	
 .mycal-nav .mycal-nav-primary > li {
     border-top: 1px solid #000000;
     padding: 0;
@@ -846,7 +850,7 @@ color:#ffffff;
     /*border-left: 1px solid #000000;*/
 }
 	
-	.mycal-nav .mycal-nav-primary > li:last-child {
+	.mycal-nav .mycal-nav-primary li:last-child {
     border-bottom: 1px solid #000000;
 }
 
@@ -865,6 +869,22 @@ color:#ffffff;
 	.mycal-nav-submenu-item {
     border:none;
     font-size: 1rem;
+}
+	
+	.mycal-nav-primary a[aria-expanded=false]::after {
+    font-family: "FontAwesome";
+    content: "\f107";
+    color: #000000;
+    float: right;
+    font-size: 1.5rem;
+}
+	
+		.mycal-nav-primary a[aria-expanded=false]::after {
+    font-family: "FontAwesome";
+    content: "\f077";
+    color: #000000;
+    float: right;
+    font-size: 1.5rem;
 }
 	
 	
@@ -935,6 +955,16 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 	
 	.mycal-mobile-secondary-links {
 		display:block;
+		list-style-type:none;
+		-webkit-padding-start: 0;
+		padding-left:2rem;
+	
+	}
+	
+	.mycal-mobile-secondary-item a {
+		color:#000000;
+		padding-top:0;
+		padding-bottom:0;
 	}
 	
 	
