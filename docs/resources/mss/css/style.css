@@ -770,7 +770,7 @@ color:#ffffff;
     border: none;
 }
 	
-.mycal-header-extended.logout .mycal-logo {
+.mycal-header-extended.logout .mycal-logo, .mycal-header-extended .mycal-logo {
 	font-size: 2.12941rem;
 	margin: 0 !important;
 	max-width: 100%;
