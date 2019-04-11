@@ -596,6 +596,7 @@ div.mycal-logo img {
 }
 .mycal-nav-secondary-links li.mycal-nav-secondary-item button.mycal-nav-link > span {
 color:#ffffff;	
+	    margin-right: .5rem;
 	
 }
 
@@ -797,7 +798,7 @@ color:#ffffff;
 .mycal-nav-secondary-links .mycal-nav-secondary-item:after {
     color: #ffffff;
     content: "|";
-    padding-right: .25rem;
+    padding: .25rem;
 }
 	
 	.mycal-nav-secondary-links .mycal-nav-secondary-item+.mycal-nav-secondary-item:last-child:after {
