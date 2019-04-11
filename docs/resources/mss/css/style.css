@@ -602,6 +602,18 @@ color:#ffffff;
 .mycal-nav-secondary-links a:hover {
 	color: #ffffff;
 }
+
+.mycal-nav-secondary-links span:hover {
+	color: #ffffff;
+	text-decoration:underline;
+}
+
+.mycal-nav-secondary-item button.mycal-nav-link:hover{
+
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 .mycal-nav .mycal-nav-link.mycal-current {
 	font-weight: 600;
 	background-color: #ffffff;
