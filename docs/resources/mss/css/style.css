@@ -1578,6 +1578,16 @@ nav.mycal-breadcrumb	{
 
 #dialog-overlay
    { 
-    background-color: #000000;
+    background-color: #000000 !important;
     opacity: .4;
 	   transition: opacity 0.15s linear;}
+
+
+.ui-widget-header {
+	background-color:transparent;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.ui-widget-content{
+	border: 1px solid #e5e5e5;
+}
