@@ -1,4 +1,4 @@
-@charset "utf-8";
+
 hr {
 	margin-top: .2em;
 }
@@ -873,24 +873,9 @@ position: absolute;
     font-size: 1rem;
 }
 	
-	.mycal-nav-primary a[aria-expanded=false]::after {
-    font-family: "FontAwesome";
-    content: "\f107";
-    color: #000000;
-    float: right;
-    font-size: 1.5rem;
-}
+
 	
-		.mycal-nav-primary a[aria-expanded=false]::after {
-    font-family: "FontAwesome";
-    content: "\f077";
-    color: #000000;
-    float: right;
-    font-size: 1.5rem;
-}
-	
-	
-.mycal-nav-primary button[aria-expanded=false]::after {
+.mycal-nav-primary button[aria-expanded=false]::after, .mycal-nav-primary a[aria-expanded=false]::after {
 
     font-family: "FontAwesome";
     content: "\f107";
@@ -912,7 +897,7 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
     background-color: #ffffff;
 }	
 
-	.mycal-nav .mycal-nav-primary button[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]:after{
+	.mycal-nav .mycal-nav-primary button[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link a[aria-expanded=true]:after{
 		
 	 font-family: "FontAwesome";
     content: "\f077";
@@ -921,11 +906,7 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
     margin-top: -.25rem;	
 	}
 	
-.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
-
-        font-weight: 600;
-	background-color:#ffffff;
-}	
+.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {font-weight: 600;background-color:#ffffff;}	
 	
 	.mycal-nav-submenu {
     background-color: #ffffff;
