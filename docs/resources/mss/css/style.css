@@ -673,8 +673,12 @@ color:#ffffff;
         background-position: right 1rem top 53%;
         background-repeat: no-repeat;
         background-size: .5rem;
-        color: #fff
-    }	
+        color: #000000;
+    }
+	
+	 .mycal-nav-primary button[aria-expanded=true] span {
+     font-weight:600;
+    }
 	
 	.mycal-nav .mycal-nav-primary > li > a:focus, .mycal-nav .mycal-accordion-button.mycal-nav-link:focus {
 
@@ -906,7 +910,12 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
     margin-top: -.25rem;	
 	}
 	
-.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {font-weight: 600;background-color:#ffffff;}	
+.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
+	background-color:#ffffff;}
+	
+	
+	.mycal-nav .mycal-nav-primary button[aria-expanded=true] span, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] span {
+	font-weight:600;}	
 	
 	.mycal-nav-submenu {
     background-color: #ffffff;
