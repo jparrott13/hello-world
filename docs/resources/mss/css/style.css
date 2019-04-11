@@ -809,7 +809,7 @@ color:#ffffff;
     padding: 0;
 }
 	
-	.mycal-nav-primary-item .mobile	 {
+	.mycal-nav-primary-item.mobile	 {
 		display:none;
 	}
 	
