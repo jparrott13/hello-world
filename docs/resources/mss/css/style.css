@@ -1584,7 +1584,7 @@ nav.mycal-breadcrumb	{
 
 
 .ui-widget-header {
-	background-color:transparent;
+	background-color:transparent !important;
 	border-bottom: 1px solid #e5e5e5;
 }
 
