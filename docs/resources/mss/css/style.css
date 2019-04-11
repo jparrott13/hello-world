@@ -627,6 +627,23 @@ color:#ffffff;
 	background-color: #ffffff;
 }
 
+	.unreadMessages {
+position: absolute;
+    background: #F4B125;
+    height: 1rem;
+    top: 0.5rem;
+    right: 4.5rem;
+    width: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    font-size: .75rem;
+    border-radius: 50%;
+    color: #000;
+    border: #F4B125;
+    font-family: "Open Sans", arial, sans-serif;
+    font-weight: 600;	}	
+	
+
 @media screen and (min-width: 64em) {
  .mycal-header-extended [aria-expanded=false]:after {
     bottom: 0;
@@ -704,24 +721,11 @@ color:#ffffff;
     color: #ffffff;
     margin: 0.55rem;
 }	
-.messages::after {
-    content: "1";
-    position: absolute;
-    background: #F4B125;
-    height: 1rem;
-    top: -.25rem;
-    right: -0.5rem;
-    width: 1rem;
-    text-align: center;
-    line-height: 1rem;
-    font-size: .75rem;
-    border-radius: 50%;
-    color: #000;
-    border: #F4B125;
-    font-family: "Open Sans", arial, sans-serif;
-    font-weight: 600;
-}	
 	
+	
+	
+
+
 .mycal-nav-secondary-item > a > i.fa-envelope {
     font-size: 1.5rem;
     margin: 0.55rem;
