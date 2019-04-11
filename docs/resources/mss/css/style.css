@@ -1574,3 +1574,10 @@ nav.mycal-breadcrumb	{
 
 	
 }
+
+
+#dialog-overlay
+   { 
+    background-color: #000000;
+    opacity: .4;
+	   transition: opacity 0.15s linear;}
