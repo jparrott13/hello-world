@@ -731,6 +731,11 @@ color:#ffffff;
     color: #ffffff !important;
 }
 	
+	.mycal-nav-secondary-item button.mycal-nav-link:hover:after {
+    color: #ffffff !important;
+}
+
+	
 .mycal-header-extended .mycal-nav-secondary-item > .mycal-nav-link::hover {
     color:#ffffff;
 	text-decoration:underline;
