@@ -123,11 +123,12 @@ a:hover, a.hover {
 	text-decoration: underline;
 }
 a:focus, a.focus {
-	outline: solid;
-	outline: 3px solid #39659b;
-	outline-offset: 4px;
-	border-radius: 0;
-	margin: 5px;
+    outline: solid;
+    outline: 3px solid #39659b;
+    outline-offset: .5rem;
+    border-radius: 0;
+    margin: 1rem !important;
+    line-height: 3rem;
 }
 
 
@@ -703,6 +704,7 @@ color:#ffffff;
     outline-offset: 4px;
     border-radius: 0;
     margin: 5px;
+		    padding: 0rem;
 }
 	
 .mycal-nav .mycal-nav-link:hover, .mycal-nav .mycal-accordion-button.mycal-nav-link:hover {
@@ -1150,8 +1152,9 @@ input[type=checkbox], input[type=radio] {
     font-family: 'FontAwesome', "Open Sans";
 }
 
-.mycal-focus, select:focus, button:focus, input[type='button']:focus, input[type='submit']:focus, input[type='radio']:focus, input[type='checkbox']:focus, input[type='textarea']:focus, input[type='text']:focus, input[type='password']:focus, a:focus, .dialog:focus {
-    outline-offset: 4px;
+.mycal-focus, select:focus, button:focus, input[type='button']:focus, input[type='submit']:focus, input[type='radio']:focus, input[type='checkbox']:focus, input[type='textarea']:focus, input[type='text']:focus, input[type='password']:focus,.dialog:focus {
+     outline-offset: .5rem;
+    margin: 1rem;
 }
 
 /* Progress Bar */
