@@ -124,7 +124,7 @@ a:hover, a.hover {
 	color: #003c5e;
 	text-decoration: underline;
 }
-a:focus, a.focus {
+p a:focus, p a.focus {
     outline: solid;
     outline: 3px solid #39659b;
     outline-offset: .5rem;
@@ -133,6 +133,11 @@ a:focus, a.focus {
     line-height: 3rem;
 }
 
+li.mycal-nav-secondary-item button.mycal-nav-link:focus {
+    outline: .25rem solid #ffffff;
+    margin: 0;
+    outline-offset: 0;
+}
 
 .mycal-prose>a:focus {
     outline-offset: 4px;
