@@ -637,12 +637,20 @@ color:#ffffff;
 	display:contents;
 }
 	
+	.navbar-bg {
+		background-color: #00659e;
+	}
+	
 .mycal-header-extended [aria-expanded=false]:hover:after {
  
    color:#00659e !important
 
 }
 
+	.mycal-header-extended .mycal-navbar {
+		max-width:75rem;
+		margin: 0 auto;
+	}
 	
  .mycal-header-extended [aria-expanded=true]:after {
     bottom: 0;
@@ -789,7 +797,7 @@ position: absolute;
 	    padding: .5rem 0;
 }
 .mycal-header-extended .mycal-nav-inner {
-	max-width: 160rem;
+	max-width: 75rem;
 }
 .mycal-nav-submenu > li > a {
 	font-size: 1rem;
