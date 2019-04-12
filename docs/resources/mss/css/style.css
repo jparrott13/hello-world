@@ -1164,7 +1164,6 @@ input[type=checkbox], input[type=radio] {
 .progress-steps .steps-count {
 	font-weight: bold;
 	color: #666666;
-	text-transform: uppercase;
 	letter-spacing: .25px;
 	margin-bottom: .5em;
 }
