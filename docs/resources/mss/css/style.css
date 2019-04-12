@@ -1,4 +1,6 @@
 
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+	
 hr {
 	margin-top: .2em;
 }
@@ -632,7 +634,8 @@ color:#ffffff;
  .mycal-header-extended [aria-expanded=false]:after {
     bottom: 0;
     height: .25rem;
-    font-family: "FontAwesome";
+       font-family: "Font Awesome 5 Free";
+	 font-weight:900;
     content: "\f078";
     color: #000000;
 	display:contents;
@@ -656,7 +659,8 @@ color:#ffffff;
  .mycal-header-extended [aria-expanded=true]:after {
     bottom: 0;
     height: .25rem;
-    font-family: "FontAwesome";
+       font-family: "Font Awesome 5 Free";
+	 font-weight:900;
     content: "\f077";
     color: #000000;
 	display:contents;
@@ -891,7 +895,8 @@ position: absolute;
 	
 .mycal-nav-primary button[aria-expanded=false]::after, .mycal-nav-primary a[aria-expanded=false]::after {
 
-    font-family: "FontAwesome";
+       font-family: "Font Awesome 5 Free";
+	font-weight:900;
     content: "\f107";
     color: #000000;
     float: right;
@@ -899,7 +904,8 @@ position: absolute;
 }
 	
 button[aria-expanded=true].mycal-accordion-button.mycal-nav-link.mycal-current span::after {
-    font-family: "FontAwesome";
+       font-family: "Font Awesome 5 Free";
+	font-weight:900;
     content: "\f077";
     color: #000000;
     float: right;
@@ -913,7 +919,8 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 
 	.mycal-nav .mycal-nav-primary button[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link a[aria-expanded=true]:after{
 		
-	 font-family: "FontAwesome";
+	    font-family: "Font Awesome 5 Free";
+		font-weight:900;
     content: "\f077";
     color: #000000;
     float: right;
@@ -1010,14 +1017,14 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 	    font-size: 1.05rem;
 }
 .mycal-menu-btn::before {
-    font-family: "FontAwesome";
+       font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f0c9";
     margin: .5rem;
 }
 
 .mycal-nav-close::before {
-    font-family: "FontAwesome";
+       font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f00d";
     margin: 0 .5rem;
@@ -1063,7 +1070,8 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 
 
 .mycal-footer-nav li.grid-col-auto::before {
-    font-family: "FontAwesome";
+        font-family: "Font Awesome 5 Free";
+	font-weight:900;
     content: "\007C";
     color: #ffffff;
     position: absolute;
@@ -1081,7 +1089,8 @@ li.mycal-footer-primary-content {
 	padding: 5px 0;
 }
 li.mycal-footer-primary-content:before {
-	font-family: "FontAwesome";
+	    font-family: "Font Awesome 5 Free";
+	font-weight:900;
 	content: "\007C";
 	color: #ffffff;
 }
@@ -1149,7 +1158,7 @@ input[type=checkbox], input[type=radio] {
 
  button, html input[type=button], input[type=reset], input[type=submit] {
  
-    font-family: 'FontAwesome', "Open Sans";
+        font-family: "Font Awesome 5 Free", "Open Sans";
 }
 
 .mycal-focus, select:focus, button:focus, input[type='button']:focus, input[type='submit']:focus, input[type='radio']:focus, input[type='checkbox']:focus, input[type='textarea']:focus, input[type='text']:focus, input[type='password']:focus,.dialog:focus {
@@ -1277,7 +1286,8 @@ background: url(../../images/ept/result_error_field_icon.png) no-repeat 0px 3px;
 
 div.fieldErrorMessage::before {
     content: "\f057";
-    font-family: 'FontAwesome' !important;
+       font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
     top: -3px;
     color: #cc0033;
     font-size: 1.25rem;
@@ -1293,7 +1303,8 @@ div.fieldErrorMessage::before {
 
 div.inlineValid::before {
     content: "\f058";
-    font-family: 'FontAwesome' !important;
+    font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
     top: -3px;
     color: #689844;
     font-size: 1.25rem;
@@ -1381,7 +1392,8 @@ position: absolute;
 
 .bx-wrapper .bx-next:before, .bx-wrapper .bx-prev:before {
     position: absolute !important;
-    font-family: 'FontAwesome' !important;
+       font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
     font-size: 2rem !important;
     color: #666666 !important;
     top: -14px !important;
@@ -1399,7 +1411,8 @@ position: absolute;
 
 .bx-wrapper .bx-next:prev, .bx-wrapper .bx-prev:before {
     position: absolute !important;
-    font-family: 'FontAwesome' !important;
+     font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
     font-size: 2rem !important;
     color: #666666 !important;
     top: -14px !important;
@@ -1516,7 +1529,8 @@ position: absolute;
 .success > div::before {
 	content:"\f058";
 	color:#689844;
-	font-family:"FontAwesome" !important;
+	    font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
 	font-size:2.25rem;
 	position:absolute;
 	top:0.25rem;
@@ -1531,7 +1545,8 @@ position: absolute;
 .notification > div::before {
 	content:"\f06a";
 	color:#c49128;
-	font-family:"FontAwesome" !important;
+	    font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
 	font-size:2.25rem;
 	position:absolute;
 	top:0.25rem;
@@ -1546,7 +1561,8 @@ position: absolute;
 .information > div::before {
 	content:"\f05a";
 	color:#0080b8;
-	font-family:"FontAwesome" !important;
+	    font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
 	font-size:2.25rem;
 	position:absolute;
 	top:0.25rem;
@@ -1562,7 +1578,8 @@ position: absolute;
 .error > div::before {
 	content:"\f057";
 	color:#cc0033;
-	font-family:"FontAwesome" !important;
+    font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
 	font-size:2.25rem;
 	position:absolute;
 	top:0.25rem;
@@ -1623,9 +1640,9 @@ td p.expire {
     padding: 0 5px;
     line-height: .875rem;
     font-size: .875rem;
-    font-family: 'FontAwesome';
+      font-family: "Font Awesome 5 Free";
     content: "\f054";
-    font-weight: 400;
+   font-weight:900;
 }
 
 .mycal-unstyled-list li:last-child::after {
