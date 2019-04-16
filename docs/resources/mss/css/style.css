@@ -521,7 +521,7 @@ section h5[id]:focus {
 }
 .white {
 	background-color: #ffffff;
-	border: 1px solid #000000;
+
 }
 .spark-orange {
 	background-color: #b95726;
@@ -1137,6 +1137,23 @@ input[type=checkbox], input[type=radio] {
     height: 1rem;
     width: 1rem;
 }
+
+
+span.mycal-checkbox {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 2px;
+    /* border: 1px solid gray; */
+    position: relative;
+    left: 22px;
+    top: -3px;
+    box-shadow: 0 0 0 2px #666666;
+    /* align-content: center; */
+    background-color: #ffffff;
+}
+
 .mycal-radio-input:checked+.mycal-radio-label:before {
    
     box-shadow: 0 0 0 2px #666666, inset 0 0 0 2px #fff;
@@ -1458,6 +1475,12 @@ position: absolute;
 .success > div, .notification > div, .information > div, .error > div {
 	padding: 20px 20px 15px 65px;
 }
+
+
+.success > div:focus, .notification > div:focus, .information > div:focus, .error > div:focus {
+    outline: 1px solid auto;
+}
+
 .success, .notification, .information, .error {
 	margin: 0 10px 10px 10px;
 }
