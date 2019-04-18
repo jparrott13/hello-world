@@ -80,6 +80,18 @@ h2 {
 	font-size: 2.125rem;
 	font-weight: 300;
 }
+
+h2 a:focus {
+	
+	  outline: solid;
+    outline: 3px solid #39659b;
+    border-radius: 0;
+    margin: .25rem !important;
+    line-height: .25rem;
+}
+
+
+
 h3 {
 	font-size: 1.875rem;
 	font-weight: 300;
@@ -120,6 +132,13 @@ a {
 	text-decoration: underline;
 	cursor: pointer;
 }
+
+a:focus {
+	margin: .25rem !important;
+    line-height: .25rem;
+
+}
+
 a:hover, a.hover {
 	color: #003c5e;
 	text-decoration: underline;
@@ -127,10 +146,9 @@ a:hover, a.hover {
 p a:focus, p a.focus {
     outline: solid;
     outline: 3px solid #39659b;
-    outline-offset: .5rem;
     border-radius: 0;
-    margin: 1rem !important;
-    line-height: 3rem;
+    margin: .25rem !important;
+    line-height: .25rem;
 }
 
 li.mycal-nav-secondary-item button.mycal-nav-link:focus {
@@ -141,6 +159,14 @@ li.mycal-nav-secondary-item button.mycal-nav-link:focus {
 
 .mycal-prose>a:focus {
     outline-offset: 4px;
+}
+
+
+ .mycal-skipnav:focus {
+
+    outline: solid;
+    outline: 3px solid #000000;
+	     line-height: inherit;
 }
 
 a:visited, a.visited {
@@ -199,6 +225,8 @@ a.secondary-nav-link:focus, a.secondary-nav-link.focus {
 .mycal-footer-primary-section .mycal-footer-primary-link:focus, a.mycal-footer-primary-link.focus {
 	outline-color: #fff;
 	outline-offset: -5px;
+    line-height: inherit;
+    margin: 0 !important;
 }
 .mycal-footer-primary-link.mycal-external_link:after {
 	background: url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat 0 0;
@@ -433,6 +461,8 @@ section h5[id]:focus {
 	outline-offset: -3px;
 	outline-style: solid;
 	outline-width: 3px;
+	line-height: inherit;
+    margin: inherit !important;
 }
 /*.mycal-button-secondary, .mycal-button-secondary.active {
 	color: #23518b;
@@ -471,6 +501,8 @@ section h5[id]:focus {
 	outline-offset: -3px;
 	outline-style: solid;
 	outline-width: 3px;
+		line-height: inherit;
+    margin: inherit !important;
 }
 .disabled {
 	opacity: .5;
@@ -598,9 +630,11 @@ div.mycal-logo img {
 
 .mycal-nav-secondary {
 	color: #ffffff;
+
 }
 .mycal-nav-secondary-links a {
 	color: #ffffff;
+
 }
 .mycal-nav-secondary-links li.mycal-nav-secondary-item button.mycal-nav-link > span {
 color:#ffffff;	
@@ -700,14 +734,27 @@ color:#ffffff;
 	
 	.mycal-nav .mycal-nav-primary > li > a:focus, .mycal-nav .mycal-accordion-button.mycal-nav-link:focus {
 
-    margin: 0;
+    margin: 0 !important;
 }
 	
 	.mycal-nav-secondary-links .mycal-nav-secondary-item:last-child:after {
     content: "";
 }
 	
-	.mycal-nav-secondary-links a:focus, a#headerLogoId:focus {
+	
+		.mycal-nav-secondary-links a:focus {
+    outline: solid;
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 0;
+margin: 0 !important;
+			    line-height: inherit;
+		   
+}
+	
+	    
+	
+	a#headerLogoId:focus {
     outline: solid;
     outline: 3px solid #ffffff;
     outline-offset: 4px;
@@ -821,6 +868,11 @@ position: absolute;
 }
 .mycal-nav-submenu > li > a:hover {
 	color: #003c5e !important;
+}
+	
+	.mycal-nav-submenu .mycal-nav-submenu-item a:focus {
+
+    outline-offset: 4px;
 }
 	
 .mycal-nav-secondary-links .mycal-nav-secondary-item:after {
@@ -1181,6 +1233,12 @@ span.mycal-checkbox {
  button, html input[type=button], input[type=reset], input[type=submit] {
  
         font-family: "Font Awesome 5 Free", "Open Sans";
+}
+
+
+.mycal-input, .mycal-range, .mycal-select, .mycal-textarea {
+
+    margin: .25rem 0 .5rem 0;
 }
 
 
