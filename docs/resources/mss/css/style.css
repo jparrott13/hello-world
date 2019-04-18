@@ -462,7 +462,7 @@ section h5[id]:focus {
 	outline-style: solid;
 	outline-width: 3px;
 	line-height: inherit;
-    margin: inherit !important;
+
 }
 /*.mycal-button-secondary, .mycal-button-secondary.active {
 	color: #23518b;
@@ -502,7 +502,7 @@ section h5[id]:focus {
 	outline-style: solid;
 	outline-width: 3px;
 		line-height: inherit;
-    margin: inherit !important;
+
 }
 .disabled {
 	opacity: .5;
