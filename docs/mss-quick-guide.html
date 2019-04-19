@@ -416,24 +416,24 @@
 		
 			<h3>Buttons</h3>
 				 <h4>Primary</h4>
-    
+    <div class="grid-row">
           <button class="button mycal-button">Default</button>
           <button class="button mycal-button-hover">Hover</button>
           <button class="button mycal-button">Active</button>
           <button class="button mycal-button-focus">Focus</button>
           <button class="button mycal-button disabled">Disabled</button>
-    
+    </div>
         <h4>Secondary</h4>
-
+  <div class="grid-row">
           <button class="button mycal-button-secondary">Default</button>
           <button class="button mycal-button-secondary-hover">Hover</button>
           <button class="button mycal-button-secondary">Active</button>
           <button class="button mycal-button-secondary-focus">Focus</button>
           <button class="button mycal-button-secondary disabled">Disabled</button>
-     
+      </div>
         
         <h4>Tertiary</h4>
-   <a href="#">Tertiary Link</a> 
+   <a href="#">Tertiary Link</a> 	<a tabindex="0" id="MoreInfoCalPERSID"><i class="fa fa-info-circle"></i><span class="mycal-sr-only">information on CalPERS ID</span></a> 
   
 				
 		
@@ -498,50 +498,32 @@
 		$j('head').append('<style>.messages:after{content::1;}</style>');
 	</script> 
 </script> 
-<br/>
-<div style="font-size:11px; text-align: center;"> <span style="padding-right:5px"><a href="/psr-web/ept/shiftDataSource.html?psr.param42=PvwJGpM-2Zs71X6LVDp3sHlhLywNHesBuMbM0O8esesfKRHCHYhM7rQFBINNlmrYlu-TnFmMosD5zVsOQQqxmEP2K7t4PGqc">DataSource Shifter</a></span> | <span style="padding-left:5px"> <a href="/psr-web/ept/shiftTime.html?psr.param43=OwryebGIFAGZG5-0-XIBiqoh2-fE2cOUI7Z1z-4xXn2z7-tLT4sNfHqDfQ3n74xbyUc-MBut5iZrJQKqMLqgjsZzsvTQc9s_">Time Shifter</a> </span> | <span style="padding-right:5px"> <a title="Open developer console" onclick="openPopupUrl('/psr-web/ept/devtools/devConsole.html', 'devConsole');return false;" href="#">Developer Console</a> </span> <br/>
-  <span style="padding-right:10px">Build: 1.2.a</span> <span style="padding-right:10px">Baseline: 2007-12-31-235954</span> <span style="padding-right:10px"><b>UID: 503</b></span> <br/>
-  <span style="padding-right:10px">Username: ADA2688005114</span> <span style="padding-right:10px">Datasource: 
-  MSS_TE2 </span> <span style="padding-right:10px">Schema owner: 
-  MSS_TE2 </span> <span style="padding-right:10px">Server: 
-  AdminServer </span> <br/>
-  <span style="padding-right:10px">Last imported dataset name: 
-  2019/02/25 00:01:03 MINI      MASKED </span> <br/>
-  <span style="padding-right:10px">Current patch level: 
-  UNKNOWN </span> <span style="padding-right:10px">Database: 
-  MYCDR.CALPERS.CA.GOV </span> <br/>
-  <span style="padding-right:10px"> Action class : <span style="display:block; overflow-wrap: anywhere; word-break: break-all; word-wrap:break-word">psr.web.mvc.action.general.crm.InquiryThreadListAction</span> <br/>
-  JSP : ept/general/crm/inquiryThreadList.jsp </span> <br/>
-  <span style="padding-right:10px">SQL query executed by this page: 
-  
-  
-  
-  9
-  
-  
-  
-  
-  in
-  
-  
-  
-  0.033
-  
-  
-  seconds with 11 rows received. </span> <br/>
-  <span style="padding-right:10px"> <span style="color:red"> Duplicate queries executed by this page: 1
-  in 0.000
-  seconds with 1 rows received. </span> </span> <br/>
-  <span style="padding-right:10px">Action execution time: 
-  
-  
-  
-  0.069  
-  
-  
-  seconds</span> <br/>
-</div>
-<br/>
+<script>
+$j(document).ready(function() {
+	// setup ssn or cid field
+    if ('' == 'CID')
+    	enablePersID();
+    else	
+    	enableSSN();
+});
+document.addEventListener('DOMContentLoaded', function(){
+    var instance = new Tooltip(document.getElementById("MoreInfoCalPERSID"), {
+        title: "<p style='text-align: left;'>This is the new quicktip style.</p>",       
+        trigger: "click touchend",
+        closeOnClickOutside: true,
+        popperOptions: {
+            modifiers: {
+              flip: {
+                boundariesElement: 'scrollParent',
+              },
+            },        
+        },
+        html: true,
+    });
+    instance.hide();
+});
+
+</script>
 <script>
 					new SessionTimer({'time': 900, 'delta':3, 'refreshTime':28800, 'logoutWaitTime':60
 					,'logoutUrl':function() { logout("/psr-web/ept/home/eptLogout.html","/psr-web/ept/public/systemaccess/login/username.html"); }, 'sessionUrl':'/psr-web/ept/keepSession.html','ept':true }).start();
