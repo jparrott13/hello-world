@@ -467,7 +467,32 @@
     </div>
   </div>
 </footer>
+<script>
+$j(document).ready(function() {
+	// setup ssn or cid field
+    if ('' == 'CID')
+    	enablePersID();
+    else	
+    	enableSSN();
+});
+document.addEventListener('DOMContentLoaded', function(){
+    var instance = new Tooltip(document.getElementById("MoreInfoCalPERSID"), {
+        title: "<p style='text-align: left;'>This is the new quicktip style.</p>",       
+        trigger: "click touchend",
+        closeOnClickOutside: true,
+        popperOptions: {
+            modifiers: {
+              flip: {
+                boundariesElement: 'scrollParent',
+              },
+            },        
+        },
+        html: true,
+    });
+    instance.hide();
+});
 
+</script>
 <!-- new Jquery UI --> 
 <script type="text/javascript" src="resources/mss/js/updated/jquery-ui.min.js"></script> 
 <script type="text/javascript" src="resources/mss/js/updated/jquery.dialogOptions.js"></script> 
@@ -498,32 +523,7 @@
 		$j('head').append('<style>.messages:after{content::1;}</style>');
 	</script> 
 </script> 
-<script>
-$j(document).ready(function() {
-	// setup ssn or cid field
-    if ('' == 'CID')
-    	enablePersID();
-    else	
-    	enableSSN();
-});
-document.addEventListener('DOMContentLoaded', function(){
-    var instance = new Tooltip(document.getElementById("MoreInfoCalPERSID"), {
-        title: "<p style='text-align: left;'>This is the new quicktip style.</p>",       
-        trigger: "click touchend",
-        closeOnClickOutside: true,
-        popperOptions: {
-            modifiers: {
-              flip: {
-                boundariesElement: 'scrollParent',
-              },
-            },        
-        },
-        html: true,
-    });
-    instance.hide();
-});
 
-</script>
 <script>
 					new SessionTimer({'time': 900, 'delta':3, 'refreshTime':28800, 'logoutWaitTime':60
 					,'logoutUrl':function() { logout("/psr-web/ept/home/eptLogout.html","/psr-web/ept/public/systemaccess/login/username.html"); }, 'sessionUrl':'/psr-web/ept/keepSession.html','ept':true }).start();
