@@ -435,13 +435,23 @@
         <h4>Tertiary</h4>
    <a href="#">Tertiary Link</a> 	<a tabindex="0" id="MoreInfoCalPERSID"><i class="fa fa-info-circle"></i><span class="mycal-sr-only">information on CalPERS ID</span></a> 
   
-				
-		<div class="grid-col-5">
-					<label for="participantAddressEPTPanel.newMailingAddress.address.zipCode5" id="participantAddressEPTPanel.newMailingAddress.address.zipLbl">ZIP Code<span class="required"> (required)</span></label>
+			<div class="grid-row grid-col-5">
+					<label for="participantAddressEPTPanel.newMailingAddress.address.zipCode5" id="participantAddressEPTPanel.newMailingAddress.address.zipLbl">ZIP Code no Pattern<span class="required"> (required)</span></label>
 					 <div id="participantAddressEPTPanel.newMailingAddress.address.postalLbl_placeholder"></div>
 					
 					<span id="participantAddressEPTPanel.newMailingAddress.address.zipFields"> 
-						<input id="participantAddressEPTPanel.newMailingAddress.address.zipCode5" name="participantAddressEPTPanel.newMailingAddress.address.zipCode5" class="requiredTextField mycal-input" type="text" value="95758" size="5" pattern="[0-9]*" maxlength="5" onblur="requiredTextFieldValidation(this);"> 
+						<input id="participantAddressEPTPanel.newMailingAddress.address.zipCode5" name="participantAddressEPTPanel.newMailingAddress.address.zipCode5" class="requiredTextField mycal-input" type="text"  size="5" pattern="[0-9]*" maxlength="5" onblur="requiredTextFieldValidation(this);"> 
+					</span>
+					<div id="participantAddressEPTPanel.newMailingAddress.address.postalCode_placeholder"></div>
+					</div>
+			
+						
+		<div class="grid-row grid-col-5">
+					<label for="participantAddressEPTPanel.newMailingAddress.address.zipCode5" id="participantAddressEPTPanel.newMailingAddress.address.zipLbl">ZIP Code Number Pattern<span class="required"> (required)</span></label>
+					 <div id="participantAddressEPTPanel.newMailingAddress.address.postalLbl_placeholder"></div>
+					
+					<span id="participantAddressEPTPanel.newMailingAddress.address.zipFields"> 
+						<input id="participantAddressEPTPanel.newMailingAddress.address.zipCode5" name="participantAddressEPTPanel.newMailingAddress.address.zipCode5" class="requiredTextField mycal-input" type="text"  size="5" pattern="[0-9]*" maxlength="5" onblur="requiredTextFieldValidation(this);"> 
 					</span>
 					<div id="participantAddressEPTPanel.newMailingAddress.address.postalCode_placeholder"></div>
 					</div>
