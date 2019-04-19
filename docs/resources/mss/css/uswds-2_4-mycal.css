@@ -14693,11 +14693,7 @@ input[type=search] {
         display: inline;
         padding-left: .25rem
     }
-    .mycal-nav-secondary-links .mycal-nav-secondary-item+.mycal-nav-secondary-item:before {
-        color: #dbdee1;
-        content: "|";
-        padding-right: .25rem
-    }
+
 /** Change from calpers **/
 
 .mycal-nav-submenu  > li > a {
