@@ -1242,6 +1242,11 @@ span.mycal-checkbox {
 }
 
 
+.mycal-textarea:focus {
+    outline: .25rem solid #00659e;
+    outline-offset: 0;
+}
+
 /* Progress Bar */
 
 .progress-steps p {
