@@ -169,6 +169,16 @@ li.mycal-nav-secondary-item button.mycal-nav-link:focus {
 	     line-height: inherit;
 }
 
+a.cancel {
+    vertical-align: middle;
+    float: right;
+}
+
+a.cancel:focus {
+    line-height: inherit;
+    margin: 0 !important;
+}
+
 a:visited, a.visited {
 	color: #715192;
 }
@@ -1775,3 +1785,4 @@ nav.mycal-breadcrumb	{
 .ui-widget-content{
 	border: 1px solid #e5e5e5;
 }
+l
