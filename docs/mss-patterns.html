@@ -316,16 +316,7 @@ function includeHTML() {
   }
 };
 </script>
-	<script>
-	   jQuery(function($) {
-     var path = window.location.href; 
-     $('ul li.mycal-side-nav-item a').each(function() {
-      if (this.href === path) {
-       $(this).addClass('mycal-current');
-      }
-     });
-    });
-</script>
+
 <body class="page-utilities layout-styleguide ">
 <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
 <div class="mycal-overlay"></div>
@@ -466,14 +457,9 @@ function includeHTML() {
 includeHTML();
 </script>
 	<script>
-	   jQuery(function($) {
-     var path = window.location.href; 
-     $('ul li.mycal-side-nav-item a').each(function() {
-      if (this.href === path) {
-       $(this).addClass('mycal-current');
-      }
-     });
-    });
+$(function() {
+  $('ul.site-sidenav.mycal-sidenav li.mycal-sidenav-item a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+});
 </script>
 	</body>
 </html>
