@@ -12,7 +12,7 @@
 <script>
 	   jQuery(function($) {
      var path = window.location.href; 
-     $('ul a').each(function() {
+     $('ul li.mycal-side-nav-item a').each(function() {
       if (this.href === path) {
        $(this).addClass('mycal-current');
       }
