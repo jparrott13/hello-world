@@ -8,3 +8,14 @@
     <li class="mycal-sidenav-item"> <a href="mss-typography.html"> Typography </a> </li>
   </ul>
 </aside>
+
+<script>
+	   jQuery(function($) {
+     var path = window.location.href; 
+     $('ul a').each(function() {
+      if (this.href === path) {
+       $(this).addClass('mycal-current');
+      }
+     });
+    });
+</script>
