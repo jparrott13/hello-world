@@ -1365,13 +1365,13 @@ span.sr-only {
 	.au-progress-indicator__status {
 		color: #000 !important
 	}
-}
+
 .au-body .au-progress-indicator, .au-progress-indicator {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.25;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: 'Open Sans', arial, sans-serif;
 	list-style: none;
 	padding: 0;
 	border-top: 1px solid gray
@@ -1485,7 +1485,7 @@ span.sr-only {
 }
 .au-progress-indicator--dark .au-progress-indicator__status {
 	color: #b8cfd4
-
+}
 
 /** Changes **/
 .grid-row {
