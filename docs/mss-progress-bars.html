@@ -288,6 +288,17 @@
 <script> 
 	var $j = jQuery.noConflict();
 </script>
+	
+		<script>
+$(document).ready(function(){
+  $(".hide-progress").click(function(){
+    $(".inactive").hide();
+  });
+  $(".show-progress").click(function(){
+    $(".inactive").show();
+  });
+});
+</script>
 </head>
 <body class="page-utilities layout-styleguide ">
 <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
@@ -415,16 +426,7 @@
 </main>
 
 	
-	<script>
-$(document).ready(function(){
-  $(".hide-progress").click(function(){
-    $("li.inactive").hide();
-  });
-  $(".show-progress").click(function(){
-    $("li.inactive").show();
-  });
-});
-</script>
+
 
 <!-- new Jquery UI --> 
 <script type="text/javascript" src="resources/mss/js/updated/jquery-ui.min.js"></script> 
