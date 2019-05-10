@@ -81,6 +81,16 @@
 
 <!-- JS Includes -->
 <script type="text/javascript" src="resources/mss/js/updated/jquery-3.3.1.min.js"></script>
+							<script>
+$(document).ready(function(){
+  $(".hide-progress").click(function(){
+    $(".inactive").hide();
+  });
+  $(".show-progress").click(function(){
+    $(".inactive").show();
+  });
+});
+</script>
 <script> 
 	var $j = jQuery.noConflict();
 	var isEpt = true;
@@ -384,19 +394,19 @@
 
 <ul class="mycal-progress">
   <li class="active">
-    <span data-nav-position="1 of 3: " class="mycal-progress__link mycal-progress__link--doing">
+    <span data-nav-position="Step 1 of 3: " class="mycal-progress__link mycal-progress__link--doing">
   
       First
     </span>
   </li>
   <li class="inactive">
-    <span data-nav-position="2 of 3: " class="mycal-progress__link mycal-progress__link--todo">
+    <span data-nav-position="Step 2 of 3: " class="mycal-progress__link mycal-progress__link--todo">
   
       Next
     </span>
   </li>
   <li class="inactive">
-    <span data-nav-position="3 of 3: " class="mycal-progress__link mycal-progress__link--done">
+    <span data-nav-position="Step 3 of 3: " class="mycal-progress__link mycal-progress__link--done">
  
       Last
     </span>
@@ -442,16 +452,7 @@
 <script type="text/javascript" src="resources/mss/js/updated/gatag.js"></script> 
 
 	
-						<script>
-$(document).ready(function(){
-  $(".hide-progress").click(function(){
-    $(".inactive").hide();
-  });
-  $(".show-progress").click(function(){
-    $(".inactive").show();
-  });
-});
-</script>
+
 <!-- <script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script>  
 <script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script>
 <script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script>
