@@ -486,7 +486,7 @@
 
 		  
 			<!--<p class="info"><button class="hide-progress">Hide</button></p>-->
-			<p class="float-right"><a tabindex="0" class="show-progress">Show All Steps</a></p>
+			<a tabindex="0" class="show-progress float-right">Show All Steps</a>
 			  </div>
 		  
       </div>
@@ -582,11 +582,20 @@ document.addEventListener('DOMContentLoaded', function(){
 				</script>
 	 		<script>
 $j(document).ready(function(){
-  $j(".hide-progress").click(function(){
-    $j(".inactive").hide();
-  });
+  //$j(".hide-progress").click(function(){
+ //   $j(".inactive").hide();
+//  });
   $j(".show-progress").click(function(){
     $j(".inactive").show();
+	  $j(".show-progress").click(function(){
+		  $j(this).toggleClass("inactive");
+		  if ($j.trimn($j(this).text()) === 'Show All Steps') {
+			  $j(this).text('Hide All Steps');
+		  } else {
+			  $j(this).text('Show All Steps');
+		  }
+		  return false;
+	  });
   });
 });
 </script>
