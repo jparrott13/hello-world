@@ -381,16 +381,7 @@
 		  
 		  <div class="grid-row">
     <div class="grid-col 12 tablet:grid-col-4">
-				<script>
-$(document).ready(function(){
-  $(".hide-progress").click(function(){
-    $(".inactive").hide();
-  });
-  $(".show-progress").click(function(){
-    $(".inactive").show();
-  });
-});
-</script>
+
 <ul class="mycal-progress">
   <li class="active">
     <span data-nav-position="1 of 3: " class="mycal-progress__link mycal-progress__link--doing">
@@ -432,6 +423,16 @@ $(document).ready(function(){
 <!-- new Jquery UI --> 
 <script type="text/javascript" src="resources/mss/js/updated/jquery-ui.min.js"></script> 
 <script type="text/javascript" src="resources/mss/js/updated/jquery.dialogOptions.js"></script> 
+					<script>
+$(document).ready(function(){
+  $(".hide-progress").click(function(){
+    $(".inactive").hide();
+  });
+  $(".show-progress").click(function(){
+    $(".inactive").show();
+  });
+});
+</script>
 
 <!-- datatable --> 
 <script type="text/javascript" src="resources/mss/js/updated/datatables.min.js"></script> 
