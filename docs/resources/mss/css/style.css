@@ -1349,6 +1349,8 @@ span.sr-only {
 
 /*! @gov.au/progress-indicator v3.1.7 */
 
+
+@media screen and (min-width: 40em) {
 		ul.mycal-progress {
 			counter-reset: progress-counter;
 }
@@ -1358,7 +1360,7 @@ content: counter(progress-counter);
 counter-increment: progress-counter;
 
 	}
-
+}
 
 @media print {
 	.mycal-progress {
@@ -1475,6 +1477,20 @@ counter-increment: progress-counter;
 }
 .mycal-progress--dark .mycal-progress__status {
 	color: #b8cfd4
+}
+
+
+@media screen and (max-width: 63.99em) {
+
+ul.mycal-progress li > span:before  {
+    content: attr(data-nav-position) !important;
+}
+
+ul.mycal-progress li > span:before  {
+    content: '';
+}
+
+
 }
 
 
