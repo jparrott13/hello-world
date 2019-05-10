@@ -289,16 +289,7 @@
 	var $j = jQuery.noConflict();
 </script>
 	
-		<script>
-$(document).ready(function(){
-  $(".hide-progress").click(function(){
-    $(".inactive").hide();
-  });
-  $(".show-progress").click(function(){
-    $(".inactive").show();
-  });
-});
-</script>
+
 </head>
 <body class="page-utilities layout-styleguide ">
 <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
@@ -390,6 +381,16 @@ $(document).ready(function(){
 		  
 		  <div class="grid-row">
     <div class="grid-col 12 tablet:grid-col-4">
+				<script>
+$(document).ready(function(){
+  $(".hide-progress").click(function(){
+    $(".inactive").hide();
+  });
+  $(".show-progress").click(function(){
+    $(".inactive").show();
+  });
+});
+</script>
 <ul class="mycal-progress">
   <li class="active">
     <span data-nav-position="1 of 3: " class="mycal-progress__link mycal-progress__link--doing">
