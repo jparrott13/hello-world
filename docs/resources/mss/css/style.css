@@ -1360,6 +1360,10 @@ content: counter(progress-counter);
 counter-increment: progress-counter;
 
 	}
+	li.inactive {
+		display:none;
+	}	
+	
 }
 
 @media print {
