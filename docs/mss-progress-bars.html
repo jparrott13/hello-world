@@ -82,12 +82,7 @@
 <!-- JS Includes -->
 <script type="text/javascript" src="resources/mss/js/updated/jquery-3.3.1.min.js"></script>
 							
-	<script>
-$(document).ready(function(){
-  $(".hide-progress").click(function(){
- alert("Hello! I am an alert box!!");
-});
-</script>
+
 <script> 
 	var $j = jQuery.noConflict();
 	var isEpt = true;
@@ -231,6 +226,8 @@ $(document).ready(function(){
 
 		
 </script>
+
+	
 
 <!-- CSS Includes -->
 <link rel="stylesheet" type="text/css" href="resources/mss/css/updated/uswds-2_4-mycal.css">
@@ -480,7 +477,16 @@ $(document).ready(function(){
       </nav>
     </div>
   </div>
- 
+ 		<script>
+$j(document).ready(function(){
+  $(".hide-progress").click(function(){
+    $(".inactive").hide();
+  });
+  $(".show-progress").click(function(){
+    $(".inactive").show();
+  });
+});
+</script>
 </footer>
 </body>
 </html>
