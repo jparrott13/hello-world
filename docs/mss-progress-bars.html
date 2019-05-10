@@ -380,28 +380,29 @@
 		  <div class="grid-row">
     <div class="grid-col 12 tablet:grid-col-4">
 <ul class="mycal-progress">
-  <li>
+  <li class="active">
     <span data-nav-position="1 of 3: " class="mycal-progress__link mycal-progress__link--doing">
   
-      Introduction
+      First
     </span>
   </li>
-  <li>
+  <li class="inactive">
     <span data-nav-position="2 of 3: " class="mycal-progress__link mycal-progress__link--todo">
   
-      Business Contacts
+      Next
     </span>
   </li>
-  <li>
+  <li class="inactive">
     <span data-nav-position="3 of 3: " class="mycal-progress__link mycal-progress__link--done">
  
-      Case Studies
+      Last
     </span>
   </li>
         </ul>
 
 		  
-			  
+			<p class="info"><button class="hide-progress">Hide</button></p>
+			<p class="info"><button class="show-progress">Show</button></p>
 			  </div></div>
 		  
 		  
@@ -413,6 +414,17 @@
 </div>
 </main>
 
+	
+	<script>
+$(document).ready(function(){
+  $(".hide-progress").click(function(){
+    $("li.inactive").hide();
+  });
+  $(".show-progress").click(function(){
+    $("li.inactive").show();
+  });
+});
+</script>
 
 <!-- new Jquery UI --> 
 <script type="text/javascript" src="resources/mss/js/updated/jquery-ui.min.js"></script> 
