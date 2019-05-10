@@ -1909,7 +1909,10 @@ div.breadcrumb > a {
 nav.mycal-breadcrumb	{
 	display:none;
 	}
+	.parent-reverse {
 
+	flex-direction:column-reverse;
+}
 	
 }
 
@@ -1929,4 +1932,3 @@ nav.mycal-breadcrumb	{
 .ui-widget-content{
 	border: 1px solid #e5e5e5;
 }
-l
