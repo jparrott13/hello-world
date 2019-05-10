@@ -401,7 +401,7 @@
     <div class="grid-container-desktop-lg flex-wrap"> 
       <!-- Breadcrumbs -->
       
-      <div class="grid-row grid-gap">
+      <div class="grid-row grid-gap parent-reverse">
         <div class="tablet:grid-col-8 grid-col-12 mycal-padding-bottom-content">
           <h1>MSS Patterns</h1>
           <h2>Quick Reference Guide</h2>
@@ -457,13 +457,49 @@
 					</div>
 			
         </div>
-        <div class="tablet:grid-col-4 grid-col-12">
+     <div class="grid-col 12 tablet:grid-col-4">
+		 <h2>Complex Progress Bar Style</h2> 
+		  
+		  <div class="grid-row">
+  
+
+<ul class="mycal-progress">
+  <li class="active">
+    <span data-nav-position="Step 1 of 3: " class="mycal-progress__link mycal-progress__link--doing">
+  
+      First
+    </span>
+  </li>
+  <li class="inactive">
+    <span data-nav-position="Step 2 of 3: " class="mycal-progress__link mycal-progress__link--todo">
+  
+      Next
+    </span>
+  </li>
+  <li class="inactive">
+    <span data-nav-position="Step 3 of 3: " class="mycal-progress__link mycal-progress__link--done">
+ 
+      Last
+    </span>
+  </li>
+        </ul>
+
+		  
+			<p class="info"><button class="hide-progress">Hide</button></p>
+			<p class="info"><button class="show-progress">Show</button></p>
+			  </div></div>
+		  
+		  
+      </div>
+		
+		
+		     <div class="tablet:grid-col-4 grid-col-12">
           <div class="sidebar">
             <h2>Sidebar Style</h2>
             <p> Sidebar text with <a href="https://www.calpers.ca.gov/page/faq" target="_blank">link</a>. </p>
           </div>
         </div>
-      </div>
+		
     </div>
   </div>
 
