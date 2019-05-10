@@ -135,7 +135,7 @@ a {
 
 a:focus {
 	margin: .25rem !important;
-    line-height: .25rem;
+   
 
 }
 
@@ -1360,10 +1360,20 @@ content: counter(progress-counter);
 counter-increment: progress-counter;
 
 	}
-	li.inactive {
+.show-progress {
 		display:none;
-	}	
+	}
+}
+
+@media screen and (max-width: 40em) {
+
+		li.inactive {
+		display:none;
+	}
 	
+	.show-progress {
+		display:block;
+	}	
 }
 
 @media print {
