@@ -575,12 +575,21 @@ document.addEventListener('DOMContentLoaded', function(){
 <script>
 		$j('head').append('<style>.messages:after{content::1;}</style>');
 	</script> 
-</script> 
 
 <script>
 					new SessionTimer({'time': 900, 'delta':3, 'refreshTime':28800, 'logoutWaitTime':60
 					,'logoutUrl':function() { logout("/psr-web/ept/home/eptLogout.html","/psr-web/ept/public/systemaccess/login/username.html"); }, 'sessionUrl':'/psr-web/ept/keepSession.html','ept':true }).start();
 				</script>
+	 		<script>
+$j(document).ready(function(){
+  $j(".hide-progress").click(function(){
+    $j(".inactive").hide();
+  });
+  $j(".show-progress").click(function(){
+    $j(".inactive").show();
+  });
+});
+</script>
 </body>
 </html>
 <!--<script>
