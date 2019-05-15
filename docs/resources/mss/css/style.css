@@ -1946,3 +1946,318 @@ nav.mycal-breadcrumb	{
 .ui-widget-content{
 	border: 1px solid #e5e5e5;
 }
+
+
+
+/* Vertical Tabs */
+
+.mycal-vertical-tabs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+	border: 1px solid #dddbda;
+	border-radius: .25rem
+}
+.mycal-vertical-tabs__nav {
+	 width: 33.33333%
+	border-right: 1px solid #dddbda;
+	background: #f3f2f2
+}
+.mycal-vertical-tabs__nav-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	overflow: hidden;
+	border-bottom: 1px solid #dddbda;
+	color: #3e3e3c
+}
+.mycal-vertical-tabs__nav-item:last-child {
+	margin-bottom: -1px
+}
+.mycal-vertical-tabs__link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0%;
+	flex: 1 1 0%;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	min-width: 0;
+	padding: .75rem;
+	color: currentColor
+}
+.mycal-vertical-tabs__link:hover {
+	background: #dddbda;
+	color: #080707;
+	text-decoration: none
+}
+.mycal-vertical-tabs__link:focus {
+	outline: 0
+}
+.mycal-vertical-tabs__left-icon {
+	margin-right: .5rem
+}
+.mycal-vertical-tabs__left-icon:empty {
+	margin-right: 0
+}
+.mycal-vertical-tabs__right-icon {
+	margin-left: auto
+}
+.mycal-vertical-tabs__content {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	padding: 1rem;
+	background: #fff
+}
+.mycal-vertical-tabs__nav-item.mycal-is-active {
+	margin-right: -1px;
+	border-right: 0;
+	background: #fff;
+	color: #006dcc
+}
+.mycal-vertical-tabs__nav-item.mycal-is-active .mycal-vertical-tabs__link:hover {
+	background: #fff;
+	color: currentColor
+}
+.mycal-vertical-tabs__nav-item.mycal-has-focus {
+	text-decoration: underline
+}	
+	
+	
+	
+	@media print {
+	.mycal-no-print {
+		display: none
+	}
+}
+.mycal-collapsed {
+	height: 0;
+	overflow: hidden
+}
+.mycal-expanded {
+	height: auto;
+	overflow: visible
+}
+.mycal-assistive-text {
+	position: absolute !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	text-transform: none !important;
+	white-space: nowrap !important
+}
+.mycal-assistive-text_focus:focus, .mycal-assistive-text--focus:focus {
+	margin: inherit !important;
+	border: inherit !important;
+	padding: inherit !important;
+	width: auto !important;
+	height: auto !important;
+	overflow: visible !important;
+	clip: auto !important
+}
+.mycal-is-collapsed {
+	height: 0;
+	overflow: hidden
+}
+.mycal-is-expanded {
+	height: auto;
+	overflow: visible
+}
+.mycal-hidden {
+	visibility: hidden !important
+}
+.mycal-visible {
+	visibility: visible
+}
+.mycal-hide {
+	display: none !important
+}
+.mycal-show {
+	display: block
+}
+.mycal-show_inline-block, .mycal-show--inline-block {
+	display: inline-block
+}
+.mycal-show_inline, .mycal-show--inline {
+	display: inline
+}
+.mycal-transition-hide {
+	opacity: 0
+}
+.mycal-transition-show {
+	opacity: 1
+}
+.mycal-x-small-show {
+	display: none
+}
+@media (min-width: 320px) {
+	.mycal-x-small-show {
+		display: block
+	}
+	.mycal-x-small-show_inline-block, .mycal-x-small-show--inline-block {
+		display: inline-block
+	}
+	.mycal-x-small-show_inline, .mycal-x-small-show--inline {
+		display: inline
+	}
+}
+.mycal-x-small-show-only {
+	display: none
+}
+@media (min-width: 320px) and (max-width: 479px) {
+	.mycal-x-small-show-only {
+		display: block
+	}
+	.mycal-x-small-show-only_inline-block, .mycal-x-small-show-only--inline-block {
+		display: inline-block
+	}
+	.mycal-x-small-show-only_inline, .mycal-x-small-show-only--inline {
+		display: inline
+	}
+}
+@media (max-width: 479px) {
+	.mycal-max-x-small-hide {
+		display: none
+	}
+}
+.mycal-small-show {
+	display: none
+}
+@media (min-width: 480px) {
+	.mycal-small-show {
+		display: block
+	}
+	.mycal-small-show_inline-block, .mycal-small-show--inline-block {
+		display: inline-block
+	}
+	.mycal-small-show_inline, .mycal-small-show--inline {
+		display: inline
+	}
+}
+.mycal-small-show-only {
+	display: none
+}
+@media (min-width: 480px) and (max-width: 767px) {
+	.mycal-small-show-only {
+		display: block
+	}
+	.mycal-small-show-only_inline-block, .mycal-small-show-only--inline-block {
+		display: inline-block
+	}
+	.mycal-small-show-only_inline, .mycal-small-show-only--inline {
+		display: inline
+	}
+}
+@media (max-width: 767px) {
+	.mycal-max-small-hide {
+		display: none
+	}
+}
+.mycal-medium-show {
+	display: none
+}
+@media (min-width: 768px) {
+	.mycal-medium-show {
+		display: block
+	}
+	.mycal-medium-show_inline-block, .mycal-medium-show--inline-block {
+		display: inline-block
+	}
+	.mycal-medium-show_inline, .mycal-medium-show--inline {
+		display: inline
+	}
+}
+.mycal-medium-show-only {
+	display: none
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+	.mycal-medium-show-only {
+		display: block
+	}
+	.mycal-medium-show-only_inline-block, .mycal-medium-show-only--inline-block {
+		display: inline-block
+	}
+	.mycal-medium-show-only_inline, .mycal-medium-show-only--inline {
+		display: inline
+	}
+}
+@media (max-width: 1023px) {
+	.mycal-max-medium-hide {
+		display: none
+	}
+}
+.mycal-large-show {
+	display: none
+}
+@media (min-width: 1024px) {
+	.mycal-large-show {
+		display: block
+	}
+	.mycal-large-show_inline-block, .mycal-large-show--inline-block {
+		display: inline-block
+	}
+	.mycal-large-show_inline, .mycal-large-show--inline {
+		display: inline
+	}
+}
+@media (min-width: 320px) {
+	.mycal-hide_x-small, .mycal-hide--x-small {
+		display: none !important
+	}
+}
+@media (max-width: 319px) {
+	.mycal-show_x-small, .mycal-show--x-small {
+		display: none !important
+	}
+}
+@media (min-width: 480px) {
+	.mycal-hide_small, .mycal-hide--small {
+		display: none !important
+	}
+}
+@media (max-width: 479px) {
+	.mycal-show_small, .mycal-show--small {
+		display: none !important
+	}
+}
+@media (min-width: 768px) {
+	.mycal-hide_medium, .mycal-hide--medium {
+		display: none !important
+	}
+}
+@media (max-width: 767px) {
+	.mycal-show_medium, .mycal-show--medium {
+		display: none !important
+	}
+}
+@media (min-width: 1024px) {
+	.mycal-hide_large, .mycal-hide--large {
+		display: none !important
+	}
+}
+@media (max-width: 1023px) {
+	.mycal-show_large, .mycal-show--large {
+		display: none !important
+	}
+}
+@media (min-width: 1280px) {
+	.mycal-hide_x-large, .mycal-hide--x-large {
+		display: none !important
+	}
+}
+@media (max-width: 1279px) {
+	.mycal-show_x-large, .mycal-show--x-large {
+		display: none !important
+	}
+}
