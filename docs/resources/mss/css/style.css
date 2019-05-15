@@ -79,6 +79,7 @@ h1 {
 h2 {
 	font-size: 2.125rem;
 	font-weight: 300;
+	margin: 0;
 }
 
 h2 a:focus {
@@ -1960,20 +1961,22 @@ nav.mycal-breadcrumb	{
 	border-radius: .25rem
 }
 .mycal-vertical-tabs__nav {
-	 width: 33.33333%;
-	border-right: 1px solid #dddbda;
-	background: #f3f2f2
+	 /* width: 33.33333%; */
+	 border-right: 1px solid #eee;
+	 background: #cce0eb;
+	 padding-inline-start: 0;
+	 margin-block-end: 0;
 }
 .mycal-vertical-tabs__nav-item {
-	display: -webkit-box;
+	/* display: -webkit-box; */
 	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
+	/* display: flex; */
+	/* -webkit-box-align: center; */
 	-ms-flex-align: center;
-	align-items: center;
+	/* align-items: center; */
 	overflow: hidden;
 	border-bottom: 1px solid #dddbda;
-	color: #3e3e3c
+	color: #3e3e3c;
 }
 .mycal-vertical-tabs__nav-item:last-child {
 	margin-bottom: -1px
@@ -1989,8 +1992,8 @@ nav.mycal-breadcrumb	{
 	-ms-flex-align: center;
 	align-items: center;
 	min-width: 0;
-	padding: .75rem;
-	color: currentColor
+	padding: 1.25rem;
+	color: currentColor;
 }
 .mycal-vertical-tabs__link:hover {
 	background: #dddbda;
@@ -2013,14 +2016,14 @@ nav.mycal-breadcrumb	{
 	-webkit-box-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	padding: 1rem;
-	background: #fff
+	padding: 1.5rem;
+	background: #fff;
 }
 .mycal-vertical-tabs__nav-item.mycal-is-active {
 	margin-right: -1px;
 	border-right: 0;
 	background: #fff;
-	color: #006dcc
+	color: #006dcc;
 }
 .mycal-vertical-tabs__nav-item.mycal-is-active .mycal-vertical-tabs__link:hover {
 	background: #fff;
