@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title and meta description
+================================================== -->
+
+<title>MSS Patterns - Vertical Tabs</title>
+<meta property="og:title" content="myCalPERS new responsive design">
+
+<!-- Favicons
+================================================== -->
+<!-- 128x128 -->
+<link rel="shortcut icon" type="image/ico" href="http://lgdimcip1:20410/mss/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="http://lgdimcip1:20410/mss/img/favicons/favicon.png">
+
+<!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+<link rel="icon" type="image/png" sizes="192x192" href="http://lgdimcip1:20410/mss/img/favicons/favicon-192.png">
+
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://lgdimcip1:20410/mss/img/favicons/favicon-57.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://lgdimcip1:20410/mss/img/favicons/favicon-72.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://lgdimcip1:20410/mss/img/favicons/favicon-114.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://lgdimcip1:20410/mss/img/favicons/favicon-144.png">
+
+<!-- CSS
+================================================== -->
+<!-- env: demo -->
+
+<!--<link rel="stylesheet" href="resources/mss/css/v2style.css">
+<link rel="stylesheet" href="resources/mss/css/uswds-2_4-mycal.css">
+<script type="text/javascript" src="resources/mss/js/forms.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/ept/ept.js"></script>		-->
+
+<!-- CSS Includes -->
+<!--<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/menu2.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/ept/dialog.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="resources/mss/css/datepicker.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/uswds-2_4-mycal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/modaal.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="resources/mss/css/jquery-ui.css" />-->
+<!-- From PSR -->
+<!--<script type="text/javascript" src="resources/mss/js/prototype-1.7.3.js"></script>-->
+<!-- JS Includes -->
+<!--<script type="text/javascript" src="resources/mss/js/jquery-2.1.4.min.js"></script>
+<script src="resources/mss/js/calendar-popup.js"></script>
+<script src="resources/mss/js/application.js"></script> -->
+
+<!--<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/psr-web/js/cp_analytics.js"></script>
+
+		
+<script>var teaLeafTargetUrl = "/psr-web/ept/public/systemaccess/tealeafTarget.html"</script>
+
+<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/ept/tealeaf/TealeafSDKConfig.js"></script>		
+<script type="text/javascript" src="http://esdd-58707:7001/psr-web/js/tealeaf/TealeafSDK.js"></script> -->
+
+<!-- From PSR -->
+<script type="text/javascript" src="resources/mss/js/updated/prototype.js"></script>
+
+<!-- JS Includes -->
+<script type="text/javascript" src="resources/mss/js/updated/jquery-3.3.1.min.js"></script>
+<script> 
+	var $j = jQuery.noConflict();
+	var isEpt = true;
+	var surveyTriggeredElement; //used for storing the element/menu reference that triggered the survey.
+	
+	function elementSupportsAttribute(element, attribute) {
+		  var test = document.createElement(element);
+		  if (attribute in test) {
+		    return true;
+		  } else {
+		    return false;
+		  }
+		};
+
+	function setupTextareaPlaceholder()
+	{
+		if (!elementSupportsAttribute('textarea', 'placeholder')) {
+			
+			$j('[placeholder]').focus(function() {
+				  var input = $j(this);
+				  if (input.val() == input.attr('placeholder')) {
+				    input.val('');
+				    input.removeClass('placeholder');
+				  }
+				}).blur(function() {
+				  var input = $j(this);
+				  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+				    input.addClass('placeholder');
+				    input.val(input.attr('placeholder'));
+				  }
+				}).blur().parents('form').submit(function() {
+				  $j(this).find('[placeholder]').each(function() {
+				    var input = $j(this);
+				    if (input.val() == input.attr('placeholder')) {
+				      input.val('');
+				    }
+				  })
+				}); 
+		}
+	}
+
+	Event.observe(window, "load", function(){ 
+		addGAToDownloadLinks();
+
+		if($j('#nav > li.active')){
+			$j('#hidden-secondary-menu').html($j('#nav > li.active').find("ul").html());
+		}
+		
+		if ($j('#nav > li.active').length == 0)
+		{
+			//$j('#topNav').css("min-height",'38px');
+		}
+		else //if ( $j('#topNav ul.active').height() > 38 )
+		{
+			//$j('#topNav').css("min-height",'72px');
+			
+		}
+
+		if($j('.tabbedContainer > ul > li > a')){
+			$j('.tabbedContainer > ul > li > a').attr('aria-expanded', 'false');
+		}
+		if ( $j('.tabbedContainer > ul > li > a.active').length == 0)
+		{
+			$j('.tabbedContainer > ul > li:first > a').addClass('active');
+			$j('.tabbedContainer > ul > li:first > a').attr('aria-expanded', 'true');
+			$j('.tabbedContainer > ul > li:first > a').parent().next().find('a').addClass('leftShadow');
+			$j ( $j('.tabbedContainer > ul > li:first > a').attr('href') ).show();
+		}
+		else if ( $j('.tabbedContainer > ul > li > a.active').length == 1 )
+		{
+			$j ( $j('.tabbedContainer > ul > li> a.active').attr('href') ).show();
+			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
+		}
+		
+		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
+		
+		$j('.tabbedContainer > ul > li > a').click(function() {
+			var containerId = $j(this).parent().parent().parent().attr('id');
+			var targetId = $j(this).attr("href");
+			
+			$j('#' + containerId + ' > ul > li > a').removeClass('active').removeClass('rightShadow').removeClass('leftShadow');
+			$j('#' + containerId + ' > ul > li > a').attr('aria-expanded', 'false');
+			$j(this).addClass('active');
+			$j(this).attr('aria-expanded', 'true');
+			$j(this).parent().prev().find('a').addClass('rightShadow');
+			$j(this).parent().next().find('a').addClass('leftShadow');			
+			$j('#' + containerId + ' > div.content').hide();
+			$j('#' + containerId + ' > div' + targetId +  '.content').show();
+		});
+
+		setupTextareaPlaceholder();
+		
+		var restrictedContent = "<div class='notification'>"+
+							"<p><strong>You are restricted to READ-ONLY access for this moduke.<br\>"+
+							"Please contact us at <strong>888 CalPERS</strong> (or <strong>888</strong>-225-7377) for assistance.</p>"+
+							"</div>";
+		
+		
+		
+		
+		$j( " .error" ).focus();
+		
+		$j('.error > div > ul > li > a').each(function() {
+			search = $j(this).attr("href");
+			if(search != null && search.indexOf("#") >= 0){
+				search = search.replace("#","");
+				$j(this).attr("href", "#" + $j("input[name*='" + search + "'], select[name*='" + search + "'], textarea[name*='" + search + "']  ").attr("id"));
+			}
+		});
+	}); 		
+	    
+	var urlContext = '/psr-web';	
+</script>
+<script>
+
+	
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-25763786-9']);
+	_gaq.push(['_setDomainName', 'calpers.ca.gov']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+	  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<!-- From PSR -->
+<script src="resources/mss/js/updated/calendar-popup.js"></script>
+<script src="resources/mss/js/updated/application.js"></script>
+<script>
+	Psr.Request = Class.create({
+		initialize : function(url, options){
+			if( options.method && options.method.toUpperCase() == 'POST' ){
+				options.parameters = options.parameters || {};
+				options.parameters.psrFormToken='6cJla8JIfqlCD82MvPdKrX0VA';
+			}
+			new Ajax.Request(url, options);
+		}
+	});
+
+		
+</script>
+
+<!-- CSS Includes -->
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/uswds-2_4-mycal.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/calendar.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="resources/mss/css/updated/progress-steps.css">
+	
+
+	
+
+<!-- UX Custom -->
+<link rel="stylesheet" type="text/css" href="resources/mss/css/style.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<style>
+.roundedCorners, input[type='button'], input[type='submit'], a.doSomething, .mainButton, .button, .tabbedContainer > ul > li a {
+	behavior: url(/psr-web/css/ept/pie/PIE.htc);
+}
+	
+	
+	
+	
+.slds-vertical-tabs {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+	border: 1px solid #dddbda;
+	border-radius: .25rem
+}
+.slds-vertical-tabs__nav {
+	width: 12rem;
+	border-right: 1px solid #dddbda;
+	background: #f3f2f2
+}
+.slds-vertical-tabs__nav-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	overflow: hidden;
+	border-bottom: 1px solid #dddbda;
+	color: #3e3e3c
+}
+.slds-vertical-tabs__nav-item:last-child {
+	margin-bottom: -1px
+}
+.slds-vertical-tabs__link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0%;
+	flex: 1 1 0%;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	min-width: 0;
+	padding: .75rem;
+	color: currentColor
+}
+.slds-vertical-tabs__link:hover {
+	background: #dddbda;
+	color: #080707;
+	text-decoration: none
+}
+.slds-vertical-tabs__link:focus {
+	outline: 0
+}
+.slds-vertical-tabs__left-icon {
+	margin-right: .5rem
+}
+.slds-vertical-tabs__left-icon:empty {
+	margin-right: 0
+}
+.slds-vertical-tabs__right-icon {
+	margin-left: auto
+}
+.slds-vertical-tabs__content {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	padding: 1rem;
+	background: #fff
+}
+.slds-vertical-tabs__nav-item.slds-is-active {
+	margin-right: -1px;
+	border-right: 0;
+	background: #fff;
+	color: #006dcc
+}
+.slds-vertical-tabs__nav-item.slds-is-active .slds-vertical-tabs__link:hover {
+	background: #fff;
+	color: currentColor
+}
+.slds-vertical-tabs__nav-item.slds-has-focus {
+	text-decoration: underline
+}	
+	
+</style>
+
+
+<!-- Page Specific JS/CSS -->
+
+<script type="text/javascript">
+		function returnToLogin() 
+		{
+			location.href='/psr-web/ept/public/systemaccess/eptLogin.html?psr.param0=vU1LBnuXujCt2G9id2fJS2lXFyXuFeH_';
+		}
+		
+		function goToForgotUsername() 
+		{
+			location.href='/psr-web/ept/public/systemaccess/username/userIdentification.html?psr.param1=vU1LBnuXujCt2G9id2fJS2lXFyXuFeH_';
+		}
+		
+		function goToForgotPassword() 
+		{
+			location.href='/psr-web/ept/public/systemaccess/password/userIdentification.html?psr.param2=vU1LBnuXujCt2G9id2fJS2lXFyXuFeH_';
+		}
+		
+	    Event.observe(window, 'load', function() {
+		    if ('SSN' == 'CID')
+		    	enablePersID();
+		    else	
+		    	enableSSN();	    
+	    });
+
+		function enableSSN()
+		{
+			$('idTypeSSN').checked = true;
+			Psr.show('ssnInput');
+			Psr.hide('cidInput');			
+		}
+		
+		function enablePersID()
+		{
+			$('idTypeCID').checked = true;
+			Psr.show('cidInput');
+			Psr.hide('ssnInput');			
+		}
+	</script>
+<script> 
+	var $j = jQuery.noConflict();
+</script>
+	
+
+</head>
+<body class="page-utilities layout-styleguide ">
+<a class="mycal-skipnav" href="#main-content">Skip to main content</a>
+<div class="mycal-overlay"></div>
+<header class="mycal-header mycal-header-extended logout" role="banner">
+  <div class="mycal-navbar">
+  <div class="mycal-logo" id="extended-logo"> <em class="mycal-logo-text"><a id="headerLogoId" href="mss-patterns.html"><img alt="myCalPERS" src="resources/images/mycalpers-logo.svg"><span class="mycal-sr-only">Return to MSS Patterns</span></a> </em> </div>
+  </div>
+</header>
+<div id="callout"><!-- start callout --> 
+  
+</div>
+
+<!--<header class="mycal-header mycal-header-extended logout  grid-col-12" role="banner">
+  <div class="mycal-navbar">
+    <div class="mycal-logo site-logo" id="logo">
+      <em class="mycal-logo-text">
+        <a href="#" title="Home" aria-label="United States Web Design System home">
+          <span aria-hidden="true" class="site-title-short" style="color:#ffffff;">USWDS</span>
+          <span class="site-title" style="color:#ffffff;">myCalPERS</span>
+        </a>
+      </em>
+    </div>
+    <button class="mycal-menu-btn">Menu</button>
+    <ul class="site-button-list mycal-button-list mycal-unstyled-list">
+  <li>
+    <a class="mycal-button site-button-version" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');">
+      Based on USWDS v2.0 <span class="text-normal">Beta 4</span>
+    </a>
+  </li>
+</ul>
+
+  </div>
+</header>
+
+<nav role="navigation" class="mycal-nav sidenav-mobile">
+  <button class="mycal-nav-close"> <img src="http://lgdimcip1:20410/mss/img/close.svg" alt="close" style=""> </button>
+  <div class="mycal-nav-inner">
+    <ul class="mycal-nav-primary mycal-accordion">
+      <li class="mycal-nav-primary-item">
+        <button class="mycal-accordion-button mycal-nav-link" aria-controls="nav-documentation" aria-expanded="false"> Documentation </button>
+        <ul id="nav-documentation" class="mycal-nav-submenu" hidden="">
+          <li class="mycal-nav-submenu-item"> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-alerts.html"> <span> Alerts </span> </a> </li>
+          <li class="mycal-nav-submenu-item"> <a href="mss-buttons.html"> <span> Buttons </span> </a> </li>
+          <li class="mycal-nav-submenu-item mycal-current"> <a href="mss-typography.html"> <span> Typography </span> </a> </li>
+        </ul>
+      </li>
+    </ul>
+    </li>
+    </ul>
+  </div>
+</nav> -->
+<div w3-include-html="mss-pattern-navigation.html"></div>
+<main id="main-content">
+<div class="sidenav-main-content grid-container-desktop-lg">
+<div class="grid-col-12">
+
+	
+	
+	<div tabindex="0" role="alert" aria-live="assertive" aria-atomic="true" aria-relevant="all" class="information"><div> <h3 class="mycal-alert-heading">In Progress</h3>
+    <p class="mycal-alert-text">UX Developing</p></div></div>
+	
+
+		
+      <header>
+        <p class="site-subheading">Components</p>
+        <h1 id="buttons" class="site-page-title">Vertical Tabs</h1>
+      </header>
+      <p class="site-font-lead mycal-font-lead">Alert users to a destructive action.</p>
+      <div class="preview mycal-prose ">
+		  
+		  
+
+<div class="slds-vertical-tabs">
+  <ul class="slds-vertical-tabs__nav" role="tablist" aria-orientation="vertical">
+    <li class="slds-vertical-tabs__nav-item slds-is-active" title="Tab 1" role="presentation">
+      <a class="slds-vertical-tabs__link" href="javascript:void(0)" role="tab" tabindex="0" aria-selected="true" aria-controls="slds-vertical-tabs-0" id="slds-vertical-tabs-0__nav">
+        <span class="slds-vertical-tabs__left-icon"></span>
+        <span class="slds-truncate" title="Tab 1">Tab 1</span>
+        <span class="slds-vertical-tabs__right-icon"></span>
+      </a>
+    </li>
+    <li class="slds-vertical-tabs__nav-item" title="Tab 2" role="presentation">
+      <a class="slds-vertical-tabs__link" href="javascript:void(0)" role="tab" tabindex="-1" aria-selected="false" aria-controls="slds-vertical-tabs-1" id="slds-vertical-tabs-1__nav">
+        <span class="slds-vertical-tabs__left-icon"></span>
+        <span class="slds-truncate" title="Tab 2">Tab 2</span>
+        <span class="slds-vertical-tabs__right-icon"></span>
+      </a>
+    </li>
+    <li class="slds-vertical-tabs__nav-item" title="Tab 3 has a really long label and can wrap or truncate" role="presentation">
+      <a class="slds-vertical-tabs__link" href="javascript:void(0)" role="tab" tabindex="-1" aria-selected="false" aria-controls="slds-vertical-tabs-2" id="slds-vertical-tabs-2__nav">
+        <span class="slds-vertical-tabs__left-icon"></span>
+        <span class="slds-truncate" title="Tab 3 has a really long label and can wrap or truncate">Tab 3 has a really long label and can wrap or truncate</span>
+        <span class="slds-vertical-tabs__right-icon"></span>
+      </a>
+    </li>
+  </ul>
+  <div class="slds-vertical-tabs__content slds-show" id="slds-vertical-tabs-0" role="tabpanel" aria-labelledby="slds-vertical-tabs-0__nav">
+    <div class="slds-text-longform">
+      <h3 class="slds-text-heading_medium">Tab Title</h3>
+      <p>Content for Tab 1</p>
+      <p>Lorem ipsum dolor...</p>
+      <p>Lorem ipsum dolor...</p>
+    </div>
+  </div>
+  <div class="slds-vertical-tabs__content slds-hide" id="slds-vertical-tabs-1" role="tabpanel" aria-labelledby="slds-vertical-tabs-1__nav">
+    <div class="slds-text-longform">
+      <h3 class="slds-text-heading_medium">Tab Title</h3>
+      <p>Content for Tab 1</p>
+      <p>Lorem ipsum dolor...</p>
+      <p>Lorem ipsum dolor...</p>
+    </div>
+  </div>
+  <div class="slds-vertical-tabs__content slds-hide" id="slds-vertical-tabs-2" role="tabpanel" aria-labelledby="slds-vertical-tabs-2__nav">
+    <div class="slds-text-longform">
+      <h3 class="slds-text-heading_medium">Tab Title</h3>
+      <p>Content for Tab 1</p>
+      <p>Lorem ipsum dolor...</p>
+      <p>Lorem ipsum dolor...</p>
+    </div>
+  </div>
+</div>
+		  
+		  
+		  
+		  
+      </div>
+	
+	
+</div>
+</div>
+</main>
+
+	
+
+
+<!-- new Jquery UI --> 
+<script type="text/javascript" src="resources/mss/js/updated/jquery-ui.min.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/jquery.dialogOptions.js"></script> 
+
+<!-- datatable --> 
+<script type="text/javascript" src="resources/mss/js/updated/datatables.min.js"></script> 
+<!--  USWDS js --> 
+<script type="text/javascript" src="resources/mss/js/updated/uswds-2_4-mycal.js"></script> 
+
+<!--  Cutsom app specific --> 
+<script type="text/javascript" src="resources/mss/js/updated/quicktip.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/ept.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/application.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/hoverIntent.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/jquery.ba-dotimeout.min.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/jquery.plugins.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/jquery.cookies.min.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/mock.js"></script> 
+<script type="text/javascript" src="resources/mss/js/updated/gatag.js"></script> 
+
+<!-- <script type="text/javascript" src="resources/mss/js/jquery-ui.min.js"></script>  
+<script type="text/javascript" src="resources/mss/js/ept/hoverIntent.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ui.modal-dialog.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.ba-dotimeout.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.plugins.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/jquery.cookies.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/ept/mock.js"></script> --> 
+<!-- Modal 
+	<script type="text/javascript" src="resources/mss/js/modaal.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/calendar.js" />	
+
+<script type="text/javascript" src="resources/mss/js/datepicker.min.js"></script>
+<script type="text/javascript" src="resources/mss/js/uswds-2_4-mycal.js"></script>
+<script type="text/javascript" src="resources/mss/js/styleguide.js"></script>
+
+<script type="text/javascript" src="resources/mss/js/datatables.min.js"></script> -->
+<footer class="mycal-footer mycal-footer-slim" role="contentinfo">
+
+  <div class="mycal-footer-primary-section">
+    <div class="grid-row">
+      <nav class="mycal-footer-nav">
+        <ul class="add-list-reset grid-row grid-gap">
+          <li class="grid-col-auto mycal-footer-primary-content"> <a class="mycal-button site-button-version" target="_blank" href="https://v2.designsystem.digital.gov/" onclick="ga('send', 'event', 'Version', 'Clicked version number from inside site');">
+			  Based on USWDS v2.0 <span class="text-normal">Beta 4</span></a></li>
+         
+     
+        </ul>
+      </nav>
+    </div>
+  </div>
+ 
+</footer>
+	<script>
+includeHTML();
+</script>
+</body>
+</html>
+<!--<script>
+	$j('a[target]').addClass('mycal-external_link');
+Event.observe(window, "load", function(){ 
+		if($j('.tabbedContainer > ul > li > a')){
+			$j('.tabbedContainer > ul > li > a').attr('aria-expanded', 'false');
+		}
+		if ( $j('.tabbedContainer > ul > li > a.active').length == 0)
+		{
+			$j('.tabbedContainer > ul > li:first > a').addClass('active');
+			$j('.tabbedContainer > ul > li:first > a').attr('aria-expanded', 'true');
+			$j('.tabbedContainer > ul > li:first > a').parent().next().find('a').addClass('leftShadow');
+			$j ( $j('.tabbedContainer > ul > li:first > a').attr('href') ).show();
+		}
+		else if ( $j('.tabbedContainer > ul > li > a.active').length == 1 )
+		{
+			$j ( $j('.tabbedContainer > ul > li> a.active').attr('href') ).show();
+			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
+		}
+		
+		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
+		
+		$j('.tabbedContainer > ul > li > a').click(function() {
+			var containerId = $j(this).parent().parent().parent().attr('id');
+			var targetId = $j(this).attr("href");
+			
+			$j('#' + containerId + ' > ul > li > a').removeClass('active').removeClass('rightShadow').removeClass('leftShadow');
+			$j('#' + containerId + ' > ul > li > a').attr('aria-expanded', 'false');
+			$j(this).addClass('active');
+			$j(this).attr('aria-expanded', 'true');
+			$j(this).parent().prev().find('a').addClass('rightShadow');
+			$j(this).parent().next().find('a').addClass('leftShadow');			
+			$j('#' + containerId + ' > div.content').hide();
+			$j('#' + containerId + ' > div' + targetId +  '.content').show();
+		});
+	
+	});		
+</script> -->
