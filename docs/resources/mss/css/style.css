@@ -1,9 +1,73 @@
-
 @import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
-	
+
+/*** 
+
+Mobile TABLES
+
+***/
+.responsive-table.mobile,
+.mobile thead,
+.mobile tbody,
+.mobile th,
+.mobile td,
+.mobile tr {
+  display: block;
+}
+
+.mobile thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.mobile tr {
+  border: 1px solid #ccc;
+}
+
+.mobile td {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  text-align: right;
+  word-wrap: break-word;
+}
+
+.mobile .responsive-header {
+  font-size: 18px !important;
+  color: #444444 !important;
+  font-weight: bold;
+  display: inline;
+  float: left;
+  padding: 0px !important;
+  padding-left: 5px!important;
+  border:none;
+  ;
+}
+
+.mobile td:before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+.responsive-header {
+  display: none;
+}
+
 hr {
 	margin-top: .2em;
 }
+
+
+/***
+
+ALERTS 
+
+***/
+
 .mycal-alert {
 	margin-bottom: 20px;
 }
@@ -14,48 +78,66 @@ hr {
 	font-weight: 700;
 }
 
-  a.mask { position: relative;
+a.mask { 
+	position: relative;
     top: 0.75rem;
 }
 
-/* Body */
 
+/* Body */
 body {
 	font-family: 'Open Sans', arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 1.6;
-	color: #000000;
+	line-height: 24px;
+	color: #000;
 }
 p {
-	margin: 0 0 12.5px;
+	margin: 0 0 .75em;
 }
+* + p { 
+	margin-top: .75em !important; 
+}
+
+p.lead {
+	font-size: 25px;
+	line-height: 30px;
+	margin-bottom: .75em !important;
+}
+
+
 label, .label {
-	font-size: 1rem;
+	font-size: 16px;
+	line-height: 24px;
 	font-weight: 600;
-	color: #000000;
+	color: #000;
 }
 .helper-text {
-	font-size: 0.875rem;
+	font-size: 12.8px;
+	line-height: 24px;
 	font-weight: 400;
-	color: #333333;
-	margin: 0;
+	color: #000;
+	margin: 0 !important;
 }
 .disclaimer-text {
-	font-size: 0.875rem;
+	font-size: 12.8px;
+	line-height: 24px;
 	font-weight: 400;
-	color: #000000;
+	color: #000;
 	margin: 5px 0 5px 0;
 }
 span.required {
-	font-size: 0.875rem;
+	font-size: 12.8px;
+	line-height: 24px;
+	font-weight: 400;
+	vertical-align: baseline;
 	color: #cc0033;
 }
+
+
 /* Headings */
 
-
 .fa-info-circle {
-	
 	font-size: 1.25rem;
     color: #00659e;
 }
@@ -66,65 +148,68 @@ span.required {
 	-webkit-margin-before: 0px;
 	-webkit-margin-after: 0px;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', arial, sans-serif;
-	line-height: 1.1;
-	color: #666666;
-	margin: 30px 0 15px 0;
-}
-h1 {
-	font-size: 2.5rem;
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-weight: 500;
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: #000;
+	margin: 24px 0 12px;
 }
-h2 {
-	font-size: 2.125rem;
-	font-weight: 300;
-	margin: 0;
+h1, .h1 {
+	font-size: 48.828125px;
+	line-height: 58.59375px;
+	margin-top: 0;
+}
+h2, .h2 {
+	font-size: 39.0625px;
+	line-height: 46.875px;
 }
 
-h2 a:focus {
-	
-	  outline: solid;
+h2 a:focus, .h2 a:focus {
+	outline: solid;
     outline: 3px solid #39659b;
     border-radius: 0;
     margin: .25rem !important;
     line-height: .25rem;
 }
 
-
-
-h3 {
-	font-size: 1.875rem;
-	font-weight: 300;
+h3, .h3 {
+	font-size: 31.25px;
+	line-height: 37.5px;
 }
 h4, .h4 {
-	font-size: 1.625rem;
-	font-weight: 300;
+	font-size: 25px;
+	line-height: 30px;
 }
-h5 {
-	font-size: 1.375rem;
-	font-weight: 300;
+h5, .h5 {
+	font-size: 20px;
+	line-height: 24px;
 }
-h6 {
-	font-size: 1.125rem;
-	font-weight: 300;
-}
-.sidebar h2 {
-	font-size: 1.1875rem;
-	margin: 5px 0 15px 0;
-}
-.sidebar p {
-	line-height: 1.4;
-	padding: 5px 0 5px 0;
-	text-align: left;
-	font-size: 1rem;
+h6, .h6 {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 24px;
 }
 
+
 .sidebar {
-    padding: .8375rem;
+    padding: 16px 24px 16px;
     border: 1px solid #00659e;
-    margin-bottom: 1.25rem;
+    margin-bottom: 24px;
 }
+
+.sidebar h2,
+.sidebar .h2 {
+	font-size: 25px;
+	line-height: 30px;
+	margin-top: 0 !important;
+}
+
+.sidebar p {
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+}
+
 
 /* Links */
 
@@ -132,24 +217,17 @@ a {
 	color: #00659e;
 	text-decoration: underline;
 	cursor: pointer;
+	padding: 0;
 }
 
-a:focus {
-	margin: .25rem !important;
-   
-
+a:focus, a.focus {
+	outline: 3px solid #39659b;
+	outline-offset: 3px;
 }
 
 a:hover, a.hover {
 	color: #003c5e;
 	text-decoration: underline;
-}
-p a:focus, p a.focus {
-    outline: solid;
-    outline: 3px solid #39659b;
-    border-radius: 0;
-    margin: .25rem !important;
-    line-height: .25rem;
 }
 
 li.mycal-nav-secondary-item button.mycal-nav-link:focus {
@@ -163,7 +241,7 @@ li.mycal-nav-secondary-item button.mycal-nav-link:focus {
 }
 
 
- .mycal-skipnav:focus {
+.mycal-skipnav:focus {
 
     outline: solid;
     outline: 3px solid #000000;
@@ -173,6 +251,7 @@ li.mycal-nav-secondary-item button.mycal-nav-link:focus {
 a.cancel {
     vertical-align: middle;
     float: right;
+	line-height: 34px;
 }
 
 a.cancel:focus {
@@ -219,32 +298,27 @@ a.secondary-nav-link:hover, a.secondary-nav-link.hover {
 	color: #000000;
 }
 a.secondary-nav-link:focus, a.secondary-nav-link.focus {
-	outline: solid;
 	outline: 3px solid #00659e;
-	outline-offset: 4px;
-	border-radius: 0;
-	margin: 5px;
+	outline-offset: 3px;
 }
 .mycal-external_link:after {
-	background: url(http://lgdimcip1:20410/mss/img/external-link.svg) no-repeat 0 0;
+	background: url(../../images/external-link.svg) no-repeat 0 0;
 	background-size: 100%;
 }
 .mycal-external_link:hover:after {
-	background: url(http://lgdimcip1:20410/mss/img/external-link-hover.svg) no-repeat 0 0;
+	background: url(../../images/external-link-hover.svg) no-repeat 0 0;
 	background-size: 100%;
 }
 .mycal-footer-primary-section .mycal-footer-primary-link:focus, a.mycal-footer-primary-link.focus {
 	outline-color: #fff;
-	outline-offset: -5px;
-    line-height: inherit;
-    margin: 0 !important;
+	outline-offset: -6px;
 }
 .mycal-footer-primary-link.mycal-external_link:after {
-	background: url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat 0 0;
+	background: url(../../images/external-link-white.png) no-repeat 0 0;
 	background-size: 100%;
 }
 .mycal-footer-primary-link.mycal-external_link:hover:after {
-	background: url(http://lgdimcip1:20410/mss/img/external-link-white.png) no-repeat 0 0;
+	background: url(../../images/external-link-white.png) no-repeat 0 0;
 	background-size: 100%;
 }
 .mycal-footer-primary-section .mycal-footer-primary-link {
@@ -263,7 +337,7 @@ a.tooltip {
 
 /* Popovers */
 
-		a.quicktip /*.tooltip*/ {
+a.quicktip /*.tooltip*/ {
 	border-bottom: 1px dashed;
 	cursor: help;
 	font-weight: normal;
@@ -272,16 +346,31 @@ a.tooltip {
 	margin-left: 15px;
 	text-decoration: none;
 }
-	.link-anchor {
+
+a.quicktip-text {
+	border-bottom: 1px dashed;
+	cursor: help;
+	font-weight: normal;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+p a.quicktip {
+	margin-left: 0px;	
+}
+
+.link-anchor {
   position: relative;
   width: 0;
   font-size: .8em;
   opacity: 0;
   transition: opacity .2s ease-in-out;
 }
+
 .anchor-wrapper {
   border: none;
 }
+
 .anchor-wrapper:hover .link-anchor {
   opacity: 1;
 }
@@ -293,7 +382,6 @@ section h4[id]:focus,
 section h5[id]:focus {
   outline: 0;
 }
-
 
 .popper,
 .tooltip {
@@ -307,6 +395,7 @@ section h5[id]:focus {
     text-align: center;
 	font-size:0.875rem;
 }
+
 .style5 .tooltip {
     background: #1E252B;
     color: #FFFFFF;
@@ -315,6 +404,7 @@ section h5[id]:focus {
     font-size: .8rem;
     padding: .5em 1em;
 }
+
 .popper .popper__arrow,
 .tooltip .tooltip-arrow {
     width: 0;
@@ -328,15 +418,16 @@ section h5[id]:focus {
 .popper .popper__arrow {
     border-color: #666666;
 }
+
 .style5 .tooltip .tooltip-arrow {
     border-color: #666666;
 }
+
 .popper[x-placement^="top"],
 .tooltip[x-placement^="top"] {
     margin-bottom: 5px;
 }
-		
-		
+			
 .tooltip[x-placement^="top"] .tooltip-arrow::before, .tooltip-arrow::before {
     border-width: 5px 5px 0 5px;
     border-left-color: #ffffff;
@@ -351,8 +442,7 @@ section h5[id]:focus {
     border-style: solid;
     z-index: 999999;
 }		
-		
-		
+			
 .popper[x-placement^="top"] .popper__arrow,
 .tooltip[x-placement^="top"] .tooltip-arrow {
     border-width: 5px 5px 0 5px;
@@ -364,10 +454,12 @@ section h5[id]:focus {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .popper[x-placement^="bottom"],
 .tooltip[x-placement^="bottom"] {
     margin-top: 5px;
 }
+
 .tooltip[x-placement^="bottom"] .tooltip-arrow,
 .popper[x-placement^="bottom"] .popper__arrow {
     border-width: 0 5px 5px 5px;
@@ -379,10 +471,12 @@ section h5[id]:focus {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .tooltip[x-placement^="right"],
 .popper[x-placement^="right"] {
     margin-left: 5px;
 }
+
 .popper[x-placement^="right"] .popper__arrow,
 .tooltip[x-placement^="right"] .tooltip-arrow {
     border-width: 5px 5px 5px 0;
@@ -394,10 +488,12 @@ section h5[id]:focus {
     margin-left: 0;
     margin-right: 0;
 }
+
 .popper[x-placement^="left"],
 .tooltip[x-placement^="left"] {
     margin-right: 5px;
 }
+
 .popper[x-placement^="left"] .popper__arrow,
 .tooltip[x-placement^="left"] .tooltip-arrow {
     border-width: 5px 0 5px 5px;
@@ -410,22 +506,21 @@ section h5[id]:focus {
     margin-right: 0;
 }
 
-
-
 /* Numbers */
-
 .big-number {
-	font-size: 1.6875rem;
-	font-weight: 600;
-	color: #666666;
+	font-size: 48.828125px;
+    line-height: 58.59375px;
+	font-weight:600;
+	color: #666;
 }
 .small-number {
-	font-size: 1.375rem;
+	font-size: 31.25px;
+	line-height: 37.5px;
 	font-weight: 500;
-	color: #666666;
+	color: #000;
 }
-/* Buttons */
 
+/* Buttons */
 .button {
 	display: inline-block;
 	margin-bottom: 0;
@@ -458,12 +553,14 @@ section h5[id]:focus {
 	background-color: #b95726;
 	border-color: #a44d22;
 }
+
 .mycal-button:hover, .mycal-button-hover {
 	color: #ffffff;
 	background-color: #8f431d;
 	border-color: #713517;
 	text-decoration: none;
 }
+
 .mycal-button:focus, .mycal-button-focus {
 	color: #a3582d;
 	background-color: #fff;
@@ -473,8 +570,14 @@ section h5[id]:focus {
 	outline-style: solid;
 	outline-width: 3px;
 	line-height: inherit;
-
 }
+
+/* Add spacing between the icon and the text in a button */
+.mycal-button .fa,
+.mycal-button-secondary .fa {
+	margin-right: .25em;
+}
+
 /*.mycal-button-secondary, .mycal-button-secondary.active {
 	color: #23518b;
 	background-color: #cce0eb;
@@ -564,7 +667,6 @@ section h5[id]:focus {
 }
 .white {
 	background-color: #ffffff;
-
 }
 .spark-orange {
 	background-color: #b95726;
@@ -619,10 +721,8 @@ div.mycal-logo img {
 
 .mycal-navbar {
 	background-color: #00659e;
-	border: none !important;
-	
+	border: none !important;	
     height: inherit;
-
 }
 .mycal-nav {
 	background-color: #cce0eb;
@@ -641,16 +741,13 @@ div.mycal-logo img {
 
 .mycal-nav-secondary {
 	color: #ffffff;
-
 }
 .mycal-nav-secondary-links a {
 	color: #ffffff;
-
 }
 .mycal-nav-secondary-links li.mycal-nav-secondary-item button.mycal-nav-link > span {
 color:#ffffff;	
 	    margin-right: .5rem;
-	
 }
 
 .mycal-nav-secondary-links a:hover {
@@ -663,7 +760,6 @@ color:#ffffff;
 }
 
 .mycal-nav-secondary-item button.mycal-nav-link:hover{
-
     background-color: transparent;
     text-decoration: underline;
 }
@@ -681,222 +777,218 @@ color:#ffffff;
 }
 
 @media screen and (min-width: 64em) {
- .mycal-header-extended [aria-expanded=false]:after {
-    bottom: 0;
-    height: .25rem;
-       font-family: "Font Awesome 5 Free";
-	 font-weight:900;
-    content: "\f078";
-    color: #000000;
-	display:contents;
-}
-	
+	 .mycal-header-extended [aria-expanded=false]:after {
+	    bottom: 0;
+	    height: .25rem;
+	    font-family: "Font Awesome 5 Free";
+	    font-weight: 600;
+	    content: "\f078";
+	    color: #333;
+	    display:contents;
+	    font-size: .833rem;
+	}
+		
 	.navbar-bg {
 		background-color: #00659e;
 	}
+		
+	.mycal-header-extended [aria-expanded=false]:hover:after {
+	   color:#00659e !important
+	}
 	
-.mycal-header-extended [aria-expanded=false]:hover:after {
- 
-   color:#00659e !important
-
-}
-
 	.mycal-header-extended .mycal-navbar {
 		max-width:75rem;
 		margin: 0 auto;
 	}
+		
+	 .mycal-header-extended [aria-expanded=true]:after {
+	    font-size: .833rem;
+	    bottom: 0;
+	    height: .25rem;
+	    font-family: "Font Awesome 5 Free";
+	    font-weight:900;
+	    content: "\f077";
+	    color: #333;
+	    display:contents;
+	}
+		
+	.mycal-nav-primary button[aria-expanded=false] {
+		background-image: none;
+		background-image: none;
+		background-image: none;
+	}
 	
- .mycal-header-extended [aria-expanded=true]:after {
-    bottom: 0;
-    height: .25rem;
-       font-family: "Font Awesome 5 Free";
-	 font-weight:900;
-    content: "\f077";
-    color: #000000;
-	display:contents;
-}
+	.mycal-nav-primary button[aria-expanded=false]:focus, .mycal-nav-primary .mycal-accordion-button.mycal-current{
+		background-image: none; background-image: none; background-image: none;
+	}
 	
+	.mycal-nav-primary button[aria-expanded=false]:hover {
+		background-image: none; background-image: none; background-image: none;
+		background-repeat: no-repeat
+	}
 	
-.mycal-nav-primary button[aria-expanded=false] {
-        background-image: none;
-         background-image: none;
-         background-image: none;
-       
-    }
-    .mycal-nav-primary button[aria-expanded=false]:focus, .mycal-nav-primary .mycal-accordion-button.mycal-current{
-        background-image: none; background-image: none; background-image: none;
-      
-    }
-    .mycal-nav-primary button[aria-expanded=false]:hover {
-         background-image: none; background-image: none; background-image: none;
-        background-repeat: no-repeat
-    }
-    .mycal-nav-primary button[aria-expanded=true] {
-      background-image: none; background-image: none; background-image: none;
-        background-position: right 1rem top 53%;
-        background-repeat: no-repeat;
-        background-size: .5rem;
-        color: #000000;
-    }
+	.mycal-nav-primary button[aria-expanded=true] {
+	  	background-image: none; background-image: none; background-image: none;
+		background-position: right 1rem top 53%;
+		background-repeat: no-repeat;
+		background-size: .5rem;
+		color: #000000;
+	}
 	
-	 .mycal-nav-primary button[aria-expanded=true] span {
-     font-weight:600;
-    }
+	.mycal-nav-primary button[aria-expanded=true] span {
+		 font-weight:600;
+	}
 	
 	.mycal-nav .mycal-nav-primary > li > a:focus, .mycal-nav .mycal-accordion-button.mycal-nav-link:focus {
-
-    margin: 0 !important;
-}
-	
+	    margin: 0 !important;
+	}
+		
 	.mycal-nav-secondary-links .mycal-nav-secondary-item:last-child:after {
-    content: "";
-}
-	
-	
-		.mycal-nav-secondary-links a:focus {
-    outline: solid;
-    outline: 3px solid #ffffff;
-    outline-offset: 4px;
-    border-radius: 0;
-margin: 0 !important;
-			    line-height: inherit;
-		   
-}
-	
-	    
-	
+	    content: "";
+	}
+		
+	.mycal-nav-secondary-links a:focus {
+	    outline: solid;
+	    outline: 3px solid #ffffff;
+	    outline-offset: 4px;
+	    border-radius: 0;
+		margin: 0 !important;
+		line-height: inherit;	   
+	}
+		
+		    
+		
 	a#headerLogoId:focus {
-    outline: solid;
-    outline: 3px solid #ffffff;
-    outline-offset: 4px;
-    border-radius: 0;
-    margin: 5px;
-		    padding: 0rem;
-}
-	
-.mycal-nav .mycal-nav-link:hover, .mycal-nav .mycal-accordion-button.mycal-nav-link:hover {
-    text-decoration: none;
-    background-color: #ffffff;
-    color: #00659e !important;
-}	
-	
-.messages {
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin: 0.55rem;
-}	
-	
-
-	
+	    outline: solid;
+	    outline: 3px solid #ffffff;
+	    outline-offset: 4px;
+	    border-radius: 0;
+	    margin: 5px;
+		padding: 0rem;
+	}
+		
+	.mycal-nav .mycal-nav-link:hover, .mycal-nav .mycal-accordion-button.mycal-nav-link:hover {
+	    text-decoration: none;
+	    background-color: #ffffff;
+	    color: #00659e !important;
+	}	
+		
+	.messages {
+	    font-size: 1.5rem;
+	    color: #ffffff;
+	    margin: 0.55rem;
+	}	
+		
 	.unreadMessages {
-position: absolute;
-    background: #F4B125;
-    height: 1rem;
-    top: 0.5rem;
-    right: 4.5rem;
-    width: 1rem;
-    text-align: center;
-    line-height: 1rem;
-    font-size: .75rem;
-    border-radius: 50%;
-    color: #000;
-    border: #F4B125;
-    font-family: "Open Sans", arial, sans-serif;
-    font-weight: 600;	}	
-	
-
-.mycal-nav-secondary-item > a > i.fa-envelope {
-    font-size: 1.5rem;
-    margin: 0.55rem;
-    color: #ffffff;
-}
-	
-.mycal-nav-secondary-item button.mycal-nav-link::after {
-    color: #ffffff !important;
-}
-	
+		position: absolute;
+	    background: #F4B125;
+	    height: 1rem;
+	    top: 0.5rem;
+	    right: 4.5rem;
+	    width: 1rem;
+	    text-align: center;
+	    line-height: 1rem;
+	    font-size: .75rem;
+	    border-radius: 50%;
+	    color: #000;
+	    border: #F4B125;
+	    font-family: "Open Sans", arial, sans-serif;
+	    font-weight: 600;	
+	}	
+		
+	.mycal-nav-secondary-item > a > i.fa-envelope {
+	    font-size: 1.5rem;
+	    margin: 0.55rem;
+	    color: #ffffff;
+	}
+		
+	.mycal-nav-secondary-item button.mycal-nav-link::after {
+	    color: #ffffff !important;
+	}
+		
 	.mycal-nav-secondary-item button.mycal-nav-link:hover:after {
-    color: #ffffff !important;
+	    color: #ffffff !important;
+	}
+	
+	.mycal-header-extended .mycal-nav-secondary-item > .mycal-nav-link::hover {
+	    color:#ffffff;
+		text-decoration:underline;
+		background-color:transparent;
+	}	
 }
 
-	
-.mycal-header-extended .mycal-nav-secondary-item > .mycal-nav-link::hover {
-    color:#ffffff;
-	text-decoration:underline;
-	background-color:transparent;
-}	
-	
-	
-	
-	
-}
 
 
 /* TEST LOG OUT HEADER */
-
 @media screen and (min-width:64em) {
-.mycal-header-extended.logout .mycal-navbar {
-	max-width: 160rem;
-	border: none !important;
-}
-.mycal-nav-submenu {
-	border: none;
-	background-color: #ffffff;
-	min-height: 35px;
-	list-style-type: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 1rem;
-	position: absolute;
-	width: 15rem;
-	z-index: 400;
-	border: 1px solid #000000;
-	border-top: 0;
-}
-
-	li.mycal-nav-secondary-item button.mycal-nav-link {
-    background-color: transparent;
-    border: none;
+	.mycal-header-extended.logout .mycal-navbar {
+		max-width: 160rem;
+		border: none !important;
+	}
+	.mycal-nav-submenu {
+		border: none;
+		background-color: #ffffff;
+		min-height: 35px;
+		list-style-type: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 1rem;
+		position: absolute;
+		width: 15rem;
+		z-index: 400;
+		border: 1px solid #000000;
+		border-top: 0;
+	}
+	
+		li.mycal-nav-secondary-item button.mycal-nav-link {
+	    background-color: transparent;
+	    border: none;
+	}
+		
+	.mycal-header-extended.logout .mycal-logo, .mycal-header-extended .mycal-logo {
+		font-size: 2.12941rem;
+		margin: 0 !important;
+		max-width: 100%;
+		    padding: .5rem 0;
+	}
+	.mycal-header-extended .mycal-nav-inner {
+		max-width: 75rem;
+	}
+	
+	
+li.mycal-nav-submenu-item:last-child {
+    border-top: 1px solid #88898d;
+    padding-top: .5rem;
 }
 	
-.mycal-header-extended.logout .mycal-logo, .mycal-header-extended .mycal-logo {
-	font-size: 2.12941rem;
-	margin: 0 !important;
-	max-width: 100%;
-	    padding: .5rem 0;
-}
-.mycal-header-extended .mycal-nav-inner {
-	max-width: 75rem;
-}
-.mycal-nav-submenu > li > a {
-	font-size: 1rem;
-	text-decoration: underline;
-	line-height: 1em !important;
-	font-weight: 400;
-	padding-left: 2rem;
-	color: #00659e !important;
-	margin: 0;
-}
-.mycal-nav-submenu > li > a:hover {
-	color: #003c5e !important;
-}
-	
+	.mycal-nav-submenu > li > a {
+		font-size: 1rem;
+		text-decoration: underline;
+		line-height: 1em !important;
+		font-weight: 400;
+		padding-left: 2rem;
+		color: #00659e !important;
+		margin: 0;
+	}
+	.mycal-nav-submenu > li > a:hover {
+		color: #003c5e !important;
+	}
+		
 	.mycal-nav-submenu .mycal-nav-submenu-item a:focus {
-
-    outline-offset: 4px;
-}
-	
-.mycal-nav-secondary-links .mycal-nav-secondary-item:after {
-    color: #ffffff;
-    content: "|";
-    padding: .25rem;
-}
-	
-	.mycal-nav-secondary-links .mycal-nav-secondary-item+.mycal-nav-secondary-item:last-child:after {
-    content: "";
-    padding: 0;
-}
-	
+	    outline-offset: 3px;
+	}
+		
+	.mycal-nav-secondary-links .mycal-nav-secondary-item:after {
+	    color: #ffffff;
+	    content: "|";
+	    padding: .25rem;
+	}
+		
+		.mycal-nav-secondary-links .mycal-nav-secondary-item+.mycal-nav-secondary-item:last-child:after {
+	    content: "";
+	    padding: 0;
+	}
+		
 	.mycal-nav-primary-item.mobile	 {
 		display:none;
 	}
@@ -904,127 +996,147 @@ position: absolute;
 	.mycal-mobile-secondary-links {
 		display:none;
 	}
-	
 }
 
+
 @media screen and (max-width: 63.99em) {
-.mycal-logo {
-	text-align: center;
-}
-.mycal-nav{
-	padding:0;
-}
-	
+	.mycal-logo {
+		text-align: center;
+	}
+	.mycal-nav{
+		padding:0;
+	}
+		
 	ul.mycal-nav-secondary-links > li.mycal-nav-secondary-item:first-child {
-    background-color: #ffffff;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    padding: .75rem 0;
-}
-	
+	    background-color: #ffffff;
+	    border-top: 1px solid #000000;
+	    border-bottom: 1px solid #000000;
+	    padding: .75rem 0;
+	}
 	
 	.mycal-nav-primary {
-   margin-top:3rem;}
+   		margin-top:3rem;
+   	}
 	
-.mycal-nav .mycal-nav-primary > li {
-    border-top: 1px solid #000000;
-    padding: 0;
-  
+	li.mycal-nav-submenu-item:last-child {
+    border-top: 1px solid #88898d;
+   
 }
+	
+	.mycal-nav .mycal-nav-primary > li {
+	    border-top: 1px solid #777;
+	    padding: 0;
+	}
+	
+	.mycal-nav .mycal-nav-primary > li:last-child {
+		 border-bottom: 1px solid #777;}
+	
+	.mycal-nav-primary a {
+		
+		color:#000;
+	}
+	
+	
 	.mycal-nav-secondary-links li.mycal-nav-secondary-item button.mycal-nav-link > span {
 		color:#000000;
 	}
+	
 	.mycal-nav .mycal-nav-primary > li:first-child {
-    /*border-left: 1px solid #000000;*/
-}
-	
-	.mycal-nav .mycal-nav-primary li:nth-child(6){
-    border-bottom: 1px solid #000000;
-}
-
-	
-.mycal-nav-primary .mycal-current:after {
-    /*DELETE FROM USWDS*/
-	display:none;
-}	
-	
-.mycal-nav .mycal-nav-link:hover, .mycal-nav .mycal-accordion-button.mycal-nav-link:hover {
-    text-decoration: none;
-    background-color: #ffffff;
-    color: #000000;
-}	
-	
-	.mycal-nav-submenu-item {
-    border:none;
-    font-size: 1rem;
-}
-	
-
-	
-.mycal-nav-primary button[aria-expanded=false]::after, .mycal-nav-primary a[aria-expanded=false]::after {
-
-       font-family: "Font Awesome 5 Free";
-	font-weight:900;
-    content: "\f107";
-    color: #000000;
-    float: right;
-    font-size: 1.5rem;
-}
-	
-button[aria-expanded=true].mycal-accordion-button.mycal-nav-link.mycal-current span::after {
-       font-family: "Font Awesome 5 Free";
-	font-weight:900;
-    content: "\f077";
-    color: #000000;
-    float: right;
-    margin-top: -.25rem;
-}
-	
-	
-li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-expanded=true] ~ ul.mycal-nav-submenu {
-    background-color: #ffffff;
-}	
-
-	.mycal-nav .mycal-nav-primary button[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link a[aria-expanded=true]:after{
-		
-	    font-family: "Font Awesome 5 Free";
-		font-weight:900;
-    content: "\f077";
-    color: #000000;
-    float: right;
-    margin-top: -.25rem;	
+   	 	/*border-left: 1px solid #000000;*/
 	}
 	
-.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
-	background-color:#ffffff;}
+li#global_54000 {
+    border-bottom: 1px solid #777;
+}
+
+	.mycal-nav-primary .mycal-current:after {
+	    /*DELETE FROM USWDS*/
+		display:none;
+	}	
 	
+	.mycal-nav .mycal-nav-link:hover, .mycal-nav .mycal-accordion-button.mycal-nav-link:hover {
+	    text-decoration: none;
+	    background-color: #ffffff;
+	    color: #000000;
+	}	
+	
+	.mycal-nav-submenu-item {
+	    border:none;
+	    font-size: 1rem;
+	}
+	
+	.mycal-nav-primary button[aria-expanded=false]::after, .mycal-nav-primary a[aria-expanded=false]::after {
+	    font-family: "Font Awesome 5 Free";
+	    font-weight:900;
+	    content: "\f107";
+	    color: #333;
+	    float: right;
+	    font-size: 1rem;
+	}
+	
+	
+	button.mycal-accordion-button.mycal-nav-link.mycal-current span::after {
+	        font-family: "Font Awesome 5 Free";
+	    font-weight:900;
+	    content: "\f107";
+	    color: #333;
+	    float: right;
+	    font-size: 1rem;
+	}
+	
+	button[aria-expanded=true].mycal-accordion-button.mycal-nav-link.mycal-current span::after {
+	       font-family: "Font Awesome 5 Free";
+	       font-weight:900;
+	       content: "\f077";
+	       color: #333;
+	       float: right;
+	       margin-top: -.25rem;
+	       font-size: .833rem;
+	}
+	
+	li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-expanded=true] ~ ul.mycal-nav-submenu {
+	    background-color: #ffffff;
+	}	
+
+	.mycal-nav .mycal-nav-primary button[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true]:after, .mycal-nav .mycal-nav-primary-item .mycal-nav-link a[aria-expanded=true]:after{
+		font-family: "Font Awesome 5 Free";
+		font-weight:900;
+		content: "\f077";
+		color: #333;
+		float: right;
+		margin-top: -.25rem;
+		font-size: .822rem;
+	}
+	
+	.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
+		background-color:#ffffff;
+	}
 	
 	.mycal-nav .mycal-nav-primary button[aria-expanded=true] span, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] span {
-	font-weight:600;}	
+		font-weight:600;
+	}	
 	
 	.mycal-nav-submenu {
-    background-color: #ffffff;
-}
+    	background-color: #ffffff;
+	}
 	
 	.mycal-nav-secondary {
-    color: #000000;
-}
-.mycal-nav-secondary-links a {
-    color: #000000;
-}	
-	
-.mycal-nav .mycal-nav-link.mycal-current {
-    text-decoration: none;
+    	color: #000000;
+	}
 
-}
+	.mycal-nav-secondary-links a {
+    	color: #000000;
+	}	
 	
-	
+	.mycal-nav .mycal-nav-link.mycal-current {
+    	text-decoration: none;
+	}
+		
 	button.mycal-nav-link {
 		background:transparent;
 		border:none;
 		font-size:18px;
 	}	
-	
 	
 	.mycal-nav-primary-item .mobile	 {
 		display:block;
@@ -1034,45 +1146,44 @@ li.mycal-nav-primary-item > button.mycal-accordion-button.mycal-nav-link[aria-ex
 		display:block;
 		list-style-type:none;
 		-webkit-padding-start: 0;
-	margin-top: .75rem;
-	
+		margin-top: .75rem;
 	}
 	
 	.mycal-mobile-secondary-item a {
 		color:#000000;
 		padding-top:0;
 		padding-bottom:0;
+		font-size: 18px;
 	}
-	
 	
 	.mycal-nav-secondary {
 		display:none;
 	}
 	
+	
 	.messages {
 		font-size: 1.5rem;
-    color: #000000;
-    margin-right: 0.55rem;
+    	color: #000000;
+    	margin-right: 0.55rem;
 	}
+	
 	.unreadMessages {	
-      position: relative;
-    background: #F4B125;
-    height: 1rem;
-    top: -.5rem;
-    right: 1rem;
-    width: 1rem;
-    text-align: center;
-    line-height: 1rem;
-    font-size: .75rem;
-    border-radius: 75%;
-    color: #000;
-    border: #F4B125;
-    font-family: "Open Sans", arial, sans-serif;
-    font-weight: 600;
-    display: inline-block;
+      	position: relative;
+	    background: #F4B125;
+	    height: 1rem;
+	    top: -.5rem;
+	    right: 1rem;
+	    width: 1rem;
+	    text-align: center;
+	    line-height: 1rem;
+	    font-size: .75rem;
+	    border-radius: 75%;
+	    color: #000;
+	    border: #F4B125;
+	    font-family: "Open Sans", arial, sans-serif;
+	    font-weight: 600;
+	    display: inline-block;
 	}	
-	
-	
 }	
 	
 	
@@ -1188,6 +1299,14 @@ span.mycal-footer-primary-copyright {
 	
 }
 
+@media reader, speech, aural {
+       .mycal-footer-nav li.grid-col-auto::before {
+           display: none;
+        visibility: hidden;
+       }      
+}
+
+
 
 /* Form Styles */
 
@@ -1248,14 +1367,18 @@ span.mycal-checkbox {
 
 
 .mycal-input, .mycal-range, .mycal-select, .mycal-textarea {
-
-    margin: .25rem 0 .5rem 0;
+    margin: 6px 0;
 }
 
 
 .mycal-textarea:focus {
     outline: .25rem solid #00659e;
     outline-offset: 0;
+}
+
+.textAreaCounter {
+	font-size: 12.8px;
+	line-height: 24px;
 }
 
 /* Progress Bar */
@@ -1479,7 +1602,7 @@ counter-increment: progress-counter;
 	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23689844' d='M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z'/%3E%3Cpath fill='%23689844' d='M18.744186,9.23753281 C18.744186,9.48293963 18.6627907,9.71391076 18.5,9.88713911 L11.3895349,17.7257218 C11.2267442,17.8989501 10.996124,18 10.7655039,18 C10.5484496,18 10.3178295,17.8989501 10.1550388,17.7257218 L5.24418605,12.5 C5.08139535,12.3267717 5,12.0958005 5,11.8503937 C5,11.6049869 5.08139535,11.3595801 5.24418605,11.1863517 L6.47868217,9.88713911 C6.64147287,9.71391076 6.85852713,9.61286089 7.08914729,9.61286089 C7.31976744,9.61286089 7.53682171,9.71391076 7.6996124,9.88713911 L10.7655039,13.1496063 L16.0445736,7.27427822 C16.2073643,7.10104987 16.4244186,7 16.6550388,7 C16.8856589,7 17.1027132,7.10104987 17.2655039,7.27427822 L18.5,8.57349081 C18.6627907,8.74671916 18.744186,8.99212598 18.744186,9.23753281 Z'/%3E%3C/svg%3E")
 }
 .ie8  .mycal-progress__link.mycal-progress__link--done:after, .lt-ie8  .mycal-progress__link.mycal-progress__link--done:after, .ie8 .mycal-progress__link.mycal-progress__link--done:after, .lt-ie8 .mycal-progress__link.mycal-progress__link--done:after {
-	content: '✓'
+	content: #x2714;
 }
 
 .mycal-progress__status {
@@ -1571,13 +1694,32 @@ label.info, input.info {
 /** Slider **/
 
 a.linkedImage {
-	display:inline-block;
+	display: block;
+	padding: 6px;
 }
 
-a.selectedSicon {
-
-    border: 5px solid #689844;
+a.linkedImage:focus {
+	margin: 0;
 }
+
+a.linkedImage img {
+	display: block;
+	padding: 6px;
+}
+
+a.selectedSicon:focus {
+	outline: 3px solid #00659e;
+	outline-offset: -3px !important;
+}
+
+a.selectedSicon img {
+    border: 3px solid #689844;
+	padding: 3px;
+}
+
+
+
+
 
 .bx-wrapper {
 	width:100% !important;
@@ -1609,6 +1751,7 @@ position: absolute;
     bottom: -30px;
     width: 100%;
 	
+
 	}
 
 .bx-wrapper .bx-controls-direction a {
@@ -1701,7 +1844,7 @@ position: absolute;
 } */
 /***** Content Elements (Action Result) *****/
 .success > div, .notification > div, .information > div, .error > div {
-	padding: 20px 20px 15px 65px;
+	padding: 24px 36px 24px 72px;
 }
 
 
@@ -1710,10 +1853,12 @@ position: absolute;
 }
 
 .success, .notification, .information, .error {
-	margin: 0 10px 10px 10px;
+	margin: 0 0 24px;
 }
 .success h2, .notification h2, .information h2, .error h2 {
-	font-size: 15px;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 24px;
 	color: #000;
 }
 .notification ul, .error ul, .information ul, .success ul {
@@ -1726,10 +1871,7 @@ position: absolute;
 }
 .success {
 	background-color:#dae2c7;
-	border-color:#d5d9b6;
-	color:#000000;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
+	color:#000;
 }
 
 .success a {
@@ -1738,25 +1880,17 @@ position: absolute;
 }
 .notification {
 	background-color:#f9edcd;
-	border-color:#f6dab6;
-	color:#000000;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
+	color:#000;
 }
 
 .notification a {
 	color:#9a7221;
 	font-weight:600;
-	
 }
-
 
 .information {
 	background-color:#e1ebef;
-	border-color:#0080b8;
-	color:#000000;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
+	color:#000;
 }
 
 /*.information a {
@@ -1765,81 +1899,62 @@ position: absolute;
 
 .error {
 	background-color: #f4e4e4;
-	border-color: #edd2d6;
 	color: #cc0033;
-	border-radius: 4px;
-	-moz-border-radius: 4px;
 }
 
 .error a {
-	
 	font-weight:600;
 	color: #990026;
 }
 
-.success > div {
-	border: 1px solid #689844;
+.success > div, .notification > div, .information > div, .error > div {
 	position: relative;
+}
+
+.success > div::before, .notification > div::before, .information > div::before, .error > div::before {
+	font-family: "Font Awesome 5 Free" !important;
+	font-weight:900;
+	font-size:2.25rem;
+	position:absolute;
+	top: 24px;
+	left: 24px;
+}
+
+.success > div {
+	border: 1px solid #689844;	
 }
 
 .success > div::before {
 	content:"\f058";
-	color:#689844;
-	    font-family: "Font Awesome 5 Free" !important;
-	font-weight:900;
-	font-size:2.25rem;
-	position:absolute;
-	top:0.25rem;
-	left:1.25rem;
+	color:#689844;	
 }
 
 .notification > div {
 	border: 1px solid #c49128;
-	position: relative;
 }
 
 .notification > div::before {
 	content:"\f06a";
 	color:#c49128;
-	    font-family: "Font Awesome 5 Free" !important;
-	font-weight:900;
-	font-size:2.25rem;
-	position:absolute;
-	top:0.25rem;
-	left:1.25rem;
 }
 
 .information > div {
 	border: 1px solid #0080b8;
-	position: relative;
 }
 
 .information > div::before {
 	content:"\f05a";
 	color:#0080b8;
-	    font-family: "Font Awesome 5 Free" !important;
-	font-weight:900;
-	font-size:2.25rem;
-	position:absolute;
-	top:0.25rem;
-	left:1.25rem;
 }
 
 .error > div {
 	border: 1px solid #edd2d6;
 	color: #cc0033;
-	position: relative;
 }
 
 .error > div::before {
 	content:"\f057";
 	color:#cc0033;
-    font-family: "Font Awesome 5 Free" !important;
-	font-weight:900;
-	font-size:2.25rem;
-	position:absolute;
-	top:0.25rem;
-	left:1.25rem;
 }
 
 
@@ -1849,7 +1964,7 @@ table p {
 	margin:0;
 }
 thead {
-	    background-color: #00659e;
+	background-color: #00659e;
     color: #ffffff;
 }
 
@@ -1884,27 +1999,27 @@ td p.expire {
 
 .mycal-unstyled-list li {
     display: inline-block;
-	font-size:.875rem;
-	font-weight: 400;
+    font-size: 0.833em;
+    line-height: 24px;
+    font-weight: normal;
+    /* padding: 5px; */
 }
 
 .mycal-unstyled-list li:last-child {
-    font-weight: 600;
+    font-weight: bold;
 }
 .mycal-unstyled-list li::after {
-    color: #333333;
-    padding: 0 5px;
-    line-height: .875rem;
-    font-size: .875rem;
-      font-family: "Font Awesome 5 Free";
+    color: #666;
+    padding: 5px;
+    line-height: 0.833em;
+    font-size: 0.833em;
+    font-family: "Font Awesome 5 Free";
     content: "\f054";
-   font-weight:900;
+    font-weight:900;
 }
 
 .mycal-unstyled-list li:last-child::after {
-
-    content: "";
-
+	content: "";
 }
 
 div.breadcrumb > a {
@@ -1917,6 +2032,7 @@ div.breadcrumb > a {
     text-decoration: none;
 	
 }
+
 
 
 @media screen and (max-width: 40em) {
@@ -1947,9 +2063,6 @@ nav.mycal-breadcrumb	{
 .ui-widget-content{
 	border: 1px solid #e5e5e5;
 }
-
-
-
 /* Vertical Tabs */
 
 .mycal-vertical-tabs {
@@ -1962,8 +2075,8 @@ nav.mycal-breadcrumb	{
 }
 .mycal-vertical-tabs__nav {
 	 /* width: 33.33333%; */
-	 border-right: 1px solid #eee;
-	 background: #cce0eb;
+	 border-right: 1px solid #bababa;
+	 background: #f5f5f5;
 	 padding-inline-start: 0;
 	 margin-block-end: 0;
 }
@@ -1975,8 +2088,9 @@ nav.mycal-breadcrumb	{
 	-ms-flex-align: center;
 	/* align-items: center; */
 	overflow: hidden;
-	border-bottom: 1px solid #dddbda;
-	color: #3e3e3c;
+	border-bottom: 1px solid #bababa;
+	color: #00659e;
+	font-weight:600;
 }
 .mycal-vertical-tabs__nav-item:last-child {
 	margin-bottom: -1px
@@ -1994,6 +2108,7 @@ nav.mycal-breadcrumb	{
 	min-width: 0;
 	padding: 1.25rem;
 	color: currentColor;
+	text-decoration:none;
 }
 .mycal-vertical-tabs__link:hover {
 	background: #dddbda;
@@ -2023,7 +2138,8 @@ nav.mycal-breadcrumb	{
 	margin-right: -1px;
 	border-right: 0;
 	background: #fff;
-	color: #006dcc;
+	color: #000000;
+	font-weight:600;
 }
 .mycal-vertical-tabs__nav-item.mycal-is-active .mycal-vertical-tabs__link:hover {
 	background: #fff;
@@ -2033,9 +2149,7 @@ nav.mycal-breadcrumb	{
 	text-decoration: underline
 }	
 	
-	
-	
-	@media print {
+@media print {
 	.mycal-no-print {
 		display: none
 	}
@@ -2264,3 +2378,40 @@ nav.mycal-breadcrumb	{
 		display: none !important
 	}
 }
+
+
+@media screen and (max-width: 750px) {
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: right;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+  	color: #444444 !important;
+  	display: inline;
+  	float: left;
+  	padding: 0px !important;
+  	padding-left: 5px!important;
+  	border:none;
+  }
+  
+}
+
