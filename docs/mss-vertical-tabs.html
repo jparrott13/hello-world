@@ -2,7 +2,8 @@
 <!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en">
-<!--<![endif]--><head>
+<!--<![endif]-->
+<head>
 <!-- Basic Page Needs
 ================================================== -->
 <meta charset="utf-8">
@@ -18,7 +19,7 @@
 <!-- Title and meta description
 ================================================== -->
 
-<title>MSS Patterns - Vertical Tabs</title>
+<title>MSS Patterns - Buttons</title>
 <meta property="og:title" content="myCalPERS new responsive design">
 
 <!-- Favicons
@@ -194,7 +195,6 @@
 	var urlContext = '/psr-web';	
 </script>
 <script>
-
 	
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-25763786-9']);
@@ -224,10 +224,7 @@
 
 		
 </script>
-<script type="text/javascript" src="https://www.lightningdesignsystem.com/assets/__internal/chunked/showcase/common.js"></script>
-	
-	<script type="text/javascript" src="https://www.lightningdesignsystem.com/assets/__internal/chunked/showcase/ui/components/vertical-tabs/base/example.jsx.js"></script>
-	
+
 <!-- CSS Includes -->
 <link rel="stylesheet" type="text/css" href="resources/mss/css/updated/uswds-2_4-mycal.css">
 <link rel="stylesheet" type="text/css" href="resources/mss/css/updated/calendar.css">
@@ -235,9 +232,6 @@
 <link rel="stylesheet" type="text/css" href="resources/mss/css/updated/datatables.min.css">
 <link rel="stylesheet" type="text/css" href="http://esdd-58707:7001/psr-web/css/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="resources/mss/css/updated/progress-steps.css">
-	
-
-	
 
 <!-- UX Custom -->
 <link rel="stylesheet" type="text/css" href="resources/mss/css/style.css" />
@@ -246,323 +240,8 @@
 .roundedCorners, input[type='button'], input[type='submit'], a.doSomething, .mainButton, .button, .tabbedContainer > ul > li a {
 	behavior: url(/psr-web/css/ept/pie/PIE.htc);
 }
-	
-	
-	
-	
-.mycal-vertical-tabs {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	overflow: hidden;
-	border: 1px solid #dddbda;
-	border-radius: .25rem
-}
-.mycal-vertical-tabs__nav {
-	width: 12rem;
-	border-right: 1px solid #dddbda;
-	background: #f3f2f2
-}
-.mycal-vertical-tabs__nav-item {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	overflow: hidden;
-	border-bottom: 1px solid #dddbda;
-	color: #3e3e3c
-}
-.mycal-vertical-tabs__nav-item:last-child {
-	margin-bottom: -1px
-}
-.mycal-vertical-tabs__link {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-flex: 1;
-	-ms-flex: 1 1 0%;
-	flex: 1 1 0%;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	min-width: 0;
-	padding: .75rem;
-	color: currentColor
-}
-.mycal-vertical-tabs__link:hover {
-	background: #dddbda;
-	color: #080707;
-	text-decoration: none
-}
-.mycal-vertical-tabs__link:focus {
-	outline: 0
-}
-.mycal-vertical-tabs__left-icon {
-	margin-right: .5rem
-}
-.mycal-vertical-tabs__left-icon:empty {
-	margin-right: 0
-}
-.mycal-vertical-tabs__right-icon {
-	margin-left: auto
-}
-.mycal-vertical-tabs__content {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-	padding: 1rem;
-	background: #fff
-}
-.mycal-vertical-tabs__nav-item.mycal-is-active {
-	margin-right: -1px;
-	border-right: 0;
-	background: #fff;
-	color: #006dcc
-}
-.mycal-vertical-tabs__nav-item.mycal-is-active .mycal-vertical-tabs__link:hover {
-	background: #fff;
-	color: currentColor
-}
-.mycal-vertical-tabs__nav-item.mycal-has-focus {
-	text-decoration: underline
-}	
-	
-	
-	
-	@media print {
-	.mycal-no-print {
-		display: none
-	}
-}
-.mycal-collapsed {
-	height: 0;
-	overflow: hidden
-}
-.mycal-expanded {
-	height: auto;
-	overflow: visible
-}
-.mycal-assistive-text {
-	position: absolute !important;
-	margin: -1px !important;
-	border: 0 !important;
-	padding: 0 !important;
-	width: 1px !important;
-	height: 1px !important;
-	overflow: hidden !important;
-	clip: rect(0 0 0 0) !important;
-	text-transform: none !important;
-	white-space: nowrap !important
-}
-.mycal-assistive-text_focus:focus, .mycal-assistive-text--focus:focus {
-	margin: inherit !important;
-	border: inherit !important;
-	padding: inherit !important;
-	width: auto !important;
-	height: auto !important;
-	overflow: visible !important;
-	clip: auto !important
-}
-.mycal-is-collapsed {
-	height: 0;
-	overflow: hidden
-}
-.mycal-is-expanded {
-	height: auto;
-	overflow: visible
-}
-.mycal-hidden {
-	visibility: hidden !important
-}
-.mycal-visible {
-	visibility: visible
-}
-.mycal-hide {
-	display: none !important
-}
-.mycal-show {
-	display: block
-}
-.mycal-show_inline-block, .mycal-show--inline-block {
-	display: inline-block
-}
-.mycal-show_inline, .mycal-show--inline {
-	display: inline
-}
-.mycal-transition-hide {
-	opacity: 0
-}
-.mycal-transition-show {
-	opacity: 1
-}
-.mycal-x-small-show {
-	display: none
-}
-@media (min-width: 320px) {
-	.mycal-x-small-show {
-		display: block
-	}
-	.mycal-x-small-show_inline-block, .mycal-x-small-show--inline-block {
-		display: inline-block
-	}
-	.mycal-x-small-show_inline, .mycal-x-small-show--inline {
-		display: inline
-	}
-}
-.mycal-x-small-show-only {
-	display: none
-}
-@media (min-width: 320px) and (max-width: 479px) {
-	.mycal-x-small-show-only {
-		display: block
-	}
-	.mycal-x-small-show-only_inline-block, .mycal-x-small-show-only--inline-block {
-		display: inline-block
-	}
-	.mycal-x-small-show-only_inline, .mycal-x-small-show-only--inline {
-		display: inline
-	}
-}
-@media (max-width: 479px) {
-	.mycal-max-x-small-hide {
-		display: none
-	}
-}
-.mycal-small-show {
-	display: none
-}
-@media (min-width: 480px) {
-	.mycal-small-show {
-		display: block
-	}
-	.mycal-small-show_inline-block, .mycal-small-show--inline-block {
-		display: inline-block
-	}
-	.mycal-small-show_inline, .mycal-small-show--inline {
-		display: inline
-	}
-}
-.mycal-small-show-only {
-	display: none
-}
-@media (min-width: 480px) and (max-width: 767px) {
-	.mycal-small-show-only {
-		display: block
-	}
-	.mycal-small-show-only_inline-block, .mycal-small-show-only--inline-block {
-		display: inline-block
-	}
-	.mycal-small-show-only_inline, .mycal-small-show-only--inline {
-		display: inline
-	}
-}
-@media (max-width: 767px) {
-	.mycal-max-small-hide {
-		display: none
-	}
-}
-.mycal-medium-show {
-	display: none
-}
-@media (min-width: 768px) {
-	.mycal-medium-show {
-		display: block
-	}
-	.mycal-medium-show_inline-block, .mycal-medium-show--inline-block {
-		display: inline-block
-	}
-	.mycal-medium-show_inline, .mycal-medium-show--inline {
-		display: inline
-	}
-}
-.mycal-medium-show-only {
-	display: none
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-	.mycal-medium-show-only {
-		display: block
-	}
-	.mycal-medium-show-only_inline-block, .mycal-medium-show-only--inline-block {
-		display: inline-block
-	}
-	.mycal-medium-show-only_inline, .mycal-medium-show-only--inline {
-		display: inline
-	}
-}
-@media (max-width: 1023px) {
-	.mycal-max-medium-hide {
-		display: none
-	}
-}
-.mycal-large-show {
-	display: none
-}
-@media (min-width: 1024px) {
-	.mycal-large-show {
-		display: block
-	}
-	.mycal-large-show_inline-block, .mycal-large-show--inline-block {
-		display: inline-block
-	}
-	.mycal-large-show_inline, .mycal-large-show--inline {
-		display: inline
-	}
-}
-@media (min-width: 320px) {
-	.mycal-hide_x-small, .mycal-hide--x-small {
-		display: none !important
-	}
-}
-@media (max-width: 319px) {
-	.mycal-show_x-small, .mycal-show--x-small {
-		display: none !important
-	}
-}
-@media (min-width: 480px) {
-	.mycal-hide_small, .mycal-hide--small {
-		display: none !important
-	}
-}
-@media (max-width: 479px) {
-	.mycal-show_small, .mycal-show--small {
-		display: none !important
-	}
-}
-@media (min-width: 768px) {
-	.mycal-hide_medium, .mycal-hide--medium {
-		display: none !important
-	}
-}
-@media (max-width: 767px) {
-	.mycal-show_medium, .mycal-show--medium {
-		display: none !important
-	}
-}
-@media (min-width: 1024px) {
-	.mycal-hide_large, .mycal-hide--large {
-		display: none !important
-	}
-}
-@media (max-width: 1023px) {
-	.mycal-show_large, .mycal-show--large {
-		display: none !important
-	}
-}
-@media (min-width: 1280px) {
-	.mycal-hide_x-large, .mycal-hide--x-large {
-		display: none !important
-	}
-}
-@media (max-width: 1279px) {
-	.mycal-show_x-large, .mycal-show--x-large {
-		display: none !important
-	}
-}
-	
 </style>
-
+<style></style>
 
 <!-- Page Specific JS/CSS -->
 
@@ -606,7 +285,9 @@
 <script> 
 	var $j = jQuery.noConflict();
 </script>
-		<script>
+	
+	
+			<script>
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
@@ -635,7 +316,6 @@ function includeHTML() {
   }
 };
 </script>
-
 </head>
 <body class="page-utilities layout-styleguide ">
 <a class="mycal-skipnav" href="#main-content">Skip to main content</a>
@@ -694,83 +374,78 @@ function includeHTML() {
 <div class="sidenav-main-content grid-container-desktop-lg">
 <div class="grid-col-12">
 
+<div tabindex="0" role="alert" aria-live="assertive" aria-atomic="true" aria-relevant="all" class="notification"><div> <h3 class="mycal-alert-heading">Ready for Review</h3>
+    <p class="mycal-alert-text">Needs review by: ACT & DEV</p></div></div>
 	
-	
-	<div tabindex="0" role="alert" aria-live="assertive" aria-atomic="true" aria-relevant="all" class="information"><div> <h3 class="mycal-alert-heading">In Progress</h3>
-    <p class="mycal-alert-text">UX Developing</p></div></div>
-	
-
-		
-      <header>
+     <header>
         <p class="site-subheading">Components</p>
-        <h1 id="buttons" class="site-page-title">Vertical Tabs</h1>
+        <h1 id="buttons" class="site-page-title">Tabs</h1>
       </header>
-      <p class="site-font-lead mycal-font-lead">Alert users to a destructive action.</p>
+      <p class="site-font-lead mycal-font-lead">Tabs collapse into a dropdown on smaller screens.</p>
       <div class="preview mycal-prose ">
+        <h2>Vertical</h2>
+        
 		  
-		  
+		        <div class="mycal-vertical-tabs">
+              
+              <div id="mycal-tab-nav-1" class="mycal-tab-nav">
+                    
+                    <a href="#mycal-tab-nav-1" 
+                        class="mycal-tab-nav-toggler" 
+                        role="button" 
+                        data-toggle="dropdown" 
+                        aria-haspopup="true" 
+                        aria-expanded="false"  
+                        >
+                        <strong>CalPERS Death Benefit</strong>
+                        <small>Member PELZEL, SAMBATH L.</small>
+                    </a>
 
-<div class="mycal-vertical-tabs">
-  <ul class="mycal-vertical-tabs__nav" role="tablist" aria-orientation="vertical">
-    <li class="mycal-vertical-tabs__nav-item mycal-is-active" title="Tab 1" role="presentation">
-      <a class="mycal-vertical-tabs__link" href="javascript:void(0)" role="tab" tabindex="0" aria-selected="true" aria-controls="mycal-vertical-tabs-0" id="mycal-vertical-tabs-0__nav">
-        <span class="mycal-vertical-tabs__left-icon"></span>
-        <span class="mycal-truncate" title="Tab 1">Tab 1</span>
-        <span class="mycal-vertical-tabs__right-icon"></span>
-      </a>
-    </li>
-    <li class="mycal-vertical-tabs__nav-item" title="Tab 2" role="presentation">
-      <a class="mycal-vertical-tabs__link" href="javascript:void(0)" role="tab" tabindex="-1" aria-selected="false" aria-controls="mycal-vertical-tabs-1" id="mycal-vertical-tabs-1__nav">
-        <span class="mycal-vertical-tabs__left-icon"></span>
-        <span class="mycal-truncate" title="Tab 2">Tab 2</span>
-        <span class="mycal-vertical-tabs__right-icon"></span>
-      </a>
-    </li>
-    <li class="mycal-vertical-tabs__nav-item" title="Tab 3 has a really long label and can wrap or truncate" role="presentation">
-      <a class="mycal-vertical-tabs__link" href="javascript:void(0)" role="tab" tabindex="-1" aria-selected="false" aria-controls="mycal-vertical-tabs-2" id="mycal-vertical-tabs-2__nav">
-        <span class="mycal-vertical-tabs__left-icon"></span>
-        <span class="mycal-truncate" title="Tab 3 has a really long label and can wrap or truncate">Tab 3 has a really long label and can wrap or truncate</span>
-        <span class="mycal-vertical-tabs__right-icon"></span>
-      </a>
-    </li>
-  </ul>
-  <div class="mycal-vertical-tabs__content mycal-show" id="mycal-vertical-tabs-0" role="tabpanel" aria-labelledby="mycal-vertical-tabs-0__nav">
-    <div class="mycal-text-longform">
-      <h3 class="mycal-text-heading_medium">Tab Title</h3>
-      <p>Content for Tab 1</p>
-      <p>Lorem ipsum dolor...</p>
-      <p>Lorem ipsum dolor...</p>
-    </div>
-  </div>
-  <div class="mycal-vertical-tabs__content mycal-hide" id="mycal-vertical-tabs-1" role="tabpanel" aria-labelledby="mycal-vertical-tabs-1__nav">
-    <div class="mycal-text-longform">
-      <h3 class="mycal-text-heading_medium">Tab Title</h3>
-      <p>Content for Tab 1</p>
-      <p>Lorem ipsum dolor...</p>
-      <p>Lorem ipsum dolor...</p>
-    </div>
-  </div>
-  <div class="mycal-vertical-tabs__content mycal-hide" id="mycal-vertical-tabs-2" role="tabpanel" aria-labelledby="mycal-vertical-tabs-2__nav">
-    <div class="mycal-text-longform">
-      <h3 class="mycal-text-heading_medium">Tab Title</h3>
-      <p>Content for Tab 1</p>
-      <p>Lorem ipsum dolor...</p>
-      <p>Lorem ipsum dolor...</p>
-    </div>
-  </div>
-</div>
+                    <ul class="mycal-vertical-tabs__nav" role="tablist" aria-orientation="vertical">
+                        <li class="mycal-vertical-tabs__nav-item mycal-is-active" title="CalPERS Death Benefit Member PELZEL, SAMBATH L." role="presentation">
+                            <a class="mycal-vertical-tabs__link" href="#">
+                                <strong>CalPERS Death Benefit</strong>
+                                <small>Member PELZEL, SAMBATH L.</small>
+                            </a>
+                        </li>
+                        <li class="mycal-vertical-tabs__nav-item" title="CalPERS Refund Member PELZEL, SAMBATH L." role="presentation">
+                            <a class="mycal-vertical-tabs__link" href="#" role="tab" aria-selected="false">
+                                <strong>CalPERS Refund</strong>
+                                <small>Member PELZEL, SAMBATH L.</small>
+                            </a>
+                        </li>
+                        <li class="mycal-vertical-tabs__nav-item" title="CalPERS Refund Member PELZEL, SAMBATH L." role="presentation">
+                            <a class="mycal-vertical-tabs__link" href="#" role="tab" aria-selected="false">
+                                <strong>CalPERS Health Benefit into Two Rows</strong>
+                                <small>Member PELZEL, SAMBATH L. von Bavarian Schwarzwald</small>
+                            </a>
+                        </li>
+                    </ul>
+                  
+                </div>
+
+                <div class="mycal-vertical-tabs__content mycal-show" id="mycal-vertical-tabs-0" role="tabpanel" aria-labelledby="mycal-vertical-tabs-0__nav">	
+                    
+                    <!-- Delete the <div> below -->
+
+                    <div style="padding: 48px;">
+                    
+                        <p>Tab content goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <p>Tab content goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    
+                    </div>
+
+                </div>
+
+            </div>
 		  
 		  
-		  
-		  
-      </div>
-	
+	</div>
 	
 </div>
 </div>
 </main>
-
-	
 
 
 <!-- new Jquery UI --> 
@@ -825,7 +500,9 @@ function includeHTML() {
   </div>
  
 </footer>
-	<script>
+	
+	
+		<script>
 includeHTML();
 </script>
 </body>
@@ -849,6 +526,7 @@ Event.observe(window, "load", function(){
 			$j('.tabbedContainer > ul > li> a.active').attr('aria-expanded', 'true');
 		}
 		
+
 		$j('.tabbedContainer > ul').append('<div class="clear"></div>');
 		
 		$j('.tabbedContainer > ul > li > a').click(function() {
