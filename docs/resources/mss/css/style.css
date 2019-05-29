@@ -953,6 +953,7 @@ color:#ffffff;
 	}
 	.mycal-header-extended .mycal-nav-inner {
 		max-width: 75rem;
+		/* box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.1); */
 	}
 	
 	
