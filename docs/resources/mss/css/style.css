@@ -725,14 +725,14 @@ div.mycal-logo img {
     height: inherit;
 }
 .mycal-nav {
-	background-color: #cce0eb;
-	border-bottom: #cce0eb;
+	background-color: #fff;
+	border-bottom: #fff;
 }
 .mycal-nav.is-visible {
 	background-color: #00659e;
 }
 .mycal-nav .mycal-nav-primary {
-	background-color: #cce0eb;
+	background-color: #fff;
 }
 .mycal-nav .mycal-nav-link, .mycal-nav .mycal-nav-primary > li > a {
 	color: #000000;
@@ -766,10 +766,10 @@ color:#ffffff;
 
 .mycal-nav .mycal-nav-link.mycal-current {
 	font-weight: 600;
-	background-color: #ffffff;
+	background-color: #cce0eb;
 }
 .mycal-nav .mycal-nav-link.mycal-current + ul.mycal-nav-submenu {
-	background-color: #ffffff;
+	background-color: #cce0eb;
 }
 .mycal-nav .mycal-nav-link.mycal-current:hover {
 	text-decoration: none;
@@ -869,8 +869,8 @@ color:#ffffff;
 		
 	.mycal-nav .mycal-nav-link:hover, .mycal-nav .mycal-accordion-button.mycal-nav-link:hover {
 	    text-decoration: none;
-	    background-color: #ffffff;
-	    color: #00659e !important;
+	    background-color: #cce0eb;
+	    color: #000 !important;
 	}	
 		
 	.messages {
@@ -927,7 +927,7 @@ color:#ffffff;
 	}
 	.mycal-nav-submenu {
 		border: none;
-		background-color: #ffffff;
+		background-color: #cce0eb;
 		min-height: 35px;
 		list-style-type: none;
 		margin-bottom: 0;
@@ -936,7 +936,7 @@ color:#ffffff;
 		position: absolute;
 		width: 15rem;
 		z-index: 400;
-		border: 1px solid #000000;
+		/* border: 1px solid #000000; */
 		border-top: 0;
 	}
 	
@@ -1109,7 +1109,7 @@ li#global_54000 {
 	}
 	
 	.mycal-nav .mycal-nav-primary button[aria-expanded=true], .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] {
-		background-color:#ffffff;
+		background-color: #cce0eb;
 	}
 	
 	.mycal-nav .mycal-nav-primary button[aria-expanded=true] span, .mycal-nav .mycal-nav-primary-item .mycal-nav-link[aria-expanded=true] span {
@@ -1190,10 +1190,10 @@ li#global_54000 {
 	
 	
 .mycal-menu-btn {
-	background-color: #cce0eb !important;
+	background-color: #fff !important;
 	color: #333333 !important;
 	margin: .75rem;
-	    font-size: 1.05rem;
+	font-size: 1.05rem;
 }
 .mycal-menu-btn::before {
        font-family: "Font Awesome 5 Free";
@@ -1231,7 +1231,7 @@ li#global_54000 {
 }
 
 .mycal-nav.is-visible {
-    background-color: #cce0eb;
+    background-color: #fff;
 }
 
 
@@ -1559,15 +1559,16 @@ counter-increment: progress-counter;
 	border-bottom: 1px solid gray;
 	border-left: 3px solid transparent;
 	transition: background-color 0.1s ease-in-out;
-	cursor: pointer
+	cursor: text;
 }
+ /*
  .mycal-progress__link:hover, .mycal-progress__link:hover {
 	background-color: #f5f5f5
 }
  .mycal-progress__link:focus, .mycal-progress__link:focus {
 	outline: 3px solid #9263DE;
 	outline-offset: 2px
-}
+}*/
  .mycal-progress__link::-moz-focus-inner, .mycal-progress__link::-moz-focus-inner {
 	border: 0
 }
@@ -1635,6 +1636,7 @@ ul.mycal-progress li > span:before  {
 /** Changes **/
 .grid-row {
 	margin: 1rem 0;
+	/* background-color: #eee; */
 }
 .no-close .ui-dialog-titlebar-close {
 	display: none;
@@ -2122,7 +2124,7 @@ nav.mycal-breadcrumb	{
 	position: absolute;
 	top: 24px;
 	right: 24px;
-	content: "";
+	content: "\f107";
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
 	font-size: 16px;
@@ -2215,6 +2217,12 @@ nav.mycal-breadcrumb	{
 .mycal-vertical-tabs .mycal-tab-nav:target .mycal-vertical-tabs__nav, .mycal-vertical-tabs .open .mycal-vertical-tabs__nav {
 	display: block
 }
+
+.mycal-vertical-tabs__nav-item.mycal-is-active {
+
+	display:none;
+}
+
 @media screen and (min-width: 600px) {
 	.mycal-vertical-tabs {
 		padding-left: 33.333333%;
@@ -2229,6 +2237,12 @@ nav.mycal-breadcrumb	{
 		width: 50%;
 		margin-left: -50%
 	}
+
+.mycal-vertical-tabs__nav-item.mycal-is-active {
+
+	display:block;
+}
+
 	.mycal-vertical-tabs .mycal-vertical-tabs__nav .mycal-vertical-tabs__nav-item {
 		margin-bottom: 2px
 	}
@@ -2328,6 +2342,7 @@ nav.mycal-breadcrumb	{
 	flex: 1;
 	padding: 1.5rem;
 	background: #fff;
+	padding: 48px;
 }
 .mycal-vertical-tabs__nav-item.mycal-is-active {
 	margin-right: -1px;
