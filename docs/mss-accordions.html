@@ -489,24 +489,24 @@ function includeHTML() {
 </main>
 
 	
-		<script type="text/javascript">
+	<script type="text/javascript">
 				
 				// JavaScript for accordions and guided steps
 					
-				$(document).on('click', '.mycal-accordion-button, .mycal-accordion-steps-button', function(){
-					var context = $(this).closest('li');
+				$j(document).on('click', '.mycal-accordion-button, .mycal-accordion-steps-button', function(){
+					var context = $j(this).closest('li');
 
 					if (context.hasClass('open')) {
 						context.removeClass('open');
-						$('.mycal-accordion-content', context).attr('aria-hidden', 'true');
-						$('.mycal-accordion-step-content', context).attr('aria-hidden', 'true');
+						$j('.mycal-accordion-content', context).attr('aria-hidden', 'true');
+						$j('.mycal-accordion-step-content', context).attr('aria-hidden', 'true');
 						history.replaceState(null, null, ' ');
-						$(this).attr('aria-expanded', 'false');
+						$j(this).attr('aria-expanded', 'false');
 					} else {
 						context.addClass('open');
-						$(this).attr('aria-expanded', 'true');
-						$('.mycal-accordion-content', context).attr('aria-hidden', 'false');
-						$('.mycal-accordion-step-content', context).attr('aria-hidden', 'false');
+						$j(this).attr('aria-expanded', 'true');
+						$j('.mycal-accordion-content', context).attr('aria-hidden', 'false');
+						$j('.mycal-accordion-step-content', context).attr('aria-hidden', 'false');
 						history.replaceState(null, null, ' ');
 					}
 
@@ -516,21 +516,21 @@ function includeHTML() {
 				
 				// Show All / Hide All
 				
-				$(document).on('click', '.mycal-accordion-steps-hide-all', function(){
-					var context = $(this).closest('.mycal-accordion-steps');
+				$j(document).on('click', '.mycal-accordion-steps-hide-all', function(){
+					var context = $j(this).closest('.mycal-accordion-steps');
 					
-					$('.mycal-accordion-steps-item', context).each(function(){
+					$j('.mycal-accordion-steps-item', context).each(function(){
 						$(this).removeClass('open');
 					});
 
 					return false;
 				});
 				
-				$(document).on('click', '.mycal-accordion-steps-show-all', function(){
-					var context = $(this).closest('.mycal-accordion-steps');
+				$j(document).on('click', '.mycal-accordion-steps-show-all', function(){
+					var context = $j(this).closest('.mycal-accordion-steps');
 					
-					$('.mycal-accordion-steps-item', context).each(function(){
-						$(this).addClass('open');
+					$j('.mycal-accordion-steps-item', context).each(function(){
+						$j(this).addClass('open');
 					});
 
 					return false;
